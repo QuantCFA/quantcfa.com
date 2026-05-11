@@ -1,26 +1,219 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-cream: #faf6ef;
+  --color-cream-deep: #f3ede0;
+  --color-paper: #ffffff;
+
+  --color-ink: #1a1d24;
+  --color-ink-soft: #3a3f4a;
+  --color-ink-muted: #6b7280;
+
+  --color-navy: #1e3a5f;
+  --color-navy-deep: #16263f;
+  --color-navy-soft: #4a6a8f;
+
+  --color-accent: #b8860b;
+  --color-accent-soft: #d4a843;
+
+  --color-rule: #e3dccd;
+  --color-rule-soft: #ece7da;
+
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga", "calt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Paper / long-form prose styling — used inside .prose-paper wrapper */
+.prose-paper {
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose-paper h1 {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 1rem;
+  color: var(--color-navy-deep);
+}
+
+.prose-paper h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-rule);
+  color: var(--color-navy-deep);
+}
+
+.prose-paper h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+  color: var(--color-ink);
+}
+
+.prose-paper h4 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.75rem 0 0.5rem;
+  color: var(--color-ink-soft);
+}
+
+.prose-paper p {
+  margin: 0 0 1.1rem;
+}
+
+.prose-paper a {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.prose-paper a:hover {
+  color: var(--color-navy-deep);
+  text-decoration-thickness: 2px;
+}
+
+.prose-paper strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.prose-paper em {
+  font-style: italic;
+}
+
+.prose-paper ul,
+.prose-paper ol {
+  margin: 0 0 1.1rem 1.25rem;
+  padding-left: 0.75rem;
+}
+
+.prose-paper li {
+  margin: 0.25rem 0;
+}
+
+.prose-paper li > p {
+  margin: 0.25rem 0;
+}
+
+.prose-paper blockquote {
+  border-left: 3px solid var(--color-navy-soft);
+  margin: 1.25rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
+.prose-paper code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-cream-deep);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.prose-paper pre {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--color-cream-deep);
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  line-height: 1.55;
+}
+
+.prose-paper pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.prose-paper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+}
+
+.prose-paper th,
+.prose-paper td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+}
+
+.prose-paper th {
+  font-weight: 600;
+  color: var(--color-navy-deep);
+  background: var(--color-cream-deep);
+  border-bottom: 2px solid var(--color-rule);
+}
+
+.prose-paper hr {
+  border: none;
+  border-top: 1px solid var(--color-rule);
+  margin: 2.25rem 0;
+}
+
+.prose-paper .anchor {
+  color: var(--color-rule);
+  margin-left: 0.4rem;
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.prose-paper h2:hover .anchor,
+.prose-paper h3:hover .anchor {
+  opacity: 1;
+}
+
+/* KaTeX size adjustment so display math sits nicely in serif body */
+.prose-paper .katex {
+  font-size: 1.05em;
+}
+.prose-paper .katex-display {
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
