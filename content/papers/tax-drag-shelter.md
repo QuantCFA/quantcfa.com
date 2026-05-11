@@ -259,7 +259,7 @@ Stylized 22%-bracket Roth conversion, paid from outside the retirement account.
 
 **Tax-Drag Shelter alpha — IRR:**
 
-The same $K = \$17{,}966$ outlay generates two drag-benefit streams. The IRRs are the rates equating each stream to the outlay:
+The same outlay ($K$ = \$17,966) generates two drag-benefit streams. The IRRs are the rates equating each stream to the outlay:
 
 | Component | IRR (drag-only) |
 |---|---|
