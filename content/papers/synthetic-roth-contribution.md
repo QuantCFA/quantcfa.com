@@ -108,7 +108,7 @@ The \$22,000 Bank holding is a *liability offset*: a pre-funded reserve against 
 
 ### 3.2 Conversion as Liability Settlement
 
-A Roth conversion at conversion-year marginal rate $t_C = 22\%$ *extinguishes* the embedded deferred tax liability by paying $t_C \cdot \text{conv\_amt} = \$22{,}000$ to the tax authority immediately. The household then holds the converted balance in the Roth wrapper, which carries *no* embedded deferred tax liability — every Roth dollar is fully owned, after-tax, and tax-free in distribution.
+A Roth conversion at conversion-year marginal rate $t_C = 22\%$ *extinguishes* the embedded deferred tax liability by paying $t_C \cdot \text{conv\_amt}$ = \$22,000 to the tax authority immediately. The household then holds the converted balance in the Roth wrapper, which carries *no* embedded deferred tax liability — every Roth dollar is fully owned, after-tax, and tax-free in distribution.
 
 Because $t_C = 22\%$ is less than the assumed $t_D = 25\%$, the \$22,000 immediate settlement extinguishes a liability with face value \$25,000 in PV terms. The household captures the \$3,000 difference as a balance-sheet gain — the rate-arbitrage Core of the conversion's NPV.
 
@@ -118,9 +118,9 @@ The conversion tax is therefore not an *expense*; it is a *settlement of a pre-e
 
 The \$22,000 settlement can be sourced two ways:
 
-**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Trad gross is reduced by $\text{conv\_amt} + \text{conv\_tax} = \$122{,}000$: \$100,000 of converted principal moves to Roth, \$22,000 is withheld and remitted to the tax authority. The Roth holds \$78,000 (the converted principal less the withheld conversion tax); the Bank's \$22,000 reserve remains untouched.
+**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Trad gross is reduced by $\text{conv\_amt} + \text{conv\_tax}$ = \$122,000: \$100,000 of converted principal moves to Roth, \$22,000 is withheld and remitted to the tax authority. The Roth holds \$78,000 (the converted principal less the withheld conversion tax); the Bank's \$22,000 reserve remains untouched.
 
-**Option B — Outside funding.** The settlement is paid from the Bank reserve. The Trad gross is reduced by $\text{conv\_amt} = \$100{,}000$: all \$100,000 of converted principal moves to Roth. The Bank's \$22,000 reserve transfers to the tax authority as the conversion-tax settlement.
+**Option B — Outside funding.** The settlement is paid from the Bank reserve. The Trad gross is reduced by $\text{conv\_amt}$ = \$100,000: all \$100,000 of converted principal moves to Roth. The Bank's \$22,000 reserve transfers to the tax authority as the conversion-tax settlement.
 
 Both options extinguish the same deferred-tax liability, capture the same \$3,000 rate-arbitrage gain in net after-tax wealth, and leave the household at the same total wealth of \$100,000:
 
