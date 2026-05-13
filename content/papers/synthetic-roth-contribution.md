@@ -12,7 +12,7 @@ The traditional accounting of a Roth conversion's value focuses on the tax-rate 
 
 ## 1. Introduction
 
-The economic value of a Roth conversion is conventionally framed as the present-value gain from converting traditional retirement-account dollars at one marginal tax rate today $t_C$ and avoiding distributions at a different (typically higher) marginal tax rate in retirement $t_D$. The "spread arbitrage" gain is the converted amount times $(t_D - t_C)$, modulated by time, growth, and Social Security / IRMAA / tax-drag interactions.
+The economic value of a Roth conversion is conventionally framed as the present-value gain from converting traditional retirement-account dollars at one marginal tax rate today $t_C$ and avoiding distributions at a different (typically higher) marginal tax rate in retirement $t_D$. The "spread arbitrage" gain is the converted amount times $(t_D - t_C)$, modulated by time, growth, Social Security, and inflation.
 
 The funding-source effect is treated unevenly in the existing literature: some practitioner writers note informally that paying conversion tax from outside the retirement account adds value to the Roth, while other published work misses or actively misframes the effect, treating the conversion-tax outflow as a one-sided cost rather than as the wrapper migration it actually is. Across both camps, the funding source has not been formalized as a separable, quantifiable economic component with its own per-year cash flow, IRR, and PV identity. The omission matters. When the conversion tax is paid from **outside** the retirement account (Outside funding), the household removes after-tax dollars from a taxable wrapper to settle the conversion tax; the Roth then holds two components — the *Roth-equivalent conversion amount* (the converted balance minus the conversion tax) plus an additional **Synthetic Roth Contribution** equal to the conversion tax, the after-tax dollars that physically migrated from the taxable wrapper into the Roth via the tax-settlement mechanic. When the conversion tax is paid from **inside** the retirement account (Inside funding, only feasible at age 59½+ to avoid the 10% early-withdrawal penalty), no dollars leave the taxable wrapper; the Roth holds only the Roth-equivalent conversion amount, with no Synthetic Roth Contribution. The two paths produce different end-of-life wealth, and the difference is not the spread arbitrage. It is the Synthetic Roth Contribution.
 
@@ -176,7 +176,7 @@ The SRC is not the rate-arbitrage Core. The rate-arbitrage Core — the $(t_D - 
 
 We now prove that, when the discount rate equals the portfolio rate, the Outside-funded path's net present value equals the Inside-funded path's net present value, despite their different cash-flow timings. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
 
-**Setup.** Hold all spread / IRMAA / tax-drag effects equal across the two scenarios (they are, by construction). Isolate the SRC component.
+**Setup.** Hold all spread / tax-drag effects equal across the two scenarios (they are, by construction). Isolate the SRC component.
 
 In Outside funding, the additional Roth principal of $K$ produces additional yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (using the standard fixed-annuity payment formula). Year by year, the Outside-vs-Inside ATCF difference attributable to the SRC alone is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years. The conversion-year cash flow under Outside funding includes the year-0 outflow of $-K$.
 
@@ -304,7 +304,7 @@ The crucial RMD finding is that the per-year **(Outside − Inside) increment is
 | Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside (nom) | Outside − Inside (PV @ 7%) |
 |------|-----|---|---|---|---|
 | 2030 | 73 | \$1,274 | \$2,105 | \$831 | \$634 |
-| 2031 | 74 | \$178* | \$1,069 | \$891 | \$635 |
+| 2031 | 74 | \$1,609 | \$2,500 | \$891 | \$635 |
 | 2032 | 75 | \$1,719 | \$2,671 | \$952 | \$634 |
 | 2033 | 76 | \$1,837 | \$2,854 | \$1,017 | \$633 |
 | 2034 | 77 | \$1,618 | \$2,725 | \$1,107 | \$644 |
@@ -323,7 +323,7 @@ The crucial RMD finding is that the per-year **(Outside − Inside) increment is
 | 2047 | 90 | \$4,116 | \$6,482 | \$2,366 | \$571 |
 | 2048 | 91 | \$4,305 | \$6,777 | \$2,472 | \$558 |
 | 2049 | 92 | \$4,501 | \$7,097 | \$2,596 | \$548 |
-| **Owner totals** | | **\$30,409** | **\$62,633** | **+\$32,224** | **+\$12,186** |
+| **Owner totals** | | **\$31,840** | **\$64,064** | **+\$32,224** | **+\$12,186** |
 | 2050 | 93 | \$2,015 | \$5,916 | \$3,901 | \$769 |
 | 2051 | 94 | \$2,015 | \$5,916 | \$3,901 | \$719 |
 | 2052 | 95 | \$2,015 | \$5,916 | \$3,901 | \$672 |
@@ -335,9 +335,7 @@ The crucial RMD finding is that the per-year **(Outside − Inside) increment is
 | 2058 | 101 | \$2,015 | \$5,916 | \$3,901 | \$448 |
 | 2059 | 102 | \$2,015 | \$5,916 | \$3,901 | \$418 |
 | **Beneficiary totals** | | **\$20,150** | **\$59,156** | **+\$39,006** | **+\$5,780** |
-| **30-yr total** | | **\$50,559** | **\$121,788** | **+\$71,229** | **+\$17,966** |
-
-\* 2031 contains the IRMAA conversion-year lookback hit (IRMAA savings of −\$1,431 for that year only).
+| **30-yr total** | | **\$51,990** | **\$123,219** | **+\$71,229** | **+\$17,966** |
 
 ### 5B.3 The PV Identity Holds — to the Penny
 
@@ -418,11 +416,11 @@ Roth dollars passed to a non-spouse beneficiary distribute over a 10-year window
 
 §5B.5 provides direct empirical evidence for this channel under RMD distributions. The Outside RMD beneficiary period (years 2050–2059) shows a constant \$3,901/year ATCF advantage of Outside over Inside — entirely the product of Outside's larger inherited Roth balance at the moment of owner death (the SRC has compounded for 20 years). This contributes \$39,006 of nominal SRC value over the 10-year statutory distribution window, or 55% of the total SRC value across the full 30-year horizon. The PV-at-portfolio-rate share is \$5,780 (32% of total). When the discount rate equals the portfolio rate, the inheritance channel still nets to zero (the algebraic identity holds across the full horizon as shown in §5B.3); but the channel is tangible, observable, and shifts the timing of when the SRC value is realized. Households evaluating Roth conversions for estate-planning purposes — a substantial subset of practitioner cases — should treat this beneficiary-period contribution as a first-class component of the conversion's value, not a footnote.
 
-Under FA distribution (§5), the inheritance channel does not appear because FA depletes the balance to zero at owner death. The SRC's owner-period contribution still exists but the inheritance channel is absent by construction. RMD's 10-year beneficiary distribution makes the inheritance channel structurally visible — and the application correctly captures it.
+Under FA distribution (§5), the inheritance channel does not appear because FA depletes the balance to zero at owner death. The SRC's owner-period contribution still exists but the inheritance channel is absent by construction. RMD's 10-year beneficiary distribution makes the inheritance channel structurally visible.
 
 ### 6.3 Discount-Rate Mismatch
 
-For households whose marginal cost of capital (or marginal time preference for consumption) differs from the portfolio's expected return, the PV identity in Section 4 no longer holds. If a household discounts future consumption at a rate $d > r$, the SRC produces negative PV (worse than the portfolio's growth). If $d < r$, positive PV. In practice, retirees are typically risk-averse with personal discount rates close to or below the portfolio's expected return, making the SRC neutral-to-favorable in PV terms even before including 6.1 and 6.2.
+For households whose marginal cost of capital (or marginal time preference for consumption) differs from the portfolio's expected return, the PV identity in Section 4 no longer holds. If a household discounts future consumption at a rate $\rho > r$, the SRC produces negative PV (worse than the portfolio's growth). If $\rho < r$, positive PV. In practice, retirees are typically risk-averse with personal discount rates close to or below the portfolio's expected return, making the SRC neutral-to-favorable in PV terms even before including 6.1 and 6.2.
 
 ---
 
@@ -452,7 +450,7 @@ The Synthetic Roth Contribution is the dollar-for-dollar economic equivalent of 
 
 1. **Algebraic.** The annuity-payment / present-value identity proves that when the discount rate equals the portfolio rate, the Outside vs Inside PV difference is exactly zero — yet the Outside-funded household receives a constant $K \cdot \mathrm{AF}(r, N)$ of additional cash flow in every distribution year.
 
-2. **Empirical (FA case).** Paired Inside FA and Outside FA scenarios, with all inputs held constant except the tax payment source, show: (a) the constant **\$1,695.86 / year** increment in 19 of 20 distribution years (the 20th year contains a separately accounted IRMAA conversion-year lookback hit), matching the algebraic prediction \$17,966 × $\mathrm{AF}(7\%, 20)$ to the cent; (b) the PVA-multiplication identity \$1,695.86 × $\mathrm{PVA}(7\%, 20)$ ≈ \$17,966 closing the year-0 outflow; and (c) the **\$9,766 ΔATCF PV total identical between the two scenarios to the dollar**. The Outside FA scenario reports a Synthetic Roth Contribution (FV) of \$33,917.27 = $K \times$ annuity-factor multiple — the future-value identifier of the SRC.
+2. **Empirical (FA case).** Paired Inside FA and Outside FA scenarios, with all inputs held constant except the tax payment source, show: (a) the constant **\$1,695.86 / year** increment in all 20 distribution years, matching the algebraic prediction \$17,966 × $\mathrm{AF}(7\%, 20)$ to the cent; (b) the PVA-multiplication identity \$1,695.86 × $\mathrm{PVA}(7\%, 20)$ ≈ \$17,966 closing the year-0 outflow; and (c) the **\$9,766 ΔATCF PV total identical between the two scenarios to the dollar**. The Outside FA scenario reports a Synthetic Roth Contribution (FV) of \$33,917.27 = $K \times$ annuity-factor multiple — the future-value identifier of the SRC.
 
 3. **Empirical (RMD case — generalization).** Paired Inside RMD and Outside RMD scenarios, with all inputs held constant except the tax payment source and the distribution method, show that **the algebraic PV identity holds under RMD too**, with the same conversion as the FA case. The per-year (Outside − Inside) increment is no longer constant — it varies from \$831 (year 2030) to \$2,596 (year 2049) in the owner period, then is flat \$3,901 in the beneficiary period (years 2050–2059) — yet the integrated PV at the portfolio rate sums to **+\$17,965.96**, exactly canceling the year-0 outflow of −\$17,966.00 to within a 4-cent rounding residual. The Outside RMD scenario's Synthetic Roth Contribution (FV) of \$71,229.59 matches the nominal 30-year (Outside − Inside) sum of \$71,229.46 to within \$0.13. The 10-year beneficiary period contributes \$3,901/yr of SRC value — direct empirical evidence of the inheritance-asymmetry channel discussed in §6.2.
 
