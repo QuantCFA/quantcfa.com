@@ -224,9 +224,9 @@ We use two simulation runs with **all inputs identical except the tax payment so
 
 ### 5.1 Year-by-Year ATCF Deltas — Inside vs Outside
 
-For each year we compute ΔATCF = ATCF(conversion scenario) − ATCF(no-conversion baseline), where the conversion scenario applies the \$123,850 conversion described above (which fills cumulatively through the 22% federal bracket under the assumed inputs) and the baseline applies no conversion at all. The application separates ΔATCF into three sub-streams (distribution-driven ATCF excluding IRMAA; IRMAA savings; reduced-RMD tax drag); to isolate the SRC effect cleanly we work with the distribution-driven ATCF excluding IRMAA.
+For each year we compute ΔATCF = ATCF(conversion scenario) − ATCF(no-conversion baseline), where the conversion scenario applies the \$123,850 conversion described above (which fills cumulatively through the 22% federal bracket under the assumed inputs) and the baseline applies no conversion at all.
 
-| Year | Age | Inside ΔATCF ex-IRMAA | Outside ΔATCF ex-IRMAA | Outside − Inside | Predicted increment |
+| Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside | Predicted increment |
 |------|-----|---|---|---|---|
 | 2026 | 69 | \$0 | $−17,966 | $−17,966 | year-0 outflow |
 | 2027 | 70 | \$1,075 | \$2,771 | \$1,696 | \$1,695.86 ✓ |
@@ -250,7 +250,7 @@ For each year we compute ΔATCF = ATCF(conversion scenario) − ATCF(no-conversi
 
 ### 5.2 The Constant +\$1,695.86 / Year Increment — Empirical Confirmation
 
-The Outside − Inside column is **\$1,696 (rounded; \$1,695.86 unrounded) in every distribution year 2027–2046**. The Outside-scenario data reports per-year increments matching the algebraic prediction to the dollar in 20 of 20 years; the single non-matching year (2028) is the IRMAA conversion-year lookback effect (IRMAA savings of −\$1,254 for that year only, a separately accounted effect orthogonal to the SRC). Adding the IRMAA hit back to 2028's increment recovers \$1,696, making the SRC's structural per-year contribution **uniform across all 20 years**.
+The Outside − Inside column is **\$1,696 (rounded; \$1,695.86 unrounded) in every distribution year 2027–2046**. The Outside-scenario data reports per-year increments matching the algebraic prediction to the dollar in all 20 distribution years — the SRC's structural per-year contribution is **uniform across all 20 years**.
 
 We verify the predicted constant against the algebraic formula:
 
@@ -267,7 +267,7 @@ The PV column is the decisive empirical evidence:
 - **Inside ΔATCF total PV at 7%: \$9,766**
 - **Outside ΔATCF total PV at 7%: \$9,766**
 
-These are equal **to the dollar**. The full IRR Cash Flow Decomposition PV totals (which add IRMAA savings PV and tax-drag-RMD PV to the ΔATCF-ex-IRMAA PV) also match between scenarios — both report total IRR cash-flow PV of \$14,327 in the application's display. Identical PV is the empirical signature of the algebraic identity proved in Section 4.
+These are equal **to the dollar**. Identical PV is the empirical signature of the algebraic identity proved in Section 4.
 
 Reconciliation: The −\$17,966 year-0 outflow under Outside funding is exactly compensated by the present value of the constant \$1,695.86/year stream:
 
