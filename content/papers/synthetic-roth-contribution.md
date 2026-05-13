@@ -353,16 +353,13 @@ Compare to the FA case (§5.3), where each year's increment was a flat \$1,695.8
 
 The SRC's **lifetime nominal payout** is the total of all year-by-year after-tax distributions the household receives from the Roth attributable to the conversion-tax dollar entering the Roth (the synthetic contribution). Conceptually this is the sum of the per-year (Outside − Inside) ΔATCF column over the full distribution horizon: the SRC's nominal lifetime cash payoff.
 
-The engine computes it via a closed-form multiplier rather than by integrating the year stream:
+The engine computes the lifetime nominal payout as a per-dollar multiple of the conversion-tax outlay:
 
 $$
-\begin{aligned}
-\text{Lifetime nominal payout} &= K \cdot \text{payout multiple} \\[4pt]
-\text{payout multiple} &= \frac{\text{Total ATCF Change (FV)}}{K + \text{Tax-Rate Spread (FV)}}
-\end{aligned}
+\text{Lifetime nominal payout} = K \cdot \text{payout multiple}
 $$
 
-For the Outside RMD scenario, the payout multiple is 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
+The payout multiple is a structural property of the household's distribution schedule. Under FA distribution, it equals $\mathrm{AF}(r, N) \cdot N$ (1.88786 in our scenario, with $r = 7\%$, $N = 20$). Under RMD distribution, it is determined empirically from the year-by-year RMD divisor schedule applied to the SRC's $K$ dollars. For the Outside RMD scenario, the payout multiple is 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
 
 **What 3.9647 is.** The payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor. The 10% bracket conversion (Group 1) is computed first and serves as the benchmark.
 
@@ -432,7 +429,7 @@ For households whose marginal cost of capital (or marginal time preference for c
 
 *At or above age 59½:* the early-withdrawal penalty does not apply, and Inside funding becomes a real option. The household now faces two decisions whose analytical content separates:
 
-- *Conversion decision* (yes/no, how much). Determined by the sum at the portfolio rate of PV alpha components that exist regardless of funding source: the rate-arbitrage Core (the spread alpha between $t_C$ and $t_D$ on the converted principal); the IRMAA / Medicare alpha (a separable channel for households whose post-conversion income strategy improves their Medicare-surcharge bracket exposure; not decomposed in this paper); and the RMD tax-drag alpha (drag avoided on the reinvested-RMD stream the household no longer has to take, since the conversion shrinks the Traditional balance and thereby reduces lifetime RMDs — a channel present for both Inside and Outside conversions, since the RMD reduction is a consequence of the conversion event itself, not the funding source). An Inside conversion is rational if the sum of these alpha components is PV-positive, since Inside funding requires no outside cash outlay.
+- *Conversion decision* (yes/no, how much). Determined by the sum at the portfolio rate of PV alpha components that exist regardless of funding source: the rate-arbitrage Core (the spread alpha between $t_C$ and $t_D$ on the converted principal); the IRMAA / Medicare alpha (a separable channel for households whose post-conversion income strategy improves their Medicare-surcharge bracket exposure; not decomposed in this paper); and the RMD tax-drag alpha (drag avoided on the reinvested-RMD stream that the conversion eliminates by shrinking the Traditional balance; present for both Inside and Outside conversions, since the RMD reduction follows from the conversion event itself, not the funding source). An Inside conversion is rational if the sum of these alpha components is PV-positive, since Inside funding requires no outside cash outlay.
 
 - *Funding decision* (Inside vs Outside, conditional on having chosen to convert). Choosing Outside funding relocates the $K$ dollars from a taxable wrapper compounding at $r_d$ into a tax-free wrapper compounding at $r$. This is an asset-allocation move within the household's portfolio: the conversion tax becomes an investment rather than a cost. The asset-allocation payoff is the tax-drag-differential alpha of §6.1 (\$1,021 PV in the Outside RMD scenario). This payoff is added to the conversion-only alpha sum to produce the total alpha of an Outside conversion.
 
@@ -528,6 +525,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 | IRMAA Savings (PV) | \$1,028.02 | \$1,028.02 |
 | RMD Tax-Drag (FV) | \$22,692.17 | \$22,692.17 |
 | RMD Tax-Drag (PV) | \$3,362.08 | \$3,362.08 |
+| Payout Multiple | 3.9647 | 3.9647 |
 | SRC Tax-Drag (FV) | \$0 | \$5,091.72 |
 | SRC Tax-Drag (PV) | \$0 | \$1,021.23 |
 | Synthetic Roth Contribution (FV) | \$0 | **\$71,229.59** |
