@@ -1,6 +1,7 @@
 # The Synthetic Roth Contribution: Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions
 
-**Working draft — 2026-05-06**
+**Steven Cheshire, CFA**
+Draft: 2026-05-13
 
 ---
 
