@@ -42,3 +42,6 @@ next-env.d.ts
 
 # semantic-diff scratch files
 *.norm
+
+# Office lock files
+~$*
