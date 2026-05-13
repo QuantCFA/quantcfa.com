@@ -227,33 +227,30 @@ We use two simulation runs with **all inputs identical except the tax payment so
 
 For each year we compute ΔATCF = ATCF(conversion scenario) − ATCF(no-conversion baseline), where the conversion scenario applies the \$123,850 conversion described above (which fills cumulatively through the 22% federal bracket under the assumed inputs) and the baseline applies no conversion at all.
 
-| Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside | Predicted increment |
+| Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside (nom) | Outside − Inside (PV @ 7%) |
 |------|-----|---|---|---|---|
-| 2026 | 69 | \$0 | $−17,966 | $−17,966 | year-0 outflow |
-| 2027 | 70 | \$1,075 | \$2,771 | \$1,696 | \$1,695.86 ✓ |
-| 2028 | 71 | \$1,033 | \$2,729 | \$1,696 | \$1,695.86 ✓ |
-| 2029 | 72 | \$989 | \$2,685 | \$1,696 | \$1,695.86 ✓ |
-| 2030 | 73 | \$945 | \$2,641 | \$1,696 | \$1,695.86 ✓ |
-| 2031 | 74 | \$900 | \$2,596 | \$1,696 | \$1,695.86 ✓ |
-| 2032 | 75 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2033 | 76 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2034 | 77 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2035 | 78 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2036 | 79 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2037 | 80 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2038 | 81 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2039 | 82 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2040 | 83 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| ⋯ | ⋯ | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| 2046 | 89 | \$876 | \$2,572 | \$1,696 | \$1,695.86 ✓ |
-| **20-yr total** |  | **\$18,083** | **\$34,034** | **\$15,951** |  |
-| **20-yr PV @ 7%** |  | **\$9,766** | **\$9,766** | **\$0** |  |
+| 2026 | 69 | \$0 | $−17,966 | $−17,966 | $−17,966 |
+| 2027 | 70 | \$1,075 | \$2,771 | \$1,696 | \$1,585 |
+| 2028 | 71 | \$1,033 | \$2,729 | \$1,696 | \$1,481 |
+| 2029 | 72 | \$989 | \$2,685 | \$1,696 | \$1,384 |
+| 2030 | 73 | \$945 | \$2,641 | \$1,696 | \$1,294 |
+| 2031 | 74 | \$900 | \$2,596 | \$1,696 | \$1,209 |
+| 2032 | 75 | \$876 | \$2,572 | \$1,696 | \$1,130 |
+| 2033 | 76 | \$876 | \$2,572 | \$1,696 | \$1,056 |
+| 2034 | 77 | \$876 | \$2,572 | \$1,696 | \$987 |
+| 2035 | 78 | \$876 | \$2,572 | \$1,696 | \$923 |
+| 2036 | 79 | \$876 | \$2,572 | \$1,696 | \$862 |
+| 2037 | 80 | \$876 | \$2,572 | \$1,696 | \$806 |
+| 2038 | 81 | \$876 | \$2,572 | \$1,696 | \$753 |
+| 2039 | 82 | \$876 | \$2,572 | \$1,696 | \$704 |
+| 2040 | 83 | \$876 | \$2,572 | \$1,696 | \$658 |
+| ⋯ | ⋯ | \$876 | \$2,572 | \$1,696 | ⋯ |
+| 2046 | 89 | \$876 | \$2,572 | \$1,696 | \$438 |
+| **20-yr total** |  | **\$18,083** | **\$34,034** | **+\$15,951** | **+\$0** |
 
 ### 5.2 The Constant +\$1,695.86 / Year Increment — Empirical Confirmation
 
-The Outside − Inside column is **\$1,696 (rounded; \$1,695.86 unrounded) in every distribution year 2027–2046**. The Outside-scenario data reports per-year increments matching the algebraic prediction to the dollar in all 20 distribution years — the SRC's structural per-year contribution is **uniform across all 20 years**.
-
-We verify the predicted constant against the algebraic formula:
+The Outside − Inside column is **constant at \$1,696 in every distribution year 2027–2046** (\$1,695.86 to two decimals). The SRC's structural per-year contribution is uniform across all 20 years, matching the algebraic prediction:
 
 $$
 K \cdot \mathrm{AF}(r{=}7\%,\, N{=}20) \;=\; \$17{,}966 \times 0.094393 \;=\; \$1{,}695.86 \quad\checkmark
@@ -263,14 +260,7 @@ where $\mathrm{AF}(7\%, 20) = 0.07\,/\,(1 - 1.07^{-20}) = 0.094393$.
 
 ### 5.3 The PV Identity
 
-The PV column is the decisive empirical evidence:
-
-- **Inside ΔATCF total PV at 7%: \$9,766**
-- **Outside ΔATCF total PV at 7%: \$9,766**
-
-These are equal **to the dollar**. Identical PV is the empirical signature of the algebraic identity proved in Section 4.
-
-Reconciliation: The −\$17,966 year-0 outflow under Outside funding is exactly compensated by the present value of the constant \$1,695.86/year stream:
+The Outside − Inside (PV @ 7%) column sums to approximately zero across all 21 rows — the decisive empirical evidence of the algebraic identity proved in Section 4. The −\$17,966 year-0 outflow is exactly compensated by the present value of the 20-year constant \$1,696 distribution stream:
 
 $$
 \begin{aligned}
@@ -280,6 +270,8 @@ $$
   &\approx \$17{,}966 \quad\checkmark
 \end{aligned}
 $$
+
+Equivalently, the Inside ΔATCF total PV at 7% (\$9,766) equals the Outside ΔATCF total PV at 7% (\$9,766) to the dollar — the two paths produce identical PV value at the portfolio rate.
 
 The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — at the portfolio rate. This is the algebraic identity in production-system numbers. The Outside scenario's full-cash-flow IRR of 15.01% exceeds the portfolio rate by ~8 percentage points; this excess captures the rate-arbitrage Core, IRMAA savings, and tax-drag components that ride on top of the (PV-zero-at-7%) SRC. The Inside scenario has no outside outlay, so its full-cash-flow IRR is undefined; only the Outside path admits a meaningful IRR measurement on the $K$ outlay.
 
