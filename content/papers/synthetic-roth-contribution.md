@@ -357,7 +357,7 @@ The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion
 
 **Empirical validation against the year-by-year sum.** The closed-form lifetime nominal payout of \$71,229.59 matches the §5B.2 table's year-by-year nominal sum of (Outside − Inside) ΔATCF of \$71,229.46 to within \$0.13.
 
-**Comparison to FA.** For the Outside FA scenario, the lifetime nominal payout = \$17,966 × 1.88786 = \$33,917.27. The RMD multiplier (3.9647) exceeds the FA multiplier (1.88786) by ~2.1× because RMD's distribution horizon is longer (30 years vs 20 for FA): the SRC's $K$ dollars compound more years inside the Roth before being fully distributed, producing larger nominal cash flows over the longer horizon. In PV terms at the portfolio rate, both methods produce the same SRC value of zero by §4's identity — the difference is purely in nominal lifetime cash flow, not in SRC economic value.
+**Comparison to FA.** Holding $K = \$17,966$ constant, if these same SRC dollars distributed via FA over 20 years instead of RMD, the lifetime nominal payout would be \$17,966 × 1.88786 = \$33,917.27. The RMD multiplier (3.9647) exceeds the FA multiplier (1.88786) by ~2.1× because RMD's distribution horizon is longer (30 years vs 20 for FA): the $K$ dollars compound more years inside the Roth before being fully distributed, producing larger nominal cash flows over the longer horizon. In PV terms at the portfolio rate, both methods produce the same SRC value of zero by §4's identity — the difference is purely in nominal lifetime cash flow, not in SRC economic value.
 
 ### 5B.5 Beneficiary-Period Empirical Evidence for Inheritance Asymmetry
 
