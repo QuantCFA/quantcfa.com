@@ -337,11 +337,11 @@ $$
 
 A four-cent rounding residual. **The SRC's algebraic identity is empirically confirmed under RMD distributions to within 0.0002%**, despite varying per-year differentials from \$831 (year 2030) to \$2,596 (year 2049) for the owner plus a flat \$3,901 (years 2050–2059) for the beneficiary.
 
-Unlike FA's flat \$1,695.86 per-year increment (§5.3), RMD's varies because each year's distribution is the prior balance divided by an age-indexed divisor that changes annually. **The varying per-year SRC increment is a feature of distribution-method-specific cash flows, not a violation of the SRC framework.** Across both distribution methods, the SRC's PV at the portfolio rate equals exactly zero.
+Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies because each year's distribution is the prior balance divided by an age-indexed divisor that changes annually. **The varying per-year SRC differential is a feature of distribution-method-specific cash flows, not a violation of the SRC framework.** Across both distribution methods, the SRC's PV at the portfolio rate equals exactly zero.
 
-### 5B.4 The SRC's Lifetime Nominal Payout — Engine Formula and Empirical Cross-Validation
+### 5B.4 The Payout Multiple — Closed Form and Cross-Validation
 
-The SRC's **lifetime nominal payout** is the total of all year-by-year after-tax distributions the household receives from the Roth attributable to the conversion-tax dollar entering the Roth (the synthetic contribution). Conceptually this is the sum of the per-year (Outside − Inside) ΔATCF column over the full distribution horizon: the SRC's nominal lifetime cash payoff.
+The SRC's **lifetime nominal payout** is the total of all year-by-year after-tax distributions the household receives from the Roth attributable to the conversion-tax dollar entering the Roth (the synthetic contribution). Conceptually this is the sum of the per-year (Outside − Inside) ΔATCF column over the full distribution horizon.
 
 The engine computes the lifetime nominal payout as a per-dollar multiple of the conversion-tax outlay:
 
