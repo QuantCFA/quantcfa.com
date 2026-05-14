@@ -167,13 +167,13 @@ The Synthetic Roth Contribution (SRC) is the conversion-tax amount ($K$) that mi
 
 ### 3.8 What the SRC Is Not
 
-The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion — present in both Outside and Inside settlement. The SRC is a separate, additional economic component visible only under Outside settlement, and visible only as a *wrapper-composition difference*, not as a difference in net after-tax wealth at the moment of conversion.
+The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion — present in both Outside and Inside settlement. The SRC appears only under Outside settlement, and only as a wrapper-composition difference — not a change in net after-tax wealth.
 
 ---
 
 ## 4. Algebraic Proof: PV Equivalence at the Portfolio Rate
 
-We now prove that, when the discount rate equals the portfolio rate, the Outside-funded path's net present value equals the Inside-funded path's net present value, despite their different cash-flow timings. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
+We now prove the SRC's central PV identity: when the discount rate equals the portfolio rate, the SRC's incremental cash-flow stream produces exactly zero net present value. Outside funding's year-0 tax outflow ($-K$) is exactly compensated in PV by the larger per-year nominal distributions over the distribution period. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
 
 **Setup.** Hold all spread / tax-drag effects equal across the two scenarios (they are, by construction). Isolate the SRC component.
 
