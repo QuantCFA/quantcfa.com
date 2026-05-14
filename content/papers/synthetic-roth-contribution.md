@@ -285,7 +285,7 @@ We answer both with a second paired simulation, holding all inputs identical to 
 
 ### 5B.1 Setup
 
-Same profile, same conversion ($C$ = \$123,850, $K$ = \$17,966), same portfolio return assumption (7.00%), same 20-year owner life expectancy. RMD-Only distributions begin at the IRS-mandated age 73 (year 2030), running through age 92 (year 2049), followed by a 10-year statutory beneficiary distribution period (years 2050–2059), distributed as a constant annuity-payment stream over the 10 years (not as continued RMDs, since the inherited Roth has no annual RMD requirement under SECURE Act's 10-year rule).
+Same profile, same conversion ($C$ = \$123,850, $K$ = \$17,966), same portfolio return assumption (7.00%), same 20-year owner life expectancy. RMD-Only distributions begin at the IRS-mandated age 73 (year 2030), running through age 92 (year 2049), followed by the SECURE Act's 10-year beneficiary distribution period (years 2050–2059), distributed as a constant annuity-payment stream rather than continued RMDs (the inherited Roth has no annual RMD requirement).
 
 ### 5B.2 Year-by-Year ΔATCF — Inside vs Outside Under RMD
 
