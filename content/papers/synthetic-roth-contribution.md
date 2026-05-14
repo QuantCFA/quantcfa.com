@@ -276,7 +276,7 @@ The household paid \$17,966 at year 0 and received its present-value equivalent 
 
 ## 5B. Generalization to RMD-Only Distributions: Paired Inside / Outside Scenarios (RMD)
 
-The Section 5 demonstration uses Fixed Annuity (FA) distributions, which deplete the retirement balance to zero at the end of the owner's life. The constant-per-year SRC increment of \$1,695.86 emerges from FA's flat distribution schedule. Two natural questions follow:
+Section 5 uses Fixed Annuity (FA) distributions: a constant nominal payment depleting the balance to zero over the owner's 20-year life expectancy and producing the constant \$1,695.86 per-year SRC increment. Two natural questions follow:
 
 1. Does the SRC's PV identity ($\mathrm{PV}(\text{Outside} - \text{Inside}) \approx K$) hold under varying-distribution methods, where the per-year increment is no longer constant?
 2. How does the SRC manifest in distribution methods that leave a positive balance for beneficiaries?
