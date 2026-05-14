@@ -116,7 +116,7 @@ The conversion tax is therefore not an *expense*; it is a *settlement of a pre-e
 
 The \$22,000 settlement can be sourced two ways:
 
-**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Traditional gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the Traditional conversion amount net of the distributed conversion tax amount), and the \$22,000 distribution is paid to the IRS. The \$22,000 bank account asset is untouched.
+**Option A — Inside funding.** The settlement is paid from inside the Traditional account. The Traditional gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the Traditional conversion amount net of the distributed conversion tax amount), and the \$22,000 distribution is paid to the IRS. The \$22,000 bank account asset is untouched.
 
 **Option B — Outside funding.** The settlement is paid from the Bank reserve. The Trad gross is reduced by $C$ = \$100,000: all \$100,000 of converted principal moves to Roth. The Bank's \$22,000 reserve transfers to the tax authority as the conversion-tax settlement.
 
