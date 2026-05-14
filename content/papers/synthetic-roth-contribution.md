@@ -141,15 +141,15 @@ If the liquidity-surrender of moving after-tax cash into a Roth wrapper is not c
 
 ### 3.5 Wrapper Migration Neutrality
 
-The structural pattern visible in §3.3 (Two Settlement Options) and §3.4 (Symmetry to Statutory Roth Contributions) generalizes to a primitive principle that the SRC instantiates:
+The structural pattern visible in §3.3 (Two Settlement Options) and §3.4 (Symmetry to Statutory Roth Contributions) leads to a general principle:
 
-**Definition (Wrapper Migration Neutrality).** A *pure wrapper migration* is any transaction that alters the tax-wrapper composition of a household's after-tax wealth without changing contemporaneous total after-tax household wealth. The moment of a pure wrapper migration imposes no cost — it is a reallocation, not an expense.
+**Wrapper Migration Neutrality** postulates that any transaction that alters a household's tax-wrapper composition without changing its contemporaneous after-tax wealth imposes no cost — it is a reallocation, not an expense.
 
-Instances of the principle:
+Examples:
 
-- A **statutory Roth contribution** of $X$ dollars moves $X$ of after-tax cash from the Bank wrapper to the Roth wrapper.
-- An **Outside-funded Roth conversion** moves $K$ of after-tax cash from the Bank wrapper to the Roth wrapper (implicitly, via the conversion-tax settlement mechanic), in addition to the rate-arbitrage gain captured on the converted principal.
-- A **taxable-to-HSA migration** moves after-tax dollars from a Bank wrapper into a triple-tax-advantaged HSA wrapper.
+- A **statutory Roth contribution** of $X$ dollars moves $X$ of after-tax cash from the bank wrapper to the Roth wrapper.
+- An **Outside-funded Roth conversion** moves $K$ after-tax dollars from the bank wrapper to the Roth wrapper (implicitly, via the conversion-tax payment), in addition to the rate-arbitrage on converted principal.
+- A **taxable-to-HSA migration** moves after-tax dollars from a bank wrapper into a triple-tax-advantaged HSA wrapper.
 
 Each is structurally identical at the migration moment: total after-tax wealth is conserved, only wrapper composition changes. The forward economic value of each migration emerges over time through the differential growth rates of the source and destination wrappers — drag in the source, no drag in the destination — but at the moment of migration, none of these transactions imposes a cost.
 
