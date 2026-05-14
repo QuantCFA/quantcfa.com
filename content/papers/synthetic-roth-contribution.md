@@ -161,13 +161,13 @@ The Synthetic Roth Contribution (SRC) is the conversion-tax amount ($K$) that mi
 
 **Property 1 — Wrapper transition.** Under Outside funding, the household ends the conversion year with $K$ fewer dollars in the taxable wrapper and $K$ more dollars (relative to the Inside scenario) in the Roth wrapper.
 
-**Property 2 — Tax-drag elimination.** The $K$ dollars now grow at the Roth's tax-free rate $r$ rather than the taxable wrapper's after-drag rate $r_d = r \cdot (1 - d)$. The annual benefit of this transition is approximately $K \cdot (r - r_d)$ per year in the simplest case where the $K$ cash would otherwise have remained invested at $r_d$.
+**Property 2 — Tax-drag elimination.** The $K$ dollars now grow at the Roth's tax-free rate $r$ rather than the taxable wrapper's after-drag rate $r_d = r \cdot (1 - d)$. This benefit is approximately $K \cdot (r - r_d)$ per year if the $K$ cash would have remained invested at $r_d$.
 
 **Property 3 — Estate-and-beneficiary asymmetry.** Roth dollars pass to non-spouse beneficiaries free of ordinary income tax (subject to the 10-year SECURE distribution rule). Taxable wrapper dollars pass with a step-up in basis but no preferential income-tax treatment. SRC dollars therefore receive the more favorable inherited-Roth treatment.
 
 ### 3.8 What the SRC Is Not
 
-The SRC is not the rate-arbitrage Core. The rate-arbitrage Core — the $(t_D - t_C) \cdot C$ PV gain captured at conversion — is present under both Outside and Inside settlement. The SRC is a separate, additional economic component visible only under Outside settlement, and visible only as a *wrapper-composition difference*, not as a difference in net after-tax wealth at the moment of conversion.
+The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion — present in both Outside and Inside settlement. The SRC is a separate, additional economic component visible only under Outside settlement, and visible only as a *wrapper-composition difference*, not as a difference in net after-tax wealth at the moment of conversion.
 
 ---
 
