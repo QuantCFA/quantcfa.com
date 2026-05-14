@@ -155,7 +155,7 @@ Each is structurally identical at the migration moment: total after-tax wealth i
 
 ### 3.6 Definition
 
-**Definition (SRC).** The Synthetic Roth Contribution is the dollar amount that, in the Outside-funded scenario, migrates from the taxable wrapper into the tax-free Roth wrapper at the moment of conversion-tax settlement. Its magnitude equals $K$. It is economically equivalent to a same-day statutory Roth contribution of $K$, but is not subject to the IRS annual contribution limit because it is not formally a contribution — it is the implicit by-product of settling the deferred tax liability from outside the retirement account.
+The Synthetic Roth Contribution (SRC) is the conversion-tax amount ($K$) that migrates from the bank account into the Roth wrapper via the conversion-tax payment in an Outside-funded conversion. It is economically equivalent to a same-day statutory Roth contribution of $K$, but is not subject to IRS annual contribution limits.
 
 ### 3.7 Properties
 
