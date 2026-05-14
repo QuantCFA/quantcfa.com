@@ -173,7 +173,7 @@ The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion
 
 ## 4. Algebraic Proof: PV Equivalence at the Portfolio Rate
 
-We now prove the SRC's central PV identity: when the discount rate equals the portfolio rate, the SRC's incremental cash-flow stream produces exactly zero net present value. Outside funding's year-0 tax outflow ($-K$) is exactly compensated in PV by the larger per-year nominal distributions over the distribution period. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
+We now prove the SRC's central PV identity: when the discount rate equals the portfolio rate, the SRC's incremental cash-flow stream produces exactly zero net present value. Outside funding's year-0 tax outflow ($-K$) is exactly compensated by the present value of the larger per-year nominal distributions over the distribution period. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
 
 **Setup.** Hold all spread / tax-drag effects equal across the two scenarios (they are, by construction). Isolate the SRC component.
 
@@ -203,10 +203,10 @@ The reconciliation: at a portfolio discount rate, that nominal "extra" is exactl
 
 ## 5. Empirical Proof: Paired Inside / Outside Scenarios (Fixed Annuity)
 
-We use two simulation runs with **all inputs identical except the tax payment source** (Inside vs Outside).
+We use two simulation runs with **all conversion inputs identical except the tax payment source** (Inside vs Outside).
 
 **User profile:**
-- Age 69, single filer
+- Age 69, Single filer
 - Traditional savings: \$1,000,000.00; Roth savings: \$0.00
 
 **Shared inputs (both scenarios):**
@@ -215,7 +215,6 @@ We use two simulation runs with **all inputs identical except the tax payment so
 - Portfolio return assumption: 7.00%
 - Inflation assumption: 2.50%
 - Social Security benefit: \$50,000/yr starting age 70
-- Marital status: single
 - Medicare coverage: Parts B & D
 - No other taxable income in either the conversion year or distribution years
 
@@ -223,7 +222,7 @@ We use two simulation runs with **all inputs identical except the tax payment so
 
 ### 5.1 Year-by-Year ATCF Deltas — Inside vs Outside
 
-For each year we compute ΔATCF = ATCF(conversion scenario) − ATCF(no-conversion baseline), where the conversion scenario applies the \$123,850 conversion described above (which fills cumulatively through the 22% federal bracket under the assumed inputs) and the baseline applies no conversion at all.
+For each year we compute ΔATCF = ATCF(conversion) − ATCF(no-conversion baseline), the \$123,850 conversion scenario described above minus the no-conversion baseline.
 
 | Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside (nom) | Outside − Inside (PV @ 7%) |
 |------|-----|---|---|---|---|
