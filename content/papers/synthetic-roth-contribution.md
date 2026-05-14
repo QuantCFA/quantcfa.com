@@ -75,10 +75,10 @@ McQuarrie's NPV analysis runs entirely off the \$100,000 Traditional shadow bala
 
 **Two scenarios:**
 
-- **Outside funding:** Tax $K$ is settled from a taxable account in the conversion year. The Roth receives the full $C$.
-- **Inside funding:** Tax $K$ is settled from inside the Traditional account (an additional pre-tax distribution in the conversion year). The Roth receives $C - K$. No taxable-account dollars are spent.
+- **Inside funding:** Tax $K$ is settled from inside the Traditional account (a separate pre-tax distribution in the conversion year). The Roth receives $C - K$. No taxable-account dollars are spent.
+- **Outside funding:** Tax $K$ is settled from a taxable account in the conversion year. The Roth receives the $C - K$ converted amount plus the $K$ tax payment.
 
-The Traditional balance is reduced equally in both scenarios by $C$, with an additional $K$ consumed from Traditional only in the Inside case.
+In both scenarios the Traditional balance is reduced by $C$. The two paths differ only in the source of the $K$ tax payment: a separate inside-the-Traditional pre-tax distribution (Inside funding) or a Bank account distribution (Outside funding).
 
 ---
 
@@ -116,7 +116,7 @@ The conversion tax is therefore not an *expense*; it is a *settlement of a pre-e
 
 The \$22,000 settlement can be sourced two ways:
 
-**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Trad gross is reduced by $C + K$ = \$122,000: \$100,000 of converted principal moves to Roth, \$22,000 is withheld and remitted to the tax authority. The Roth holds \$78,000 (the converted principal less the withheld conversion tax); the Bank's \$22,000 reserve remains untouched.
+**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Trad gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the converted balance net of withheld conversion tax), and \$22,000 is withheld and remitted to the tax authority. The Bank's \$22,000 reserve remains untouched.
 
 **Option B — Outside funding.** The settlement is paid from the Bank reserve. The Trad gross is reduced by $C$ = \$100,000: all \$100,000 of converted principal moves to Roth. The Bank's \$22,000 reserve transfers to the tax authority as the conversion-tax settlement.
 
