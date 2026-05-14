@@ -361,7 +361,7 @@ The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion
 
 ### 5B.5 Beneficiary-Period Empirical Evidence for Inheritance Asymmetry
 
-The Outside RMD beneficiary period (2050–2059) has \$3,901/year (Outside − Inside) differentials. Over 10 years, this contributes \$39,006 — 55% of the SRC's total nominal value. In PV @ 7%, the contribution is \$5,780, or 32% of the total — less PV weight because of the long discount horizon.
+The Outside RMD beneficiary period (2050–2059) has \$3,901/year (Outside − Inside) differentials. Over 10 years, this \$39,006 is 55% of the SRC's total nominal value. In PV @ 7%, it is \$5,780, or 32% of the total — less PV weight due to the long discount horizon.
 
 The beneficiary-period \$3,901/yr increment exists **only because Outside funding leaves the beneficiary's inherited Roth balance larger by $K$ times the growth factor at the moment of owner death**. The 10-year statutory distribution of that excess Roth balance — entirely tax-free to the beneficiary — is the mechanism through which §6.2's "Roth-vs-taxable inheritance asymmetry" channel materializes empirically. Under FA distribution, this channel is invisible because FA depletes the balance to zero at owner death; under RMD it is structurally visible.
 
