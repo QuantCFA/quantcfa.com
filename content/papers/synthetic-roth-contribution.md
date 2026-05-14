@@ -112,11 +112,11 @@ Because $t_C = 22\%$ is less than the assumed $t_D = 25\%$, the \$22,000 immedia
 
 The conversion tax is therefore not an *expense*; it is a *settlement of a pre-existing liability* at a discount to the liability's expected face value. This distinction is structural and load-bearing for everything that follows.
 
-### 3.3 Two Settlement Options
+### 3.3 Two Tax Settlement Options
 
 The \$22,000 settlement can be sourced two ways:
 
-**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Trad gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the converted balance net of withheld conversion tax), and \$22,000 is withheld and remitted to the tax authority. The Bank's \$22,000 reserve remains untouched.
+**Option A — Inside funding.** The settlement is paid from inside the converted balance. The Traditional gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the Traditional conversion amount net of the distributed conversion tax amount), and the \$22,000 distribution is paid to the IRS. The \$22,000 bank account asset is untouched.
 
 **Option B — Outside funding.** The settlement is paid from the Bank reserve. The Trad gross is reduced by $C$ = \$100,000: all \$100,000 of converted principal moves to Roth. The Bank's \$22,000 reserve transfers to the tax authority as the conversion-tax settlement.
 
