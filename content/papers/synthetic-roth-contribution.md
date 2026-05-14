@@ -127,7 +127,7 @@ Both options settle the same deferred-tax liability and capture the same \$3,000
 | **Inside payment** | \$78,000 | \$22,000 | **\$100,000** |
 | **Outside payment** | \$100,000 | \$0 | **\$100,000** |
 
-The \$22,000 **wrapper-composition** difference between Outside and Inside — \$22,000 more in Roth, \$22,000 less in Bank, identical total after-tax wealth — *is* the Synthetic Roth Contribution. Outside payment has not "cost" the household \$22,000; it has *re-wrapped* \$22,000 of after-tax cash from a tax-drag-bearing Bank wrapper into a tax-free Roth wrapper.
+The \$22,000 Outside/Inside **wrapper-composition** difference — \$22,000 more in Roth, \$22,000 less in Bank, identical total after-tax wealth — *is* the Synthetic Roth Contribution. Outside payment has not "cost" the household \$22,000; it has *moved* \$22,000 of after-tax cash from a tax-drag-bearing Bank wrapper into a tax-free Roth wrapper.
 
 ### 3.4 Symmetry to Statutory Roth Contributions
 
