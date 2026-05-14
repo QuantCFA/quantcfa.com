@@ -118,7 +118,7 @@ The \$22,000 settlement can be sourced two ways:
 
 **Option A — Inside funding.** The settlement is paid from inside the Traditional account. The Traditional gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the Traditional conversion amount net of the distributed conversion tax amount), and the \$22,000 distribution is paid to the IRS. The \$22,000 bank account asset is untouched.
 
-**Option B — Outside funding.** The settlement is paid from the Bank reserve. The Trad gross is reduced by $C$ = \$100,000: all \$100,000 of converted principal moves to Roth. The Bank's \$22,000 reserve transfers to the tax authority as the conversion-tax settlement.
+**Option B — Outside funding.** The settlement is paid from the bank account. The Traditional gross is reduced by $C$ = \$100,000: the \$78,000 converted principal and the \$22,000 paid to the IRS from the bank account together leave \$100,000 in the Roth and \$0 in the bank account.
 
 Both options extinguish the same deferred-tax liability, capture the same \$3,000 rate-arbitrage gain in net after-tax wealth, and leave the household at the same total wealth of \$100,000:
 
