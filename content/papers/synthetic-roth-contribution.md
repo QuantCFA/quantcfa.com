@@ -268,9 +268,9 @@ $$
 \end{aligned}
 $$
 
-Equivalently, the Inside ΔATCF total PV at 7% (\$9,766) equals the Outside ΔATCF total PV at 7% (\$9,766) to the dollar — identical PV values at the portfolio rate!
+Equivalently, the Inside ΔATCF total PV at 7% (\$9,766) equals the Outside ΔATCF total PV at 7% (\$9,766) to the dollar — identical present values at the portfolio rate!
 
-The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years. This is the algebraic identity in production-system numbers. The Outside scenario's 15.01% full-cash-flow IRR exceeds the portfolio rate by ~8 percentage points; this excess captures the rate-arbitrage Core, IRMAA savings, and tax-drag components that ride on top of the (PV-zero-at-7%) SRC. The Inside scenario has no outside outlay, so its full-cash-flow IRR is undefined; only the Outside path admits a meaningful IRR measurement on the $K$ outlay.
+The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — the algebraic identity in production-system numbers. The conversion's alpha components (rate-arbitrage Core, IRMAA savings, tax-drag) are identical between Inside and Outside; both scenarios report \$9,766 of alpha in PV terms. Outside also admits an IRR measurement on the $K$ outlay: 15.01%, exceeding the portfolio rate by ~8 percentage points — capturing the same alpha components on top of the (PV-zero-at-7%) SRC. Inside's IRR is undefined due to lack of a cash outlay.
 
 ---
 
