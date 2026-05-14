@@ -337,7 +337,7 @@ $$
 
 A four-cent rounding residual. **The SRC's algebraic identity is empirically confirmed under RMD distributions to within 0.0002%**, despite varying per-year differentials from \$831 (year 2030) to \$2,596 (year 2049) for the owner plus a flat \$3,901 (years 2050–2059) for the beneficiary.
 
-Compare to the FA case (§5.3), where each year's increment was a flat \$1,695.86 because FA's distribution schedule itself is flat. RMD's per-year increment varies because RMD's distribution amounts vary year-by-year, which in turn modulates the year-by-year benefit of having a larger (Outside) versus smaller (Inside) starting Roth balance. **The varying per-year SRC increment is a feature of distribution-method-specific cash-flow shapes, not a violation of the SRC framework.** Across both distribution methods, the SRC's PV at the portfolio rate equals exactly zero.
+Unlike FA's flat \$1,695.86 per-year increment (§5.3), RMD's varies because each year's distribution is the prior balance divided by an age-indexed divisor that changes annually. **The varying per-year SRC increment is a feature of distribution-method-specific cash flows, not a violation of the SRC framework.** Across both distribution methods, the SRC's PV at the portfolio rate equals exactly zero.
 
 ### 5B.4 The SRC's Lifetime Nominal Payout — Engine Formula and Empirical Cross-Validation
 
