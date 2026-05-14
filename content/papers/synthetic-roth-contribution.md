@@ -120,14 +120,14 @@ The \$22,000 settlement can be sourced two ways:
 
 **Option B — Outside funding.** The settlement is paid from the bank account. The Traditional gross is reduced by $C$ = \$100,000: the \$78,000 converted principal and the \$22,000 paid to the IRS from the bank account together leave \$100,000 in the Roth and \$0 in the bank account.
 
-Both options extinguish the same deferred-tax liability, capture the same \$3,000 rate-arbitrage gain in net after-tax wealth, and leave the household at the same total wealth of \$100,000:
+Both options settle the same deferred-tax liability and capture the same \$3,000 rate-arbitrage gain, leaving the same \$100,000 total household wealth:
 
 | | Roth (tax-free) | Bank (after-tax) | Total net after-tax wealth |
 |---|---|---|---|
 | **Inside payment** | \$78,000 | \$22,000 | **\$100,000** |
 | **Outside payment** | \$100,000 | \$0 | **\$100,000** |
 
-The two options differ only in **wrapper composition**. The \$22,000 wrapper-composition difference between Outside and Inside — \$22K more in Roth, \$22K less in Bank, identical total after-tax wealth — *is* the Synthetic Roth Contribution. Outside payment has not "cost" the household \$22,000; it has *re-wrapped* \$22,000 of after-tax cash from a tax-drag-bearing Bank wrapper into a tax-free Roth wrapper.
+The \$22,000 **wrapper-composition** difference between Outside and Inside — \$22,000 more in Roth, \$22,000 less in Bank, identical total after-tax wealth — *is* the Synthetic Roth Contribution. Outside payment has not "cost" the household \$22,000; it has *re-wrapped* \$22,000 of after-tax cash from a tax-drag-bearing Bank wrapper into a tax-free Roth wrapper.
 
 ### 3.4 Symmetry to Statutory Roth Contributions
 
