@@ -349,9 +349,9 @@ $$
 \text{Lifetime nominal payout} = K \cdot \text{payout multiple}
 $$
 
-The payout multiple is a structural property of the distribution schedule. In our $r = 7\%$, $N = 20$ scenario, with Fixed Annuity it equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786 . With RMD distributions, it is determined empirically from the year-by-year RMD divisor applied to the SRC's $K$ dollars. For the Outside RMD scenario, the payout multiple is 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
+The payout multiple is a structural property of the distribution schedule. Under FA distribution at $r = 7\%$ over $N = 20$ years, it equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD distribution (20-year owner period plus 10-year SECURE beneficiary period), it is determined empirically from the year-by-year RMD divisor applied to the SRC's $K$ dollars; the Outside RMD scenario yields 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
 
-**What 3.9647 is.** The payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor. The 10% bracket conversion (Group 1) is computed first and serves as the benchmark.
+The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor. The 10% bracket conversion (Group 1) is computed first and serves as the benchmark.
 
 **Why the same 3.9647 appears at every cumulative bracket.** Each bracket — Group 1 (10%), Group 2 (12%), Group 3 (22%), Group 4 (the \$123,850 conversion) — independently computes its own payout multiple from its own ΔATCF, $K$, and rate-spread inputs. That every subsequent bracket reproduces Group 1's benchmark value of 3.9647 is the empirical signature of the SRC framework's internal consistency. The payout multiple is a **structural property of the household's distribution schedule**, not an artifact of any particular conversion size.
 
