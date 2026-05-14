@@ -359,17 +359,6 @@ The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion
 
 **Comparison to FA.** The same $K$ = \$17,966 distributed via FA over 20 years would yield a lifetime nominal payout of \$17,966 × 1.88786 = \$33,917.27. RMD's multiplier exceeds FA's by ~2.1× because RMD distributes over 30 years instead of 20, giving $K$ more years of tax-free compounding before full distribution. Both methods produce the same PV at the portfolio rate (zero, by §4's identity); only nominal cash flow differs.
 
-### 5.4 Where Outside Funding Differs from Inside
-
-The two scenarios produce **identical** PV totals because the discount rate equals the portfolio rate. They produce **different** nominal lifetime totals because Outside funding migrates $K$ of taxable-wrapper dollars into a tax-free wrapper at the conversion moment. Over 20 years, that wrapper transition is the SRC's tangible benefit:
-
-- The household's total nominal cash inflow is \$34,034 − \$18,083 = **+\$15,951 higher** under Outside funding (Section 5.1 totals)
-- This \$15,951 represents the household receiving back \$1,696/year for 20 years (= \$33,920 nominal) on a \$17,966 outflow at year 0
-- Net nominal: \$33,920 − \$17,966 = \$15,954 (rounding-equivalent to the table's \$15,951)
-- In present-value terms, this \$15,951 is exactly the time-value-of-money the household earned on the \$17,966 — i.e., it is **not extra wealth at the portfolio discount rate**
-
-The SRC's economic significance therefore lies elsewhere, captured in the next subsection.
-
 ---
 
 ## 6. Where the SRC Has Real Value
