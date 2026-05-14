@@ -285,11 +285,11 @@ We answer both with a second paired simulation, holding all inputs identical to 
 
 ### 5B.1 Setup
 
-All §5 inputs apply except the distribution method: $C$ = \$123,850, $K$ = \$17,966, 7.00% portfolio return, 20-year life expectancy. RMDs run from the IRS-mandated age 73 (year 2030) through age 92 (year 2049), followed by the SECURE Act's 10-year beneficiary distribution period (years 2050–2059), distributed as a constant annuity-payment.not continued RMDs.
+All §5 inputs apply except the distribution method: $C$ = \$123,850, $K$ = \$17,966, 7.00% portfolio return, 20-year life expectancy. RMDs run from the IRS-mandated age 73 (year 2030) through age 92 (year 2049), followed by the SECURE Act's 10-year beneficiary distribution period (years 2050–2059), distributed as a constant annuity-payment, not continued RMDs.
 
 ### 5B.2 Year-by-Year ΔATCF — Inside vs Outside Under RMD
 
-The crucial RMD finding is that the per-year **(Outside − Inside) increment is NOT constant**. RMD distributions vary with the age-indexed divisor and with the post-conversion balance trajectory. The SRC's per-year contribution therefore tracks RMD's varying schedule rather than producing a flat dollar value.
+The crucial RMD finding: the per-year **(Outside − Inside) increment is not constant** but varies with the age-indexed RMD divisor and post-conversion balance trajectory.
 
 | Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside (nom) | Outside − Inside (PV @ 7%) |
 |------|-----|---|---|---|---|
