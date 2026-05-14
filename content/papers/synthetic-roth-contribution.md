@@ -222,7 +222,7 @@ We use two simulation runs with **all conversion inputs identical except the tax
 
 ### 5.1 Year-by-Year ATCF Deltas — Inside vs Outside
 
-For each year we compute ΔATCF = ATCF(conversion) − ATCF(no-conversion baseline), the \$123,850 conversion scenario described above minus the no-conversion baseline.
+For each year we compute ΔATCF = ATCF(conversion) − ATCF(no-conversion baseline) for both Inside and Outside scenarios.
 
 | Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside (nom) | Outside − Inside (PV @ 7%) |
 |------|-----|---|---|---|---|
