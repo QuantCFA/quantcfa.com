@@ -153,8 +153,6 @@ Examples:
 
 Each is structurally identical at the migration moment: total after-tax wealth is conserved, only wrapper composition changes. The future economic value of each emerges over time through the source/destination growth rate differential — drag in the source, no drag in the destination — but at the moment of migration, none impose a cost.
 
-The SRC framework's "no cost" claim is therefore not a special exception for Roth conversions; it is the application of a general principle of wrapper migration neutrality.
-
 ### 3.6 Definition
 
 **Definition (SRC).** The Synthetic Roth Contribution is the dollar amount that, in the Outside-funded scenario, migrates from the taxable wrapper into the tax-free Roth wrapper at the moment of conversion-tax settlement. Its magnitude equals $K$. It is economically equivalent to a same-day statutory Roth contribution of $K$, but is not subject to the IRS annual contribution limit because it is not formally a contribution — it is the implicit by-product of settling the deferred tax liability from outside the retirement account.
