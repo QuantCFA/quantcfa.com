@@ -137,7 +137,7 @@ A household that contributes \$22,000 to a Roth 401K performs an explicit wrappe
 
 The SRC is the same wrapper migration, performed implicitly via the Outside-tax payment. The tax paid to settle the deferred Traditional liability is not a "conversion cost" any more than the income tax paid on W-2 earnings is a "Roth contribution cost." Both settle tax obligations that were always owed; both leave after-tax wealth unchanged at the wrapper-migration moment; both produce the same tax-free compounding of the migrated dollars and the same inherited-Roth treatment for beneficiaries.
 
-If the liquidity-surrender of moving after-tax cash into a Roth wrapper is not considered a cost of a statutory contribution — and universally it is not — then it cannot be considered a cost of the SRC either. The two mechanics differ only in *which* tax obligation is being settled (income tax on W-2 earnings vs. deferred tax on Traditional balances) and *when* the corresponding wrapper migration is initiated. The economic structure is identical.
+If the liquidity-surrender of moving after-tax cash into a Roth wrapper is not considered a cost of a statutory contribution — and universally it is not — then it cannot be considered a cost of the SRC either. The two differ only in when the income-tax obligation is settled — at earning time (statutory contribution) or at conversion time (SRC). The economic structure is identical.
 
 ### 3.5 Wrapper Migration Neutrality
 
