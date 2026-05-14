@@ -367,7 +367,7 @@ Section 4 proved that the SRC present value is zero when the discount rate equal
 
 ### 6.1 Tax-Drag Differential
 
-Inside the Roth wrapper, every dollar compounds at $r$. In a taxable bank or brokerage wrapper the same dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding instead at the after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the percent of the return lost annually to taxation. This paper's scenarios use $d = 5\%$ — i.e., a 7.0% pre-tax return becomes a 6.65% after-drag return, or 35 basis points. This small annual differential compounds non-trivially over multi-decade retirement horizons.
+Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% pre-tax return becomes an after-drag 6.65%. This 35 basis point annual differential compounds non-trivially over a multi-decade retirement horizon.
 
 Under Outside payment, the $K$ dollars migrate from the taxable wrapper into the Roth — the Synthetic Roth Contribution defined in §3. Those dollars now compound at $r$ instead of $r_d$. The drag-avoidance value is the lifetime PV/FV differential of the SRC compounding at $r$ versus a taxable-wrapper counterfactual compounding at $r_d$. This component exists only under Outside payment — Inside payment moves no dollars from the taxable wrapper, so no drag-avoidance accrues.
 
