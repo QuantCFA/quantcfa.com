@@ -127,13 +127,13 @@ Both options settle the same deferred-tax liability and capture the same \$3,000
 | **Inside payment** | \$78,000 | \$22,000 | **\$100,000** |
 | **Outside payment** | \$100,000 | \$0 | **\$100,000** |
 
-The \$22,000 Outside/Inside **wrapper-composition** difference — \$22,000 more in Roth, \$22,000 less in Bank, identical total after-tax wealth — *is* the Synthetic Roth Contribution. Outside payment has not "cost" the household \$22,000; it has *moved* \$22,000 of after-tax cash from a tax-drag-bearing Bank wrapper into a tax-free Roth wrapper.
+The \$22,000 Outside/Inside **wrapper-composition** difference — \$22,000 more in Roth, \$22,000 less in Bank, identical total after-tax wealth — *is* the Synthetic Roth Contribution. Outside payment has not "cost" the household \$22,000; it has *moved* \$22,000 of after-tax cash from a taxable bank account into a tax-free Roth.
 
 ### 3.4 Symmetry to Statutory Roth Contributions
 
-The "no cost" framing of the SRC has a direct structural analogue in the statutory Roth contribution.
+The SRC "no cost" framing has a structural analogue in the statutory Roth contribution.
 
-A household that contributes \$22,000 to a Roth 401K from after-tax Bank cash performs an explicit wrapper migration: \$22,000 of after-tax cash that previously sat in the Bank wrapper now sits in the Roth wrapper. The income tax originally paid on the earnings that produced the \$22,000 is universally not considered a "cost of the Roth contribution" — it is the income tax that was always owed on those earnings, settled at the household's marginal rate. The contribution itself is wrapper migration alone, with no reduction in after-tax wealth at the migration moment.
+A household that contributes \$22,000 to a Roth 401K performs an explicit wrapper migration: \$22,000 of after-tax cash that was in a bank wrapper now sits in a Roth wrapper. The income tax originally paid on the earnings that produced the \$22,000 is universally not considered a "cost of the Roth contribution" — it is the income tax that was always owed on those earnings, settled at the household's marginal rate.
 
 The SRC mechanic is the same wrapper migration, performed implicitly via the conversion-tax settlement. The tax that the household pays to settle the deferred Traditional liability is not a "cost of the conversion" any more than the income tax paid on W-2 earnings is a "cost of the Roth contribution." Both are settlements of tax obligations that were always owed; both leave after-tax wealth unchanged at the wrapper-migration moment; both produce the same prospective tax-free compounding of the migrated dollars and the same inherited-Roth treatment for beneficiaries.
 
