@@ -151,7 +151,7 @@ Examples:
 - An **Outside-funded Roth conversion** moves $K$ after-tax dollars from the bank wrapper to the Roth wrapper (implicitly, via the conversion-tax payment), in addition to the rate-arbitrage on converted principal.
 - A **taxable-to-HSA migration** moves after-tax dollars from a bank wrapper into a triple-tax-advantaged HSA wrapper.
 
-Each is structurally identical at the migration moment: total after-tax wealth is conserved, only wrapper composition changes. The future economic value of each emerges over time through the source/destination growth rate differential — drag in the source, no drag in the destination — but at the moment of migration, none of these imposes a cost.
+Each is structurally identical at the migration moment: total after-tax wealth is conserved, only wrapper composition changes. The future economic value of each emerges over time through the source/destination growth rate differential — drag in the source, no drag in the destination — but at the moment of migration, none impose a cost.
 
 The SRC framework's "no cost" claim is therefore not a special exception for Roth conversions; it is the application of a general principle of wrapper migration neutrality.
 
