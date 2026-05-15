@@ -376,7 +376,7 @@ Empirical values:
 - **Outside FA scenario (§5):** FV \$917.08 / PV \$485.78
 - **Outside RMD scenario (§5B):** FV \$5,092 / PV \$1,021
 
-RMD values exceed the FA-scenario values on both metrics. The 20 year plus beneficiary 10 year horizon keeps SRC dollars compounding in the Roth wrapper longer before distribution than FA's 20-year horizon, producing a larger cumulative drag-avoidance differential. The FV (~5.5×) is larger than the PV (~2.1×) ratio due to heavily discounted drag-avoidance accruals in the beneficiary period.
+RMD values exceed the FA-scenario values on both metrics. RMD's 30-year horizon (20 owner + 10 beneficiary) keeps SRC dollars compounding in the Roth wrapper longer than FA's 20 years, producing a larger cumulative drag-avoidance differential. The FV ratio (~5.5×) exceeds the PV ratio (~2.1×) because beneficiary-period drag-avoidance accruals are heavily discounted back to today.
 
 ### 6.2 Estate / Beneficiary Asymmetry
 
