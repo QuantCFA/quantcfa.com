@@ -19,6 +19,16 @@ The funding-source effect is treated unevenly in the existing literature: some p
 
 The Synthetic Roth Contribution framework was introduced in Cheshire (2025, SSRN 5205840), which defined the term, established that the SRC equals the conversion tax under $\mathrm{MTR}_D = \mathrm{MTR}_C$, decomposed conversion-tax payback into SRC plus tax-rate-arbitrage components, and provided worked numerical examples across single and married filers under varying savings, Social Security, and return assumptions. The present paper extends that framework with formal algebraic and empirical proofs, generalizes the identity to RMD-method distributions, and engages directly with the closest related literature (§1B).
 
+**Contributions of this paper.**
+
+1. **Formal definition and separable decomposition.** The SRC is defined as the conversion-tax amount $K$ migrating from the bank account into the Roth wrapper under Outside funding, with its own per-year IRR / PV / FV identity distinct from the rate-arbitrage Core, the Medicare-surcharge-reduction alpha, and the RMD tax-drag alpha. To our knowledge, this separable decomposition has not been published outside this framework.
+
+2. **Algebraic proof of the matched-rate PV identity.** When the discount rate equals the portfolio rate, $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$, via the annuity-payment / present-value identity (§4).
+
+3. **Empirical validation under both Fixed Annuity and RMD distributions.** Paired Inside/Outside scenarios confirm the algebraic identity — the constant \$1,695.86/year increment under FA (§5) and a per-year-varying but PV-canceling increment under RMD (§5B), closing the year-0 outflow to within 4 cents over a 30-year horizon.
+
+4. **Wrapper Migration Neutrality as a generalizing principle.** Pure wrapper migrations at constant household wealth impose no PV cost at the portfolio rate. The SRC is one instance of this principle (§3.5).
+
 ---
 
 ## 1B. Prior Literature
@@ -268,7 +278,7 @@ $$
 
 Equivalently, the Inside ΔATCF total PV at 7% (\$9,766) equals the Outside ΔATCF total PV at 7% (\$9,766) to the dollar — identical present values at the portfolio rate!
 
-The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — the algebraic identity in production-system numbers. The conversion's alpha components (rate-arbitrage Core, IRMAA savings, tax-drag) are identical between Inside and Outside; both scenarios report \$9,766 of alpha in PV terms. Outside also admits an IRR measurement on the $K$ outlay: 15.01%, exceeding the portfolio rate by ~8 percentage points — capturing the same alpha components on top of the (PV-zero-at-7%) SRC. Inside's IRR is undefined due to lack of a cash outlay.
+The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — the algebraic identity in production-system numbers. The conversion's alpha components (rate-arbitrage Core, Medicare-surcharge savings, tax-drag) are identical between Inside and Outside; both scenarios report \$9,766 of alpha in PV terms. Outside also admits an IRR measurement on the $K$ outlay: 15.01%, exceeding the portfolio rate by ~8 percentage points — capturing the same alpha components on top of the (PV-zero-at-7%) SRC. Inside's IRR is undefined due to lack of a cash outlay.
 
 ---
 
@@ -412,9 +422,9 @@ The SRC's lasting value emerges not from PV at the portfolio rate (which is zero
 
 - **The SRC is separable from the rate-arbitrage Core.** Calculators that pool them into a single "conversion value" miss the SRC's distinct economic signal — especially when $t_C > t_D$, where the rate-arbitrage Core is negative but the SRC's tax-drag-avoidance alpha (under Outside funding) can still render the household total favorable.
 
-- **The "live past 97 to break even" framing dissolves under SRC accounting.** McQuarrie (2024)'s pessimism rests on running NPV entirely off the Traditional shadow balance — structurally omitting the post-conversion Roth balance and treating the conversion tax as a one-sided cost rather than a wrapper migration of the household's own funds. There is no recoupment-age threshold: a conversion has no time-horizon break-even because there is no cost.
+- **The "live past 97 to break even" framing no longer holds under SRC accounting.** McQuarrie (2024)'s pessimism rests on running NPV entirely off the Traditional shadow balance — structurally omitting the post-conversion Roth balance and treating the conversion tax as a one-sided cost rather than a wrapper migration of the household's own funds. There is no recoupment-age threshold: a conversion has no time-horizon break-even because there is no cost.
 
-- **The conversion decision is PV of alpha components, not rules of thumb.** The "convert only when future tax rates are higher" rule captures the rate-arbitrage Core in isolation and ignores Medicare-surcharge-reduction and RMD tax-drag — both of which can flip the decision. Households deferring otherwise-favorable conversions on the basis of published recoupment-age advice are being misled by the omission, not the math.
+- **The conversion decision is PV of alpha components, not rules of thumb.** The "convert only when future tax rates are higher" rule captures the rate-arbitrage Core in isolation and ignores Medicare-surcharge-reduction and RMD tax-drag — both of which can flip the decision. Households deferring otherwise-favorable conversions on the basis of published recoupment-age advice are reacting to an incomplete accounting, not to the math.
 
 ---
 
