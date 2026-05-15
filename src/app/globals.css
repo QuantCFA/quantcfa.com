@@ -122,6 +122,14 @@ body {
   padding-left: 0.75rem;
 }
 
+.prose-paper ul {
+  list-style-type: disc;
+}
+
+.prose-paper ol {
+  list-style-type: decimal;
+}
+
 .prose-paper li {
   margin: 0.25rem 0;
 }

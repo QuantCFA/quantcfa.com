@@ -408,7 +408,7 @@ The SRC's lasting value emerges not from PV at the portfolio rate (which is zero
 
 **Implications for practice:**
 
-- **The SRC framework is the first separable decomposition.** A per-year IRR / PV / FV bucket for the funding-source effect — with the algebraic identity $\mathrm{PV}(\text{Outside} - \text{Inside}) = 0$ at the portfolio rate — has not, to our knowledge, been published outside this framework. Reichenstein & Meyer (2017), Vanguard BETR (2025), and Nalebuff/Haghani/White (2025) each capture related parts but do not state the identity.
+- **The SRC framework is the first separable decomposition.** A per-year PV / FV / IRR bucket for the funding-source effect — with the algebraic identity $\mathrm{PV}(\text{Outside} - \text{Inside}) = 0$ at the portfolio rate — has not, to our knowledge, been published outside this framework. Reichenstein & Meyer (2017), Vanguard BETR (2025), and Nalebuff/Haghani/White (2025) each capture related parts but do not state the identity.
 
 - **The SRC is separable from the rate-arbitrage Core.** Calculators that pool them into a single "conversion value" miss the SRC's distinct economic signal — especially when $t_C > t_D$, where the rate-arbitrage Core is negative but the SRC's tax-drag-avoidance alpha (under Outside funding) can still render the household total favorable.
 
@@ -453,8 +453,8 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 | Total ATCF Change (FV) | \$31,937.04 | \$65,854.30 |
 | Tax-Rate Spread (PV) | \$9,765.91 | \$9,765.91 |
 | Tax-Rate Spread (FV) | \$18,082.96 | \$18,082.96 |
-| IRMAA Savings (FV) | \$7,680.36 | \$7,680.36 |
-| IRMAA Savings (PV) | \$3,440.20 | \$3,440.20 |
+| Medicare-Surcharge Savings (FV) | \$7,680.36 | \$7,680.36 |
+| Medicare-Surcharge Savings (PV) | \$3,440.20 | \$3,440.20 |
 | RMD Tax-Drag (FV) | \$6,173.72 | \$6,173.72 |
 | RMD Tax-Drag (PV) | \$1,120.55 | \$1,120.55 |
 | Annuity-Factor Multiple | 1.88786 | 1.88786 |
@@ -478,8 +478,8 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 | Total ATCF Change (FV) | \$73,251.04 | \$144,480.62 |
 | Tax-Rate Spread (PV) | \$13,279.95 | \$13,279.95 |
 | Tax-Rate Spread (FV) | \$42,910.67 | \$55,995.69 |
-| IRMAA Savings (FV) | \$7,648.20 | \$7,648.20 |
-| IRMAA Savings (PV) | \$1,028.02 | \$1,028.02 |
+| Medicare-Surcharge Savings (FV) | \$7,648.20 | \$7,648.20 |
+| Medicare-Surcharge Savings (PV) | \$1,028.02 | \$1,028.02 |
 | RMD Tax-Drag (FV) | \$22,692.17 | \$22,692.17 |
 | RMD Tax-Drag (PV) | \$3,362.08 | \$3,362.08 |
 | Payout Multiple | 3.9647 | 3.9647 |
@@ -492,13 +492,12 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 
 **Notes.**
 
-- The **Synthetic Roth Contribution (FV)** is empirically validated: Outside FA = \$33,917.27 = $K \times$ annuity-factor multiple = \$17,966 × 1.88786. Outside RMD = \$71,229.59 ≈ the nominal 30-year (Outside − Inside) ATCF delta of \$71,229.46. The stored SRC value captures the lifetime nominal payoff across both distribution methods.
-- **RMD's higher SRC** (~\$71,230 vs FA's ~\$33,917) reflects the longer compounding horizon: RMD's beneficiary 10-year window extends the SRC compound period beyond the owner-only horizon of FA, increasing nominal lifetime value. PV at 7% is identical across methods (\$17,966 = $K$) — exactly the algebraic identity of §4.
-- **Time-weighted $t_D$ is higher under RMD** (25.23% vs FA's 22.39%) because RMD's later, larger withdrawals push more of the lifetime distributions into higher brackets, increasing the time-weighted average.
-- **SRC Tax-Drag** is non-zero only in Outside scenarios because it captures the value of $K$ dollars escaping taxable-account drag; this effect does not exist when no outside dollars are migrated into the Roth wrapper. Magnitudes here are small because the scenarios use a modest $r - r_d$ differential; under realistic 1–3% absolute drag this term scales materially.
-- **Tax-Rate Spread, IRMAA Savings, and RMD Tax-Drag are identical between Inside and Outside** within each distribution method — confirming these components are independent of payment source, as the SRC framework predicts.
-- **Total ATCF Change (FV) differs between scenarios** because Outside's distribution stream includes the year-by-year +\$1,695.86 increment from the SRC (under FA). The Outside FV equals approximately Inside FV + ($K \times$ Annuity-Factor Multiple) = \$31,937 + \$33,917 = \$65,854.
-- **Full-Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside payment it is meaningful: the rate at which the conversion's full cash-flow profile produces NPV = 0. The Outside IRR exceeds the portfolio rate by the combined spread + IRMAA + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
+- **Synthetic Roth Contribution (FV).** Outside FA = \$33,917.27 = $K \times$ 1.88786; Outside RMD = \$71,229.59 ≈ nominal 30-year (Outside − Inside) ATCF delta of \$71,229.46. RMD's larger nominal SRC reflects the longer compounding horizon — RMD's 10-year beneficiary window extends the SRC compound period beyond FA's owner-only 20 years. PV at 7% is identical across methods (\$17,966 = $K$), as the §4 identity requires.
+- **Time-weighted $t_D$ is higher under RMD** (25.23% vs FA's 22.39%) because RMD's later, larger withdrawals push more lifetime distributions into higher brackets.
+- **SRC Tax-Drag** is non-zero only under Outside payment — it captures the value of $K$ dollars escaping taxable-account drag. Magnitudes here are small because the scenarios use a modest $r - r_d$ differential; under realistic 1–3% absolute drag this term scales materially.
+- **Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag are identical between Inside and Outside** within each distribution method — confirming these components are funding-source-independent, as the SRC framework predicts.
+- **Total ATCF Change (FV) differs between scenarios** because Outside's distribution stream includes the year-by-year SRC increment. Under FA: Outside FV ≈ Inside FV + ($K \times$ annuity-factor multiple) = \$31,937 + \$33,917 = \$65,854.
+- **Full-Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside it is meaningful: the Outside IRR exceeds the portfolio rate by the combined spread + Medicare-surcharge + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
 
 ---
 
