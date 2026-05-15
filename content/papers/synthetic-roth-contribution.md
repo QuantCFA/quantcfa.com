@@ -378,9 +378,7 @@ Unlike the SRC's PV-zero identity at the portfolio rate, this drag-avoidance alp
 
 ---
 
-## 7. Implications
-
-**1. Two decisions: Convert? then fund Inside or Outside?**
+## 7. Implications: Convert? Then Fund Inside or Outside?
 
 *Under age 59½:* Outside funding is effectively required. Inside funding requires a pre-tax distribution to cover the conversion tax, subject to the 10% early-withdrawal penalty. Conversion and SRC are bundled — choosing to convert necessarily activates the SRC.
 
@@ -390,11 +388,7 @@ Unlike the SRC's PV-zero identity at the portfolio rate, this drag-avoidance alp
 
 - **Funding (Inside vs Outside), conditional on conversion:** Outside relocates $K$ from a taxable wrapper compounding at $r_d$ to a tax-free wrapper compounding at $r$ — turning the conversion tax from a cost into an investment. The payoff is the tax-drag-avoidance alpha of §6 (\$1,021 PV in the Outside RMD scenario), added to the conversion alpha sum to give total Outside-conversion alpha.
 
-The SRC has no independent existence: it materializes only as a side effect of choosing Outside funding for an already-decided conversion.
-
-**2. The SRC and the rate-arbitrage Core are economically separable. Published calculators and academic literature do not separate them cleanly.** Cheshire (2025, SSRN 5205840) identified this conflation at the algebraic level. The current paper's empirical evidence strengthens that argument: the constant \$1,695.86/year (Outside − Inside) ATCF increment under FA distribution (§5), the \$71,229.59 lifetime nominal payoff under RMD distribution (§5B), and the cross-bracket constancy of the 3.9647 growth multiple (§5B.4) are structural signatures of the SRC's identity as a distinct economic component, visible only when the SRC is isolated from the rate-arbitrage Core. A calculator that pools the SRC into a single "conversion value" cannot recover any of these signatures and produces misleading recommendations especially when $t_C > t_D$ — where the rate-arbitrage Core is negative but the SRC's asset-allocation payoff (under Outside funding) can render the household total still favorable.
-
-**3. The conversion decision is driven by PV of alpha components, not rules of thumb.** The conventional *"convert only when future tax rates are higher"* rule captures the rate-arbitrage Core in isolation and ignores both the Medicare-surcharge-reduction alpha and the RMD tax-drag alpha; conventional Outside-funding advice frames the conversion tax as a "cost" rather than an asset-allocation investment. A household running the full alpha decomposition — Core + Medicare + RMD tax-drag on the conversion side, plus tax-drag-avoidance on the funding side under Outside payment — can identify favorable conversions even when $t_D \leq t_C$ and can correctly reject conversions whose pooled alpha is negative despite a favorable rate spread.
+The SRC materializes only as a side effect of choosing Outside funding for an already-decided conversion.
 
 ---
 
@@ -408,13 +402,19 @@ The Synthetic Roth Contribution is the dollar-for-dollar economic equivalent of 
 
 3. **Empirical (RMD case — generalization).** Paired Inside RMD and Outside RMD scenarios, with all inputs held constant except the tax payment source and the distribution method, show that **the algebraic PV identity holds under RMD too**, with the same conversion as the FA case. The per-year (Outside − Inside) increment is no longer constant — it varies from \$831 (year 2030) to \$2,596 (year 2049) in the owner period, then is flat \$3,901 in the beneficiary period (years 2050–2059) — yet the integrated PV at the portfolio rate sums to **+\$17,965.96**, exactly canceling the year-0 outflow of −\$17,966.00 to within a 4-cent rounding residual. The Outside RMD scenario's Synthetic Roth Contribution (FV) of \$71,229.59 matches the nominal 30-year (Outside − Inside) sum of \$71,229.46 to within \$0.13.
 
-4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a first-class component alongside spread arbitrage, IRMAA savings, and reduced-RMD tax-drag.
+4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a first-class component alongside spread arbitrage, Medicare-surcharge savings, and reduced-RMD tax-drag.
 
-The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from the tax-drag differential between Roth and taxable wrappers — the channel that compounds the SRC's $K$ dollars at $r$ instead of $r_d$ over the post-conversion horizon.
+The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from the tax-drag differential between Roth and taxable wrappers — the channel that compounds the SRC's $K$ dollars at $r$ instead of $r_d$ over the post-conversion horizon. **Including the SRC turns Roth conversion analysis from a tax-rate-spread question into a wrapper-allocation question.**
 
-Including the SRC turns Roth conversion analysis from a tax-rate-spread question into a wrapper-allocation question. The household is not just choosing whether to pay tax now or later. It is choosing whether to migrate a meaningful sum ($K$) of taxable-wrapper savings into a tax-free wrapper. That second choice is partially captured by Reichenstein & Meyer (2017) under tax-drag conditions, partially captured by Vanguard's BETR (2025) as a parameter adjustment, and independently surfaced by Nalebuff, Haghani & White (2025) as a "size matters" heuristic — but a separable per-year IRR / PV / FV decomposition with the algebraic identity $\mathrm{PV}(\text{Outside} - \text{Inside}) = K$ at the portfolio rate has not, to our knowledge, been published outside the SRC framework.
+**Implications for practice:**
 
-The published practitioner NPV literature — most prominently McQuarrie (2024) — has reached pessimistic conclusions about RMD-reducing Roth conversions: under typical assumptions, the upfront conversion tax is said not to be recouped until roughly age 97 — long after the taxpayer's death — with the realized payoff accruing entirely to the heirs. These conclusions are dissolved by the SRC accounting. McQuarrie's framework runs entirely off the Traditional shadow balance, structurally omitting the post-conversion Roth balance and treating the conversion tax as a one-sided cost rather than a wrapper migration of the household's own funds. Under correct accounting there is no recoupment-age threshold: a Roth conversion has no time-horizon break-even because there is no cost. The conversion's PV alpha components — rate-arbitrage Core, IRMAA, RMD tax-drag, and (under outside funding) tax-drag-differential — sum to a single figure at conversion time, either positive (profitable from year 0) or negative (unprofitable from year 0); time merely unfolds the consequences. Households deferring or rejecting otherwise-favorable conversions on the basis of published recoupment-age advice are being misled by the omission, not the math.
+- **The SRC framework is the first separable decomposition.** A per-year IRR / PV / FV bucket for the funding-source effect — with the algebraic identity $\mathrm{PV}(\text{Outside} - \text{Inside}) = 0$ at the portfolio rate — has not, to our knowledge, been published outside this framework. Reichenstein & Meyer (2017), Vanguard BETR (2025), and Nalebuff/Haghani/White (2025) each capture related parts but do not state the identity.
+
+- **The SRC is separable from the rate-arbitrage Core.** Calculators that pool them into a single "conversion value" miss the SRC's distinct economic signal — especially when $t_C > t_D$, where the rate-arbitrage Core is negative but the SRC's tax-drag-avoidance alpha (under Outside funding) can still render the household total favorable.
+
+- **The "live past 97 to break even" framing dissolves under SRC accounting.** McQuarrie (2024)'s pessimism rests on running NPV entirely off the Traditional shadow balance — structurally omitting the post-conversion Roth balance and treating the conversion tax as a one-sided cost rather than a wrapper migration of the household's own funds. There is no recoupment-age threshold: a conversion has no time-horizon break-even because there is no cost.
+
+- **The conversion decision is PV of alpha components, not rules of thumb.** The "convert only when future tax rates are higher" rule captures the rate-arbitrage Core in isolation and ignores Medicare-surcharge-reduction and RMD tax-drag — both of which can flip the decision. Households deferring otherwise-favorable conversions on the basis of published recoupment-age advice are being misled by the omission, not the math.
 
 ---
 
