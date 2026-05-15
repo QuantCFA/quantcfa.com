@@ -147,7 +147,7 @@ The \$22,000 Outside/Inside **wrapper-composition** difference — \$22,000 more
 
 The SRC "no cost" framing has a structural analogue in the statutory Roth contribution.
 
-A household that contributes \$22,000 to a Roth 401K performs an explicit wrapper migration: \$22,000 of after-tax cash that was in a bank wrapper now sits in a Roth wrapper. The income tax originally paid on the earnings that produced the \$22,000 is universally not considered a "cost of the Roth contribution" — it is the income tax that was always owed on those earnings.
+A household that contributes \$22,000 to a Roth 401(k) performs an explicit wrapper migration: \$22,000 of after-tax cash that was in a bank wrapper now sits in a Roth wrapper. The income tax originally paid on the earnings that produced the \$22,000 is universally not considered a "cost of the Roth contribution" — it is the income tax that was always owed on those earnings.
 
 The SRC is the same wrapper migration, performed implicitly via the Outside-tax payment. The tax paid to settle the deferred Traditional liability is not a "conversion cost" any more than the income tax paid on W-2 earnings is a "Roth contribution cost." Both settle tax obligations that were always owed; both leave after-tax wealth unchanged at the wrapper-migration moment; both produce the same tax-free compounding of the migrated dollars and the same inherited-Roth treatment for beneficiaries.
 
@@ -282,7 +282,7 @@ $$
 
 Equivalently, the Inside ΔATCF total PV at 7% (\$9,766) equals the Outside ΔATCF total PV at 7% (\$9,766) to the dollar — identical present values at the portfolio rate!
 
-The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — the algebraic identity in production-system numbers. The conversion's alpha components (rate-arbitrage Core, Medicare-surcharge savings, tax-drag) are identical between Inside and Outside; both scenarios report \$9,766 of alpha in PV terms. Outside also admits an IRR measurement on the $K$ outlay: 15.01%, exceeding the portfolio rate by ~8 percentage points — capturing the same alpha components on top of the (PV-zero-at-7%) SRC. Inside's IRR is undefined due to lack of a cash outlay.
+The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — the algebraic identity in production-system numbers. The conversion's alpha components (rate-arbitrage Core, Medicare-surcharge savings, tax-drag) are identical between Inside and Outside; both scenarios report \$9,766 of alpha in PV terms. Outside also admits an IRR measurement on the $K$ outlay: 15.01%, exceeding the portfolio rate by ~8 percentage points — capturing the same alpha components on top of the (PV-zero-at-7%) SRC. Inside's IRR is undefined for lack of a cash outlay.
 
 ---
 
@@ -363,7 +363,7 @@ $$
 
 The payout multiple is a structural property of the distribution schedule. Under FA distribution at $r = 7\%$ over $N = 20$ years, it equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD distribution (20-year owner period plus 10-year SECURE beneficiary period), it is determined empirically from the year-by-year RMD divisor applied to the SRC's $K$ dollars; the Outside RMD scenario yields 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
 
-The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor. The 10% bracket conversion is computed first and serves as the benchmark.
+The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor.
 
 **Why the same 3.9647 appears at every cumulative bracket.** Conversions of different cumulative sizes — filling through the 10%, 12%, or 22% bracket (the \$123,850 case examined here) — each independently compute the same 3.9647 payout multiple from their own ΔATCF, $K$, and rate-spread inputs. This is the empirical signature of the SRC framework's internal consistency. The payout multiple is a **structural property of the distribution schedule**, not an artifact of any particular conversion size.
 
@@ -377,7 +377,7 @@ The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion
 
 Section 4 proved that the SRC present value is zero when the discount rate equals the portfolio rate. This makes the SRC appear neutral. It is not. The SRC has real economic value through the tax-drag-differential channel that escapes a pure PV-at-portfolio-rate framing.
 
-Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds non-trivially over a multi-decade retirement horizon.
+Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds materially over a multi-decade retirement horizon.
 
 Under Outside payment, $K$ dollars move from the taxable into the Roth wrapper and compound at $r$ instead of $r_d$. This drag-avoidance benefit is the lifetime PV/FV differential of the SRC compounding at $r$ vs. the taxable counterfactual compounding at $r_d$. This alpha component exists only under Outside payment — Inside payment retains $K$ dollars in the taxable wrapper.
 
