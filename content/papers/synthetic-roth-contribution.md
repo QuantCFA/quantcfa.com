@@ -369,14 +369,14 @@ Section 4 proved that the SRC present value is zero when the discount rate equal
 
 Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds non-trivially over a multi-decade retirement horizon.
 
-Under Outside payment, $K$ dollars move from the taxable into the Roth wrapper and compound at $r$ instead of $r_d$. The drag-avoidance value is the lifetime PV/FV differential of the SRC compounding at $r$ versus the taxable counterfactual compounding at $r_d$. This alpha component exists only under Outside payment — Inside payment retains $K$ dollars in the taxable wrapper.
+Under Outside payment, $K$ dollars move from the taxable into the Roth wrapper and compound at $r$ instead of $r_d$. This drag-avoidance benefit is the lifetime PV/FV differential of the SRC compounding at $r$ vs. the taxable counterfactual compounding at $r_d$. This alpha component exists only under Outside payment — Inside payment retains $K$ dollars in the taxable wrapper.
 
 Empirical values:
 
 - **Outside FA scenario (§5):** FV \$917.08 / PV \$485.78
 - **Outside RMD scenario (§5B):** FV \$5,092 / PV \$1,021
 
-The RMD-scenario values exceed the FA-scenario values on both metrics. The owner 20 years plus beneficiary 10 years horizon keeps the SRC dollars compounding inside the Roth wrapper longer before distribution than FA's 20-year owner-only horizon, producing a larger cumulative drag-avoidance differential. The FV ratio (~5.5×) is larger than the PV ratio (~2.1×) because the additional drag-avoidance accruing in the beneficiary period is heavily discounted back across 30 years at the portfolio rate.
+RMD values exceed the FA-scenario values on both metrics. The 20 year plus beneficiary 10 year horizon keeps SRC dollars compounding in the Roth wrapper longer before distribution than FA's 20-year horizon, producing a larger cumulative drag-avoidance differential. The FV (~5.5×) is larger than the PV (~2.1×) ratio due to heavily discounted drag-avoidance accruals in the beneficiary period.
 
 ### 6.2 Estate / Beneficiary Asymmetry
 
