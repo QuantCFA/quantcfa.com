@@ -390,13 +390,13 @@ RMD values exceed the FA-scenario values on both metrics. RMD's 30-year horizon 
 
 Unlike the SRC's PV-zero identity at the portfolio rate, this drag-avoidance alpha is quantifiable, accrues only under Outside funding, and belongs in the alpha sum when evaluating an Outside-funded conversion (§7).
 
-**Mapping to Vanguard's BETR.** Passman, Wong & Dickson (2025) parameterize the same wrapper-drag wedge via a 20-year cumulative outside-account multiple $M'$ relative to the Roth multiple $M$. The relationship to the SRC drag fraction is direct:
+**Mapping to Vanguard's BETR.** Passman, Wong & Dickson (2025) parameterize our same wrapper-drag wedge via a 20-year cumulative outside-account multiple $M'$ relative to the Roth multiple $M$. The relationship to the SRC drag fraction is direct:
 
 $$
 d = 1 - \frac{(M')^{1/n}}{M^{1/n}}
 $$
 
-For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially higher tax-inefficiency than this paper's $d = 5\%$ baseline (corresponding to $M' \approx 2.74$). Vanguard's BETR and the SRC's drag-avoidance alpha are reparameterizations of the same underlying wrapper-drag wedge;
+For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially higher tax-inefficiency than this paper's $d = 5\%$ baseline (corresponding to $M' \approx 2.74$). Vanguard's BETR and the SRC's drag-avoidance alpha are reparameterizations of the same underlying wrapper-drag wedge.
 
 ---
 
