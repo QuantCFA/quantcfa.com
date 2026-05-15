@@ -1,7 +1,7 @@
 # The Synthetic Roth Contribution: Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions
 
 **Steven Cheshire, CFA**
-Draft: 2026-05-13
+Draft: 2026-05-15
 
 ---
 
@@ -262,7 +262,7 @@ For each year we compute ΔATCF = ATCF(conversion) − ATCF(no-conversion baseli
 The Outside − Inside column is **constant at \$1,696 in every distribution year 2027–2046** (\$1,695.86 to two decimals). The SRC's structural per-year contribution is uniform across all 20 years, matching the algebraic prediction:
 
 $$
-K \cdot \mathrm{AF}(r{=}7\%,\, N{=}20) \;=\; \$17{,}966 \times 0.094393 \;=\; \$1{,}695.86 \quad\checkmark
+K \cdot \mathrm{AF}(r = 7\%,\, N = 20) \;=\; \$17{,}966 \times 0.094393 \;=\; \$1{,}695.86 \quad\checkmark
 $$
 
 where $\mathrm{AF}(7\%, 20) = 0.07\,/\,(1 - 1.07^{-20}) = 0.094393$.
@@ -508,11 +508,11 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 
 - **Synthetic Roth Contribution (FV).** Outside FA = \$33,917.27 = $K \times$ 1.88786; Outside RMD = \$71,229.59 ≈ nominal 30-year (Outside − Inside) ATCF delta of \$71,229.46. RMD's larger nominal SRC reflects the longer compounding horizon — RMD's 10-year beneficiary window extends the SRC compound period beyond FA's owner-only 20 years. PV at 7% is identical across methods (\$17,966 = $K$), as the §4 identity requires.
 - **Time-weighted $t_D$ is higher under RMD** (25.23% vs FA's 22.39%) because RMD's later, larger withdrawals push more lifetime distributions into higher brackets.
-- **SRC Tax-Drag** is non-zero only under Outside payment — it captures the value of $K$ dollars escaping taxable-account drag. Magnitudes here are small because the scenarios use a modest $r - r_d$ differential; under realistic 1–3% absolute drag this term scales materially.
+- **SRC Tax-Drag** is non-zero only under Outside payment — it captures the value of $K$ dollars escaping taxable-account drag. Magnitudes here are small because the scenarios use a modest $r - r_d$ differential; under realistic 1–5% absolute drag this term scales materially.
 - **Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag are identical between Inside and Outside** within each distribution method — confirming these components are funding-source-independent, as the SRC framework predicts.
 - **Total ATCF Change (FV) differs between scenarios** because Outside's distribution stream includes the year-by-year SRC increment. Under FA: Outside FV ≈ Inside FV + ($K \times$ annuity-factor multiple) = \$31,937 + \$33,917 = \$65,854.
 - **Full-Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside it is meaningful: the Outside IRR exceeds the portfolio rate by the combined spread + Medicare-surcharge + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
 
 ---
 
-*Draft prepared 2026-05-13. Empirical results produced by the RothGPT calculation engine.*
+*Draft prepared 2026-05-15. Empirical results produced by the RothGPT calculation engine.*
