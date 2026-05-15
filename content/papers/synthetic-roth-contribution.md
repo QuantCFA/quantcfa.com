@@ -163,8 +163,6 @@ The Synthetic Roth Contribution (SRC) is the conversion-tax amount ($K$) that mi
 
 **Property 2 — Tax-drag elimination.** The $K$ dollars now grow at the Roth's tax-free rate $r$ rather than the taxable wrapper's after-drag rate $r_d = r \cdot (1 - d)$. This benefit is approximately $K \cdot (r - r_d)$ per year if the $K$ cash would have remained invested at $r_d$.
 
-**Property 3 — Estate-and-beneficiary asymmetry.** Roth dollars pass to non-spouse beneficiaries free of ordinary income tax (subject to the 10-year SECURE distribution rule). Taxable wrapper dollars pass with a step-up in basis but no preferential income-tax treatment. SRC dollars therefore receive the more favorable inherited-Roth treatment.
-
 ### 3.8 What the SRC Is Not
 
 The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion — present in both Outside and Inside settlement. The SRC appears only under Outside settlement, and only as a wrapper-composition difference — not a change in net after-tax wealth.
@@ -197,7 +195,7 @@ The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is a standard 
 
 The reconciliation: at a portfolio discount rate, that nominal "extra" is exactly the time value of money on the $K$ sum. The household is not receiving free money; it is receiving back its capital plus the rate of return it would have earned anyway. **The SRC's value is not in producing extra present-value wealth — it is in moving capital from a tax-drag wrapper to a tax-free wrapper, eliminating the drag for the rest of the account's life.** This separate effect (Property 2) is the source of the SRC's lasting economic significance, captured by the $K \cdot (r - r_d)$ annual differential.
 
-**Scope of the identity.** The PV-equivalence identity proved here uses the portfolio's expected rate of return as the discount rate — precisely the convention adopted by the conventional Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is therefore not an artifact of an idiosyncratic discount choice; it is a property of the same matched-rate framework those prior treatments employ. Cases where the household's personal discount rate diverges from the portfolio rate are discussed separately in §6.3.
+**Scope of the identity.** The PV-equivalence identity proved here uses the portfolio's expected rate of return as the discount rate — precisely the convention adopted by the conventional Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is therefore not an artifact of an idiosyncratic discount choice; it is a property of the same matched-rate framework those prior treatments employ. Cases where the household's personal discount rate diverges from the portfolio rate are discussed separately in §6.2.
 
 ---
 
@@ -363,7 +361,7 @@ The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion
 
 ## 6. Where the SRC Has Real Value
 
-Section 4 proved that the SRC present value is zero when the discount rate equals the portfolio rate. This makes the SRC appear neutral. It is not. The SRC has real economic value through three channels that escape a pure PV-at-portfolio-rate framing.
+Section 4 proved that the SRC present value is zero when the discount rate equals the portfolio rate. This makes the SRC appear neutral. It is not. The SRC has real economic value through two channels that escape a pure PV-at-portfolio-rate framing.
 
 ### 6.1 Tax-Drag Differential
 
@@ -378,17 +376,9 @@ Empirical values:
 
 RMD values exceed the FA-scenario values on both metrics. RMD's 30-year horizon (20 owner + 10 beneficiary) keeps SRC dollars compounding in the Roth wrapper longer than FA's 20 years, producing a larger cumulative drag-avoidance differential. The FV ratio (~5.5×) exceeds the PV ratio (~2.1×) because beneficiary-period drag-avoidance accruals are heavily discounted back to today.
 
-### 6.2 Estate / Beneficiary Asymmetry
+### 6.2 Discount-Rate Mismatch
 
-Roth dollars passed to a non-spouse beneficiary distribute over a 10-year window with no income tax. Taxable-account dollars receive a step-up in basis at death but no income-tax preference for the inheritor. For an estate that will pass to children or non-spouse heirs, the SRC effectively converts taxable-inheritance-bracket future dollars into tax-free-inheritance dollars.
-
-Empirical evidence for this channel emerges under RMD distributions. The Outside RMD beneficiary period (years 2050–2059) shows a constant \$3,901/year ATCF advantage of Outside over Inside — entirely the product of Outside's larger inherited Roth balance at the moment of owner death (the SRC has compounded for 20 years). This contributes \$39,006 of nominal SRC value over the 10-year statutory distribution window, or 55% of the total SRC value across the full 30-year horizon. The PV-at-portfolio-rate share is \$5,780 (32% of total). When the discount rate equals the portfolio rate, the inheritance channel still nets to zero (the algebraic identity holds across the full horizon as shown in §5B.3); but the channel is tangible, observable, and shifts the timing of when the SRC value is realized. Households evaluating Roth conversions for estate-planning purposes — a substantial subset of practitioner cases — should treat this beneficiary-period contribution as a first-class component of the conversion's value, not a footnote.
-
-Under FA distribution (§5), the inheritance channel does not appear because FA depletes the balance to zero at owner death. The SRC's owner-period contribution still exists but the inheritance channel is absent by construction. RMD's 10-year beneficiary distribution makes the inheritance channel structurally visible.
-
-### 6.3 Discount-Rate Mismatch
-
-For households whose marginal cost of capital (or marginal time preference for consumption) differs from the portfolio's expected return, the PV identity in Section 4 no longer holds. If a household discounts future consumption at a rate $\rho > r$, the SRC produces negative PV (worse than the portfolio's growth). If $\rho < r$, positive PV. In practice, retirees are typically risk-averse with personal discount rates close to or below the portfolio's expected return, making the SRC neutral-to-favorable in PV terms even before including 6.1 and 6.2.
+For households whose marginal cost of capital (or marginal time preference for consumption) differs from the portfolio's expected return, the PV identity in Section 4 no longer holds. If a household discounts future consumption at a rate $\rho > r$, the SRC produces negative PV (worse than the portfolio's growth). If $\rho < r$, positive PV. In practice, retirees are typically risk-averse with personal discount rates close to or below the portfolio's expected return, making the SRC neutral-to-favorable in PV terms even before including the §6.1 drag-avoidance alpha.
 
 ---
 
@@ -420,11 +410,11 @@ The Synthetic Roth Contribution is the dollar-for-dollar economic equivalent of 
 
 2. **Empirical (FA case).** Paired Inside FA and Outside FA scenarios, with all inputs held constant except the tax payment source, show: (a) the constant **\$1,695.86 / year** increment in all 20 distribution years, matching the algebraic prediction \$17,966 × $\mathrm{AF}(7\%, 20)$ to the cent; (b) the PVA-multiplication identity \$1,695.86 × $\mathrm{PVA}(7\%, 20)$ ≈ \$17,966 closing the year-0 outflow; and (c) the **\$9,766 ΔATCF PV total identical between the two scenarios to the dollar**. The Outside FA scenario reports a Synthetic Roth Contribution (FV) of \$33,917.27 = $K \times$ annuity-factor multiple — the future-value identifier of the SRC.
 
-3. **Empirical (RMD case — generalization).** Paired Inside RMD and Outside RMD scenarios, with all inputs held constant except the tax payment source and the distribution method, show that **the algebraic PV identity holds under RMD too**, with the same conversion as the FA case. The per-year (Outside − Inside) increment is no longer constant — it varies from \$831 (year 2030) to \$2,596 (year 2049) in the owner period, then is flat \$3,901 in the beneficiary period (years 2050–2059) — yet the integrated PV at the portfolio rate sums to **+\$17,965.96**, exactly canceling the year-0 outflow of −\$17,966.00 to within a 4-cent rounding residual. The Outside RMD scenario's Synthetic Roth Contribution (FV) of \$71,229.59 matches the nominal 30-year (Outside − Inside) sum of \$71,229.46 to within \$0.13. The 10-year beneficiary period contributes \$3,901/yr of SRC value — direct empirical evidence of the inheritance-asymmetry channel discussed in §6.2.
+3. **Empirical (RMD case — generalization).** Paired Inside RMD and Outside RMD scenarios, with all inputs held constant except the tax payment source and the distribution method, show that **the algebraic PV identity holds under RMD too**, with the same conversion as the FA case. The per-year (Outside − Inside) increment is no longer constant — it varies from \$831 (year 2030) to \$2,596 (year 2049) in the owner period, then is flat \$3,901 in the beneficiary period (years 2050–2059) — yet the integrated PV at the portfolio rate sums to **+\$17,965.96**, exactly canceling the year-0 outflow of −\$17,966.00 to within a 4-cent rounding residual. The Outside RMD scenario's Synthetic Roth Contribution (FV) of \$71,229.59 matches the nominal 30-year (Outside − Inside) sum of \$71,229.46 to within \$0.13.
 
 4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a first-class component alongside spread arbitrage, IRMAA savings, and reduced-RMD tax-drag.
 
-The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from (a) the tax-drag differential between Roth and taxable wrappers, (b) the favorable inheritance treatment of Roth balances, and (c) deviations between the household's personal discount rate and the portfolio's expected return.
+The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from (a) the tax-drag differential between Roth and taxable wrappers and (b) deviations between the household's personal discount rate and the portfolio's expected return.
 
 Including the SRC turns Roth conversion analysis from a tax-rate-spread question into a wrapper-allocation question. The household is not just choosing whether to pay tax now or later. It is choosing whether to migrate a meaningful sum ($K$) of taxable-wrapper savings into a tax-free wrapper. That second choice is partially captured by Reichenstein & Meyer (2017) under tax-drag conditions, partially captured by Vanguard's BETR (2025) as a parameter adjustment, and independently surfaced by Nalebuff, Haghani & White (2025) as a "size matters" heuristic — but a separable per-year IRR / PV / FV decomposition with the algebraic identity $\mathrm{PV}(\text{Outside} - \text{Inside}) = K$ at the portfolio rate has not, to our knowledge, been published outside the SRC framework.
 
