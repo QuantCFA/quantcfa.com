@@ -396,7 +396,7 @@ $$
 d = 1 - \frac{(M')^{1/n}}{M^{1/n}}
 $$
 
-For Vanguard's standard $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially more tax-inefficient outside account than this paper's $d = 5\%$ baseline (which corresponds to $M' \approx 2.74$ against $M = 3$). Vanguard's BETR and the SRC's drag-avoidance alpha are reparameterizations of the same underlying wrapper-drag wedge; the SRC framework's per-year formulation generalizes the BETR's horizon-cumulative formulation.
+For Vanguard's standard $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially more tax-inefficient outside account than this paper's $d = 5\%$ baseline (which corresponds to $M' \approx 2.74$ against $M = 3$). Vanguard's BETR and the SRC's drag-avoidance alpha are reparameterizations of the same underlying wrapper-drag wedge; the SRC per-year framework generalizes BETR's horizon-cumulative formulation.
 
 ---
 
