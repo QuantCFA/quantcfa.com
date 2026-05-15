@@ -380,13 +380,13 @@ Unlike the SRC's PV-zero identity at the portfolio rate, this drag-avoidance alp
 
 ## 7. Implications
 
-**1. Funding source is constrained by age 59½.**
+**1. Two decisions: Convert? then fund Inside or Outside?**
 
 *Under age 59½:* Outside funding is effectively required. Inside funding requires a pre-tax distribution to cover the conversion tax, subject to the 10% early-withdrawal penalty. Conversion and SRC are bundled — choosing to convert necessarily activates the SRC.
 
 *At age 59½+:* both funding paths are available, and the household's decision separates into two:
 
-- **Conversion (yes/no, how much):** driven by the sum of PV alpha components that don't depend on funding source — the rate-arbitrage Core (spread on converted principal), the IRMAA / Medicare alpha (not decomposed here), and the RMD tax-drag alpha (drag avoided on the RMDs the conversion eliminates). Each follows from the conversion event itself, not from how the tax is paid. Convert if the sum is PV-positive.
+- **Conversion (yes/no, how much):** driven by the sum of PV alpha components that don't depend on funding source — the rate-arbitrage Core (spread on converted principal), the Medicare-surcharge-reduction alpha (not decomposed here), and the RMD tax-drag alpha (drag avoided on reinvested RMDs the conversion eliminates). Each follows from the conversion event itself, not from how the tax is paid. Convert if the sum is PV-positive.
 
 - **Funding (Inside vs Outside), conditional on conversion:** Outside relocates $K$ from a taxable wrapper compounding at $r_d$ to a tax-free wrapper compounding at $r$ — turning the conversion tax from a cost into an investment. The payoff is the tax-drag-avoidance alpha of §6 (\$1,021 PV in the Outside RMD scenario), added to the conversion alpha sum to give total Outside-conversion alpha.
 
@@ -394,7 +394,7 @@ The SRC has no independent existence: it materializes only as a side effect of c
 
 **2. The SRC and the rate-arbitrage Core are economically separable. Published calculators and academic literature do not separate them cleanly.** Cheshire (2025, SSRN 5205840) identified this conflation at the algebraic level. The current paper's empirical evidence strengthens that argument: the constant \$1,695.86/year (Outside − Inside) ATCF increment under FA distribution (§5), the \$71,229.59 lifetime nominal payoff under RMD distribution (§5B), and the cross-bracket constancy of the 3.9647 growth multiple (§5B.4) are structural signatures of the SRC's identity as a distinct economic component, visible only when the SRC is isolated from the rate-arbitrage Core. A calculator that pools the SRC into a single "conversion value" cannot recover any of these signatures and produces misleading recommendations especially when $t_C > t_D$ — where the rate-arbitrage Core is negative but the SRC's asset-allocation payoff (under Outside funding) can render the household total still favorable.
 
-**3. The conversion decision is driven by PV of alpha components, not rules of thumb.** The conventional *"convert only when future tax rates are higher"* rule captures the rate-arbitrage Core in isolation and ignores both the IRMAA / Medicare alpha and the RMD tax-drag alpha; conventional Outside-funding advice frames the conversion tax as a "cost" rather than an asset-allocation investment. A household running the full alpha decomposition — Core + IRMAA + RMD tax-drag on the conversion side, plus tax-drag-differential on the funding side under Outside payment — can identify favorable conversions even when $t_D \leq t_C$ and can correctly reject conversions whose pooled alpha is negative despite a favorable rate spread.
+**3. The conversion decision is driven by PV of alpha components, not rules of thumb.** The conventional *"convert only when future tax rates are higher"* rule captures the rate-arbitrage Core in isolation and ignores both the Medicare-surcharge-reduction alpha and the RMD tax-drag alpha; conventional Outside-funding advice frames the conversion tax as a "cost" rather than an asset-allocation investment. A household running the full alpha decomposition — Core + Medicare + RMD tax-drag on the conversion side, plus tax-drag-avoidance on the funding side under Outside payment — can identify favorable conversions even when $t_D \leq t_C$ and can correctly reject conversions whose pooled alpha is negative despite a favorable rate spread.
 
 ---
 
