@@ -195,7 +195,7 @@ The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is a standard 
 
 The reconciliation: at a portfolio discount rate, that nominal "extra" is exactly the time value of money on the $K$ sum. The household is not receiving free money; it is receiving back its capital plus the rate of return it would have earned anyway. **The SRC's value is not in producing extra present-value wealth — it is in moving capital from a tax-drag wrapper to a tax-free wrapper, eliminating the drag for the rest of the account's life.** This separate effect (Property 2) is the source of the SRC's lasting economic significance, captured by the $K \cdot (r - r_d)$ annual differential.
 
-**Scope of the identity.** The PV-equivalence identity proved here uses the portfolio's expected rate of return as the discount rate — precisely the convention adopted by the conventional Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is therefore not an artifact of an idiosyncratic discount choice; it is a property of the same matched-rate framework those prior treatments employ. Cases where the household's personal discount rate diverges from the portfolio rate are discussed separately in §6.2.
+**Scope of the identity.** The PV-equivalence identity proved here uses the portfolio's expected rate of return as the discount rate — precisely the convention adopted by the conventional Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is therefore not an artifact of an idiosyncratic discount choice; it is a property of the same matched-rate framework those prior treatments employ. When a household's personal discount rate $\rho$ diverges from the portfolio rate $r$, the identity breaks: $\rho > r$ produces negative SRC PV, $\rho < r$ positive — but in practice most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable in PV terms.
 
 ---
 
@@ -359,11 +359,9 @@ The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion
 
 ---
 
-## 6. Where the SRC Has Real Value
+## 6. Where the SRC Has Real Value: Tax-Drag Differential
 
-Section 4 proved that the SRC present value is zero when the discount rate equals the portfolio rate. This makes the SRC appear neutral. It is not. The SRC has real economic value through two channels that escape a pure PV-at-portfolio-rate framing.
-
-### 6.1 Tax-Drag Differential
+Section 4 proved that the SRC present value is zero when the discount rate equals the portfolio rate. This makes the SRC appear neutral. It is not. The SRC has real economic value through the tax-drag-differential channel that escapes a pure PV-at-portfolio-rate framing.
 
 Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds non-trivially over a multi-decade retirement horizon.
 
@@ -375,10 +373,6 @@ Empirical values:
 - **Outside RMD scenario (§5B):** FV \$5,092 / PV \$1,021
 
 RMD values exceed the FA-scenario values on both metrics. RMD's 30-year horizon (20 owner + 10 beneficiary) keeps SRC dollars compounding in the Roth wrapper longer than FA's 20 years, producing a larger cumulative drag-avoidance differential. The FV ratio (~5.5×) exceeds the PV ratio (~2.1×) because beneficiary-period drag-avoidance accruals are heavily discounted back to today.
-
-### 6.2 Discount-Rate Mismatch
-
-For households whose marginal cost of capital (or marginal time preference for consumption) differs from the portfolio's expected return, the PV identity in Section 4 no longer holds. If a household discounts future consumption at a rate $\rho > r$, the SRC produces negative PV (worse than the portfolio's growth). If $\rho < r$, positive PV. In practice, retirees are typically risk-averse with personal discount rates close to or below the portfolio's expected return, making the SRC neutral-to-favorable in PV terms even before including the §6.1 drag-avoidance alpha.
 
 ---
 
@@ -414,7 +408,7 @@ The Synthetic Roth Contribution is the dollar-for-dollar economic equivalent of 
 
 4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a first-class component alongside spread arbitrage, IRMAA savings, and reduced-RMD tax-drag.
 
-The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from (a) the tax-drag differential between Roth and taxable wrappers and (b) deviations between the household's personal discount rate and the portfolio's expected return.
+The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from the tax-drag differential between Roth and taxable wrappers — the channel that compounds the SRC's $K$ dollars at $r$ instead of $r_d$ over the post-conversion horizon.
 
 Including the SRC turns Roth conversion analysis from a tax-rate-spread question into a wrapper-allocation question. The household is not just choosing whether to pay tax now or later. It is choosing whether to migrate a meaningful sum ($K$) of taxable-wrapper savings into a tax-free wrapper. That second choice is partially captured by Reichenstein & Meyer (2017) under tax-drag conditions, partially captured by Vanguard's BETR (2025) as a parameter adjustment, and independently surfaced by Nalebuff, Haghani & White (2025) as a "size matters" heuristic — but a separable per-year IRR / PV / FV decomposition with the algebraic identity $\mathrm{PV}(\text{Outside} - \text{Inside}) = K$ at the portfolio rate has not, to our knowledge, been published outside the SRC framework.
 
