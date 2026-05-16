@@ -61,7 +61,18 @@ const CONTENT_ROOT = path.join(process.cwd(), "content");
 
 export function readPaperBody(file: string): string {
   const fullPath = path.join(CONTENT_ROOT, "papers", file);
-  return fs.readFileSync(fullPath, "utf8");
+  const raw = fs.readFileSync(fullPath, "utf8");
+  // Strip the title block: leading H1 + author/date lines through the first
+  // horizontal rule. The styled page header renders the title separately.
+  const ruleIdx = raw.search(/^---\s*$/m);
+  if (ruleIdx !== -1) {
+    const beforeRule = raw.slice(0, ruleIdx);
+    if (/^#\s/m.test(beforeRule)) {
+      // Drop everything up to and including the first --- and surrounding blank lines.
+      return raw.slice(ruleIdx).replace(/^---\s*\n+/, "");
+    }
+  }
+  return raw;
 }
 
 export function readContentFile(relativePath: string): string {
