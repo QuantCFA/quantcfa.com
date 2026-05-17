@@ -51,13 +51,13 @@ This is the closest published decomposition of outside-funded conversion value. 
 
 **McQuarrie (2024)** — *Net Present Value Analysis of Roth Conversions*, Journal of Financial Planning 37(7/9): 76–90. Wrapper migration at the heart of Outside-funded conversions is not separately tracked in McQuarrie's NPV accounting: \$22,000 of after-tax dollars moves from a taxable into a tax-free wrapper, compounding tax-free for the life of the account. That migration is the Synthetic Roth Contribution.
 
-McQuarrie's framework offsets the tax payment against future RMD tax savings, discounted at the portfolio rate. In his 22% → 25% base case on \$100K, the discounted savings do not catch the \$22K upfront tax until age 97; at life expectancy the household is \$7K short in PV. He concludes the \$22K was *"in all but name, a loan to the government"* and that paying conversion tax from outside funds is "not all that helpful." Notably, this RMD-savings stream is identical under Inside funding — the framework cannot distinguish the two funding paths by construction.
+McQuarrie's framework offsets the tax payment against future RMD tax savings, discounted at the portfolio rate. In his 22% → 25% base case on \$100K, *"\$7,000 remains to be defrayed"* at life expectancy and *"\$22,000 is totally cashed out"* at age 97. He concludes the \$22K was *"in all but name, a loan to the government"* and that paying conversion tax from outside funds is *"not all that helpful."*
 
-Two considerations arise here.
+Two considerations arise.
 
-*First*, the loan analogy is backwards. The Traditional account has been investing the government's \$25K tax share — interest-free, for potentially decades. Settling a \$25K liability today while booking a \$3K profit is sound management.
+*First*, the loan analogy is backwards. The Traditional account has been investing the government's \$25K tax share — interest-free, for potentially decades. Settling a \$25K liability today while booking a \$3K profit is helpful and prudent.
 
-*Second*, the NPV = 0 result obscures the wrapper migration. Evaluated at $t_D = 25\%$:
+*Second*, McQuarrie's framework is structurally blind to wrapper composition. The RMD-savings stream is identical under Inside funding — his framework cannot distinguish the two funding paths. And the NPV = 0 result obscures the wrapper migration. Evaluated at $t_D = 25\%$:
 
 | | Trad (pre-tax) | Roth (tax-free) | Bank (after-tax) | Total after-tax |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ Two considerations arise here.
 | **Outside payment** | \$0 | \$100K | \$0 | **\$100K** |
 | **Inside payment** | \$0 | \$78K | \$22K | **\$100K** |
 
-Outside and Inside hold identical totals but Outside places \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional shadow balance and does not track the post-conversion Roth separately, so this \$22K does not appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his own 6% portfolio rate — sums to ≈\$22K, equal to the upfront conversion tax. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — remains outside the calculation.
+Outside and Inside create identical wealth but Outside puts \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional shadow balance and does not track the post-conversion Roth separately, so this \$22K does not appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his own 6% portfolio rate — sums to ≈\$22K, equal to the upfront conversion tax. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — remains outside the calculation.
 
 Two further issues cloud the analysis.
 
