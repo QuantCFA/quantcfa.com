@@ -69,7 +69,7 @@ Outside and Inside create identical wealth but Outside puts \$22K more in the Ro
 
 Further considerations.
 
-*First*, conversion NPV is a positive or negative number, locked in at year 0. Time only unfolds the consequences. McQuarrie's Col 9, labeled "NPV-to-This-Point," runs from −\$22K at year 0 to +\$3K at distribution end — as if NPV accrues over time. But NPV is a year-0 scalar by definition; the decision was settled at conversion.
+*First*, conversion NPV is a positive or negative number, locked in at year 0. McQuarrie's Col 9, labeled "NPV-to-This-Point," runs from −\$22K at year 0 to +\$3K at distribution end — as if NPV accrues over time. But NPV is a year-0 scalar by definition; the decision was settled at conversion. Time only unfolds the consequences.
 
 *Second*, the conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
 
