@@ -55,7 +55,7 @@ McQuarrie's framework offsets the tax payment against future RMD tax savings, di
 
 Two considerations arise.
 
-*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Settling a \$25K liability today repays the loan while booking a \$3K profit — helpful and prudent.
+*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Settling a \$25K liability today repays the loan while booking a \$3K profit — helpful and prudent. The IRS gets the same \$22K with Inside funding and no out-of-pocket cash — confirming the government's share was never a taxpayer loan.
 
 *Second*, McQuarrie's framework misses the wrapper composition. The RMD-savings stream is identical under Inside funding — his framework does not distinguish the two funding paths. The *"\$22,000 paid out of pocket up front"* he calls a loan actually sits in the Roth. The NPV = 0 result obscures this wrapper migration.
 
