@@ -55,7 +55,7 @@ McQuarrie's framework offsets the tax payment against future RMD tax savings, di
 
 Two considerations arise here.
 
-*First*, the loan analogy is backwards. The Traditional account has been investing the government's \$25K tax share — interest-free, for potentially decades. Settling a \$25K liability for \$22K and booking a \$3K profit today is sound management.
+*First*, the loan analogy is backwards. The Traditional account has been investing the government's \$25K tax share — interest-free, for potentially decades. Settling a \$25K liability today while booking a \$3K profit is sound management.
 
 *Second*, the NPV = 0 result obscures the wrapper migration. Evaluated at $t_D = 25\%$:
 
