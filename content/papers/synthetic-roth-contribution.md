@@ -71,9 +71,7 @@ Further considerations.
 
 *First*, conversion NPV is a positive or negative number, locked in at year 0. McQuarrie's Col 9, labeled "NPV-to-This-Point," runs from −\$22K at year 0 to +\$3K at distribution end — as if NPV accrues over time. But NPV is a year-0 scalar by definition; the decision was settled at conversion. Time only unfolds the consequences.
 
-*Second*, the conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
-
-When a result diverges from both intuition and the SRC identity, the framework — not the intuition — merits revisiting.
+*Second*, the "not all that helpful" conclusion is antithetical to the universally accepted desirability of moving dollars into a tax-free wrapper. The benefit holds even absent any rate-spread profit — applying equally to statutory Roth contributions and the Synthetic Roth Contribution.
 
 **Other practitioner literature** — Kitces (multiple posts on true-marginal-rate, equivalency-principle, and tax-alpha frameworks); Slott (across newsletters and *The Retirement Savings Bomb*); Pfau (*Retirement Income Planning* and Advisor Perspectives series); the Bogleheads NPV threads; and major retirement-research publications from Schwab, Fidelity, T. Rowe Price, and Morningstar — all advise paying conversion tax from outside funds when feasible. To our knowledge, none separates the value of that practice as a standalone PV / FV / IRR bucket, none states the PV identity, and none derives a separable BETR extension. The qualitative advice is widely repeated; the formal decomposition appears to be absent from this body of work.
 
