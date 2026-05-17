@@ -49,15 +49,15 @@ This is the closest published decomposition of outside-funded conversion value. 
 
 **McQuarrie & DiLellio (2023)** — *The Arithmetic of Roth Conversions*, Journal of Financial Planning, May 2023 — explicitly tabulates the year-by-year wealth wedge between Inside-paid and Outside-paid branches at constant tax rates (\$1,343 at year 3, \$8,319 at year 10, \$40,386 at year 20 in their illustration), with the drag-rate differential between Roth ($r$) and taxable wrapper ($r' = r(1-t)$) as the underlying source. They report this as a wealth-difference time series rather than as a separable PV / FV / IRR bucket and do not state the PV-equivalence identity. Their numerical evidence is consistent with the SRC framework's predictions and provides additional empirical support for the wrapper-transition mechanism.
 
-**McQuarrie (2024)** — *Net Present Value Analysis of Roth Conversions*, Journal of Financial Planning 37(7/9): 76–90 — overlooks the wrapper migration at the heart of an Outside-funded conversion: \$22K of after-tax dollars moves from a taxable account into a tax-free one, where it compounds untaxed for the life of the account. That migration — the Synthetic Roth Contribution — is the missing component in his NPV accounting.
+**McQuarrie (2024)** — *Net Present Value Analysis of Roth Conversions*, Journal of Financial Planning 37(7/9): 76–90 — does not separately account for the wrapper migration at the heart of an Outside-funded conversion: \$22K of after-tax dollars moves from a taxable account into a tax-free one, where it compounds untaxed for the life of the account. That migration — the Synthetic Roth Contribution — is not separately tracked in his NPV accounting.
 
 McQuarrie's framework discounts the conversion tax against future RMD tax savings at the portfolio rate. In his 22% → 25% base case on \$100K, the discounted savings do not catch the \$22K upfront tax until age 97; at life expectancy the household is \$7K short in PV. He concludes the \$22K was *"in all but name, a loan to the government"* and that paying conversion tax from outside funds is "not all that helpful."
 
-Two things go wrong here.
+Two considerations arise here.
 
-*First*, the loan framing inverts the economics. The \$25K the IRS will eventually collect exists because the IRS allowed the investor to hold the government's tax share — interest-free, for potentially decades — inside the Traditional account. Settling that \$25K liability today for \$22K is sound balance-sheet management, not a loan extended by the taxpayer. It is a \$3K profit booked at conversion.
+*First*, the loan framing reads the economics asymmetrically. The \$25K the IRS will eventually collect exists because the IRS allowed the investor to hold the government's tax share — interest-free, for potentially decades — inside the Traditional account. Settling that \$25K liability today for \$22K is sound balance-sheet management. It is a \$3K profit booked at conversion.
 
-*Second*, the NPV = 0 result conceals the wrapper migration. Evaluated at $t_D = 25\%$:
+*Second*, the NPV = 0 result obscures the wrapper migration. Evaluated at $t_D = 25\%$:
 
 | | Trad (pre-tax) | Roth (tax-free) | Bank (after-tax) | Total after-tax |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ Two things go wrong here.
 | **Outside payment** | \$0 | \$100K | \$0 | **\$100K** |
 | **Inside payment** | \$0 | \$78K | \$22K | **\$100K** |
 
-Outside and Inside hold identical totals but Outside places \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional shadow balance and never tracks the post-conversion Roth separately, so this \$22K is invisible to his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his own 6% portfolio rate — sums to ≈\$22K, equal to the upfront conversion tax. McQuarrie published the column but used only Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — was never entered.
+Outside and Inside hold identical totals but Outside places \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional shadow balance and does not track the post-conversion Roth separately, so this \$22K does not appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his own 6% portfolio rate — sums to ≈\$22K, equal to the upfront conversion tax. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — remains outside the calculation.
 
 Two further issues cloud the analysis.
 
@@ -73,7 +73,7 @@ Two further issues cloud the analysis.
 
 2. The conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
 
-When a result clashes with both intuition and the SRC identity, the framework — not the intuition — needs revisiting.
+When a result clashes with both intuition and the SRC identity, the framework — not the intuition — merits revisiting.
 
 **Other practitioner literature** — Kitces (multiple posts on true-marginal-rate, equivalency-principle, and tax-alpha frameworks); Slott (across newsletters and *The Retirement Savings Bomb*); Pfau (*Retirement Income Planning* and Advisor Perspectives series); the Bogleheads NPV threads; and major retirement-research publications from Schwab, Fidelity, T. Rowe Price, and Morningstar — all advise paying conversion tax from outside funds when feasible. To our knowledge, none separates the value of that practice as a standalone PV / FV / IRR bucket, none states the PV identity, and none derives a separable BETR extension. The qualitative advice is widely repeated; the formal decomposition appears to be absent from this body of work.
 
