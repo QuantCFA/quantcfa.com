@@ -51,7 +51,7 @@ This is the closest published decomposition of outside-funded conversion value. 
 
 **McQuarrie (2024)** — *Net Present Value Analysis of Roth Conversions*, Journal of Financial Planning 37(7/9): 76–90. Wrapper migration at the heart of Outside-funded conversions is not separately tracked in McQuarrie's NPV accounting: \$22,000 of after-tax dollars moves from a taxable into a tax-free wrapper, compounding tax-free for the life of the account. That migration is the Synthetic Roth Contribution.
 
-McQuarrie's framework offsets the tax payment against future RMD tax savings, discounted at the portfolio rate. In his 22% → 25% base case on \$100K, the discounted savings do not catch the \$22K upfront tax until age 97; at life expectancy the household is \$7K short in PV. He concludes the \$22K was *"in all but name, a loan to the government"* and that paying conversion tax from outside funds is "not all that helpful."
+McQuarrie's framework offsets the tax payment against future RMD tax savings, discounted at the portfolio rate. In his 22% → 25% base case on \$100K, the discounted savings do not catch the \$22K upfront tax until age 97; at life expectancy the household is \$7K short in PV. He concludes the \$22K was *"in all but name, a loan to the government"* and that paying conversion tax from outside funds is "not all that helpful." Notably, this RMD-savings stream is identical under Inside funding — the framework cannot distinguish the two funding paths by construction.
 
 Two considerations arise here.
 
