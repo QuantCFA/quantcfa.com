@@ -55,7 +55,7 @@ McQuarrie's framework offsets the tax payment against future RMD tax savings, di
 
 Two considerations arise.
 
-*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Settling a \$25K liability today repays the loan while booking a \$3K profit — helpful and prudent. The IRS gets the same \$22K with Inside funding and no out-of-pocket cash — confirming the government's share was never a taxpayer loan.
+*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Under Inside funding, the IRS gets the same \$22K back with no out-of-pocket cash, confirming there was never a taxpayer loan. Settling a \$25K liability today repays the IRS loan while booking a \$3K profit — helpful and prudent.
 
 *Second*, McQuarrie's framework misses the wrapper composition. The RMD-savings stream is identical under Inside funding — his framework does not distinguish the two funding paths. The *"\$22,000 paid out of pocket up front"* he calls a loan actually sits in the Roth. The NPV = 0 result obscures this wrapper migration.
 
@@ -65,7 +65,7 @@ Two considerations arise.
 | **Outside payment** | \$0 | \$100K | \$0 | **\$100K** |
 | **Inside payment** | \$0 | \$78K | \$22K | **\$100K** |
 
-Outside and Inside create identical wealth but Outside puts \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional shadow balance and does not track the post-conversion Roth separately, so this \$22K does not appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his own 6% portfolio rate — sums to ≈\$22K, equal to the upfront conversion tax. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — remains outside the calculation.
+Outside and Inside create identical wealth but Outside puts \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional balance and cannot track the post-conversion Roth separately, so this \$22K does not appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his own 6% portfolio rate — sums to ≈\$22K, equal to the upfront conversion tax. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — remains outside the calculation.
 
 Two further issues cloud the analysis.
 
