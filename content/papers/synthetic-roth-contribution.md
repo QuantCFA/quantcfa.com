@@ -69,7 +69,7 @@ Outside and Inside create identical wealth but Outside puts \$22K more in the Ro
 
 Further considerations.
 
-*First*, a conversion's NPV is a single number, locked in at year 0 — positive or negative at conversion. Time only unfolds the consequences. McQuarrie's "NPV-to-This-Point" is a running sum of discounted cash flows, not a time-varying NPV, and its age-97 "break-even" has no economic meaning — the decision was settled at conversion.
+*First*, conversion NPV is a positive or negative number, locked in at year 0. Time only unfolds the consequences. McQuarrie's "NPV-to-This-Point" is a running sum of discounted cash flows, not a time-varying NPV, and its age-97 "break-even" has no economic meaning — the decision was settled at conversion.
 
 *Second*, the conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
 
