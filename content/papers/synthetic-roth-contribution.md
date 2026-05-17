@@ -65,7 +65,7 @@ Two considerations arise.
 | **Outside payment** | \$0 | \$100K | \$0 | **\$100K** |
 | **Inside payment** | \$0 | \$78K | \$22K | **\$100K** |
 
-Outside and Inside create identical wealth but Outside puts \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional balance and does not track the post-conversion Roth separately, so this \$22K cannot appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his 6% portfolio rate — sums to \$22K, equal to the tax payment. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a one-sided cost. The matching \$22K on the asset side — sitting in the Roth — remains outside the calculation.
+Outside and Inside create identical wealth but Outside puts \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional balance and does not track the post-conversion Roth separately, so this \$22K cannot appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his 6% portfolio rate — sums to \$22K, equal to the tax payment. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a cost. The matching \$22K asset — sitting in the Roth — remains outside the calculation.
 
 Two further issues cloud the analysis.
 
