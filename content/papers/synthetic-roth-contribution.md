@@ -55,7 +55,7 @@ McQuarrie's framework offsets the tax payment against future RMD tax savings, di
 
 Two considerations arise.
 
-*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Settling a \$25K liability today while booking a \$3K profit is helpful and prudent.
+*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Settling a \$25K liability today repays the loan while booking a \$3K profit — helpful and prudent.
 
 *Second*, McQuarrie's framework misses the wrapper composition. The RMD-savings stream is identical under Inside funding — his framework does not distinguish the two funding paths. And the NPV = 0 result obscures the wrapper migration.
 
