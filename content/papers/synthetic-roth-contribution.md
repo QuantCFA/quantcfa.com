@@ -67,11 +67,11 @@ Two considerations arise.
 
 Outside and Inside create identical wealth but Outside puts \$22K more in the Roth wrapper. McQuarrie's analysis runs off the \$100K Traditional balance and does not track the post-conversion Roth separately, so this \$22K cannot appear in his calculation. The matched-rate PV identity of §4 explains why his discounted RMD savings come up exactly \$22K short: Table 1 Column 8 — tax-at-22% on each RMD, discounted at his 6% portfolio rate — sums to \$22K, equal to the tax payment. McQuarrie published the column and computed Col 7 − Col 8 (the \$3K Core), treating the \$22K as a cost. The matching \$22K asset — sitting in the Roth — remains outside the calculation.
 
-Two further issues cloud the analysis.
+Further considerations.
 
-1. A conversion's NPV is a single number, locked in at year 0 — positive or negative at conversion. Time only unfolds the consequences. McQuarrie's "NPV-to-This-Point" is a running sum of discounted cash flows, not a time-varying NPV, and its age-97 "break-even" has no economic meaning — the decision was settled at conversion.
+*First*, a conversion's NPV is a single number, locked in at year 0 — positive or negative at conversion. Time only unfolds the consequences. McQuarrie's "NPV-to-This-Point" is a running sum of discounted cash flows, not a time-varying NPV, and its age-97 "break-even" has no economic meaning — the decision was settled at conversion.
 
-2. The conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
+*Second*, the conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
 
 When a result diverges from both intuition and the SRC identity, the framework — not the intuition — merits revisiting.
 
