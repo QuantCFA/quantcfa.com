@@ -73,7 +73,7 @@ Two further issues cloud the analysis.
 
 2. The conclusion that Outside payment is "not all that helpful" contradicts the universally accepted desirability of moving dollars into a tax-free wrapper.
 
-When a result clashes with both intuition and the SRC identity, the framework — not the intuition — merits revisiting.
+When a result diverges from both intuition and the SRC identity, the framework — not the intuition — merits revisiting.
 
 **Other practitioner literature** — Kitces (multiple posts on true-marginal-rate, equivalency-principle, and tax-alpha frameworks); Slott (across newsletters and *The Retirement Savings Bomb*); Pfau (*Retirement Income Planning* and Advisor Perspectives series); the Bogleheads NPV threads; and major retirement-research publications from Schwab, Fidelity, T. Rowe Price, and Morningstar — all advise paying conversion tax from outside funds when feasible. To our knowledge, none separates the value of that practice as a standalone PV / FV / IRR bucket, none states the PV identity, and none derives a separable BETR extension. The qualitative advice is widely repeated; the formal decomposition appears to be absent from this body of work.
 
