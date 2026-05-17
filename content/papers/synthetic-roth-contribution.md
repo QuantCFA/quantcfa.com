@@ -57,7 +57,7 @@ Two considerations arise.
 
 *First*, the loan analogy is backwards. The Traditional account has been investing the government's \$25K tax share — interest-free, for potentially decades. Settling a \$25K liability today while booking a \$3K profit is helpful and prudent.
 
-*Second*, McQuarrie's framework is structurally blind to wrapper composition. The RMD-savings stream is identical under Inside funding — his framework cannot distinguish the two funding paths. And the NPV = 0 result obscures the wrapper migration.
+*Second*, McQuarrie's framework misses the wrapper composition. The RMD-savings stream is identical under Inside funding — his framework does not distinguish the two funding paths. And the NPV = 0 result obscures the wrapper migration.
 
 | | Trad (pre-tax) | Roth (tax-free) | Bank (after-tax) | Total after-tax |
 |---|---|---|---|---|
