@@ -527,7 +527,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 - **Synthetic Roth Contribution (FV).** Outside FA = \$33,917.27 = $K \times$ 1.88786; Outside RMD = \$71,229.59 ≈ nominal 30-year (Outside − Inside) ATCF delta of \$71,229.46. RMD's larger nominal SRC reflects longer compounding — RMD's 10-year beneficiary window compounds beyond FA's owner-only 20 years. PV at 7% is identical (\$17,966 = $K$), as the §4 identity requires.
 - **Time-weighted $t_D$ is higher under RMD** (25.23% vs FA's 22.39%) because RMD's later, larger distributions push into higher brackets.
 - **SRC Tax-Drag** alpha is non-zero only under Outside payment — capturing the value of $K$ dollars avoiding taxable-account drag.
-- **Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag are identical between Inside and Outside** within each distribution method — confirming these components are funding-source-independent, as the SRC framework predicts.
+- **Conversion alpha components — Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag — are identical between Inside and Outside under each distribution method, confirming funding-source independence.**
 - **Total ATCF Change (FV) differs between scenarios** because Outside's distribution stream includes the year-by-year SRC increment. Under FA: Outside FV ≈ Inside FV + ($K \times$ annuity-factor multiple) = \$31,937 + \$33,917 = \$65,854.
 - **Full-Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside it is meaningful: the Outside IRR exceeds the portfolio rate by the combined spread + Medicare-surcharge + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
 
