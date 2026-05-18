@@ -493,7 +493,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 | SRC Tax-Drag (FV) | \$0 | \$917.08 |
 | SRC Tax-Drag (PV) | \$0 | \$485.78 |
 | Synthetic Roth Contribution (FV) | \$0 | **\$33,917.27** |
-| Full-Cash-Flow IRR | — (no outside outlay) | **15.014%** |
+| Cash-Flow IRR | — (no outside outlay) | **15.014%** |
 | Return Multiple | — | 3.32186 |
 | Duration (yrs) | — | 11.94 |
 
@@ -518,7 +518,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 | SRC Tax-Drag (FV) | \$0 | \$5,091.72 |
 | SRC Tax-Drag (PV) | \$0 | \$1,021.23 |
 | Synthetic Roth Contribution (FV) | \$0 | **\$71,229.59** |
-| Full-Cash-Flow IRR | — (no outside outlay) | **11.497%** |
+| Cash-Flow IRR | — (no outside outlay) | **11.497%** |
 | Return Multiple | — | 6.7788 |
 | Duration (yrs) | — | 22.97 |
 
@@ -529,7 +529,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 - **SRC Tax-Drag** alpha is non-zero only under Outside payment — capturing the value of $K$ dollars avoiding taxable-account drag.
 - **Conversion alpha components — identical for Inside and Outside** — confirm funding-source independence under each distribution method. Alphas: Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag.
 - **Total ATCF (FV) differs between scenarios by the SRC's lifetime payout.** Under FA: Outside \$65,854 = Inside \$31,937 + SRC \$33,917.
-- **Full-Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside it is meaningful: the Outside IRR exceeds the portfolio rate by the combined spread + Medicare-surcharge + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
+- **Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside it is meaningful: the Outside IRR exceeds the portfolio rate by the combined spread + Medicare-surcharge + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
 
 ---
 
