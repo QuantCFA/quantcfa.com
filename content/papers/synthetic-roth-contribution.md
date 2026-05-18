@@ -56,7 +56,7 @@ SRC (alternative):      $300K = $300K × (1 − BETR) + $70K → 23.3%
 
 Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss of wealth (= \$100K × (35% − 24%)). Vanguard cognitively frames the tax payment as a cost rather than a migrated asset.
 
-Jill's advisor's assumed taxable multiple of 2 (vs Roth's 3) implies a 37.5% drag on annual pretax return (§6) — implausibly high for most investors. Framing it as a multiple obscures what an explicit drag rate would have made alarming.
+Jill's advisor's assumed taxable multiple of 2 implies a 37.5% drag on annual pretax return (§6) — implausibly high for most investors. Framing it as a multiple obscures what an explicit drag rate would have made alarming.
 
 **McQuarrie & DiLellio (2023)** — *The Arithmetic of Roth Conversions*, Journal of Financial Planning, May 2023 — explicitly tabulates the year-by-year wealth wedge between Inside-paid and Outside-paid branches at constant tax rates (\$1,343 at year 3, \$8,319 at year 10, \$40,386 at year 20 in their illustration), with the drag-rate differential between Roth ($r$) and taxable wrapper ($r' = r(1-t)$) as the underlying source. They report this as a wealth-difference time series rather than as a separable PV / FV / IRR bucket and do not state the PV-equivalence identity. Their numerical evidence is consistent with the SRC framework's predictions and provides additional empirical support for the wrapper-transition mechanism.
 
