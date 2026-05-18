@@ -432,7 +432,7 @@ The Synthetic Roth Contribution is the dollar-for-dollar economic equivalent of 
 
 2. **Empirical (FA case).** Paired Inside FA and Outside FA scenarios confirm a constant **\$1,695.86/year** increment matching the algebraic prediction to the cent, with identical **\$9,766 PV totals**. SRC (FV) = \$33,917.27 = $K \times$ annuity-factor multiple (§5).
 
-3. **Empirical (RMD case — generalization).** Paired Inside RMD and Outside RMD scenarios, with all inputs held constant except the tax payment source and the distribution method, show that **the algebraic PV identity holds under RMD too**, with the same conversion as the FA case. The per-year (Outside − Inside) increment is no longer constant — it varies from \$831 (year 2030) to \$2,596 (year 2049) in the owner period, then is flat \$3,901 in the beneficiary period (years 2050–2059) — yet the integrated PV at the portfolio rate sums to **+\$17,965.96**, exactly canceling the year-0 outflow of −\$17,966.00 to within a 4-cent rounding residual. The Outside RMD scenario's Synthetic Roth Contribution (FV) of \$71,229.59 matches the nominal 30-year (Outside − Inside) sum of \$71,229.46 to within \$0.13.
+3. **Empirical (RMD case — generalization).** Under RMD, the per-year (Outside − Inside) increment varies but its PV sums to **+\$17,965.96**, within 4 cents of $K$. SRC (FV) = \$71,229.59 matches the 30-year nominal sum to \$0.13 (§5B).
 
 4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a first-class component alongside spread arbitrage, Medicare-surcharge savings, and reduced-RMD tax-drag.
 
