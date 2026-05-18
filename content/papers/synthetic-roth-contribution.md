@@ -161,9 +161,9 @@ If the liquidity-surrender of moving after-tax cash into a Roth wrapper is not c
 
 ### 3.5 Wrapper Migration Neutrality
 
-The structural pattern visible in §3.3 (Two Settlement Options) and §3.4 (Symmetry to Statutory Roth Contributions) leads to a general principle:
+The pattern in §3.3 and §3.4 generalizes:
 
-**Wrapper Migration Neutrality** postulates that any transaction that alters a household's tax-wrapper composition without changing its contemporaneous after-tax wealth imposes no cost — it is a reallocation, not an expense.
+**Wrapper Migration Neutrality**: any transaction altering tax-wrapper composition without changing contemporaneous after-tax wealth imposes no cost — it is reallocation, not expense.
 
 Examples:
 
@@ -171,7 +171,7 @@ Examples:
 - An **Outside-funded Roth conversion** moves $K$ after-tax dollars from the bank wrapper to the Roth wrapper (implicitly, via the conversion-tax payment), in addition to the rate-arbitrage on converted principal.
 - A **taxable-to-HSA migration** moves after-tax dollars from a bank wrapper into a triple-tax-advantaged HSA wrapper.
 
-Each is structurally identical at the migration moment: total after-tax wealth is conserved, only wrapper composition changes. The future economic value of each emerges over time through the source/destination growth rate differential — drag in the source, no drag in the destination — but at the moment of migration, none impose a cost.
+Each is identical at the migration moment: after-tax wealth conserved, only wrapper composition changes. Future value emerges through the source/destination drag differential, but migration itself imposes no cost.
 
 ### 3.6 Definition
 
