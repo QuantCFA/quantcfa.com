@@ -524,7 +524,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 
 **Notes.**
 
-- **Synthetic Roth Contribution (FV).** Outside FA = \$33,917.27 = $K \times$ 1.88786; Outside RMD = \$71,229.59 ≈ nominal 30-year (Outside − Inside) ATCF delta of \$71,229.46. RMD's larger nominal SRC reflects the longer compounding horizon — RMD's 10-year beneficiary window extends the SRC compound period beyond FA's owner-only 20 years. PV at 7% is identical across methods (\$17,966 = $K$), as the §4 identity requires.
+- **Synthetic Roth Contribution (FV).** Outside FA = \$33,917.27 = $K \times$ 1.88786; Outside RMD = \$71,229.59 ≈ nominal 30-year (Outside − Inside) ATCF delta of \$71,229.46. RMD's larger nominal SRC reflects longer compounding — RMD's 10-year beneficiary window compounds beyond FA's owner-only 20 years. PV at 7% is identical (\$17,966 = $K$), as the §4 identity requires.
 - **Time-weighted $t_D$ is higher under RMD** (25.23% vs FA's 22.39%) because RMD's later, larger distributions push into higher brackets.
 - **SRC Tax-Drag** is non-zero only under Outside payment — it captures the value of $K$ dollars escaping taxable-account drag. Magnitudes here are small because the scenarios use a modest $r - r_d$ differential; under realistic 1–5% absolute drag this term scales materially.
 - **Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag are identical between Inside and Outside** within each distribution method — confirming these components are funding-source-independent, as the SRC framework predicts.
