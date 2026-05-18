@@ -56,7 +56,7 @@ SRC (alternative):      $300K = $300K × (1 − BETR) + $70K → 23.3%
 
 Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss of wealth (= \$100K × (35% − 24%)).
 
-Does Jill understand that her advisor's assumed taxable multiple of 2 implies a 37.5% annual tax rate on investment returns (§6) — implausibly high for most investors?
+Does Jill understand that her advisor's assumed taxable multiple of 2 (vs Roth's 3) implies a 37.5% annual tax rate on investment returns (§6) — implausibly high for most investors?
 
 Vanguard cognitively frames the tax payment as a cost rather than a migrated asset.
 
