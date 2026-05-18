@@ -529,7 +529,7 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 - **SRC Tax-Drag** alpha is non-zero only under Outside payment — capturing the value of $K$ dollars avoiding taxable-account drag.
 - **Conversion alpha components — identical for Inside and Outside** — confirm funding-source independence under each distribution method. Alphas: Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag.
 - **Total ATCF (FV) differs between scenarios by the SRC's lifetime payout.** Under FA: Outside \$65,854 = Inside \$31,937 + SRC \$33,917.
-- **Cash-Flow IRR** is undefined under Inside payment (no outside outlay; cash-flow stream is purely positive). Under Outside it is meaningful: the Outside IRR exceeds the portfolio rate by the combined spread + Medicare-surcharge + tax-drag alpha, on top of the PV-zero-at-$r$ SRC.
+- **Cash-Flow IRR** is meaningful for Outside (15.014% FA, 11.497% RMD), exceeding the 7% portfolio rate because the lifetime distributions include the conversion's alpha — rate-arbitrage spread, Medicare savings, RMD tax-drag savings, and SRC tax-drag avoidance. Inside has no out-of-pocket cash; IRR is undefined.
 
 ---
 
