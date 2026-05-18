@@ -238,7 +238,7 @@ We use two simulation runs with **all conversion inputs identical except the tax
 
 **Conversion under analysis (both scenarios):** $C$ = \$123,850.00, filling through the 22% cumulative bracket. $K$ = \$17,966.00 (effective $t_C = 14.51\%$). Time-weighted $t_D = 22.39\%$. Annuity-factor multiple = 1.88786.
 
-**Distribution convention.** Both Traditional and Roth balances are level-distributed via the annuity-payment formula over the 20-year horizon. Roth accounts (IRAs and 401(k)s) have no IRS RMDs during the owner's lifetime, but are modeled identically with the Traditional balance here for direct Outside-vs-Inside comparability — both scenarios face the same distribution schedule, isolating the funding-source effect.
+**Distribution convention.** Both Traditional and Roth balances are level-distributed via the annuity-payment formula over the 20-year horizon. Roth accounts (IRAs and 401(k)s) have no IRS RMDs during owner's lifetime; modeled identically here for Outside-vs-Inside comparability.
 
 ### 5.1 Year-by-Year ATCF Deltas — Inside vs Outside
 
@@ -307,7 +307,7 @@ We answer both with a second paired simulation, holding all inputs identical to 
 
 All §5 inputs apply except the distribution method: $C$ = \$123,850, $K$ = \$17,966, 7.00% portfolio return, 20-year life expectancy. RMDs run from the IRS-mandated age 73 (year 2030) through age 92 (year 2049), followed by the SECURE Act's 10-year beneficiary distribution period (years 2050–2059), distributed as a constant annuity-payment, not continued RMDs.
 
-**Distribution convention.** Roth accounts (IRAs and 401(k)s) are not subject to IRS RMDs during the owner's lifetime. For Outside-vs-Inside comparability, however, both scenarios distribute the post-conversion Roth balance using the same proportional schedule applied to the Traditional balance — IRS Uniform Lifetime Table divisors during the owner period (ages 73–92), and the SECURE Act's 10-year level distribution during the beneficiary period (ages 93–102). Both Outside and Inside paths face identical distribution schedules, isolating the funding-source effect.
+**Distribution convention** (extends §5): for Outside-vs-Inside comparability, under RMD Inside and Outside follow IRS Uniform Lifetime Table divisors during owner period (ages 73–92) and SECURE Act's 10-year level distribution during beneficiary period (ages 93–102).
 
 ### 5B.2 Year-by-Year ΔATCF — Inside vs Outside Under RMD
 
