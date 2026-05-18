@@ -54,7 +54,7 @@ SRC as Cost (Vanguard): $230K = $300K × (1 − BETR) → 23.3%
 SRC (alternative):      $300K = $300K × (1 − BETR) + $70K → 23.3%
 ```
 
-Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss of wealth at conversion (Trad@24% valuation \$76K + bank \$35K = \$111K → Roth \$100K). Vanguard's choice psychologically frames the tax as a cost rather than a migrated asset. Our SRC framework restores what their quote alluded to, pricing the migrated tax explicitly at present value $K$ at the portfolio rate, additive to the drag-alpha rather than absorbed into a break-even rate adjustment.
+Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss of wealth (Trad@24% valuation \$76K + bank \$35K = \$111K → Roth \$100K). Vanguard's choice psychologically frames the tax as a cost rather than a migrated asset. Our SRC framework restores what their quote alluded to, pricing the migrated tax explicitly at present value $K$ at the portfolio rate, additive to the drag-alpha rather than absorbed into a break-even rate adjustment.
 
 Vanguard's assumed taxable multiple of 2 (vs Roth's 3) implies a 37.5% drag on annual pretax return (§6) — implausibly high for most investors. Framing it as a multiple obscures what an explicit drag rate would have made alarming.
 
