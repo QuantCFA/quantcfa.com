@@ -58,7 +58,7 @@ Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss 
 
 Does Jill understand that her advisor's assumed taxable multiple of 2 (vs Roth's 3) implies a 37.5% annual tax rate on investment returns (§6) — implausibly high for most investors?
 
-Vanguard cognitively frames the tax payment as a cost rather than a migrated asset.
+Vanguard frames the tax payment as a cost rather than a migrated asset.
 
 
 **McQuarrie & DiLellio (2023)** — *The Arithmetic of Roth Conversions*, Journal of Financial Planning, May 2023 — explicitly tabulates the year-by-year wealth wedge between Inside-paid and Outside-paid branches at constant tax rates (\$1,343 at year 3, \$8,319 at year 10, \$40,386 at year 20 in their illustration), with the drag-rate differential between Roth ($r$) and taxable wrapper ($r' = r(1-t)$) as the underlying source. They report this as a wealth-difference time series rather than as a separable PV / FV / IRR bucket and do not state the PV-equivalence identity. Their numerical evidence is consistent with the SRC framework's predictions and provides additional empirical support for the wrapper-transition mechanism.
