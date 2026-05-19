@@ -104,7 +104,7 @@ Further considerations.
 | $N$ | Distribution period (years) |
 | $\mathrm{AF}(r, N)$ | Annuity-payment factor at rate $r$ over $N$ years; $\mathrm{AF}(r, N) = r\,/\,(1 - (1 + r)^{-N})$ |
 | $\mathrm{PVA}(r, N)$ | Present-value annuity factor; $\mathrm{PVA}(r, N) = (1 - (1 + r)^{-N})\,/\,r = 1\,/\,\mathrm{AF}(r, N)$ |
-| ATCF | After-Tax Cash Flow in a given year — the household's spendable cash flow from retirement-account distributions after federal income tax: ATCF = Traditional distribution + Roth distribution − federal tax. Roth distributions are tax-free; federal tax falls on traditional distributions plus any Social Security taxation triggered by total income. ΔATCF is the year-by-year ATCF difference between a conversion scenario and the no-conversion baseline. |
+| ATCF | After-tax cash flow from retirement-account distributions: ATCF = Traditional distribution + Roth distribution − federal tax. Federal tax includes Social Security taxation triggered by total income (Roth distributions are tax-free). ΔATCF = year-by-year ATCF difference between conversion and no-conversion baseline. |
 
 **Two scenarios:**
 
