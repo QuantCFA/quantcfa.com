@@ -441,7 +441,7 @@ Once the conversion decision is made, Outside funding is simply an added capital
 
 The Synthetic Roth Contribution is the economic equivalent of a Roth contribution that occurs when conversion tax is paid from outside the retirement account. Cheshire (2025, SSRN 5205840) introduced the concept; this paper proves it four independent ways:
 
-1. **Algebraic.** The annuity-payment / present-value identity proves that when the discount rate equals the portfolio rate, the Outside vs Inside PV difference is exactly zero — yet the Outside-funded household receives a constant $K \cdot \mathrm{AF}(r, N)$ of additional cash flow in every distribution year.
+1. **Algebraic.** The annuity-payment / present-value identity proves that when the discount rate equals the portfolio rate, the Outside vs Inside PV difference is exactly zero — yet Outside funding creates a constant $K \cdot \mathrm{AF}(r, N)$ of additional cash flow in every distribution year.
 
 2. **Empirical (FA case).** Paired Inside FA and Outside FA scenarios confirm a constant **\$1,695.86/year** increment matching the algebraic prediction to the cent, with identical **\$9,766 PV totals**. SRC (FV) = \$33,917.27 = $K \times$ annuity-factor multiple (§5).
 
