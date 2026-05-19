@@ -447,7 +447,7 @@ The Synthetic Roth Contribution is the economic equivalent of a Roth contributio
 
 3. **Empirical (RMD case — generalization).** Under RMD, the per-year (Outside − Inside) increment varies but its PV sums to **+\$17,965.96**, within 4 cents of $K$. SRC (FV) = \$71,229.59 matches the 30-year nominal sum to \$0.13 (§5B).
 
-4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a first-class component alongside spread arbitrage, Medicare-surcharge savings, and reduced-RMD tax-drag.
+4. **Decompositional.** The realized end-of-life wealth difference between Outside and Inside paths cannot be reconciled without including the SRC term as a separable component alongside spread arbitrage, Medicare-surcharge savings, and reduced-RMD tax-drag.
 
 The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from the tax-drag differential between Roth and taxable wrappers — the channel that compounds the SRC's $K$ dollars at $r$ instead of $r_d$ over the post-conversion horizon. **Including the SRC turns Roth conversion analysis from a tax-rate-spread question into a wrapper-allocation question.**
 
