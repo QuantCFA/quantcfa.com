@@ -433,7 +433,7 @@ For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming
 
 - **Funding (Inside vs Outside), conditional on conversion:** Outside relocates $K$ from a taxable wrapper compounding at $r_d$ to a tax-free wrapper compounding at $r$ — the IRS allows this conversion-tax investment (SRC) that others miscast as a cost. The payoff is the tax-drag-avoidance alpha of §6 (\$1,021 PV in the Outside RMD scenario), added to the conversion alpha sum to give total Outside-conversion alpha.
 
-The SRC materializes only as a side effect of choosing Outside funding for an already-decided conversion.
+Once the conversion decision is made, Outside funding is simply an added capital allocation decision.
 
 ---
 
