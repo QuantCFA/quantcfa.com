@@ -9,7 +9,7 @@ Draft: 2026-05-18
 
 Traditional accounting of Roth conversion value focuses on the arbitrage between the conversion-year tax rate $t_C$ and the time-weighted distribution tax rate $t_D$. This framing is incomplete. When the conversion tax is paid from outside the retirement account, after-tax dollars equal to the conversion tax migrate from a taxable wrapper into a tax-free wrapper, where they grow tax-free for the life of the account, including any beneficiary period. We name this effect the **Synthetic Roth Contribution** (SRC). Cheshire (2025, SSRN 5205840) introduced the concept, decomposing conversion-tax payback into SRC plus tax-rate-arbitrage components. Additional SRC alpha lies in tax-drag avoidance. We now formalize the SRC as a separable component with its own PV / FV / IRR identity, distinct from the rate-arbitrage Core.
 
-We prove the SRC's existence four independent ways: (1) algebraically, via the annuity-payment / present-value identity, showing $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$; (2) empirically under Fixed Annuity distributions, where the Outside − Inside per-year ATCF increment is \$1,695.86 in all 20 distribution years, matching the prediction to the cent; (3) empirically under RMD distributions, where varying per-year PV increments sum to within 4 cents of the SRC amount over the 30-year horizon; and (4) by decomposition, showing that the Outside/Inside end-of-life wealth difference is the SRC value.
+We prove the SRC's existence four independent ways: (1) algebraically, via the annuity-payment / present-value identity, showing $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$; (2) empirically under Fixed Annuity distributions, where the Outside − Inside per-year ATCF increment is \$1,695.86 in all 20 distribution years, matching the prediction to the cent; (3) empirically under RMD distributions, where varying per-year PV increments sum to within 4 cents of the SRC amount over the 30-year horizon; and (4) by decomposition, showing that the realized Outside/Inside FV difference equals the SRC value.
 
 Prior treatments — Reichenstein & Meyer (2017), McQuarrie & DiLellio (2023), Vanguard's 2025 BETR, Nalebuff/Haghani/White (2025) — recognize the wrapper migration but treat the migrated tax as a forgone cost. We formalize it as a separable asset with its own per-year cash flow and closed-form PV identity, and reconcile McQuarrie (2024)'s "live past 97 to break even" conclusion by incorporating the SRC into the NPV accounting.
 
@@ -86,7 +86,7 @@ Further considerations.
 
 *Second*, the "not all that helpful" conclusion is antithetical to the widely accepted desirability of moving dollars into a tax-free wrapper. The benefit holds even absent any rate-spread profit — applying equally to statutory Roth contributions and the Synthetic Roth Contribution.
 
-**Other practitioner literature** — Kitces (multiple posts on true-marginal-rate, equivalency-principle, and tax-alpha frameworks); Slott (across newsletters and *The Retirement Savings Bomb*); Pfau (*Retirement Income Planning* and Advisor Perspectives series); the Bogleheads NPV threads; and major retirement-research publications from Schwab, Fidelity, T. Rowe Price, and Morningstar — all advise paying conversion tax from outside funds when feasible. To our knowledge, none separates the value of that practice as a standalone PV / FV / IRR bucket, none states the PV identity, and none derives a separable BETR extension. The qualitative advice is widely repeated; the formal decomposition appears to be absent from this body of work.
+**Other practitioner literature** — Kitces (multiple posts on true-marginal-rate, equivalency-principle, and tax-alpha frameworks); Slott (across newsletters and *The Retirement Savings Bomb*); Pfau (*Retirement Income Planning* and Advisor Perspectives series); the Bogleheads NPV threads; and major retirement-research publications from Schwab, Fidelity, T. Rowe Price, and Morningstar — all advise paying conversion tax from outside funds when feasible. Stowe, Fodor, and Stowe (2013) — *Financial Analysts Journal* — note in their now-defunct recharacterization-option analysis that paying conversion tax from taxable accounts raises terminal value by ~3 percentage points, but treat it as a parameter sensitivity rather than a separable wrapper-migration component. To our knowledge, none separates the value of that practice as a standalone PV / FV / IRR bucket, none states the PV identity, and none derives a separable BETR extension. The qualitative advice is widely repeated; the formal decomposition appears to be absent from this body of work.
 
 ---
 
@@ -465,7 +465,7 @@ The SRC's lasting value emerges not from PV at the portfolio rate (which is zero
 
 Cheshire, S. (2025). *Roth Conversion Valuation & Mechanics*. SSRN Working Paper 5205840 (April 4, 2025). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5205840
 
-Haghani, V., White, J., & Nalebuff, B. (2025). *Size Matters in the Roth IRA Conversion Decision*. Elm Wealth Research Note (June 18, 2025). Republished by Advisor Perspectives, July 14, 2025. https://elmwealth.com/roth-conversion/
+Nalebuff, B., Haghani, V., & White, J. (2025). *Size Matters in the Roth IRA Conversion Decision*. Elm Wealth Research Note (June 18, 2025). Republished by Advisor Perspectives, July 14, 2025. https://elmwealth.com/roth-conversion/
 
 McQuarrie, E. F. (2024). *Net Present Value Analysis of Roth Conversions*. Journal of Financial Planning 37(7/9): 76–90.
 
@@ -474,8 +474,6 @@ McQuarrie, E. F., & DiLellio, J. (2023). *The Arithmetic of Roth Conversions*. J
 Passman, A. (2025). *A "BETR" Approach to Roth Conversions*. Vanguard Research (July 2025). https://corporate.vanguard.com/content/dam/corp/research/pdf/a_betr_approach_to_roth_conversions_072025.pdf
 
 Reichenstein, W., & Meyer, W. (2017). *Valuing Roth Conversion and Recharacterization Options*. Journal of Financial Planning 30(11): 48–56.
-
-Reichenstein, W., & Meyer, W. (2020). *Using Roth Conversions to Add Value to Higher-Income Retirees' Financial Portfolios*. Journal of Financial Planning 33(2): 46–55.
 
 Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Recharacterization Option*. Financial Analysts Journal 69(5): 61–75.
 
