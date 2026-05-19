@@ -439,7 +439,7 @@ Once the conversion decision is made, Outside funding is simply an added capital
 
 ## 8. Conclusion
 
-The Synthetic Roth Contribution is the dollar-for-dollar economic equivalent of a Roth contribution that occurs implicitly when conversion tax is paid from outside the retirement account. The framework was introduced in Cheshire (2025, SSRN 5205840) and is rigorously extended here. We have demonstrated its existence and properties four independent ways:
+The Synthetic Roth Contribution is the economic equivalent of a Roth contribution that occurs when conversion tax is paid from outside the retirement account. Cheshire (2025, SSRN 5205840) introduced the framework; this paper proves it four independent ways:
 
 1. **Algebraic.** The annuity-payment / present-value identity proves that when the discount rate equals the portfolio rate, the Outside vs Inside PV difference is exactly zero — yet the Outside-funded household receives a constant $K \cdot \mathrm{AF}(r, N)$ of additional cash flow in every distribution year.
 
