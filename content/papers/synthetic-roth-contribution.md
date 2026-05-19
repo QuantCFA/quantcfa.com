@@ -431,7 +431,7 @@ For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming
 
 - **Conversion (yes/no, how much):** driven by the sum of PV alpha components that don't depend on funding source — the rate-arbitrage Core (spread on converted principal), the Medicare-surcharge-reduction alpha (not decomposed here), and the RMD tax-drag alpha (drag avoided on reinvested RMDs the conversion eliminates). Each follows from the conversion event itself, not from how the tax is paid. Convert if the sum is PV-positive.
 
-- **Funding (Inside vs Outside), conditional on conversion:** Outside relocates $K$ from a taxable wrapper compounding at $r_d$ to a tax-free wrapper compounding at $r$ — turning the conversion tax from a cost into an investment. The payoff is the tax-drag-avoidance alpha of §6 (\$1,021 PV in the Outside RMD scenario), added to the conversion alpha sum to give total Outside-conversion alpha.
+- **Funding (Inside vs Outside), conditional on conversion:** Outside relocates $K$ from a taxable wrapper compounding at $r_d$ to a tax-free wrapper compounding at $r$ — the IRS allows this conversion-tax investment (SRC) that others miscast as a cost. The payoff is the tax-drag-avoidance alpha of §6 (\$1,021 PV in the Outside RMD scenario), added to the conversion alpha sum to give total Outside-conversion alpha.
 
 The SRC materializes only as a side effect of choosing Outside funding for an already-decided conversion.
 
