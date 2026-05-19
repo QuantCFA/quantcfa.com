@@ -95,16 +95,16 @@ Further considerations.
 | Symbol | Definition |
 |--------|------------|
 | $C$ | Pre-tax dollars converted from Traditional to Roth |
-| $t_C$ | Effective marginal conversion-year tax rate (after Social Security and bracket effects) |
+| $t_C$ | Effective marginal conversion-year tax rate |
 | $K$ | Federal tax owed on the conversion $= C \cdot t_C$ |
-| $t_D$ | Time-weighted marginal distribution-year tax rate that would apply if the converted dollars were instead distributed during retirement |
-| $r$ | Portfolio return assumption (used both for compounding and as discount rate in standard analysis) |
+| $t_D$ | Time-weighted marginal distribution tax rate |
+| $r$ | Portfolio return assumption (used for compounding and as discount rate) |
 | $r_d$ | Effective return rate on a taxable account, after tax drag; $r_d = r \cdot (1 - d)$ |
 | $d$ | Annual drag fraction on a taxable account's return |
 | $N$ | Distribution period (years) |
 | $\mathrm{AF}(r, N)$ | Annuity-payment factor at rate $r$ over $N$ years; $\mathrm{AF}(r, N) = r\,/\,(1 - (1 + r)^{-N})$ |
 | $\mathrm{PVA}(r, N)$ | Present-value annuity factor; $\mathrm{PVA}(r, N) = (1 - (1 + r)^{-N})\,/\,r = 1\,/\,\mathrm{AF}(r, N)$ |
-| ATCF | After-tax cash flow from retirement-account distributions: ATCF = Traditional distribution + Roth distribution − Federal tax (includes Social Security tax). ΔATCF = year-by-year ATCF difference between conversion and no-conversion baseline. |
+| ATCF | After-tax cash flow from retirement-account distributions: Traditional distribution + Roth distribution − Federal tax (includes Soc Sec tax). ΔATCF = year-by-year ATCF difference between conversion and no-conversion baseline. |
 
 **Two scenarios:**
 
