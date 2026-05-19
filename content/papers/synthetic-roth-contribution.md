@@ -459,8 +459,6 @@ The SRC's lasting value emerges not from PV at the portfolio rate (which is zero
 
 - **Break-even time frames no longer hold under SRC accounting.** Profits are booked at conversion time and play out over the horizon — there is no recoupment-age threshold because there is no cost. McQuarrie (2024)'s age-97 break-even is one example: discounted RMD savings are computed against a one-sided conversion-tax "cost" rather than against a wrapper migration of the household's own funds. The framing also misreads saving intent: a horizon out to age 97 doesn't make a conversion bad, it confirms the household is doing what investing is for.
 
-- **The conversion decision is PV of alpha components, not rules of thumb.** The "convert only when future tax rates are higher" rule captures the rate-arbitrage Core in isolation and ignores Medicare-surcharge-reduction and RMD tax-drag — both of which can flip the decision. Households deferring otherwise-favorable conversions on the basis of published recoupment-age advice are reacting to an incomplete accounting, not to the math.
-
 ---
 
 ## References
