@@ -449,7 +449,7 @@ The Synthetic Roth Contribution is the economic equivalent of a Roth contributio
 
 4. **Decompositional.** The realized FV difference between Outside and Inside paths cannot be reconciled without including the SRC term as a separable component alongside spread arbitrage, Medicare-surcharge savings, and reduced-RMD tax-drag.
 
-The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from the tax-drag differential between Roth and taxable wrappers — the channel that compounds the SRC's $K$ dollars at $r$ instead of $r_d$ over the post-conversion horizon. **Including the SRC turns Roth conversion analysis from a tax-rate-spread question into a wrapper-allocation question.**
+The SRC's lasting value emerges not from PV at the portfolio rate (which is zero) but from the tax-drag differential between Roth and taxable wrappers — the channel that compounds the SRC's $K$ dollars at $r$ instead of $r_d$ over the post-conversion horizon. **Establishing the SRC turns Roth conversion analysis from a tax-rate-spread calculation into a convert plus wrapper-allocation decision.**
 
 **Implications for practice:**
 
