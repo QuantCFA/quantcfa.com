@@ -11,7 +11,7 @@ Traditional accounting of Roth conversion value focuses on the arbitrage between
 
 We prove the SRC's existence four independent ways: (1) algebraically, via the annuity-payment / present-value identity, showing $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$; (2) empirically under Fixed Annuity distributions, where the Outside − Inside per-year ATCF increment is \$1,695.86 in all 20 distribution years, matching the prediction to the cent; (3) empirically under RMD distributions, where varying per-year PV increments sum to within 4 cents of the SRC amount over the 30-year horizon; and (4) by decomposition, showing that the Outside/Inside end-of-life wealth difference is the SRC value.
 
-These results extend Reichenstein & Meyer (2017), McQuarrie & DiLellio (2023), Vanguard's 2025 BETR, and Nalebuff/Haghani/White (2025) by adding a separable per-year decomposition with a closed-form identity, and reconcile McQuarrie (2024)'s "live past 97 to break even" conclusion by incorporating the post-conversion Roth balance into the NPV accounting.
+Prior treatments — Reichenstein & Meyer (2017), McQuarrie & DiLellio (2023), Vanguard's 2025 BETR, Nalebuff/Haghani/White (2025) — recognize the wrapper migration but treat the migrated tax as a forgone cost. We formalize it as a separable asset with its own per-year cash flow and closed-form PV identity, and reconcile McQuarrie (2024)'s "live past 97 to break even" conclusion by incorporating the SRC into the NPV accounting.
 
 ---
 
