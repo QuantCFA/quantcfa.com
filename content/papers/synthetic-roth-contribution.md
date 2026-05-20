@@ -381,20 +381,12 @@ The SRC's lifetime nominal payout = $K$ × payout multiple, a structural propert
 
 ## 6. SRC Alpha: Tax-Drag Avoidance
 
-The §4 PV identity makes the SRC appear neutral. It is not — tax-drag avoidance produces real economic value.
+Under Outside funding, $K$ compounds at the Roth's $r$ instead of the taxable account's $r_d = r \cdot (1 - d)$, where $d$ is the annual return lost to taxation. At $d = 5\%$, a 7% Roth return becomes 6.65% after drag — a 35-bp annual differential producing the SRC's drag-avoidance alpha:
 
-Roth dollars compound at $r$; taxable dollars at $r_d = r \cdot (1 - d)$, where $d$ is the annual return lost to taxation. At $d = 5\%$, a 7% Roth return becomes 6.65% after drag — a 35-bp annual differential.
+- **FA (§5):** \$485.78 PV / \$917.08 FV
+- **RMD (§5B):** \$1,021 PV / \$5,092 FV
 
-Under Outside funding, $K$ compounds at $r$ instead of $r_d$ — the drag-avoidance alpha, accruing only under Outside (Inside leaves $K$ in the taxable wrapper).
-
-Tax-Drag Avoidance Alphas:
-
-- **Outside FA scenario (§5):** FV \$917.08 / PV \$485.78
-- **Outside RMD scenario (§5B):** FV \$5,092 / PV \$1,021
-
-RMD's FV is ~5.5× FA's, but RMD's PV is only ~2.1× FA's — beneficiary-period accruals discount heavily back to today.
-
-Unlike the SRC's PV-zero identity at the portfolio rate, this drag-avoidance alpha is quantifiable, accrues only under Outside funding, and belongs in the alpha sum when evaluating an Outside-funded conversion (§7).
+This alpha accrues only under Outside funding.
 
 **Mapping to Vanguard's BETR.** Passman, Wong & Dickson (2025) parameterize our same wrapper-drag wedge via a 20-year cumulative outside-account multiple $M'$ relative to the Roth multiple $M$. The relationship to the SRC drag fraction is direct:
 
