@@ -273,7 +273,7 @@ For each year we compute ΔATCF = ATCF(conversion) − ATCF(no-conversion baseli
 | 2046 | 89 | \$876 | \$2,572 | \$1,696 | \$438 |
 | **20-yr total** |  | **\$18,083** | **\$34,034** | **+\$15,951** | **+\$0** |
 
-### 5.2 The Constant +\$1,695.86 / Year Increment — Empirical Confirmation
+### 5.2 Empirical Confirmation: The Constant +\$1,695.86 / Year Increment
 
 The Outside − Inside column is **constant at \$1,696 in every distribution year 2027–2046** (\$1,695.86 to two decimals). The SRC's structural per-year contribution is uniform across all 20 years, matching the algebraic prediction:
 
