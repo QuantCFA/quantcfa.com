@@ -296,7 +296,7 @@ $$
 \end{aligned}
 $$
 
-Equivalently, the Inside ΔATCF total PV at 7% (\$9,766) equals the Outside ΔATCF total PV at 7% (\$9,766) to the dollar — identical present values at the portfolio rate!
+Equivalently, Inside ΔATCF total PV at 7% (\$9,766) equals Outside ΔATCF total PV at 7% (\$9,766).
 
 The household paid \$17,966 at year 0 and received its present-value equivalent back over 20 years — the algebraic identity in production-system numbers. The conversion's alpha components (rate-arbitrage Core, Medicare-surcharge savings, tax-drag) are identical between Inside and Outside; both scenarios report \$9,766 of alpha in PV terms. Outside also admits an IRR measurement on the $K$ outlay: 15.01%, exceeding the portfolio rate by ~8 percentage points — capturing the same alpha components on top of the (PV-zero-at-7%) SRC. Inside's IRR is undefined for lack of a cash outlay.
 
