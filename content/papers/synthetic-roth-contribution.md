@@ -204,9 +204,9 @@ The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion
 
 ## 4. Algebraic Proof: PV Equivalence at the Portfolio Rate
 
-We now prove the SRC's central PV identity: when the discount rate equals the portfolio rate, the SRC's incremental cash-flow stream produces exactly zero net present value. Outside funding's year-0 tax outflow ($-K$) is exactly compensated by the present value of the larger per-year nominal distributions over the distribution period. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
+We prove the SRC's central PV identity: at the portfolio discount rate, the SRC's incremental cash-flow stream produces zero net present value. The year-0 tax outflow ($-K$) is exactly compensated by the present value of the larger per-year distributions — present-value-zero at conversion, nominal-cash-flow-positive over the distribution period.
 
-**Setup.** Hold all spread / tax-drag effects equal across the two scenarios. Isolate the SRC component.
+**Setup.** Inputs held constant except funding source.
 
 In Outside funding, the additional Roth principal of $K$ produces additional yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (standard fixed-annuity payment formula). The Outside-vs-Inside ATCF difference attributable to the SRC is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years. Outside-funding cash flows include the year-0 outflow of $-K$.
 
@@ -222,13 +222,13 @@ $$
 \end{aligned}
 $$
 
-The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is a standard annuity identity. Therefore: **when the discount rate equals the portfolio rate, the Outside-funded SRC produces zero net present value.** The household does not become "richer in present-value terms" by settling the conversion-tax obligation from outside.
+The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is a standard annuity identity. **When the discount rate equals the portfolio rate, the Outside-funded SRC produces zero net present value.**
 
-**However**, the nominal lifetime cash flow is higher under Outside funding by $K \cdot \mathrm{AF}(r, N) \cdot N - K$. With $r = 7\%$ and $N = 20$, this is $K \cdot 0.0944 \cdot 20 - K = K \cdot (1.888 - 1) = 0.888\,K$. The Outside-funded household receives back the $K$ outflow plus an additional $\approx 89\%$ of $K$ in nominal terms over the 20-year distribution period.
+**However**, the nominal lifetime cash flow is higher under Outside funding by $K \cdot \mathrm{AF}(r, N) \cdot N - K = 0.888\,K$ (at $r = 7\%$, $N = 20$). That nominal "extra" is the time value of money on $K$ at the portfolio rate — capital and return it would have earned anyway.
 
-The reconciliation: at a portfolio discount rate, that nominal "extra" is exactly the time value of money on the $K$ sum. The household is not receiving free money; it is receiving back its capital plus the rate of return it would have earned anyway. **The SRC's value is not in producing extra present-value wealth — it is in moving capital from a tax-drag wrapper to a tax-free wrapper, eliminating the drag for the rest of the account's life.** This separate effect (Property 2) is the source of the SRC's lasting economic significance, captured by the $K \cdot (r - r_d)$ annual differential.
+**The SRC's value is not in extra present-value wealth — it is in moving capital from a tax-drag wrapper to a tax-free wrapper, eliminating drag for the rest of the account's life.** This effect (Property 2, $K \cdot (r - r_d)$ annually) is the SRC's lasting economic significance.
 
-**Scope of the identity.** The PV-equivalence identity proved here uses the portfolio's expected rate of return as the discount rate — precisely the convention adopted by the conventional Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is therefore not an artifact of an idiosyncratic discount choice; it is a property of the same matched-rate framework those prior treatments employ. When a household's personal discount rate $\rho$ diverges from the portfolio rate $r$, the identity breaks: $\rho > r$ produces negative SRC PV, $\rho < r$ positive — but in practice most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable in PV terms.
+**Scope of the identity.** The PV-equivalence identity uses the portfolio's expected return as the discount rate — the convention of the conventional Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is not an artifact of discount choice; it is a property of the same matched-rate framework those prior treatments employ. When a household's personal discount rate $\rho$ diverges from $r$, the identity breaks ($\rho > r$ → negative SRC PV; $\rho < r$ → positive), but most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable.
 
 ---
 
