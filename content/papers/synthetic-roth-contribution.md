@@ -226,7 +226,7 @@ The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity 
 
 **The SRC's lasting value:** K compounds tax-free at r instead of suffering drag at r_d, generating $K \cdot (r - r_d)$ in annual tax-drag-avoidance alpha (Property 2; §6).
 
-**Scope of the identity.** The PV-equivalence identity uses the portfolio's expected return as the discount rate — the convention of much of the Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is not an artifact of discount choice; it is a property of the same matched-rate framework those prior treatments employ. When a household's personal discount rate $\rho$ diverges from $r$, the identity breaks ($\rho > r$ → negative SRC PV; $\rho < r$ → positive), but most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable.
+**Scope of the PV identity:** It is a property of the same matched-rate framework employed by McQuarrie (2024), Vanguard / Passman (2025) BETR, and Reichenstein & Meyer (2017) — not an artifact of discount choice. When a retiree's discount rate $\rho$ differs from $r$, the identity breaks ($\rho > r$ → negative SRC PV; $\rho < r$ → positive), but most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable.
 
 ---
 
