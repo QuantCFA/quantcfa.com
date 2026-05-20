@@ -313,7 +313,7 @@ We answer both with a second paired simulation, all inputs identical except the 
 
 ### 5B.1 Setup
 
-All §5 inputs apply except distribution method: $C$ = \$123,850, $K$ = \$17,966, 7.00% portfolio return, 20-year life expectancy. RMDs run ages 73–92 (years 2030–2049) using IRS Uniform Lifetime Table divisors; ages 93–102 (years 2050–2059) use level annuity distributions under SECURE Act's 10-year beneficiary period. Roth accounts have no RMDs but are modeled identically to Traditional here for Outside-vs-Inside comparability.
+All §5 inputs apply except distribution method: $C$ = \$123,850, $K$ = \$17,966, 7.00% portfolio return, 20-year life expectancy. RMDs run ages 73–92 using IRS Uniform Lifetime Table divisors; ages 93–102 use level annuity distributions under SECURE Act's 10-year beneficiary period. Roth accounts have no RMDs but are modeled identically to Traditional here for Outside-vs-Inside comparability.
 
 ### 5B.2 Year-by-Year ΔATCF — Inside vs Outside Under RMD
 
