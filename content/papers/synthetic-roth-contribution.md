@@ -315,7 +315,7 @@ We answer both with a second paired simulation, holding all inputs identical to 
 
 All §5 inputs apply except the distribution method: $C$ = \$123,850, $K$ = \$17,966, 7.00% portfolio return, 20-year life expectancy. RMDs run from the IRS-mandated age 73 (year 2030) through age 92 (year 2049), followed by the SECURE Act's 10-year beneficiary distribution period (years 2050–2059), distributed as a constant annuity-payment, not continued RMDs.
 
-**Distribution convention.** Roth accounts have no IRS RMDs during owner's lifetime but are modeled identically to Traditional here for Outside-vs-Inside comparability. Both follow IRS Uniform Lifetime Table divisors during owner period (ages 73–92) and level distributions during SECURE Act's 10-year beneficiary period (93–102).
+**Distribution convention.** Roth accounts have no RMDs but are modeled identically to Traditional here for Outside-vs-Inside comparability. Both follow IRS Uniform Lifetime Table divisors during owner period (ages 73–92) and level distributions during SECURE Act's 10-year beneficiary period (93–102).
 
 ### 5B.2 Year-by-Year ΔATCF — Inside vs Outside Under RMD
 
