@@ -381,7 +381,7 @@ The SRC's lifetime nominal payout = $K$ × payout multiple, a structural propert
 
 ## 6. The SRC Alpha: Tax-Drag Avoidance
 
-Section 4 proved that the SRC present value is zero when the discount rate equals the portfolio rate. This makes the SRC appear neutral. It is not. The SRC has real economic value through the tax-drag-differential channel that escapes a pure PV-at-portfolio-rate framing.
+Section 4 proved that the SRC present value is zero when discount and portfolio rates are equal, making the SRC appear neutral. It is not. The SRC adds economic value via tax-drag avoidance, absent in a pure PV-at-portfolio-rate framing.
 
 Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds materially over a multi-decade retirement horizon.
 
