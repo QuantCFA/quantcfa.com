@@ -285,7 +285,7 @@ where $\mathrm{AF}(7\%, 20) = 0.07\,/\,(1 - 1.07^{-20}) = 0.094393$.
 
 ### 5.3 The PV Identity
 
-The Outside − Inside (PV @ 7%) column sums to approximately zero across all 21 rows — the decisive empirical evidence of the algebraic identity proved in Section 4. The −\$17,966 year-0 outflow is exactly compensated by the present value of the 20-year constant \$1,696 distribution stream:
+The Outside − Inside (PV @ 7%) column sums to approximately zero across all 21 rows — empirical evidence of the algebraic identity proved in Section 4. The −\$17,966 year-0 outflow is offset by the 20-year constant \$1,696 distribution stream PV:
 
 $$
 \begin{aligned}
