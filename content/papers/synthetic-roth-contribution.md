@@ -222,7 +222,7 @@ $$
 
 The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity identity. **When discount and portfolio rates are equal, the Outside-funded SRC produces zero net present value.**
 
-**However**, the nominal lifetime cash flow is higher under Outside funding by $K \cdot \mathrm{AF}(r, N) \cdot N - K = 0.888\,K$ (at $r = 7\%$, $N = 20$). That nominal "extra" is the time value of money on $K$ at the portfolio rate — capital and return it would have earned anyway.
+**However**, the SRC's K dollars generate $K \cdot \mathrm{AF}(r, N) \cdot N = 1.888K$ in nominal lifetime payouts (at $r = 7\%$, $N = 20$) — K plus its time-value return at the portfolio rate.
 
 **The SRC's value is not in extra present-value wealth — it is in moving capital from a tax-drag wrapper to a tax-free wrapper, eliminating drag for the rest of the account's life.** This effect (Property 2, $K \cdot (r - r_d)$ annually) is the SRC's lasting economic value.
 
