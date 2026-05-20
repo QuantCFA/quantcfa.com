@@ -298,7 +298,7 @@ $$
 
 Equivalently, Inside ΔATCF total PV at 7% (\$9,766) equals Outside ΔATCF total PV at 7% (\$9,766).
 
-The owner paid \$17,966 at year 0 and received its PV equivalent back over 20 years — the algebraic identity confirmed; SRC IRR = 7% portfolio rate. Alpha components are identical between Inside and Outside (\$9,766 PV). Outside's $K$ outlay earns a 15.01% IRR (~8% more than SRC's 7%) — capturing alpha on top. Inside's IRR is undefined (no cash outlay).
+The owner paid \$17,966 at year 0 and received its PV equivalent back over 20 years — the identity confirmed; SRC IRR = 7% portfolio rate. Alpha components are identical between Inside and Outside (\$9,766 PV). Outside's $K$ outlay earns a 15.01% IRR (~8% more than SRC's 7%) — capturing alpha on top. Inside's IRR is undefined (no cash outlay).
 
 ---
 
