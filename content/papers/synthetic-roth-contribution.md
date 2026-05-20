@@ -224,7 +224,7 @@ The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity 
 
 **However**, the SRC's K dollars generate $K \cdot \mathrm{AF}(r, N) \cdot N = 1.888K$ in nominal lifetime payouts (at $r = 7\%$, $N = 20$) — K plus its time-value return at the portfolio rate.
 
-The SRC's lasting value: K compounds tax-free at r instead of suffering drag at r_d, generating $K \cdot (r - r_d)$ in annual tax-drag-avoidance alpha (Property 2; §6).
+**The SRC's lasting value:** K compounds tax-free at r instead of suffering drag at r_d, generating $K \cdot (r - r_d)$ in annual tax-drag-avoidance alpha (Property 2; §6).
 
 **Scope of the identity.** The PV-equivalence identity uses the portfolio's expected return as the discount rate — the convention of much of the Roth-conversion NPV literature (McQuarrie 2024; Vanguard / Passman 2025 BETR; Reichenstein & Meyer 2017). The identity is not an artifact of discount choice; it is a property of the same matched-rate framework those prior treatments employ. When a household's personal discount rate $\rho$ diverges from $r$, the identity breaks ($\rho > r$ → negative SRC PV; $\rho < r$ → positive), but most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable.
 
