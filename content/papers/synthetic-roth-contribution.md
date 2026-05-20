@@ -208,7 +208,7 @@ At the portfolio discount rate, the SRC adds a cash-flow stream with zero NPV. T
 
 **Setup.** Inputs held constant except funding source.
 
-In Outside funding, the additional Roth principal of $K$ produces additional yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (standard fixed-annuity payment formula). The Outside-vs-Inside ATCF difference attributable to the SRC is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years. Outside-funding cash flows include the year-0 outflow of $-K$.
+In Outside funding, added Roth principal, $K$, produces additional yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (fixed-annuity payment formula). The Outside-vs-Inside ATCF difference attributable to the SRC is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years. Outside-funding cash flows include the year-0 outflow of $-K$.
 
 **Net present value of the SRC stream (Outside vs Inside):**
 
