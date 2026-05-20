@@ -379,7 +379,7 @@ The SRC's lifetime nominal payout = $K$ × payout multiple, a structural propert
 
 ---
 
-## 6. The SRC Alpha: Tax-Drag Avoidance
+## 6. SRC Alpha: Tax-Drag Avoidance
 
 The §4 PV identity makes the SRC appear neutral. It is not — tax-drag avoidance produces real economic value.
 
@@ -387,12 +387,12 @@ Roth dollars compound at $r$; taxable dollars at $r_d = r \cdot (1 - d)$, where 
 
 Under Outside funding, $K$ compounds at $r$ instead of $r_d$ — the drag-avoidance alpha, accruing only under Outside (Inside leaves $K$ in the taxable wrapper).
 
-Empirical values:
+Tax-Drag Avoidance Alphas:
 
 - **Outside FA scenario (§5):** FV \$917.08 / PV \$485.78
 - **Outside RMD scenario (§5B):** FV \$5,092 / PV \$1,021
 
-RMD values exceed the FA-scenario values on both metrics. RMD's 30-year horizon (20 owner + 10 beneficiary) keeps SRC dollars compounding in the Roth wrapper longer than FA's 20 years, producing a larger cumulative drag-avoidance differential. The FV ratio (~5.5×) exceeds the PV ratio (~2.1×) because beneficiary-period drag-avoidance accruals are heavily discounted back to today.
+RMD's FV is ~5.5× FA's, but RMD's PV is only ~2.1× FA's — beneficiary-period accruals discount heavily back to today.
 
 Unlike the SRC's PV-zero identity at the portfolio rate, this drag-avoidance alpha is quantifiable, accrues only under Outside funding, and belongs in the alpha sum when evaluating an Outside-funded conversion (§7).
 
