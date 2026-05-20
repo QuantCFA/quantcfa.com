@@ -377,7 +377,7 @@ $$
 \text{Lifetime nominal payout} = K \cdot \text{payout multiple}
 $$
 
-The payout multiple is a structural property of the distribution schedule. Under FA distribution at $r = 7\%$ over $N = 20$ years, it equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD distribution (20-year owner period plus 10-year SECURE beneficiary period), it is determined empirically from the year-by-year RMD divisor applied to the SRC's $K$ dollars; the Outside RMD scenario yields 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
+The payout multiple is a structural property of the distribution schedule. Under FA distribution at $r = 7\%$ over $N = 20$ years, it equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD distribution (20-year owner plus 10-year beneficiary period), it is determined empirically from the year-by-year RMD divisor applied to the SRC's $K$ dollars; the Outside RMD scenario yields 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
 
 The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor.
 
