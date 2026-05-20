@@ -369,17 +369,7 @@ Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies as the d
 
 ### 5B.4 The Payout Multiple — Closed Form and Empirical Validation
 
-The SRC's **lifetime nominal payout** is the sum of yearly after-tax Roth distributions attributable to the tax payment entering the Roth, conceptually equal to the sum of per-year (Outside − Inside) ΔATCFs over the full distribution horizon.
-
-Lifetime nominal payout as a multiple of the conversion-tax outlay:
-
-$$
-\text{Lifetime nominal payout} = K \cdot \text{payout multiple}
-$$
-
-The payout multiple is a structural property of the distribution schedule. Under FA distribution at $r = 7\%$ over $N = 20$ years, it equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD distribution (20-year owner plus 10-year beneficiary period), it is determined empirically from the year-by-year RMD divisor applied to the SRC's $K$ dollars; the Outside RMD scenario yields 3.9647, so the lifetime nominal payout = \$17,966 × 3.9647 = \$71,229.59.
-
-The 3.9647 payout multiple is the **per-dollar lifetime growth of the conversion-tax dollar under the household's distribution schedule** — the SRC's structural growth factor.
+The SRC's lifetime nominal payout = $K$ × payout multiple, a structural property of the distribution schedule. Under FA at $r = 7\%$, $N = 20$, the multiple equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD (20-year owner + 10-year beneficiary), it is determined empirically: the Outside RMD scenario yields 3.9647, giving lifetime payout = \$17,966 × 3.9647 = \$71,229.59.
 
 **Why the same 3.9647 appears at every cumulative bracket.** Conversions of different cumulative sizes — filling through the 10%, 12%, or 22% bracket (the \$123,850 case examined here) — each independently compute the same 3.9647 payout multiple from their own ΔATCF, $K$, and rate-spread inputs. This is the empirical signature of the SRC framework's internal consistency. The payout multiple is a **structural property of the distribution schedule**, not an artifact of any particular conversion size.
 
