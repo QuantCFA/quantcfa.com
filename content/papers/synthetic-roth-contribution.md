@@ -371,7 +371,7 @@ Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies as the d
 
 The SRC's lifetime nominal payout = $K$ × payout multiple, a structural property of the distribution schedule. Under FA at $r = 7\%$, $N = 20$, the multiple equals $\mathrm{AF}(r, N) \cdot N$ = 1.88786. Under RMD (20-year owner + 10-year beneficiary), it is determined empirically: the Outside RMD scenario yields 3.9647, giving lifetime payout = \$17,966 × 3.9647 = \$71,229.59.
 
-**The same 3.9647 appears at every cumulative bracket conversion:** Conversions filling through the 10%, 12%, or 22% bracket (the \$123,850 case examined here) — each independently compute the same 3.9647 payout multiple from their own ΔATCF, $K$, and rate-spread inputs. This is the empirical signature of the SRC framework's internal consistency. The payout multiple is a **structural property of the distribution schedule**, not an artifact of any particular conversion size.
+**The same 3.9647 appears at every cumulative bracket conversion:** Conversions filling through the 10%, 12%, or 22% bracket (the \$123,850 case examined here) — each compute the same 3.9647 payout multiple from their own ΔATCF, $K$, and rate-spread inputs. This is the empirical signature of the SRC framework's internal consistency. The payout multiple is a **structural property of the distribution schedule**, not an artifact of any particular conversion size.
 
 **Empirical validation against the year-by-year sum.** The closed-form lifetime nominal payout of \$71,229.59 matches the §5B.2 table's year-by-year nominal sum of (Outside − Inside) ΔATCF of \$71,229.46 to within \$0.13.
 
