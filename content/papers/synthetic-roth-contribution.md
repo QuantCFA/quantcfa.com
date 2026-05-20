@@ -220,7 +220,7 @@ $$
 \end{aligned}
 $$
 
-The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is a standard annuity identity. **When the discount rate equals the portfolio rate, the Outside-funded SRC produces zero net present value.**
+The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity identity. **When discount and portfolio rates are equal, the Outside-funded SRC produces zero net present value.**
 
 **However**, the nominal lifetime cash flow is higher under Outside funding by $K \cdot \mathrm{AF}(r, N) \cdot N - K = 0.888\,K$ (at $r = 7\%$, $N = 20$). That nominal "extra" is the time value of money on $K$ at the portfolio rate — capital and return it would have earned anyway.
 
