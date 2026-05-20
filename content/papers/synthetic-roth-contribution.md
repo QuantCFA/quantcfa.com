@@ -371,7 +371,7 @@ Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies as the d
 
 The SRC's **lifetime nominal payout** is the sum of yearly after-tax Roth distributions attributable to the tax payment entering the Roth, conceptually equal to the sum of per-year (Outside − Inside) ΔATCFs over the full distribution horizon.
 
-The engine computes the lifetime nominal payout as a per-dollar multiple of the conversion-tax outlay:
+Lifetime nominal payout as a multiple of the conversion-tax outlay:
 
 $$
 \text{Lifetime nominal payout} = K \cdot \text{payout multiple}
