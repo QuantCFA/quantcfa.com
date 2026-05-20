@@ -375,7 +375,7 @@ The SRC's lifetime nominal payout = $K$ × payout multiple, a structural propert
 
 **Empirical validation:** The 10% bracket conversion's multiple of 3.9647, applied to the 22% bracket's $K$ = \$17,966, predicts a lifetime payout of \$71,229.59 — matching the §5B.2 table's actual year-by-year sum (\$71,229.46) to within \$0.13.
 
-**Comparison to FA.** The same $K$ = \$17,966 distributed via FA over 20 years would yield a lifetime nominal payout of \$17,966 × 1.88786 = \$33,917.27. RMD's multiplier exceeds FA's by ~2.1× because RMD distributes over 30 years instead of 20, giving $K$ more years of tax-free compounding before full distribution. Both methods produce the same PV at the portfolio rate (zero, by §4's identity); only nominal cash flow differs.
+**Comparison to FA.** The same $K$ = \$17,966 distributed via FA over 20 years yields a nominal payout of \$17,966 × 1.88786 = \$33,917.27. RMD's multiplier exceeds FA's by ~2.1× because RMD distributes over 30 years instead of 20, allowing $K$ more tax-free compounding. Each produces the same PV at the portfolio rate (zero, by §4's identity); only nominal cash flow differs.
 
 ---
 
