@@ -220,7 +220,7 @@ $$
 \end{aligned}
 $$
 
-The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity identity. When discount and portfolio rates are equal, the **Outside-funded SRC produces zero net present value.** However, the SRC's K dollars generate $K \cdot \mathrm{AF}(r, N) \cdot N = 1.888K$ in nominal lifetime payouts (at $r = 7\%$, $N = 20$) — K plus its time-value return at the portfolio rate.
+The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity identity. When discount and portfolio rates are equal, the **Outside-funded SRC produces zero net present value.** However, the SRC's K dollars generate $K \cdot \mathrm{AF}(r, N) \cdot N = 1.888K$ in nominal lifetime payouts (at $r = 7\%$, $N = 20$) — K plus its time-value return.
 
 **The SRC's lasting value:** $K$ compounds tax-free at $r$ instead of suffering drag at $r_d$, generating $K \cdot (r - r_d)$ in annual tax-drag-avoidance alpha (Property 2; §6).
 
