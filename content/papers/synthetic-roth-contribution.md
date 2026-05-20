@@ -206,7 +206,7 @@ The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion
 
 At the portfolio discount rate, the SRC adds a cash-flow stream with zero NPV — nominal-cash-flow-positive over the distribution period.
 
-Outside funding adds yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (fixed-annuity payment formula) with year-0 outflow of $-K$. The Outside-vs-Inside ATCF difference attributable to the SRC is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years.
+Outside funding adds yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (fixed-annuity payment formula) with year-0 outflow of $-K$. The Outside-vs-Inside ATCF difference is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years.
 
 **Net present value of the SRC stream (Outside vs Inside with constant inputs):**
 
