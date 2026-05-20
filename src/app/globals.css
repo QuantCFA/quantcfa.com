@@ -118,7 +118,7 @@ body {
 
 .prose-paper ul,
 .prose-paper ol {
-  margin: 0 0 1.1rem 1.25rem;
+  margin: 0.1rem 0 0.75rem 1.25rem;
   padding-left: 0.75rem;
 }
 
@@ -131,11 +131,16 @@ body {
 }
 
 .prose-paper li {
-  margin: 0.25rem 0;
+  margin: 0.1rem 0;
 }
 
 .prose-paper li > p {
-  margin: 0.25rem 0;
+  margin: 0.1rem 0;
+}
+
+.prose-paper p:has(+ ul),
+.prose-paper p:has(+ ol) {
+  margin-bottom: 0.3rem;
 }
 
 .prose-paper blockquote {
