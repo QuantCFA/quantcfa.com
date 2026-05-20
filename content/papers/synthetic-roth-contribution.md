@@ -247,7 +247,6 @@ We compare Inside vs Outside simulation runs using identical inputs.
 
 **Conversion (both scenarios):** $C$ = \$123,850.00, fills through 22% cumulative bracket. $K$ = \$17,966.00 ($t_C = 14.51\%$). Time-weighted $t_D = 22.39\%$. Annuity-factor multiple = 1.88786.
 
-**Distribution convention.** Both Traditional and Roth balances are level-distributed via the annuity-payment formula over the 20-year horizon. Roth accounts (IRAs and 401(k)s) have no IRS RMDs during owner's lifetime; modeled identically here for Outside-vs-Inside comparability.
 
 ### 5.1 Year-by-Year ATCF Deltas — Inside vs Outside
 
