@@ -234,16 +234,16 @@ We compare Inside vs Outside simulation runs using identical inputs.
 
 **User profile:**
 - Age 69, Single filer
-- Traditional savings: \$1,000,000.00; Roth savings: \$0.00
+- Traditional savings: \$1,000,000; Roth savings: \$0
 
 **Shared inputs (both scenarios):**
-- Distribution method: Fixed Annuity (FA), distribution start age 70
+- Distribution method: Fixed Annuity (FA), start age 70
 - 20-year owner life expectancy
 - Portfolio return assumption: 7.00%
 - Inflation assumption: 2.50%
 - Social Security benefit: \$50,000/yr starting age 70
 - Medicare coverage: Parts B & D
-- No other taxable income in either the conversion year or distribution years
+- No other taxable income in conversion or distribution years
 
 **Conversion under analysis (both scenarios):** $C$ = \$123,850.00, filling through the 22% cumulative bracket. $K$ = \$17,966.00 (effective $t_C = 14.51\%$). Time-weighted $t_D = 22.39\%$. Annuity-factor multiple = 1.88786.
 
