@@ -1,7 +1,7 @@
 # The Synthetic Roth Contribution: Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions
 
 **Steven Cheshire, CFA**
-Draft: 2026-05-18
+Draft: 2026-05-20
 
 ---
 
@@ -517,4 +517,4 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 
 ---
 
-*Draft prepared 2026-05-18. Empirical results produced by the RothGPT calculation engine.*
+*Draft prepared 2026-05-20. Empirical results produced by the RothGPT calculation engine.*
