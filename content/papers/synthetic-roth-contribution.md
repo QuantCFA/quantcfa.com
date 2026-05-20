@@ -309,7 +309,7 @@ Two natural questions extend the §5 FA result:
 1. Does the SRC's PV identity hold under varying distributions, where the per-year increment is no longer constant?
 2. How does the SRC manifest when distributions leave a positive balance for beneficiaries?
 
-We answer both with a second paired simulation, all inputs identical except the distribution method is set to IRS RMD-Only.
+We answer both with a second paired simulation, all inputs identical except the distribution method is set to RMD-Only.
 
 ### 5B.1 Setup
 
