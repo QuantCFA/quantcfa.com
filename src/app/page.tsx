@@ -12,7 +12,7 @@ export default function Home() {
           </div>
           <h1 className="font-serif text-[2.75rem] md:text-[3.25rem] leading-[1.1] tracking-tight text-navy-deep">
             The mathematics of <span className="italic">Roth Conversions</span>,
-            written down carefully.
+            in full.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-ink-soft font-serif leading-relaxed">
             Most Roth-conversion advice rests on a shortcut: <em>compare your tax
