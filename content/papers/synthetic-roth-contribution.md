@@ -206,9 +206,9 @@ The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion
 
 We now prove the SRC's central PV identity: when the discount rate equals the portfolio rate, the SRC's incremental cash-flow stream produces exactly zero net present value. Outside funding's year-0 tax outflow ($-K$) is exactly compensated by the present value of the larger per-year nominal distributions over the distribution period. The SRC is therefore a present-value-zero phenomenon at the moment of conversion — yet a nominal-cash-flow-positive phenomenon over the distribution period.
 
-**Setup.** Hold all spread / tax-drag effects equal across the two scenarios (they are, by construction). Isolate the SRC component.
+**Setup.** Hold all spread / tax-drag effects equal across the two scenarios. Isolate the SRC component.
 
-In Outside funding, the additional Roth principal of $K$ produces additional yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (using the standard fixed-annuity payment formula). Year by year, the Outside-vs-Inside ATCF difference attributable to the SRC alone is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years. The conversion-year cash flow under Outside funding includes the year-0 outflow of $-K$.
+In Outside funding, the additional Roth principal of $K$ produces additional yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (standard fixed-annuity payment formula). The Outside-vs-Inside ATCF difference attributable to the SRC is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years. Outside-funding cash flows include the year-0 outflow of $-K$.
 
 **Net present value of the SRC stream (Outside vs Inside):**
 
