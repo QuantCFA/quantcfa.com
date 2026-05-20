@@ -317,7 +317,7 @@ All §5 inputs apply except distribution method: $C$ = \$123,850, $K$ = \$17,966
 
 ### 5B.2 Year-by-Year ΔATCF — Inside vs Outside Under RMD
 
-The crucial RMD finding: the per-year **(Outside − Inside) increment is not constant** but varies with the age-indexed RMD divisor and post-conversion balance trajectory.
+Under RMD, the per-year (Outside − Inside) increment varies during the owner RMD period and is constant during the 10-year beneficiary annuity period.
 
 | Year | Age | Inside ΔATCF | Outside ΔATCF | Outside − Inside (nom) | Outside − Inside (PV @ 7%) |
 |------|-----|---|---|---|---|
