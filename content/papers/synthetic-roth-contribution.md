@@ -204,7 +204,7 @@ The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion
 
 ## 4. Algebraic Proof: PV Equivalence at the Portfolio Rate
 
-At the portfolio discount rate, the SRC produces an incremental cash-flow stream with zero net present value. The year-0 tax outflow ($-K$) exactly offsets the present value of the larger per-year distributions — nominal-cash-flow-positive over the distribution period.
+At the portfolio discount rate, the SRC adds a cash-flow stream with zero NPV. The year-0 tax outflow ($-K$) exactly offsets the present value of the larger per-year distributions — nominal-cash-flow-positive over the distribution period.
 
 **Setup.** Inputs held constant except funding source.
 
