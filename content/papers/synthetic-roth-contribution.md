@@ -365,7 +365,7 @@ $$
 
 A four-cent rounding residual. **The SRC's algebraic identity is empirically confirmed under RMD distributions**, despite varying per-year differentials from \$831 to \$2,596 for the owner plus a flat \$3,901 for the beneficiary.
 
-Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies because each year's distribution is the prior balance divided by an age-indexed divisor that changes annually. **The varying per-year SRC differential is a feature of distribution-method-specific cash flows, not a violation of the SRC framework.** Across both distribution methods, the SRC's PV at the portfolio rate equals exactly zero.
+Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies as the divisor changes annually. Across both methods, the SRC's PV at the portfolio rate equals exactly zero.
 
 ### 5B.4 The Payout Multiple — Closed Form and Empirical Validation
 
