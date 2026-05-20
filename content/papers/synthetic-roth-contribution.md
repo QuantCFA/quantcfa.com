@@ -373,7 +373,7 @@ The SRC's lifetime nominal payout = $K$ × payout multiple, a structural propert
 
 **3.9647 is a structural constant:** Different sized conversions — filling through the 10%, 12%, or 22% bracket (the \$123,850 case examined here) — each compute the same 3.9647 payout multiple, a structural property of the distribution schedule and input assumptions.
 
-**Empirical validation against the year-by-year sum.** The closed-form lifetime nominal payout of \$71,229.59 matches the §5B.2 table's year-by-year nominal sum of (Outside − Inside) ΔATCF of \$71,229.46 to within \$0.13.
+**Empirical validation:** The closed-form payout ($K$ × multiple = \$71,229.59) matches the §5B.2 table's year-by-year sum of (Outside − Inside) deltas (\$71,229.46) to within \$0.13.
 
 **Comparison to FA.** The same $K$ = \$17,966 distributed via FA over 20 years would yield a lifetime nominal payout of \$17,966 × 1.88786 = \$33,917.27. RMD's multiplier exceeds FA's by ~2.1× because RMD distributes over 30 years instead of 20, giving $K$ more years of tax-free compounding before full distribution. Both methods produce the same PV at the portfolio rate (zero, by §4's identity); only nominal cash flow differs.
 
