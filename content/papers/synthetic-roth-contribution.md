@@ -230,7 +230,7 @@ The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity 
 
 ## 5. Empirical Proof: Paired Inside / Outside Scenarios (Fixed Annuity)
 
-We use two simulation runs with **all conversion inputs identical except the tax payment source** (Inside vs Outside).
+We compare Inside vs Outside simulation runs using identical inputs.
 
 **User profile:**
 - Age 69, Single filer
