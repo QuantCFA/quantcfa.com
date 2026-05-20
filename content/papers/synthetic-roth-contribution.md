@@ -383,7 +383,7 @@ The SRC's lifetime nominal payout = $K$ × payout multiple, a structural propert
 
 Section 4 proved that the SRC present value is zero when discount and portfolio rates are equal, making the SRC appear neutral. It is not. The SRC adds economic value via tax-drag avoidance, absent in a pure PV-at-portfolio-rate framing.
 
-Every dollar in the Roth wrapper compounds at $r$. In a taxable brokerage wrapper that dollar pays tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds materially over a multi-decade retirement horizon.
+Roth dollars compound at $r$. Taxable brokerage earnings pay tax on dividends, interest, realized capital gains, and turnover-driven distributions every year, compounding at an after-drag rate $r_d = r \cdot (1 - d)$ where $d$ represents the annual percent of return lost to taxation. This paper uses $d = 5\%$ — i.e., a 7.0% tax-free return becomes an after-drag 6.65%. This 35 basis point annual differential compounds materially over a multi-decade retirement horizon.
 
 Under Outside payment, $K$ dollars move from the taxable into the Roth wrapper and compound at $r$ instead of $r_d$. This drag-avoidance benefit is the lifetime PV/FV differential of the SRC compounding at $r$ vs. the taxable counterfactual compounding at $r_d$. This alpha component exists only under Outside payment — Inside payment retains $K$ dollars in the taxable wrapper.
 
