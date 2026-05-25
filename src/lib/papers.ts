@@ -37,12 +37,12 @@ export const papers: Paper[] = [
     slug: "tax-drag-shelter",
     title: "Tax-Drag Shelter",
     subtitle:
-      "Quantifying the Raison d'Être of Tax-Advantaged Retirement Accounts — PV and IRR Analysis of the Two Manifestations in the Roth Conversion Setting",
+      "A Newly Isolated Component of Roth-Conversion Value — PV Decomposition of the Two Manifestations",
     date: "May 2026",
     status: "Working paper",
     keyIdea:
-      "The defining value of a retirement account isn't the tax-rate trade — it's the elimination of annual tax drag on savings. A Roth conversion accesses this benefit through two distinct channels, separately quantified here in PV and IRR.",
-    file: "tax-drag-shelter.md",
+      "Two channels through which a Roth conversion shelters principal from annual tax drag — quantified in present value, with the corresponding cash flows folded into the conversion's IRR.",
+    file: "tax-drag-jfp.md",
   },
   {
     slug: "roth-conversion-valuation-mechanics",
