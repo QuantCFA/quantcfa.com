@@ -19,7 +19,7 @@ export default function ResearchIndex() {
       <p className="font-serif text-lg text-ink-soft leading-relaxed mb-12">
         Each paper isolates one component of Roth-conversion value, derives it
         formally, and shows where the published literature has either folded it
-        into a black-box term or missed it entirely. Working drafts are revised
+        into a black-box term or missed it entirely. Working papers are revised
         as new findings emerge.
       </p>
 
@@ -60,23 +60,33 @@ export default function ResearchIndex() {
             <p className="font-serif text-ink-soft leading-relaxed">
               {p.keyIdea}
             </p>
-            <div className="mt-4">
-              {p.external ? (
-                <a
-                  href={p.external.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
-                >
-                  {p.external.label} ↗
-                </a>
-              ) : (
-                <Link
-                  href={`/research/${p.slug}`}
-                  className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
-                >
-                  Read paper →
-                </Link>
+            <div className="mt-4 space-y-1.5">
+              {p.file && (
+                <div>
+                  <Link
+                    href={`/research/${p.slug}`}
+                    className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
+                  >
+                    Read paper →
+                  </Link>
+                </div>
+              )}
+              {p.external && (
+                <div>
+                  <a
+                    href={p.external.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
+                  >
+                    {p.external.label} ↗
+                  </a>
+                </div>
+              )}
+              {p.submittedTo && (
+                <div className="text-xs italic text-ink-muted font-serif">
+                  Submitted to {p.submittedTo}
+                </div>
               )}
             </div>
           </li>

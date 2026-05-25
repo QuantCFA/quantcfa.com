@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-rule bg-cream-deep/40">
-      <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+    <footer className="border-t border-rule bg-cream-deep/40">
+      <div className="mx-auto max-w-6xl px-6 pt-4 pb-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
         <div>
           <div className="font-serif text-lg text-navy-deep">
             <span className="font-semibold">Quant</span>
@@ -56,7 +56,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-rule/60">
-        <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col md:flex-row justify-between gap-2 text-xs text-ink-muted">
+        <div className="mx-auto max-w-6xl px-6 pt-4 pb-2 flex flex-col md:flex-row justify-between gap-2 text-xs text-ink-muted">
           <div>© {new Date().getFullYear()} Steven M. Cheshire, CFA</div>
           <div>
             <a

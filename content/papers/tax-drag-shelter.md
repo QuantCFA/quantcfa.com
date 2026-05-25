@@ -2,7 +2,7 @@
 
 **PV and IRR Analysis of the Two Manifestations in the Roth Conversion Setting**
 
-**Working draft — Academic paper outline**
+**Working paper — Academic paper outline**
 **Date:** 2026-05-11
 
 ---

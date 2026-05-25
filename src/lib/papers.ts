@@ -6,10 +6,11 @@ export type Paper = {
   title: string;
   subtitle?: string;
   date: string; // ISO-ish display string
-  status: "Working draft" | "Published" | "Foundational paper";
+  status: "Working paper" | "Published" | "Foundational paper";
   keyIdea: string; // one-line plain-English hook
   authorsNote?: string;
   external?: { label: string; href: string };
+  submittedTo?: string;
   /** Filename inside content/papers/, or null if this paper has no on-site body (external only). */
   file?: string;
 };
@@ -21,10 +22,15 @@ export const papers: Paper[] = [
       "The Synthetic Roth Contribution",
     subtitle:
       "Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions",
-    date: "May 2026",
-    status: "Working draft",
+    date: "May 2026 · Posted on SSRN May 20, 2026",
+    status: "Working paper",
     keyIdea:
       "When you pay Roth conversion tax from outside the retirement account, you've quietly made a Roth contribution equal to the tax — bypassing the IRS contribution limit. This paper proves it four ways.",
+    external: {
+      label: "SSRN #6772118",
+      href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772118",
+    },
+    submittedTo: "Journal of Financial Planning",
     file: "synthetic-roth-contribution.md",
   },
   {
@@ -33,7 +39,7 @@ export const papers: Paper[] = [
     subtitle:
       "Quantifying the Raison d'Être of Tax-Advantaged Retirement Accounts — PV and IRR Analysis of the Two Manifestations in the Roth Conversion Setting",
     date: "May 2026",
-    status: "Working draft",
+    status: "Working paper",
     keyIdea:
       "The defining value of a retirement account isn't the tax-rate trade — it's the elimination of annual tax drag on savings. A Roth conversion accesses this benefit through two distinct channels, separately quantified here in PV and IRR.",
     file: "tax-drag-shelter.md",

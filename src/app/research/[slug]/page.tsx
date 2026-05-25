@@ -57,6 +57,28 @@ export default async function PaperPage({
         <div className="mt-5 text-sm text-ink-muted font-sans">
           Steven M. Cheshire, CFA
         </div>
+        {(paper.external || paper.submittedTo) && (
+          <div className="mt-3 text-sm font-sans flex flex-wrap items-center gap-x-3 gap-y-1">
+            {paper.external && (
+              <a
+                href={paper.external.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy hover:text-navy-deep underline underline-offset-2"
+              >
+                {paper.external.label} ↗
+              </a>
+            )}
+            {paper.external && paper.submittedTo && (
+              <span className="text-ink-muted" aria-hidden>·</span>
+            )}
+            {paper.submittedTo && (
+              <span className="italic text-ink-muted">
+                Submitted to {paper.submittedTo}
+              </span>
+            )}
+          </div>
+        )}
       </header>
 
       <Markdown source={body} />

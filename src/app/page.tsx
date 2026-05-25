@@ -6,34 +6,32 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="border-b border-rule">
-        <div className="mx-auto max-w-3xl px-6 pt-20 pb-14">
-          <div className="text-xs uppercase tracking-[0.18em] text-ink-muted font-sans font-semibold mb-5">
+        <div className="mx-auto max-w-3xl px-6 pt-4 pb-5">
+          <div className="text-xs uppercase tracking-[0.18em] text-ink-muted font-sans font-semibold mb-3">
             Quantitative Research
           </div>
-          <h1 className="font-serif text-[2.75rem] md:text-[3.25rem] leading-[1.1] tracking-tight text-navy-deep">
+          <h1 className="font-serif text-[2.5rem] md:text-[3rem] leading-[1.1] tracking-tight text-navy-deep">
             The mathematics of <span className="italic">Roth Conversions</span>,
             in full.
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-ink-soft font-serif leading-relaxed">
-            Most Roth-conversion advice rests on a shortcut: <em>compare your tax
-            rate today to your tax rate later</em>. The shortcut hides components
-            that materially change the answer. This site collects working research
-            papers that decompose conversion value into the pieces that actually
-            drive household wealth — and shows, in plain English, what each one is
-            and why it matters.
+          <p className="mt-3 text-lg md:text-xl text-ink-soft font-serif leading-relaxed">
+            Most Roth-conversion advice collapses to one comparison: <em>your tax
+            rate today versus your tax rate later</em>. That comparison hides the
+            components that actually drive the answer. The papers here isolate
+            each one, derive it formally, and explain it in plain English.
           </p>
         </div>
       </section>
 
       {/* Start here */}
       <section className="border-b border-rule bg-cream-deep/40">
-        <div className="mx-auto max-w-3xl px-6 py-10">
+        <div className="mx-auto max-w-3xl px-6 py-6">
           <div className="text-xs uppercase tracking-[0.18em] text-ink-muted font-sans font-semibold mb-3">
             Start here
           </div>
           <p className="font-serif text-[1.05rem] text-ink-soft leading-relaxed">
             New to this? The <Link href="/practitioner-guide" className="text-navy underline underline-offset-2">Practitioner Guide</Link> walks through the conversion decision from
-            first principles, in plain prose. If you want the math, start with the{" "}
+            first principles, in plain prose. For the math, see the{" "}
             <Link href="/research/synthetic-roth-contribution" className="text-navy underline underline-offset-2">Synthetic Roth Contribution</Link>{" "}
             paper.
           </p>
@@ -42,8 +40,8 @@ export default function Home() {
 
       {/* Papers */}
       <section>
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <div className="flex items-baseline justify-between mb-8">
+        <div className="mx-auto max-w-5xl px-6 pt-4 pb-6">
+          <div className="flex items-baseline justify-between mb-3">
             <h2 className="font-serif text-2xl text-navy-deep">Research</h2>
             <Link
               href="/research"
@@ -68,23 +66,33 @@ export default function Home() {
                 <p className="text-[0.95rem] text-ink-soft font-serif leading-relaxed flex-1">
                   {p.keyIdea}
                 </p>
-                <div className="mt-5">
-                  {p.external ? (
-                    <a
-                      href={p.external.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
-                    >
-                      {p.external.label} ↗
-                    </a>
-                  ) : (
-                    <Link
-                      href={`/research/${p.slug}`}
-                      className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
-                    >
-                      Read paper →
-                    </Link>
+                <div className="mt-5 space-y-1.5">
+                  {p.file && (
+                    <div>
+                      <Link
+                        href={`/research/${p.slug}`}
+                        className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
+                      >
+                        Read paper →
+                      </Link>
+                    </div>
+                  )}
+                  {p.external && (
+                    <div>
+                      <a
+                        href={p.external.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-navy hover:text-navy-deep underline underline-offset-2"
+                      >
+                        {p.external.label} ↗
+                      </a>
+                    </div>
+                  )}
+                  {p.submittedTo && (
+                    <div className="text-xs italic text-ink-muted font-serif">
+                      Submitted to {p.submittedTo}
+                    </div>
                   )}
                 </div>
               </article>
@@ -95,7 +103,7 @@ export default function Home() {
 
       {/* RothGPT panel */}
       <section className="border-t border-rule bg-navy-deep text-cream">
-        <div className="mx-auto max-w-3xl px-6 py-14">
+        <div className="mx-auto max-w-3xl px-6 pt-8 pb-8">
           <div className="text-xs uppercase tracking-[0.18em] text-cream/60 font-sans font-semibold mb-3">
             See the research applied
           </div>
