@@ -9,9 +9,9 @@
 
 ## 1. Concept
 
-Inside a tax-advantaged wrapper, every dollar compounds at the asset's full pre-tax return. Outside, the same dollar pays annual tax on dividends, interest, realized capital gains, and turnover-driven distributions, eroding compounded value by roughly 0.5%–2% per year and dominating over multi-decade horizons. The present value of avoiding that erosion — the wealth a household keeps by holding a given dollar inside the wrapper rather than outside it — is what this paper calls **Tax-Drag Shelter (TDS) alpha**.
+Inside a tax-advantaged wrapper, investments grow unencumbered by taxes. Outside, the same dollars pay annual tax on dividends, interest, realized capital gains, and turnover-driven distributions — a drag that compounds materially over time. The present value of holding investments inside vs. outside the wrapper is **Tax-Drag Shelter (TDS) alpha**.
 
-TDS alpha is universally acknowledged in the Roth-conversion literature but rarely quantified as a named line item, and never, to our knowledge, decomposed by source. We show that a Roth conversion does not produce one stream of TDS alpha; it produces two structurally distinct streams, unlocked by two different decisions a planner actually makes, with very different principals driving each. Naming and pricing those streams separately is the contribution of this paper.
+TDS alpha is universally acknowledged in the literature but, to our knowledge, has not been quantified in PV terms or separated into its two economic components. This paper does both.
 
 **The decision hierarchy.** A planner facing a Roth-conversion decision actually makes two decisions, which unlock two different components of TDS alpha in dominance order:
 
