@@ -118,13 +118,13 @@ $$
 CF_{TDS}(t) \;=\; K \cdot \Delta_{HC}(t) \;+\; (1-\tau_C)\cdot C\cdot \rho \cdot \Delta_{RMD}(t), \qquad t = g+1, \ldots, T+g,
 $$
 
-where the first term is present only under outside payment and the second is present under both payment modes (but $K$ appears as a year-0 outlay, and the IRR is therefore defined, only under outside payment). The conversion IRR is then the rate $i$ solving
+where the first term is present only under (A5) and the second under both payment modes. The conversion IRR is then the rate $i$ solving
 
 $$
 -K \;+\; \sum_{t=g+1}^{T+g} \frac{CF_{\mathrm{conv}}(t) + CF_{TDS}(t)}{(1+i)^{t}} \;=\; 0,
 $$
 
-solved numerically, where $CF_{\mathrm{conv}}(t)$ is the conversion's incremental after-tax-distribution differential before drag adjustments. The drag-avoidance streams $CF_{TDS}(t)$ are not associated with a separate IRR in this paper; they are identified as components of the conversion IRR's cash-flow vector.
+solved numerically, where $CF_{\mathrm{conv}}(t)$ is the conversion's incremental after-tax-distribution differential before drag adjustments. The drag streams are not associated with separate per-component IRRs.
 
 ### 3.6 On the IRR construction
 
@@ -161,7 +161,7 @@ Initialize $B^S = 1$, $B^B = 1$, $\mu_F = 0$, $\mu_P = 0$, $\tilde{r} = r(1-d)$.
 
 ### 4.2 Manifestation scaling and IRR cash-flow contribution
 
-Run §4.1 with $M = M_{\mathrm{HC}}$ to get $\mu_P^{HC}, \mu_F^{HC}, \Delta_{HC}(\cdot)$, and with $M = M_{\mathrm{RMD}}$ on the avoided-RMD reinvestment stream (owner remaining horizon plus terminal beneficiary period) to get $\mu_P^{RMD}, \mu_F^{RMD}, \Delta_{RMD}(\cdot)$. Apply the principal scalings of Propositions 2 and 3 to obtain $\alpha_{HC}^{PV}$, $\alpha_{HC}^{FV}$, $\alpha_{RMD}^{PV}$, $\alpha_{RMD}^{FV}$. Under outside payment of the conversion tax, the drag-avoidance contributions to the conversion IRR's per-year cash-flow vector are $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$, added year-by-year to the conversion's incremental after-tax-distribution differential before the IRR is solved numerically. Under inside payment, only the RMD stream is computed (PV/FV); $K$ is not an outlay, and the conversion IRR is undefined.
+Run §4.1 with $M = M_{\mathrm{HC}}$ to get $\mu_P^{HC}, \mu_F^{HC}, \Delta_{HC}(\cdot)$, and with $M = M_{\mathrm{RMD}}$ on the avoided-RMD reinvestment stream (owner remaining horizon plus terminal beneficiary period) to get $\mu_P^{RMD}, \mu_F^{RMD}, \Delta_{RMD}(\cdot)$. Apply the principal scalings of Propositions 2 and 3 to obtain $\alpha_{HC}^{PV}$, $\alpha_{HC}^{FV}$, $\alpha_{RMD}^{PV}$, $\alpha_{RMD}^{FV}$. Under (A5), the drag-avoidance contributions to the conversion IRR's per-year cash-flow vector are $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$, added year-by-year to the conversion's incremental after-tax-distribution differential before the IRR is solved numerically. With inside payment, only the RMD stream is computed (PV/FV); $K$ is not an outlay, and the conversion IRR is undefined.
 
 ---
 
@@ -199,7 +199,7 @@ Stylized 22%-bracket Roth conversion, outside payment of the conversion tax.
 | RMD drag $= (1-\tau_C)\cdot C\cdot \rho \cdot \mu_P^{RMD}$ | \$2,522 | \$17,019 |
 | **Total drag-avoidance** | **\$3,543** | **\$22,111** |
 
-**IRR contribution.** Under outside payment, the drag-attributable streams contribute the per-year cash flows $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ to the conversion's IRR cash-flow vector — non-zero only over the distribution window $t = g+1, \ldots, T+g$, with $\Delta_{RMD}(t)$ realized in the terminal 10-year beneficiary period per §3.6. The conversion IRR is then solved numerically over the augmented vector. Incorporating these streams materially changes the deployed conversion IRR relative to a specification that includes only $CF_{\mathrm{conv}}(t)$; the magnitude depends on the conversion's other cash flows and is reported by the reference implementation in §8. The paper makes no claim about a separate drag-only IRR on the outlay.
+**IRR contribution.** The drag-attributable per-year flows $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enter the conversion's IRR cash-flow vector — non-zero only over the distribution window $t = g+1, \ldots, T+g$, with $\Delta_{RMD}(t)$ realized in the terminal 10-year beneficiary period per §3.6. The conversion IRR is then solved numerically over the augmented vector. Incorporating these streams materially changes the deployed figure relative to a specification that includes only $CF_{\mathrm{conv}}(t)$; the magnitude depends on the conversion's other cash flows and is reported by the reference implementation in §8.
 
 ---
 
@@ -227,7 +227,7 @@ The tax-policy literature from **Burman, Coe & Gale (NBER WP 6227, 1997)** onwar
 |---|---|
 | Drag avoidance as a *concept* in Roth conversions | Acknowledged broadly. |
 | HC drag — PV figure | Not isolated. Conventional HC math uses $K \cdot S(T)$, implicitly a zero-growth bank counterfactual. |
-| RMD-reduction drag — PV figure | Not isolated as a household-facing PV line item; partially anticipated by McQuarrie & DiLellio as a robustness argument. |
+| RMD-reduction drag — PV figure | Not isolated as a household-facing PV component; partially anticipated by McQuarrie & DiLellio as a robustness argument. |
 | Identified cash-flow contribution of either manifestation to a conversion's IRR | Not present. |
 | Combined PV decomposition with explicit IRR cash-flow construction on the conv-tax outlay | Not present. |
 
@@ -235,13 +235,13 @@ The tax-policy literature from **Burman, Coe & Gale (NBER WP 6227, 1997)** onwar
 
 ## 7. Novelty Claim
 
-The contribution of this paper is the **PV decomposition of the drag-avoidance component on the Roth-conversion tax outlay $K$**, with HC and RMD-reduction manifestations as separable additive streams under the linearity-in-principal property of $\mu_P$, together with **identification of the per-year cash-flow streams those manifestations contribute to the conversion's overall IRR**. The contribution is methodological, not conceptual: the intuition that retirement accounts shelter dollars from annual yield drag is universally acknowledged at a qualitative level (Piper, McQuarrie & DiLellio, Vanguard BETR, Kitces); the gap is in the *isolation and joint PV quantification* of drag avoidance as a separately priced line item, and in the *explicit cash-flow construction* by which it enters the conversion's IRR.
+The contribution of this paper is the **PV decomposition of the drag-avoidance component on the Roth-conversion tax outlay $K$**, with HC and RMD-reduction manifestations as separable additive streams under the linearity-in-principal property of $\mu_P$, together with **identification of the per-year cash-flow streams those manifestations contribute to the conversion's overall IRR**. The contribution is methodological, not conceptual: the intuition that retirement accounts shelter dollars from annual yield drag is universally acknowledged at a qualitative level (Piper, McQuarrie & DiLellio, Vanguard BETR, Kitces); the gap is in the *isolation and joint PV quantification* of drag avoidance and in the explicit construction by which it enters the conversion's IRR.
 
 Three specific claims:
 
 1. **Decomposition.** The drag-avoidance component admits a clean linear decomposition into HC and RMD-reduction streams (Propositions 2 and 3), with closed-form-style PV expressions $\alpha_{HC}^{PV} = K \cdot \mu_P^{HC}$ and $\alpha_{RMD}^{PV} = (1-\tau_C)\cdot C\cdot\rho\cdot\mu_P^{RMD}$, where $\mu_P^{(\cdot)}$ are outputs of the per-dollar simulator (§4.1) under the relevant distribution schedule. Neither expression appears in the verified literature.
 
-2. **IRR cash-flow identification.** The paper identifies $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ as the per-year cash-flow streams the drag-avoidance manifestations contribute to the conversion's overall IRR (under outside payment of conversion tax), and shows that incorporating those streams materially changes the deployed conversion IRR. The construction is one IRR — the conversion's — with transparent drag-attributable cash-flow contributions; no separate per-component IRR is claimed. §3.6 defends the IRR-level choice and the legitimacy of the additive contribution.
+2. **IRR cash-flow identification.** The paper identifies $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ as the per-year streams the drag-avoidance manifestations contribute to the conversion's IRR under outside payment, and shows that incorporating them materially changes the deployed figure. The construction is one IRR — the conversion's — with transparent drag-attributable contributions; no separate per-component IRR is claimed. §3.6 defends the IRR-level choice and the legitimacy of the additive contribution.
 
 3. **Counterfactual correction.** The conventional HC figure $K \cdot S(T)$ implicitly assumes a zero-growth bank counterfactual. The realistic counterfactual is taxable-bank growth at $\tilde{r}$, and the drag-avoidance component is only the difference $K \cdot (S(T) - B(T))$. The bank-growth portion $K \cdot B(T)$ accrues to the household irrespective of the conversion and should not be credited to it. This decomposition is not present in the verified Hidden-Contribution literature.
 
@@ -249,7 +249,7 @@ Three specific claims:
 
 - Several primary PDFs (Vanguard BETR, McQuarrie/DiLellio JFP article, Reichenstein FPA papers, Vanguard Advisor's Alpha) returned encoded content the literature scan could not parse fully; characterization relies on published abstracts and summaries.
 - The Kitces archive includes paywalled posts on the most relevant article ("Tax Diversification Limits And Roth Optimization Benefits"); a logged-in read is the most important verification gap.
-- The novelty claim is about *isolation as a quantified PV line item, with explicit per-year cash-flow contributions to the conversion's IRR*, not about discovery of the underlying intuition.
+- The novelty claim is about *isolation as a quantified PV component with explicit IRR cash-flow contributions*, not about discovery of the underlying intuition.
 
 ---
 

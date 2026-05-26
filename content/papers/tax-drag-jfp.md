@@ -19,7 +19,7 @@ The present paper isolates the drag-avoidance benefit in the Roth-conversion set
 
 2. **RMD drag.** A conversion shrinks the Traditional balance and thereby reduces lifetime required minimum distributions. For retirees not consuming the full RMD, the avoided distributions would otherwise have been reinvested in a taxable wrapper at the dragged rate. Post-conversion, the avoided dollars instead remain sheltered. Unlike HC drag, RMD drag has no statutory-contribution analog — only a conversion can shrink an existing Traditional balance.
 
-This paper contributes (a) a **present value (PV) decomposition** of both manifestations into named line items, with explicit closed-form expressions that reduce to a per-dollar simulator output multiplied by the relevant principal, and (b) identification of the per-year, drag-attributable cash-flow streams that each manifestation contributes to the conversion's overall **internal rate of return (IRR)**. In the deployed reference implementation (RothGPT conversion calculator), HC drag and RMD drag are surfaced as named PV line items, and the corresponding per-year cash-flow streams are incorporated into the deployed conversion IRR.
+This paper contributes (a) a **present value (PV) decomposition** of both manifestations into named line items, with explicit closed-form expressions that reduce to a per-dollar simulator output multiplied by the relevant principal, and (b) identification of the per-year, drag-attributable cash-flow streams that each manifestation contributes to the conversion's overall **internal rate of return (IRR)**. Both outputs are surfaced in the deployed reference implementation (RothGPT conversion calculator).
 
 **Scope.** Statutory contributions are the dominant channel through which households realize TDS value. This paper does not analyze statutory contributions. It analyzes the Roth conversion because conversions create two structurally distinct drag-avoidance streams that the published literature has not isolated separately.
 
@@ -84,10 +84,8 @@ $$
 
 PV and IRR play different roles in the present framework.
 
-- **PV is the component-level metric.** Each drag manifestation has its own PV — a today-dollar figure that the household uses to compare conversion strategies and to inspect the relative contribution of each channel. The two manifestations admit clean closed-form PV expressions (§3) and are reported as named line items.
-- **IRR is the conversion-level metric.** The household-facing IRR is a single number — the conversion's overall IRR — computed against the full incremental cash-flow vector that the conversion event creates. The drag-avoidance channels enter that vector as additive per-year cash-flow contributions, not as standalone IRRs. Per-component IRRs add no information beyond per-component PV under a fixed outlay, and they describe counterfactuals (a drag-avoidance "investment" the household could elect separately) that do not exist — the channels come bundled with the conversion event.
-
-**On the IRR interpretation.** A reasonable objection is that the conv-tax outlay is not a standalone investment project in the textbook sense; the conversion IRR is constructed by attributing the full set of incremental differential cash flows to the conversion event. We embrace that construction explicitly. The conversion event creates multiple cash-flow consequences — among them a Synthetic Roth Contribution that earns its own drag-shelter stream, and a reduced-RMD reinvestment stream — all of which share the conv-tax outlay as their economically common up-front cost. The conversion IRR is the rate that equates the outlay to the union of those incremental benefit streams. Identifying which streams come from drag avoidance (rather than rate arbitrage or other effects) is the attribution exercise; it is what lets the planner say *this much* of the conversion IRR is delivered by the drag-avoidance channels.
+- **PV is the component-level metric.** Each drag manifestation has its own PV — a today-dollar figure that the household uses to compare conversion strategies and to inspect the relative contribution of each channel.
+- **IRR is the conversion-level metric.** The conversion IRR is computed from the full incremental cash-flow vector that the conversion event creates. The drag-avoidance channels enter that vector as additive per-year contributions; identifying which streams come from drag avoidance (rather than rate arbitrage) is the attribution exercise that lets the planner say *this much* of the conversion IRR is delivered by drag avoidance.
 
 ### 2.6 IRR construction
 
@@ -95,9 +93,9 @@ The conversion's overall IRR is computed against an incremental cash-flow vector
 
 - $t = 0$ — outlay $-K$ (the conversion tax paid from outside the retirement account).
 - $t = 1, \ldots, g$ — zero (gap years, before distributions begin).
-- $t \geq g+1$ — per-year incremental after-tax distribution differential between the post-conversion and pre-conversion strategies, *plus* the drag-attributable cash-flow contributions from §3 (the HC-drag stream $K \cdot \Delta_{HC}(t)$ and the RMD-reduction stream $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$).
+- $t \geq g+1$ — per-year incremental after-tax distribution differential between the post-conversion and pre-conversion strategies, *plus* the drag-attributable contributions from §3 (the HC-drag stream $K \cdot \Delta_{HC}(t)$ and the RMD-reduction stream $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$).
 
-The conversion IRR is the rate $i$ solving $\sum_{t} CF(t)/(1+i)^{t} = 0$, found numerically. Under inside payment of the conversion tax, $K = 0$ as a user outlay and the conversion IRR is undefined (the deployed implementation returns a sentinel value in that case).
+The conversion IRR is the rate $i$ solving $\sum_{t} CF(t)/(1+i)^{t} = 0$, found numerically. Under inside payment, $K = 0$ as a user outlay and the conversion IRR is undefined (the deployed implementation returns a sentinel value).
 
 ---
 
@@ -116,9 +114,9 @@ $$
 \alpha_{HC}^{FV} = K \cdot \mu_{F}^{HC}.
 $$
 
-The corresponding per-year cash-flow stream $K \cdot \Delta_{HC}(t)$ enters the conversion's overall IRR cash-flow vector as the drag-avoidance contribution from this channel; it is non-zero only under outside payment of the conversion tax.
+The corresponding per-year stream $K \cdot \Delta_{HC}(t)$ enters the conversion IRR's cash-flow vector as this channel's drag-avoidance contribution; it is non-zero only under outside payment of the conversion tax.
 
-For inside payment of the conversion tax, no Synthetic Roth Contribution exists — $K$ is withheld from the converted balance, no dollar migrates from the taxable wrapper, and $\alpha_{HC} = 0$ in both PV and FV. The conversion IRR is undefined under inside payment (no user outlay).
+For inside payment, no Synthetic Roth Contribution exists — $K$ is withheld from the converted balance, no dollar migrates from the taxable wrapper, and $\alpha_{HC} = 0$ in both PV and FV.
 
 The hidden-contribution / synthetic-contribution effect is well-known qualitatively (Piper 2020, "The 4 Effects of a Roth Conversion," effect #2; Kitces; Vanguard BETR). What is new is the isolation of *only* the drag-avoidance portion of that effect — separated from the conventional $K \cdot S(T)$ figure which folds the bank-counterfactual growth and the drag-avoidance into a single number.
 
@@ -133,7 +131,7 @@ $$
 \alpha_{RMD}^{FV} = (1 - \tau_C) \cdot C \cdot \rho \cdot \mu_{F}^{RMD}.
 $$
 
-The corresponding per-year cash-flow stream $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enters the conversion's overall IRR cash-flow vector as the drag-avoidance contribution from this channel. Unlike HC drag, RMD-reduction PV and FV are defined under both inside and outside payment of the conversion tax — the RMD-reduction benefit depends on the converted principal $C$, not on how the tax is paid. The IRR contribution, however, is meaningful only under outside payment, because the conversion IRR is undefined under inside payment ($K = 0$ as user outlay).
+The corresponding per-year stream $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enters the conversion IRR's cash-flow vector. Unlike HC drag, RMD-reduction PV and FV are defined under both inside and outside payment — the benefit depends on the converted principal $C$, not on how the tax is paid. The IRR contribution itself is meaningful only when the conversion IRR is defined (outside payment).
 
 **Timing of the $\Delta_{RMD}(t)$ stream.** The per-year RMD-drag differential is zero during the owner's remaining life and non-zero only during the terminal beneficiary distribution period. Mechanically, the avoided RMD dollars accumulate inside two parallel reinvestment balances over the owner's life — one compounding at $r$ (sheltered counterfactual), one at $\tilde{r}$ (taxable counterfactual). Those balances then distribute as a fixed-period (10-year) annuity to the beneficiary, and the drag-avoidance benefit is realized year-by-year as the differential between the two annuity streams. PV and FV totals capture the full owner-life drag through the accumulated balance differential; the cash-flow stream that feeds the conversion IRR reflects benefit realization at distribution, not at accrual.
 
@@ -153,7 +151,7 @@ $$
 \mathrm{CF}_{TDS}(t) \;=\; K \cdot \Delta_{HC}(t) \;+\; (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t),
 $$
 
-and is added to the conversion IRR's cash-flow vector at each year $t$. The drag-avoidance channels do not generate a separate IRR of their own; they raise the conversion's overall IRR by contributing the streams above to its cash-flow vector.
+and is added to the conversion IRR's cash-flow vector at each year $t$.
 
 Under inside payment, $\alpha_{HC} \equiv 0$ in PV and FV (no Synthetic Roth Contribution), the RMD-reduction PV and FV remain meaningful, and the conversion IRR is undefined ($K = 0$ as user outlay).
 
@@ -180,11 +178,11 @@ For each year $t = 1, \ldots, T + g$:
 
 ### 4.2 Applying the simulator to each manifestation
 
-**HC drag.** Run §4.1 with $M$ = the post-conversion Roth distribution method, $g$ = gap from conversion to first Roth distribution. Multiply $\mu_P$ and $\mu_F$ by $K$ to obtain $\alpha_{HC}^{PV}$ and $\alpha_{HC}^{FV}$. Multiply the per-year $\Delta_{HC}(t)$ by $K$ to obtain the per-year cash-flow stream contributed to the conversion IRR (outside payment only).
+**HC drag.** Run §4.1 with $M$ = the post-conversion Roth distribution method, $g$ = gap from conversion to first Roth distribution. Multiply $\mu_P$ and $\mu_F$ by $K$ to obtain $\alpha_{HC}^{PV}$ and $\alpha_{HC}^{FV}$. Multiply the per-year $\Delta_{HC}(t)$ by $K$ to obtain the per-year cash-flow stream (outside payment only).
 
-**RMD drag.** Run §4.1 with $M = \mathrm{RMD}$ on the *avoided RMD principal stream* — the parallel simulation of what would have been withdrawn from the larger pre-conversion balance versus the smaller post-conversion balance, with a terminal beneficiary distribution period. Multiply $\mu_P$ and $\mu_F$ by $(1-\tau_C)\cdot C\cdot \rho$ to obtain $\alpha_{RMD}^{PV}$ and $\alpha_{RMD}^{FV}$. Multiply the per-year $\Delta_{RMD}(t)$ by the same factor to obtain the per-year cash-flow stream contributed to the conversion IRR.
+**RMD drag.** Run §4.1 with $M = \mathrm{RMD}$ on the *avoided RMD principal stream* — the parallel simulation of what would have been withdrawn from the larger pre-conversion balance versus the smaller post-conversion balance, with a terminal beneficiary distribution period. Multiply $\mu_P$ and $\mu_F$ by $(1-\tau_C)\cdot C\cdot \rho$ to obtain $\alpha_{RMD}^{PV}$ and $\alpha_{RMD}^{FV}$. Multiply the per-year $\Delta_{RMD}(t)$ by the same factor to obtain its per-year stream.
 
-**Combined Tax-Drag Shelter.** Sum PV and FV components. Both per-year streams are added into the *single* conversion IRR cash-flow vector — there is no separate drag-component IRR.
+**Combined Tax-Drag Shelter.** Sum PV and FV components. Both per-year streams are added into the single conversion IRR cash-flow vector.
 
 ---
 
@@ -222,11 +220,9 @@ Stylized 22%-bracket Roth conversion, paid from outside the retirement account.
 | RMD drag | \$2,522 | \$17,019 |
 | **Total Tax-Drag Shelter** | **\$3,543** | **\$22,111** |
 
-**Contribution to the conversion IRR.** Under outside payment of the conversion tax in this scenario, the drag-attributable cash-flow streams $K \cdot \Delta_{HC}(t) + (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ are added per year over the beneficiary distribution period to the conversion's overall IRR cash-flow vector. The deployed `conv_irr` in the reference implementation includes these contributions. The drag-avoidance channels do not have separately reported IRRs — they raise the single conversion IRR by the magnitude of their attributable cash-flow streams above.
+**Contribution to the conversion IRR.** The drag-attributable streams $K \cdot \Delta_{HC}(t) + (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ are added per year over the beneficiary distribution period to the conversion's cash-flow vector. The deployed `conv_irr` in the reference implementation includes these contributions.
 
-**Planner-facing interpretation.** The household's wealth gain from drag avoidance is \$3,543 in today's dollars, growing to \$22,111 at horizon. PV is reported as two named line items (HC drag \$1,021 and RMD drag \$2,522), so the planner can inspect how much of the conversion's value comes from each channel. The conversion IRR is reported as a single household-facing number that reflects all incremental cash flows, including the drag-attributable streams above.
-
-The planner's operational rule is direct: **report HC drag and RMD drag as named PV line items, and recognize that the same channels also contribute their per-year cash-flow streams to the conversion's overall IRR**. Two PV line items inform the household which channels drive conversion value; the single conversion IRR remains the comparable rate against alternative uses of the conv-tax dollars.
+**Planner-facing interpretation.** The household's wealth gain from drag avoidance is \$3,543 in today's dollars, growing to \$22,111 at horizon, split between HC drag (\$1,021 PV) and RMD drag (\$2,522 PV). The conversion IRR is reported as a single number that reflects all incremental cash flows, including the drag-attributable streams above, and remains the comparable rate against alternative uses of the conv-tax dollars.
 
 ---
 
@@ -242,19 +238,13 @@ The published literature on tax-advantaged retirement accounts is voluminous; co
 
 **Horan (2005, 2006).** *Tax-Advantaged Savings Accounts and Tax-Efficient Wealth Accumulation,* CFA Institute Research Foundation; "Withdrawal Location with Progressive Tax Rates," *Financial Analysts Journal* 62(6): 77–87 [https://www.tandfonline.com/doi/abs/10.2469/faj.v62.n6.4355]. Develops an effective-tax-rate-on-annual-compounding framework, parsing drag into rate × turnover × yield components — but in service of pricing a *taxable* account, not as a sheltered-account PV or IRR component.
 
-**Dammon, Spatt & Zhang (2004), "Optimal Asset Location and Allocation with Taxable and Tax-Deferred Investing,"** *Journal of Finance* 59(3): 999–1037 [https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2004.00655.x]. Canonical theoretical asset-location treatment. Implicitly quantifies drag avoidance via a Merton-style first-order condition, not as a named PV or IRR component reported to a household.
-
-**Bergstresser & Poterba (2004), "Asset Allocation and Asset Location: Household Evidence from the Survey of Consumer Finances,"** *Journal of Public Economics* 88(9–10): 1893–1915 [https://www.nber.org/papers/w9268]. Empirical companion to Dammon-Spatt-Zhang; same framing, same gap.
-
-**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning* (May 2023) [https://etfmathguy.com/wp-content/uploads/2023/06/McQuerrie-and-DiLellio-2023-The-Arithmetic-of-Roth-Conversions-JFP.pdf]; follow-on NPV paper, *JFP* (Sep 2024); stochastic-price extension in *Financial Planning Review* (2024) [https://onlinelibrary.wiley.com/doi/abs/10.1002/cfp2.1174]. **Closest academic engagement with tax drag in the Roth-conversion context.** They model the reinvested-RMD counterfactual at a taxable-bank rate net of drag and argue that *"by age 85, the percent gain on the conversion from tax drag at constant tax rates notably exceeds the gain from a simple arithmetic difference of 1 percent in the future tax rate."* This partially anticipates the RMD-reduction component. The McQuarrie-DiLellio framing, however, is a robustness/breakeven argument that conversions overcome adverse rate movements via accumulating drag — not a separately-priced PV or IRR line item. HC drag is not isolated in any retrievable McQuarrie/DiLellio passage.
-
-**Brown, Cederburg & O'Doherty (2017), "Tax Uncertainty and Retirement Savings Diversification,"** *Journal of Financial Economics* 126(3): 689–712 [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2799288]. The contribution is rate-uncertainty hedging, not drag-avoidance quantification.
+**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning* (May 2023) [https://etfmathguy.com/wp-content/uploads/2023/06/McQuerrie-and-DiLellio-2023-The-Arithmetic-of-Roth-Conversions-JFP.pdf]; follow-on NPV paper, *JFP* (Sep 2024); stochastic-price extension in *Financial Planning Review* (2024) [https://onlinelibrary.wiley.com/doi/abs/10.1002/cfp2.1174]. **Closest academic engagement with tax drag in the Roth-conversion context.** They model the reinvested-RMD counterfactual at a taxable-bank rate net of drag and argue that *"by age 85, the percent gain on the conversion from tax drag at constant tax rates notably exceeds the gain from a simple arithmetic difference of 1 percent in the future tax rate."* This partially anticipates the RMD-reduction component, but the McQuarrie-DiLellio framing is a robustness/breakeven argument — not a separately-priced PV or IRR line item. HC drag is not isolated in any retrievable McQuarrie/DiLellio passage.
 
 **Geisler & Hulse (2018), "The Effects of Social Security Benefits and RMDs on Tax-Efficient Withdrawal Strategies,"** *Journal of Financial Planning* 31(2): 36–47 [https://www.financialplanningassociation.org/sites/default/files/2021-02/FEB18%20Geisler%20and%20Hulse.pdf]. Models RMD effects on sequencing; does not isolate drag-avoidance on RMD reinvestment as a PV or IRR component.
 
-**DiLellio & Ostrov (2017), "Optimal Strategies for Traditional vs. Roth IRA/401(k) Consumption During Retirement,"** *Decision Sciences* 48(2): 342–377 [https://webpages.scu.edu/ftp/dostrov/publications/DS.pdf]. Optimization of consumption/sequencing; does not surface Tax-Drag Shelter components.
+**Adjacent academic literature.** For theoretical asset-location optimization see Dammon, Spatt & Zhang (2004), *Journal of Finance* 59(3): 999–1037, and the empirical companion Bergstresser & Poterba (2004), *Journal of Public Economics* 88(9–10): 1893–1915; for rate-uncertainty hedging see Brown, Cederburg & O'Doherty (2017), *Journal of Financial Economics* 126(3): 689–712; for consumption-sequencing optimization see DiLellio & Ostrov (2017), *Decision Sciences* 48(2): 342–377. None isolates Tax-Drag Shelter as a household-facing PV or IRR component.
 
-**Search for IRR-based treatments.** SSRN, Google Scholar, and NBER searches for terms including "Roth conversion IRR," "tax drag retirement IRR," "asset location alpha PV," "hidden Roth contribution drag," and "conversion tax internal rate of return drag" return no papers that explicitly isolate Tax-Drag Shelter alpha as a PV or IRR line item in the Roth conversion setting.
+**Search for IRR-based treatments.** SSRN, Google Scholar, and NBER searches for terms including "Roth conversion IRR," "tax drag retirement IRR," "asset location alpha PV," and "hidden Roth contribution drag" return no papers that explicitly isolate Tax-Drag Shelter alpha as a PV or IRR line item in the Roth conversion setting.
 
 ### 6.2 Practitioner literature
 
@@ -284,13 +274,13 @@ The published literature on tax-advantaged retirement accounts is voluminous; co
 
 ## 7. Novelty Claim
 
-The intuition that retirement accounts shelter dollars from annual yield drag is universally acknowledged. The contribution here is methodological and centers on a **PV decomposition** of the drag-avoidance channels into named line items, plus the **identification of the per-year cash-flow streams that those channels contribute to the conversion's overall IRR**.
+The intuition that retirement accounts shelter dollars from annual yield drag is universally acknowledged. The contribution here is methodological.
 
 1. **A clean two-manifestation PV decomposition.** Tax-Drag Shelter value is structured as a Synthetic-Contribution manifestation (HC drag, inheriting the value a statutory Roth contribution of $K$ would also earn) and a purely-conversion manifestation (RMD drag, with no statutory-contribution analog). The Synthetic Roth Contribution equivalence (Cheshire 2026) clarifies that HC drag is the conversion-channel route to the same drag-avoidance value that statutory contributions also earn, while RMD drag is genuinely new value created only by the conversion event.
 
-2. **PV expressions for both manifestations.** Both reduce to $P \cdot \mu_P$ in the form of Proposition 1, with $\mu_P$ produced by a parallel-account simulator under the relevant distribution schedule. Neither expression appears in the verified literature as a household-facing PV line item. PV decomposition is the primary novel object of this paper.
+2. **PV expressions for both manifestations.** Both reduce to $P \cdot \mu_P$ in the form of Proposition 1, with $\mu_P$ produced by a parallel-account simulator under the relevant distribution schedule. Neither expression appears in the verified literature as a household-facing PV line item.
 
-3. **Identification of the drag-attributable cash-flow streams that feed the conversion IRR.** The contribution is not the use of IRR itself, but the attribution of specific incremental cash-flow streams to drag avoidance within the conversion IRR framework. The two manifestations contribute per-year cash-flow streams $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ to the conversion's overall IRR cash-flow vector. The paper identifies these streams explicitly and demonstrates that incorporating them materially changes the deployed conversion IRR (as evidenced by the 2026-03 and 2026-05 commits in the reference implementation). No separate per-component IRRs are introduced — those would describe counterfactual investments the household never faces.
+3. **Identification of the drag-attributable cash-flow streams that feed the conversion IRR.** The contribution is not the use of IRR itself, but the attribution of specific incremental cash-flow streams $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ to drag avoidance within the conversion IRR framework. Incorporating them materially changes the deployed conversion IRR (as evidenced by the 2026-03 and 2026-05 commits in the reference implementation). No separate per-component IRRs are introduced — those would describe counterfactual investments the household never faces.
 
 4. **Correcting the implicit zero-growth bank counterfactual.** The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes the conv-tax dollar would have done nothing in the no-conversion counterfactual. The realistic counterfactual is taxable-bank growth at $\tilde{r}$. The Tax-Drag Shelter framing extracts only the *difference* $K\cdot(S(T) - B(T))$ as drag-avoidance value — leaving the bank-growth portion $K\cdot B(T)$ correctly attributed to the conv-tax dollar irrespective of conversion.
 
@@ -298,7 +288,7 @@ The intuition that retirement accounts shelter dollars from annual yield drag is
 
 - Multiple primary PDFs (Vanguard BETR full paper, McQuarrie/DiLellio full JFP article, Reichenstein FPA papers, Vanguard Advisor's Alpha PDF) returned encoded content the literature scan could not parse fully. Characterization relies on published abstracts, summaries, and secondary discussion.
 - Paywalled Kitces posts on the most relevant article ("Tax Diversification Limits And Roth Optimization Benefits") are a residual verification gap on the practitioner side.
-- The novelty claim is about isolation as quantified PV line items and identification of the corresponding per-year cash-flow contributions to the conversion IRR, not about discovery of the underlying intuition. The structural innovations are the PV decomposition, the cash-flow-stream identification for the conversion IRR, and the realistic-counterfactual correction.
+- The novelty claim is about isolation and quantification, not about discovery of the underlying intuition. The structural innovations are the PV decomposition, the cash-flow-stream identification for the conversion IRR, and the realistic-counterfactual correction.
 
 ---
 
@@ -308,4 +298,4 @@ The intuition that retirement accounts shelter dollars from annual yield drag is
 - **Empirical calibration of $d$.** Illustrative $d = 5\%$ is a rough middle-of-the-road estimate for a balanced taxable portfolio. A richer specification would derive $d$ per asset class, per holding horizon, and per user marginal rate. Morningstar's Tax-Cost Ratio offers a per-fund empirical anchor.
 - **State income tax.** Not included as specified. State tax on dividends and capital gains (typically 3–10% additional) would widen TDS value for high-tax-state residents.
 - **Capital-gains deferral effect.** A more granular framework would separate dividend/interest drag (annual, captured here) from realized-capital-gains drag (turnover-dependent, not captured here).
-- **Implementation reference.** A full reference implementation of this framework — per-dollar drag-shelter simulator, two-component PV decomposition, and identification of the drag-attributable cash-flow streams that feed the conversion's overall IRR — is available in the RothGPT conversion calculator. The deployed calculator reports HC drag and RMD drag as named PV line items and incorporates the corresponding per-year cash-flow streams into the single conversion IRR; it does not surface separate per-component IRRs.
+- **Implementation reference.** A full reference implementation of this framework — per-dollar drag-shelter simulator, two-component PV decomposition, and the drag-attributable cash-flow streams feeding the conversion IRR — is deployed in the RothGPT conversion calculator.
