@@ -9,11 +9,11 @@
 
 ## 1. Concept
 
-Inside a tax-advantaged wrapper, every dollar compounds at the asset's full pre-tax return. Outside, the same dollar pays annual tax on dividends, interest, realized capital gains, and turnover-driven distributions, eroding compounded value by roughly 0.5%–2% per year and dominating over multi-decade horizons. The present value of avoiding that erosion — the wealth a household keeps by holding a given dollar inside the wrapper rather than outside it — is what this paper calls the **Tax-Drag Shelter (TDS) value** (also *TDS alpha* in keeping with practitioner usage; the "alpha" label refers to structural excess wealth from a sheltering decision, not a risk-adjusted return statistic).
+Inside a tax-advantaged wrapper, every dollar compounds at the asset's full pre-tax return. Outside, the same dollar pays annual tax on dividends, interest, realized capital gains, and turnover-driven distributions, eroding compounded value by roughly 0.5%–2% per year and dominating over multi-decade horizons. The present value of avoiding that erosion — the wealth a household keeps by holding a given dollar inside the wrapper rather than outside it — is what this paper calls **Tax-Drag Shelter (TDS) alpha**.
 
-TDS value is universally acknowledged in the Roth-conversion literature but rarely quantified as a named line item, and never, to our knowledge, decomposed by source. We show that a Roth conversion does not produce one stream of TDS value; it produces two structurally distinct streams, unlocked by two different decisions a planner actually makes, with very different principals driving each. Naming and pricing those streams separately is the contribution of this paper.
+TDS alpha is universally acknowledged in the Roth-conversion literature but rarely quantified as a named line item, and never, to our knowledge, decomposed by source. We show that a Roth conversion does not produce one stream of TDS alpha; it produces two structurally distinct streams, unlocked by two different decisions a planner actually makes, with very different principals driving each. Naming and pricing those streams separately is the contribution of this paper.
 
-**The decision hierarchy.** A planner facing a Roth-conversion decision actually makes two decisions, which unlock two different components of TDS value in dominance order:
+**The decision hierarchy.** A planner facing a Roth-conversion decision actually makes two decisions, which unlock two different components of TDS alpha in dominance order:
 
 1. **Convert decision (primary).** Choosing to convert principal $C$ unlocks **RMD drag** — the dominant component. A conversion shrinks the Traditional balance and reduces the lifetime RMD stream the household is forced to draw. For retirees not consuming the full RMD, the avoided distributions stay sheltered. RMD drag is unlocked under both Inside and Outside payment of the conversion tax — it depends on the converted principal $C$, not on how the tax is paid.
 
@@ -23,7 +23,7 @@ In the §5 worked example, RMD drag PV is \$2,522 versus SRC drag PV \$1,021 —
 
 This paper contributes (a) a **PV decomposition** of both manifestations into named line items, each reducing to a per-dollar simulator output multiplied by the relevant principal, and (b) identification of the per-year, drag-attributable cash-flow streams that each manifestation contributes to the conversion's **internal rate of return (IRR)**. Both outputs are surfaced in the deployed reference implementation (RothGPT conversion calculator).
 
-**Scope.** Statutory contributions are the dominant channel through which households realize TDS value over a lifetime. This paper analyzes the Roth conversion specifically because conversions create two structurally distinct tax-drag avoidance streams that the published literature has not isolated separately. Other Roth-conversion value channels — Medicare/IRMAA savings, Social Security tax-torpedo effects, estate-planning advantages — are out of scope here.
+**Scope.** Statutory contributions are the dominant channel through which households realize TDS alpha over a lifetime. This paper analyzes the Roth conversion specifically because conversions create two structurally distinct tax-drag avoidance streams that the published literature has not isolated separately. Other Roth-conversion value channels — Medicare/IRMAA savings, Social Security tax-torpedo effects, estate-planning advantages — are out of scope here.
 
 ---
 
@@ -133,7 +133,7 @@ Stylized 22%-bracket Roth conversion.
 | RMD multiplier (avoided-RMD schedule) | 0.0238 | 0.1607 |
 | SRC multiplier (Roth distribution schedule) | 0.0568 | 0.2834 |
 
-**Tax-Drag Shelter value — Outside vs. Inside payment side-by-side:**
+**Tax-Drag Shelter alpha — Outside vs. Inside payment side-by-side:**
 
 | Component | Outside payment | Inside payment |
 |---|---|---|
@@ -144,7 +144,7 @@ Stylized 22%-bracket Roth conversion.
 | SRC drag FV | \$5,092 | \$0 |
 | Conversion IRR | computed (includes drag streams) | undefined ($K = 0$ outlay) |
 
-**Planner-facing interpretation.** The dominance hierarchy is visible at a glance. The Convert decision delivers \$2,522 of RMD-drag PV regardless of how the conversion tax is settled. The Outside-settlement decision adds a further \$1,021 of SRC-drag PV — the wrapper-migration bonus — which is exactly the same kind of benefit a statutory Roth contribution of $K$ would earn. The Inside-payment column makes the structural separation concrete: RMD drag is genuinely new value created only by the conversion event, while SRC drag is the conversion-channel route to value that statutory contributions also earn. Total TDS value to the household is \$3,543 today (Outside) or \$2,522 today (Inside), with the FV figures showing the same dominance carried out to horizon.
+**Planner-facing interpretation.** The dominance hierarchy is visible at a glance. The Convert decision delivers \$2,522 of RMD-drag PV regardless of how the conversion tax is settled. The Outside-settlement decision adds a further \$1,021 of SRC-drag PV — the wrapper-migration bonus — which is exactly the same kind of benefit a statutory Roth contribution of $K$ would earn. The Inside-payment column makes the structural separation concrete: RMD drag is genuinely new value created only by the conversion event, while SRC drag is the conversion-channel route to value that statutory contributions also earn. Total TDS alpha to the household is \$3,543 today (Outside) or \$2,522 today (Inside), with the FV figures showing the same dominance carried out to horizon.
 
 ---
 
@@ -207,7 +207,7 @@ The novelty claim is about isolation and quantification, not about discovery of 
 
 - **Sensitivity to $\rho$.** RMD-drag PV scales linearly in $\rho$. Realistic ranges: 0.50–1.00 for surplus-wealth retirees; $\rho \approx 0$ for retirees consuming the full RMD.
 - **Empirical calibration of $d$.** Illustrative $d = 5\%$ is a rough middle-of-the-road estimate for a balanced taxable portfolio. A richer specification would derive $d$ per asset class, per holding horizon, and per user marginal rate. Morningstar's Tax-Cost Ratio offers a per-fund empirical anchor.
-- **State income tax.** Not included. State tax on dividends and capital gains (typically 3–10% additional) would widen TDS value for high-tax-state residents.
+- **State income tax.** Not included. State tax on dividends and capital gains (typically 3–10% additional) would widen TDS alpha for high-tax-state residents.
 - **Capital-gains deferral effect.** A more granular framework would separate dividend/interest drag (annual, captured here) from realized-capital-gains drag (turnover-dependent, not captured here).
 - **Implementation reference.** A full reference implementation — per-dollar drag-shelter simulator, two-component PV decomposition, and the drag-attributable cash-flow streams feeding the conversion IRR — is deployed in the RothGPT conversion calculator.
 
