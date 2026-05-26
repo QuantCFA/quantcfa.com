@@ -17,9 +17,9 @@ The drag-avoidance benefit is universally acknowledged at a conceptual level, bu
 
 1. **Convert decision (primary).** Choosing to convert principal $C$ unlocks **RMD drag** — the dominant component. A conversion shrinks the Traditional balance and reduces the lifetime RMD stream the household is forced to draw. For retirees not consuming the full RMD, the avoided distributions stay sheltered. RMD drag is unlocked under both Inside and Outside payment of the conversion tax — it depends on the converted principal $C$, not on how the tax is paid.
 
-2. **Outside-settlement decision (secondary).** Choosing to pay the conversion tax $K$ from outside the retirement account (rather than withholding $K$ from the converted balance) unlocks **HC drag** — a smaller wrapper-migration bonus. The $K$ dollars migrate from a taxable wrapper into the Roth and compound tax-free thereafter. Structurally, this Outside-vs-Inside choice is identical to a statutory Roth contribution decision: both move $K$ after-tax dollars from a taxable wrapper into a Roth wrapper at no current-wealth cost.
+2. **Outside-settlement decision (secondary).** Choosing to pay the conversion tax $K$ from outside the retirement account (rather than withholding $K$ from the converted balance) unlocks **SRC drag** (what Piper 2020 calls the "Hidden Contribution" effect; we isolate specifically the drag-avoidance portion of it) — a smaller wrapper-migration bonus. The $K$ dollars migrate from a taxable wrapper into the Roth and compound tax-free thereafter. Structurally, this Outside-vs-Inside choice is identical to a statutory Roth contribution decision: both move $K$ after-tax dollars from a taxable wrapper into a Roth wrapper at no current-wealth cost.
 
-In the §5 worked example, RMD drag PV is \$2,522 versus HC drag PV \$1,021 — RMD is 2.47× larger. The dominance is structural: the RMD-drag principal is the full after-tax converted balance $(1-\tau_C)\cdot C$ scaled by reinvestment share, while HC-drag principal is only the conversion tax $K = \tau_C \cdot C$.
+In the §5 worked example, RMD drag PV is \$2,522 versus SRC drag PV \$1,021 — RMD is 2.47× larger. The dominance is structural: the RMD-drag principal is the full after-tax converted balance $(1-\tau_C)\cdot C$ scaled by reinvestment share, while SRC-drag principal is only the conversion tax $K = \tau_C \cdot C$.
 
 This paper contributes (a) a **PV decomposition** of both manifestations into named line items, each reducing to a per-dollar simulator output multiplied by the relevant principal, and (b) identification of the per-year, drag-attributable cash-flow streams that each manifestation contributes to the conversion's **internal rate of return (IRR)**. Both outputs are surfaced in the deployed reference implementation (RothGPT conversion calculator).
 
@@ -32,7 +32,7 @@ This paper contributes (a) a **PV decomposition** of both manifestations into na
 ### 2.1 Notation
 
 - $r$ — pre-tax asset return (illustrative: 7%)
-- $d$ — annual tax drag fraction on the same return when held taxably (illustrative: 5% of return)
+- $d$ — annual tax drag fraction on the same return when held taxably (planner-input assumption; illustrative value 5% of return)
 - $\tilde{r} = r \cdot (1 - d)$ — after-drag growth rate on a taxable balance (illustrative: 6.65%)
 - $C$ — converted principal
 - $\tau_C$ — effective marginal rate on the conversion
@@ -55,7 +55,7 @@ The two TDS manifestations in §3 differ only in the principal $P$ being shelter
 
 ## 3. Two Manifestations
 
-A Roth conversion produces TDS alpha in two structurally distinct ways. We present them in dominance order: RMD drag first (the larger component, unlocked by the Convert decision) and HC drag second (the smaller component, unlocked by the Outside-settlement decision).
+A Roth conversion produces TDS alpha in two structurally distinct ways. We present them in dominance order: RMD drag first (the larger component, unlocked by the Convert decision) and SRC drag second (the smaller component, unlocked by the Outside-settlement decision).
 
 ### 3.1 RMD drag — the purely-conversion manifestation
 
@@ -69,25 +69,29 @@ $$
 
 The corresponding per-year stream $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enters the conversion IRR's cash-flow vector. RMD-drag PV is defined under **both Inside and Outside payment** of the conversion tax — the benefit depends on the converted principal $C$, not on how the tax is paid. The IRR contribution itself is meaningful only when the conversion IRR is defined (Outside payment).
 
-Typical $\rho$ ranges: $\approx 0.50\text{--}0.75$ for retirees subject to mandatory RMD-driven decumulation; $\rho \to 0$ for retirees consuming the full RMD; $\rho \to 1$ for retirees with surplus wealth and no spending need.
+Typical $\rho$ ranges: $\approx 0.50\text{--}0.75$ for retirees subject to mandatory RMD-driven decumulation; $\rho \to 0$ for retirees consuming the full RMD; $\rho \to 1$ for retirees with surplus wealth and no spending need. The deployed reference implementation defaults $\rho$ to 0.75 when the distribution method is RMD and 0.20 when the distribution method is fixed-annuity (the FA case being more consumption-oriented and therefore producing a smaller surplus available for reinvestment).
 
 **Timing of the $\Delta_{RMD}(t)$ stream.** The per-year RMD-drag differential is zero during the owner's remaining life and non-zero only during the terminal beneficiary distribution period. Mechanically, the avoided RMD dollars accumulate inside two parallel reinvestment balances over the owner's life — one compounding at $r$ (sheltered counterfactual), one at $\tilde{r}$ (taxable counterfactual). Those balances then distribute as a fixed-period (10-year) annuity to the beneficiary, and the drag-avoidance benefit is realized year-by-year as the differential between the two annuity streams. PV and FV totals capture the full owner-life drag through the accumulated balance differential; the cash-flow stream that feeds the conversion IRR reflects benefit realization at distribution, not at accrual.
 
-### 3.2 HC drag — the wrapper-migration manifestation
+### 3.2 SRC drag — the wrapper-migration manifestation
 
 When the conversion tax $K$ is paid from outside the retirement account, the post-conversion Roth principal is the full $C$ rather than $C - K$. The $K$ dollars that migrate from the taxable wrapper into the Roth compound tax-free thereafter, *identically to a statutory Roth contribution of $K$* made in the same year. We refer to the implicit $K$ dollars inside the Roth as the **Synthetic Roth Contribution**; the formal equivalence proof — same after-tax distribution stream, same wrapper, same tax treatment — is established in Cheshire (2026), "The Synthetic Roth Contribution: Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions," SSRN #6772118.
 
-By **Wrapper Migration Neutrality** (Cheshire 2026, §3.5), the Outside-payment decision is economically identical to a statutory Roth contribution decision: both move $K$ after-tax dollars from a taxable wrapper into a Roth wrapper at no current-wealth cost. HC drag is the drag-avoidance value of that wrapper migration — a benefit available wherever such migration is feasible, not a conversion-specific phenomenon.
+By **Wrapper Migration Neutrality** (Cheshire 2026, §3.5), the Outside-payment decision is economically identical to a statutory Roth contribution decision: both move $K$ after-tax dollars from a taxable wrapper into a Roth wrapper at no current-wealth cost. SRC drag is the drag-avoidance value of that wrapper migration — a benefit available wherever such migration is feasible, not a conversion-specific phenomenon.
 
 Applying the multiplier with $P = K$ on the post-conversion Roth distribution schedule:
 
 $$
-\alpha_{HC}^{PV} \;=\; K \cdot \mu_{P}^{HC}.
+\alpha_{SRC}^{PV} \;=\; K \cdot \mu_{P}^{SRC}.
 $$
 
-The corresponding per-year stream $K \cdot \Delta_{HC}(t)$ enters the conversion IRR's cash-flow vector as the HC channel's drag-avoidance contribution; it is non-zero only under Outside payment of the conversion tax. Under Inside payment, no wrapper migration occurs — $K$ is withheld from the converted balance, no dollar moves between wrappers, and $\alpha_{HC} = 0$.
+The corresponding per-year stream $K \cdot \Delta_{SRC}(t)$ enters the conversion IRR's cash-flow vector as the SRC channel's drag-avoidance contribution; it is non-zero only under Outside payment of the conversion tax. Under Inside payment, no wrapper migration occurs — $K$ is withheld from the converted balance, no dollar moves between wrappers, and $\alpha_{SRC} = 0$.
 
-The hidden-contribution effect is well-known qualitatively (Piper, "The 4 Effects of a Roth Conversion," effect #2; Kitces; Vanguard BETR). What is new is the isolation of the *drag-avoidance* portion of that effect — separated from the conventional $K \cdot S(T)$ figure which folds bank-counterfactual growth and drag-avoidance into a single number.
+**SRC drag as the alpha layer of total SRC value.** The SRC itself has a total wealth value — the full migration value of $K$ dollars moved from the taxable wrapper into the Roth — quantified separately in Cheshire (2026). That total SRC value decomposes economically into a *bank-counterfactual growth* component ($K \cdot B(T)$, what $K$ would have earned in a taxable wrapper compounding at $\tilde{r}$, which the conversion-tax dollar produces regardless of the conversion choice) and a *drag-avoidance alpha* component ($K \cdot (S(T) - B(T))$, which exists only because the dollar is now in the Roth). **SRC drag is the alpha component.** The PV reported above is the future-value differential between the two counterfactuals, discounted to today at $r$ — alpha against the realistic dragged-taxable counterfactual, not a free-standing benefit.
+
+**Timing of the $\Delta_{SRC}(t)$ stream.** The SRC-drag stream has the *opposite timing profile* from RMD drag. Because the post-conversion Roth holds $K$ extra principal under Outside payment, the Roth produces year-by-year RMDs that are $K/\varepsilon_t$ larger than the no-conversion counterfactual every year of the owner's remaining life. The per-year SRC-drag differential $\Delta_{SRC}(t)$ is therefore **non-zero during the owner's life** — realized as the difference between those larger RMDs and what the same $K$ would have produced if it had remained in the taxable wrapper compounding at $\tilde{r}$ and distributed on the same schedule. The residual balance distributes via the 10-year beneficiary period. PV and FV totals capture both segments; the cash-flow stream that feeds the conversion IRR reflects benefit realization at distribution, year-by-year throughout the owner's life and the beneficiary period.
+
+The hidden-contribution effect is well-known qualitatively (Piper, "The 4 Effects of a Roth Conversion," effect #2; Kitces; Vanguard BETR). What is new is the isolation of the *drag-avoidance* portion of that effect: the conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes a zero-growth counterfactual, folding bank-counterfactual growth and drag-avoidance into a single number; the realistic $\tilde{r}$ counterfactual is what isolates the drag-avoidance alpha cleanly.
 
 ---
 
@@ -96,10 +100,10 @@ The hidden-contribution effect is well-known qualitatively (Piper, "The 4 Effect
 Under Outside payment, the joint TDS PV is additive:
 
 $$
-\alpha_{TDS}^{PV} \;=\; \alpha_{HC}^{PV} \;+\; \alpha_{RMD}^{PV}.
+\alpha_{TDS}^{PV} \;=\; \alpha_{SRC}^{PV} \;+\; \alpha_{RMD}^{PV}.
 $$
 
-The combined per-year drag-attributable cash-flow stream $K \cdot \Delta_{HC}(t) + (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enters the conversion's full incremental cash-flow vector. The conversion IRR is the rate solving $\sum_t CF(t)/(1+i)^t = 0$ on that full vector; the drag-attributable streams enter as additive contributions, and identifying *which* streams come from drag avoidance (rather than rate arbitrage) is the attribution exercise that lets a planner say *this much* of the conversion IRR is delivered by drag avoidance. Under Inside payment, $K = 0$ as a user outlay and the conversion IRR is undefined (the deployed implementation returns a sentinel value); the RMD-drag PV remains meaningful.
+The combined per-year drag-attributable cash-flow stream $K \cdot \Delta_{SRC}(t) + (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enters the conversion's full incremental cash-flow vector. The conversion IRR is the rate solving $\sum_t CF(t)/(1+i)^t = 0$ on that full vector; the drag-attributable streams enter as additive contributions, and identifying *which* streams come from drag avoidance (rather than rate arbitrage) is the attribution exercise that lets a planner say *this much* of the conversion IRR is delivered by drag avoidance. Under Inside payment, $K = 0$ as a user outlay and the conversion IRR is undefined (the deployed implementation returns a sentinel value); the RMD-drag PV remains meaningful.
 
 ---
 
@@ -127,20 +131,20 @@ Stylized 22%-bracket Roth conversion.
 | | $\mu_P$ | $\mu_F$ |
 |---|---|---|
 | RMD multiplier (avoided-RMD schedule) | 0.0238 | 0.1607 |
-| HC multiplier (Roth distribution schedule) | 0.0568 | 0.2834 |
+| SRC multiplier (Roth distribution schedule) | 0.0568 | 0.2834 |
 
 **Tax-Drag Shelter value — Outside vs. Inside payment side-by-side:**
 
 | Component | Outside payment | Inside payment |
 |---|---|---|
 | RMD drag PV | \$2,522 | \$2,522 (unchanged) |
-| HC drag PV | \$1,021 | \$0 |
+| SRC drag PV | \$1,021 | \$0 |
 | **TDS total PV** | **\$3,543** | **\$2,522** |
 | RMD drag FV | \$17,019 | \$17,019 |
-| HC drag FV | \$5,092 | \$0 |
+| SRC drag FV | \$5,092 | \$0 |
 | Conversion IRR | computed (includes drag streams) | undefined ($K = 0$ outlay) |
 
-**Planner-facing interpretation.** The dominance hierarchy is visible at a glance. The Convert decision delivers \$2,522 of RMD-drag PV regardless of how the conversion tax is settled. The Outside-settlement decision adds a further \$1,021 of HC-drag PV — the wrapper-migration bonus — which is exactly the same kind of benefit a statutory Roth contribution of $K$ would earn. The Inside-payment column makes the structural separation concrete: RMD drag is genuinely new value created only by the conversion event, while HC drag is the conversion-channel route to value that statutory contributions also earn. Total TDS value to the household is \$3,543 today (Outside) or \$2,522 today (Inside), with the FV figures showing the same dominance carried out to horizon.
+**Planner-facing interpretation.** The dominance hierarchy is visible at a glance. The Convert decision delivers \$2,522 of RMD-drag PV regardless of how the conversion tax is settled. The Outside-settlement decision adds a further \$1,021 of SRC-drag PV — the wrapper-migration bonus — which is exactly the same kind of benefit a statutory Roth contribution of $K$ would earn. The Inside-payment column makes the structural separation concrete: RMD drag is genuinely new value created only by the conversion event, while SRC drag is the conversion-channel route to value that statutory contributions also earn. Total TDS value to the household is \$3,543 today (Outside) or \$2,522 today (Inside), with the FV figures showing the same dominance carried out to horizon.
 
 ---
 
@@ -150,7 +154,7 @@ Published treatment of tax drag as a quantified, named PV line item in the Roth-
 
 ### 6.1 Closest predecessors
 
-**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning* (May 2023); follow-on NPV paper, *JFP* (Sep 2024). Closest academic engagement with tax drag in the Roth-conversion context. They model the reinvested-RMD counterfactual at a taxable-bank rate net of drag, partially anticipating the RMD-drag component — but as a robustness/breakeven argument, not a separately-priced PV or IRR line item. HC drag is not isolated.
+**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning* (May 2023); follow-on NPV paper, *JFP* (Sep 2024). Closest academic engagement with tax drag in the Roth-conversion context. They model the reinvested-RMD counterfactual at a taxable-bank rate net of drag, partially anticipating the RMD-drag component — but as a robustness/breakeven argument, not a separately-priced PV or IRR line item. SRC drag is not isolated.
 
 **Mike Piper, "The 4 Effects of a Roth Conversion"** [https://obliviousinvestor.com/the-4-effects-of-a-roth-conversion/]. Closest practitioner article to the two-manifestation structure. Piper names effect #2 ("use taxable dollars to pay the tax" — qualitative HC) and effect #3 ("reduces your later RMDs" — qualitative RMD-drag analog), but does not quantify either as drag avoidance at $\tilde{r}$ or produce PV/IRR figures.
 
@@ -169,7 +173,7 @@ Published treatment of tax drag as a quantified, named PV line item in the Roth-
 | Element | Status in published literature |
 |---|---|
 | RMD drag — PV figure | Not isolated as a household-facing PV line item. Partially anticipated by McQuarrie & DiLellio as a robustness argument. |
-| HC drag — PV figure | Not isolated. Conventional Hidden Contribution math uses $K \cdot S(T)$, implicitly assuming a zero-growth bank counterfactual. |
+| SRC drag — PV figure | Not isolated. Conventional Hidden Contribution math uses $K \cdot S(T)$, implicitly assuming a zero-growth bank counterfactual. |
 | Drag-attributable cash-flow streams as components of the conversion IRR | Not present in verified sources. |
 | Combined TDS PV decomposition plus conversion-IRR contribution | Not present in verified sources. |
 
@@ -179,9 +183,9 @@ Published treatment of tax drag as a quantified, named PV line item in the Roth-
 
 The intuition that retirement accounts shelter dollars from annual yield drag is universally acknowledged. The contribution here is methodological.
 
-1. **A clean two-manifestation PV decomposition organized as a decision hierarchy.** RMD drag (unlocked by the Convert decision, dominant) and HC drag (unlocked by the Outside-settlement decision, secondary wrapper-migration bonus) are each expressed as $P \cdot \mu_P$ for the relevant principal. The decision-hierarchy framing — RMD drag first, HC drag second — clarifies what each planner decision actually buys and makes the Inside-vs-Outside contrast immediate. Neither expression appears in the verified literature as a household-facing PV line item.
+1. **A clean two-manifestation PV decomposition organized as a decision hierarchy.** RMD drag (unlocked by the Convert decision, dominant) and SRC drag (unlocked by the Outside-settlement decision, secondary wrapper-migration bonus) are each expressed as $P \cdot \mu_P$ for the relevant principal. The decision-hierarchy framing — RMD drag first, SRC drag second — clarifies what each planner decision actually buys and makes the Inside-vs-Outside contrast immediate. Neither expression appears in the verified literature as a household-facing PV line item.
 
-2. **Drag-attributable cash-flow streams identified within the conversion IRR.** The drag-attributable streams $K \cdot \Delta_{HC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enter the conversion's full incremental cash-flow vector. *The contribution is not the use of IRR itself, but the attribution of specific incremental cash-flow streams to drag avoidance within the conversion IRR framework.* Incorporating them materially changes the deployed conversion IRR. No separate per-component IRRs are introduced — those would describe counterfactual investments the household never faces.
+2. **Drag-attributable cash-flow streams identified within the conversion IRR.** The drag-attributable streams $K \cdot \Delta_{SRC}(t)$ and $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ enter the conversion's full incremental cash-flow vector. *The contribution is not the use of IRR itself, but the attribution of specific incremental cash-flow streams to drag avoidance within the conversion IRR framework.* Incorporating them materially changes the deployed conversion IRR. No separate per-component IRRs are introduced — those would describe counterfactual investments the household never faces.
 
 3. **Correcting the implicit zero-growth bank counterfactual.** The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes the conv-tax dollar would have done nothing in the no-conversion counterfactual. The realistic counterfactual is taxable-bank growth at $\tilde{r}$; the TDS framing extracts only the *difference* $K \cdot (S(T) - B(T))$ as drag-avoidance value, leaving the bank-growth portion $K \cdot B(T)$ correctly attributed to the conv-tax dollar irrespective of conversion.
 
@@ -235,5 +239,5 @@ For each year $t = 1, \ldots, T + g$:
 **Applying to each manifestation.**
 
 - **RMD drag.** Run the simulator with $M = \mathrm{RMD}$ on the *avoided RMD principal stream* — the parallel simulation of what would have been withdrawn from the larger pre-conversion balance versus the smaller post-conversion balance, with a terminal beneficiary distribution period. Multiply $\mu_P$ and $\mu_F$ by $(1-\tau_C)\cdot C\cdot \rho$.
-- **HC drag.** Run the simulator with $M$ = the post-conversion Roth distribution method, $g$ = gap from conversion to first Roth distribution. Multiply $\mu_P$ and $\mu_F$ by $K$ (Outside payment only).
+- **SRC drag.** Run the simulator with $M$ = the post-conversion Roth distribution method, $g$ = gap from conversion to first Roth distribution. Multiply $\mu_P$ and $\mu_F$ by $K$ (Outside payment only).
 - **Combined.** Sum PV and FV components. Both per-year streams are added into the single conversion IRR cash-flow vector.
