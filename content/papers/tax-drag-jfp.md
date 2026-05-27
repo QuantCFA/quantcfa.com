@@ -1,4 +1,6 @@
-# Quantifying Tax-Drag Shelter Benefits in Roth Conversions: RMD Reduction and Hidden Contributions
+# Quantifying Tax-Drag Shelter Benefits in Roth Conversions
+
+**RMD Reduction and Hidden Contributions**
 
 **Working paper**
 **Date:** 2026-05-25
