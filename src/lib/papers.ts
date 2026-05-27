@@ -35,9 +35,7 @@ export const papers: Paper[] = [
   },
   {
     slug: "tax-drag-shelter",
-    title: "Quantifying Tax-Drag Shelter in Roth Conversions",
-    subtitle:
-      "Hidden Contributions and RMD Reduction",
+    title: "Quantifying Tax-Drag Shelter Benefits in Roth Conversions: RMD Reduction and Hidden Contributions",
     date: "May 2026",
     status: "Working paper",
     keyIdea:
