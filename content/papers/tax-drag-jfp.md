@@ -1,21 +1,25 @@
-# Tax-Drag Shelter: A Newly Isolated Component of Roth-Conversion Value
+# Quantifying Tax-Drag Shelter in Roth Conversions
 
-**PV Decomposition of the Two Manifestations and Their Contribution to the Conversion IRR**
+**Hidden Contributions and RMD Reduction**
 
 **Working paper**
 **Date:** 2026-05-25
 
 ---
 
-## 1. Concept
+## 1. Tax-Drag Shelter
 
 **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper. Inside, investments grow unencumbered by taxes; outside, the same dollars pay annual tax on dividends, interest, realized capital gains, and turnover-driven distributions — a drag that compounds materially over time.
 
-A Roth conversion produces two distinct TDS alphas, corresponding to the two decisions a household makes: **RMD-reduction alpha** from the Convert decision, and **SRC alpha** from the Outside-settlement decision. Each has its own cause, principal, and PV; the household-facing total is their sum.
+Avoiding tax-drag is a core benefit of tax-advantaged retirement wrappers. A Roth conversion can realize this benefit in two distinct ways, each creating positive alpha.
 
-1. **Convert decision (primary): RMD-reduction alpha.** Converting a principal of $C$ shrinks the Traditional balance and reduces future RMDs. For retirees not consuming the full RMD, the avoided dollars stay sheltered instead of being reinvested taxably. **RMD-reduction alpha** is the PV of that sheltering. It scales with $C$ and is realized under both Inside and Outside payment.
+1. **RMD-reduction alpha (primary):**
 
-2. **Outside-settlement decision (secondary): SRC alpha.** Paying the conversion tax $K = \tau_C \cdot C$ from outside the retirement account migrates $K$ after-tax dollars from a taxable wrapper into the Roth. These migrated dollars are the **Synthetic Roth Contribution** (SRC; Cheshire 2026) — structurally identical to a statutory Roth contribution under Wrapper Migration Neutrality (Cheshire 2026, §3.5). **SRC alpha** is the PV of $K$ compounding tax-free in the Roth rather than in a taxable counterfactual — the drag-avoidance portion of what Piper (2020) calls the "Hidden Contribution" effect. It scales with $K$ and is realized only under Outside payment.
+    All conversions (Inside & Outside) reduce the Traditional account by an amount $C$, causing reduced future RMDs. RMD reductions that would have been reinvested taxably remain sheltered. **RMD-reduction alpha** is the PV of that sheltering.
+
+2. **SRC alpha (secondary):**
+
+    Conversion tax $K$ ($\tau_C \cdot C$) paid from Outside funds migrates $K$ after-tax dollars into the Roth wrapper, a **Synthetic Roth Contribution** (SRC; Cheshire 2026). **SRC alpha** is the PV gain of $K$ compounding tax-free vs. the taxable counterfactual, and is realized only under Outside payment. Identical alpha accrues to a statutory Roth contribution under Wrapper Migration Neutrality (Cheshire 2026, §3.5).
 
 In the §5 worked example, RMD-reduction alpha PV is \$2,522 versus SRC alpha PV \$1,021 — RMD-reduction is 2.47× larger. The asymmetry is structural: RMD-reduction alpha runs on principal $(1-\tau_C)\cdot C$ scaled by reinvestment share, while SRC alpha runs on principal $K = \tau_C \cdot C$.
 

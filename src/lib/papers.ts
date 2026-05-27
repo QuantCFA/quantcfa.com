@@ -35,13 +35,13 @@ export const papers: Paper[] = [
   },
   {
     slug: "tax-drag-shelter",
-    title: "Tax-Drag Shelter",
+    title: "Quantifying Tax-Drag Shelter in Roth Conversions",
     subtitle:
-      "A Newly Isolated Component of Roth-Conversion Value — PV Decomposition of the Two Manifestations",
+      "Hidden Contributions and RMD Reduction",
     date: "May 2026",
     status: "Working paper",
     keyIdea:
-      "Two channels through which a Roth conversion shelters principal from annual tax drag — quantified in present value, with the corresponding cash flows folded into the conversion's IRR.",
+      "Quantifies the two Tax-Drag Shelter alphas in a Roth conversion: RMD-reduction (from the Convert decision) and SRC (from the Outside-settlement decision).",
     file: "tax-drag-jfp.md",
   },
   {
