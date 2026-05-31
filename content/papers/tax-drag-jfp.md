@@ -287,11 +287,9 @@ The first runs over the owner's remaining life and beneficiary period; the secon
 
 ---
 
-## Appendix D. Per-Year Drag-Related Cash Flows (Worked Example)
+## Appendix D. Worked Example: Per-Year TDS Cash Flows
 
-The table below realizes Appendix C's per-year flow $\mathrm{CF}_{\mathrm{drag}}(t) = K\cdot\Delta_{SRC}(t) + (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ on the §2 inputs ($C$ = \$123,850, $K$ = \$17,966, $r$ = 7%, $\tilde{r}$ = 6.65%, conversion 2026, owner ages 69–92, beneficiary 2050–2059). PV discounted at $r$ = 7% to 2026.
-
-**Em-dash entries reflect accrual without distribution, not zero value.** Both alphas accumulate internally before realizing as cash flows: the SRC $K$ balance compounds at sheltered vs. taxable rates during gap years 2027–2029, and the avoided-RMD dollars compound in two parallel reinvestment balances throughout owner life (2027–2049). SRC realization begins in 2030 with owner-life RMDs and continues through the beneficiary 10-year annuity (2050–2059); RMD-reduction's full accumulated drag is realized only during the beneficiary period (2050–2059).
+PV discounted at $r$ = 7% to 2026.
 
 | Year | RMD drag (nominal) | SRC drag (nominal) | RMD drag PV | SRC drag PV |
 |---|---:|---:|---:|---:|
@@ -330,5 +328,7 @@ The table below realizes Appendix C's per-year flow $\mathrm{CF}_{\mathrm{drag}}
 | 2058 | \$1,702 | \$355 | \$195 | \$41 |
 | 2059 | \$1,702 | \$355 | \$183 | \$38 |
 | **Total** | **\$17,019** | **\$5,092** | **\$2,522** | **\$1,021** |
+
+**Em-dash entries reflect accrual without distribution, not zero value.** Both alphas accumulate internally before realizing as cash flows: the SRC $K$ balance compounds at sheltered vs. taxable rates during gap years 2027–2029, and the avoided-RMD dollars compound in two parallel reinvestment balances throughout owner life (2027–2049). SRC realization begins in 2030 with owner-life RMDs and continues through the beneficiary 10-year annuity (2050–2059); RMD-reduction's full accumulated drag is realized only during the beneficiary period (2050–2059).
 
 PV totals reconcile to the §2 figures. The SRC PV is concentrated in the beneficiary period despite SRC drag accruing throughout owner life because owner-life amounts are small and heavily discounted.
