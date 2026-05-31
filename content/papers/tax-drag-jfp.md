@@ -34,61 +34,48 @@ A Roth conversion can capture this benefit in two ways, each creating positive a
 
 ## 2. Worked Example
 
-Stylized 22%-bracket Roth conversion.
+Converting \$123,850 fills through the 22% bracket, with an effective tax rate of 14.5%.
 
 **Inputs.**
 
 | Parameter | Symbol | Value |
 |---|---|---|
 | Pre-tax return | $r$ | 7% |
-| Drag fraction | $d$ | 5% ($\tilde{r}$ = 6.65%) |
+| Tax-drag rate | $d$ | 5% |
+| After-drag return | $\tilde{r} = r(1-d)$ | 6.65% |
 | Conversion principal | $C$ | \$123,850 |
 | Conversion-year effective rate | $\tau_C$ | 14.5% |
 | Conversion tax | $K = \tau_C \cdot C$ | \$17,966 |
-| Distribution method | RMD-only, age 73 onset | |
-| Owner remaining horizon | 17 years | |
-| Beneficiary terminal period | 10 years | |
-| Reinvestment-share | $\rho$ | 0.75 |
-| Gap years | 13 | |
+| Owner remaining life | | 23 years (69–92) |
+| Beneficiary period | | 10 years |
+| RMD reinvestment | $\rho$ | 75% |
 
-**The two alphas — Outside vs. Inside payment:**
+**The two alphas — Outside- vs. Inside-funded tax payment:**
 
 | Component | Outside payment | Inside payment |
 |---|---|---|
-| RMD-reduction alpha | \$2,522 | \$2,522 (unchanged) |
+| RMD-reduction alpha | \$2,522 | \$2,522 |
 | SRC alpha | \$1,021 | \$0 |
 | **TDS total** | **\$3,543** | **\$2,522** |
-| Conversion IRR | computed (includes drag streams) | undefined ($K = 0$ outlay) |
+| Conversion IRR | 11.56% | undefined (no outlay) |
 
-**Planner-facing interpretation.** The asymmetry is visible at a glance. The Convert decision delivers \$2,522 of RMD-reduction alpha regardless of how the conversion tax is settled. The Outside-settlement decision adds a further \$1,021 of SRC alpha — the same kind of benefit a statutory Roth contribution of $K$ would earn. RMD-reduction alpha is the larger of the two (2.47× here): it scales with the full converted principal $C$, while SRC alpha scales with the conversion tax $\tau_C \cdot C$. The Inside-payment column makes the structural separation concrete: RMD-reduction alpha is genuinely new value created only by the conversion event, while SRC alpha is the conversion-channel route to value that statutory contributions also earn. Total TDS value to the household is \$3,543 today (Outside) or \$2,522 today (Inside).
+**Interpretation.** Inside & Outside-funded conversions both yield \$2,522 RMD-reduction alpha. Outside funding adds \$1,021 SRC alpha, identical to a statutory Roth contribution of $K$. RMD-reduction is 2.47× larger since it scales with $C$ rather than with $K$ ($\tau_C \cdot C$).
+
+RMD-reduction alpha is inherent in all Roth conversions while SRC alpha is unique to Outside funding, where $K$ dollars migrate from taxable to tax-free wrapper. Outside's 11.56% IRR comprises a 7% base plus a 4.56% additional alpha from rate-arbitrage (\$13,280) + Medicare (\$1,028) + tax-drag shelter (\$3,543). Tax-drag shelter contributes 19.8% of that additional value.
 
 ---
 
 ## 3. How Tax-Drag Shelter Creates Alpha
 
-Both alphas in §4 come from the same calculation: run two parallel accounts on a common distribution schedule — one sheltered at $r$, one taxable at $\tilde{r}$ — and PV the year-by-year gap. That PV is the alpha per dollar.
+Both alphas in §4 come from the same calculation: run two parallel accounts on a common distribution schedule — one sheltered at $r$, one taxable at $\tilde{r}$. The present value of the yearly distribution gap is the alpha per dollar.
 
-### 3.1 Notation
-
-| Symbol | Definition | §2 value |
-|---|---|---|
-| $r$ | pre-tax return | 7% |
-| $d$ | annual tax-drag percentage on $r$ when held taxably | 5% |
-| $\tilde{r}$ | after-drag return, $r \cdot (1 - d)$ | 6.65% |
-| $C$ | converted principal | \$123,850 |
-| $\tau_C$ | effective rate on the conversion ($K/C$) | 14.5% |
-| $K$ | conversion tax paid, $\tau_C \cdot C$ | \$17,966 |
-| $\rho \in [0,1]$ | reinvestment share, fraction of avoided RMDs reinvested rather than spent | 0.75 |
-
-### 3.2 The drag-shelter multiplier
-
-For a given principal $P$ and distribution schedule, the **drag-shelter multiplier** $\mu_P$ is the per-dollar PV of the yearly sheltered-vs-taxable gap (derivation in Appendix A; simulator in Appendix B). The PV of sheltering $P$ dollars on that schedule is
+For a given principal $P$ and distribution schedule, the **drag-shelter multiplier** $\mu_P$ is the per-dollar PV of the yearly sheltered-vs-taxable gap (derivation in Appendix A; simulator in Appendix B). The PV of sheltering $P$ dollars is
 
 $$
 \alpha \;=\; P \cdot \mu_{P}.
 $$
 
-A Roth conversion produces two alphas of this form, specialized differently in §4. SRC alpha applies the mechanic directly to $K$ on the Roth's distribution schedule. RMD-reduction alpha applies it to avoided-RMD dollars that accumulate during the owner's life and then distribute over a 10-year beneficiary annuity.
+§4 specializes the calculation twice. SRC alpha applies it to principal $K$, distributed on the planner's chosen schedule across owner life and the 10-year beneficiary annuity. RMD-reduction alpha applies it to avoided-RMD dollars that accumulate during owner life, then distribute over the 10-year beneficiary annuity only.
 
 ---
 
@@ -96,13 +83,13 @@ A Roth conversion produces two alphas of this form, specialized differently in �
 
 ### 4.1 SRC alpha — Outside-funded conversions only
 
-Specializing §3 with $P = K$ on the post-conversion Roth distribution schedule,
+Specializing §3 with $P = K$,
 
 $$
-\alpha_{SRC} \;=\; K \cdot \mu_{P}^{SRC}.
+\alpha_{SRC} \;=\; K \cdot \mu_{SRC}.
 $$
 
-**When the benefit shows up.** The per-year drag-avoidance differential is non-zero every year of the owner's remaining life — because the Roth holds $K$ extra principal, the owner's life-stage RMDs are larger than in the no-conversion world — and continues through the 10-year beneficiary period as the residual distributes.
+**Two-stage construction (RMD distribution).** Phase 1 (owner-life): per-dollar $K$ compounds in two parallel balances — sheltered at $r$, taxable at $\tilde{r}$ — and distributes each year via the RMD divisor. The yearly sheltered-vs-taxable distribution gap accrues as alpha. Phase 2 (beneficiary period): the residual distributes as a 10-year fixed annuity; the same gap mechanic continues. Appendix B.2 gives the per-dollar simulator. (Under FA distribution, Phase 1 is itself a fixed annuity across owner life — no separate Phase 2.)
 
 **Inside payment.** No wrapper migration occurs, so $\alpha_{SRC} = 0$.
 
@@ -113,10 +100,10 @@ SRC alpha is the drag-avoidance component of total SRC value; Appendix A.1 split
 The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$. Specializing §3 on the avoided-RMD schedule,
 
 $$
-\alpha_{RMD} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{P}^{RMD}.
+\alpha_{RMD} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{RMD}.
 $$
 
-**Two-stage construction.** Phase 1 (owner-life): each year's avoided RMD enters two parallel balances — sheltered at $r$, taxable at $\tilde{r}$. Nothing distributes; the owner-life drag accumulates in the balance gap. Phase 2 (forced-acceleration beneficiary period): under the SECURE-Act 10-year mandate, both balances distribute on the same accelerated schedule, and the yearly sheltered-vs-taxable gap delivers the alpha.
+**Two-stage construction.** Phase 1 (owner-life): each year's avoided RMD enters two parallel balances — sheltered at $r$, taxable at $\tilde{r}$. Nothing distributes; the owner-life drag accumulates in the balance gap. Phase 2 (beneficiary period): under the SECURE-Act 10-year mandate, both balances distribute as a 10-year fixed annuity, and the yearly sheltered-vs-taxable gap delivers the alpha. Phase 2 is identical in structure to SRC alpha's Phase 2.
 
 **Applicability.** Both Inside and Outside payment unlock this alpha; it depends on the converted principal $C$, not on how the tax is settled.
 
@@ -130,7 +117,7 @@ $$
 \alpha_{TDS} \;=\; \alpha_{SRC} \;+\; \alpha_{RMD}.
 $$
 
-Both alphas also feed the conversion's IRR through yearly drag-related cash flows — the SRC flow over owner-life and beneficiary distributions, the RMD-reduction flow over the beneficiary period — so a planner can attribute a quantified share of the deployed IRR to drag avoidance. Appendix C gives the per-year definitions. Under Inside payment ($K = 0$ outlay) the conversion IRR is undefined and the RMD-reduction PV stands alone.
+Both alphas also feed the conversion's IRR through yearly drag-related cash flows — the SRC flow over owner-life and beneficiary distributions, the RMD-reduction flow over the beneficiary period — so a planner can attribute a quantified share of the deployed IRR to drag avoidance. Appendix C gives the per-year definitions. Under Inside payment (no user outlay) the conversion IRR is undefined and the RMD-reduction PV stands alone.
 
 ---
 
@@ -203,7 +190,7 @@ The Synthetic Roth Contribution's total wealth value (Cheshire 2026) decomposes 
 - **Taxable-counterfactual growth**, $K \cdot B(T)$ — the future value the $K$ dollars would have earned at $\tilde{r}$ had they remained in the taxable wrapper. This value is properly attributed to the conv-tax dollar regardless of conversion choice.
 - **Drag-avoidance alpha**, $K \cdot (S(T) - B(T))$ — the excess generated by the $K$ dollars compounding at $r$ inside the Roth rather than at $\tilde{r}$ outside. This is the wrapper-migration benefit and is available only inside the Roth.
 
-SRC alpha in this paper is the **drag-avoidance component**: $\alpha_{SRC} = K \cdot \mu_P^{SRC}$. The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes a zero-growth taxable counterfactual and conflates the two components; the TDS framing extracts only the differential as alpha.
+SRC alpha in this paper is the **drag-avoidance component**: $\alpha_{SRC} = K \cdot \mu_{SRC}$ (Appendix B.2 defines $\mu_{SRC}$). The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes a zero-growth taxable counterfactual and conflates the two components; the TDS framing extracts only the differential as alpha.
 
 ---
 
@@ -226,9 +213,23 @@ For each year $t = 1, \ldots, T + g$:
 
 **Applying to each alpha.**
 
-- **SRC alpha.** Run the simulator with $M$ = the post-conversion Roth distribution method, $g$ = gap from conversion to first Roth distribution. Multiply $\mu_P$ and $\mu_F$ by $K$ (Outside payment only).
-- **RMD-reduction alpha.** Use the two-phase construction in B.1 below (accumulation during owner's life, then beneficiary annuity). Multiply $\mu_P$ and $\mu_F$ by $(1-\tau_C)\cdot C\cdot \rho$.
+- **SRC alpha.** Under RMD distribution, use the two-phase construction in B.2 below to compute $\mu_{SRC}$. Under FA distribution, run the simulator above directly with $M = \mathrm{FA}$, $g$ = gap years; the output is $\mu_{SRC}$. Multiply by $K$ for $\alpha_{SRC}$ (Outside payment only).
+- **RMD-reduction alpha.** Use the two-phase construction in B.1 below (accumulation during owner's life, then beneficiary fixed annuity) to compute $\mu_{RMD}$. Multiply by $(1-\tau_C)\cdot C\cdot \rho$ for $\alpha_{RMD}$.
 - **Combined.** Sum PV and FV components. Both per-year streams feed Appendix C.
+
+### B.2 SRC alpha: owner-life distribution before beneficiary annuity
+
+Under RMD distribution, the §4.1 mechanic has a two-phase structure analogous to B.1 but with non-zero Phase-1 distributions. Per-dollar of $K$:
+
+**Phase 1 — owner-life RMD distribution.** Initialize $B^{S} = 1$, $B^{B} = 1$. For each year $t = 1, \ldots, L$ of the owner's remaining life:
+
+1. Distributions: $D^{S}(t) = B^{S}/\varepsilon_t$, $D^{B}(t) = B^{B}/\varepsilon_t$.
+2. Update: $B^{S} \leftarrow B^{S}(1+r) - D^{S}(t)$, $B^{B} \leftarrow B^{B}(1+\tilde{r}) - D^{B}(t)$.
+3. Record $\Delta(t) = D^{S}(t) - D^{B}(t)$. Accumulate $\mu_F \mathrel{+}= \Delta(t)$, $\mu_P \mathrel{+}= \Delta(t)/(1+r)^t$.
+
+**Phase 2 — beneficiary 10-year fixed annuity.** Identical to B.1 Phase 2 with $N = 10$ and starting balances $B^{S}_L$, $B^{B}_L$: $D^{S}(t) = \mathrm{af}(r, N) \cdot B^{S}_L$, $D^{B}(t) = \mathrm{af}(\tilde{r}, N) \cdot B^{B}_L$, held constant; balances update each year; gap accumulates into $\mu_F$ and $\mu_P$.
+
+The output is **$\mu_{SRC}$**; multiply by $K$ for $\alpha_{SRC}$.
 
 ### B.1 RMD-reduction: accumulation before distribution
 
@@ -243,7 +244,7 @@ The §4.2 mechanic has a two-phase structure that the per-dollar simulator above
 
 **Phase 2 — beneficiary 10-year fixed annuity.** Let $N = 10$. Per-year annuity payments are $D^{S}(t) = \mathrm{af}(r, N) \cdot A^{S}_L$ and $D^{B}(t) = \mathrm{af}(\tilde{r}, N) \cdot A^{B}_L$, held constant over the period. Each year update the balances $A^{S} \leftarrow A^{S}(1+r) - D^{S}(t)$ and $A^{B} \leftarrow A^{B}(1+\tilde{r}) - D^{B}(t)$. Record $\Delta(t) = D^{S}(t) - D^{B}(t)$. Accumulate $\mu_F \mathrel{+}= \Delta(t)$ and $\mu_P \mathrel{+}= \Delta(t) / (1+r)^t$, where $t$ is the year-from-conversion.
 
-Multiply $\mu_P$ by $(1-\tau_C) \cdot C \cdot \rho$ to obtain RMD-reduction alpha; multiply $\mu_F$ by the same factor for the FV figure (alpha grown to horizon). The Phase-2 $\Delta(t)$, scaled by $(1-\tau_C)\cdot C\cdot\rho$, is the RMD-reduction per-year flow used in Appendix C; owner-life entries are zero, beneficiary-period entries carry the realized gap.
+The output is **$\mu_{RMD}$**; multiply by $(1-\tau_C) \cdot C \cdot \rho$ to obtain RMD-reduction alpha; multiply $\mu_F$ by the same factor for the FV figure (alpha grown to horizon). The Phase-2 $\Delta(t)$, scaled by $(1-\tau_C)\cdot C\cdot\rho$, is the RMD-reduction per-year flow used in Appendix C; owner-life entries are zero, beneficiary-period entries carry the realized gap.
 
 ---
 
@@ -251,7 +252,7 @@ Multiply $\mu_P$ by $(1-\tau_C) \cdot C \cdot \rho$ to obtain RMD-reduction alph
 
 §5 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
 
-**Per-year flows.** Let $\Delta_{SRC}(t)$ be the yearly sheltered-vs-taxable gap on the post-conversion Roth schedule, and $\Delta_{RMD}(t)$ the analogous Phase-2 gap on the beneficiary 10-year annuity (Appendix B.1). The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
+**Per-year flows.** Let $\Delta_{SRC}(t)$ be the yearly sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.2), and $\Delta_{RMD}(t)$ the analogous Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.1). The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
 
 $$\mathrm{CF}_{\mathrm{drag}}(t) \;=\; K\cdot\Delta_{SRC}(t)\;+\;(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t).$$
 
