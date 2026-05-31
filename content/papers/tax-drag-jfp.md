@@ -11,6 +11,7 @@
 
 - **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper — universally acknowledged, rarely quantified as a named line item.
 - A Roth conversion produces two distinct TDS alphas: **RMD-reduction alpha** (from the Convert decision) and **SRC alpha** (from the Outside-settlement choice).
+- Both alphas are special cases of a single valuation identity: the present value of the distribution gap between sheltered and taxable growth paths.
 - This paper provides PV identification for both alphas and attributes the corresponding share of the conversion IRR to drag avoidance.
 - **Scope.** Roth conversion only; other conversion-value channels (Medicare/IRMAA, Social Security tax-torpedo, estate-planning) are out of scope.
 
@@ -65,7 +66,7 @@ RMD-reduction alpha is inherent in all Roth conversions while SRC alpha is uniqu
 
 ---
 
-## 3. How Tax-Drag Shelter Creates Alpha
+## 3. The Drag-Shelter Valuation Identity
 
 Both alphas in §4 come from the same calculation: run two parallel accounts on a common distribution schedule — one sheltered at $r$, one taxable at $\tilde{r}$. The present value of the yearly distribution gap is the alpha per dollar.
 
@@ -97,7 +98,7 @@ SRC alpha is the drag-avoidance component of total SRC value; Appendix A.1 split
 
 ### 4.2 RMD-reduction alpha — all conversions
 
-The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$. Specializing §3 on the avoided-RMD schedule,
+The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$ — the lump-sum equivalent of the stream of avoided future RMDs accumulating year by year. Specializing §3 on the avoided-RMD schedule,
 
 $$
 \alpha_{RMD} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{RMD}.
@@ -107,21 +108,21 @@ $$
 
 **Applicability.** Both Inside and Outside payment unlock this alpha; it depends on the converted principal $C$, not on how the tax is settled.
 
----
+### 4.3 Total TDS alpha
 
-## 5. Joint PV
-
-Under Outside payment, the joint TDS PV is additive:
+Under Outside payment,
 
 $$
 \alpha_{TDS} \;=\; \alpha_{SRC} \;+\; \alpha_{RMD}.
 $$
 
+Under Inside payment, $\alpha_{TDS} = \alpha_{RMD}$ since no wrapper migration occurs and $\alpha_{SRC} = 0$.
+
 Both alphas also feed the conversion's IRR through yearly drag-related cash flows — the SRC flow over owner-life and beneficiary distributions, the RMD-reduction flow over the beneficiary period — so a planner can attribute a quantified share of the deployed IRR to drag avoidance. Appendix C gives the per-year definitions. Under Inside payment (no user outlay) the conversion IRR is undefined and the RMD-reduction PV stands alone.
 
 ---
 
-## 6. Literature Review
+## 5. Literature Review
 
 Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse. Four entries locate the gap.
 
@@ -137,21 +138,21 @@ Across these treatments, drag is discussed qualitatively but is not isolated as 
 
 ---
 
-## 7. Contribution
+## 6. Contribution
 
 This paper adds three things to the Roth-conversion literature.
 
 1. **PV identification of two distinct alphas, organized as a decision hierarchy.** RMD-reduction alpha (unlocked by the Convert decision) and SRC alpha (unlocked by the Outside-settlement decision) are each expressed as $P \cdot \mu_P$ for the relevant principal. The decision-hierarchy framing — RMD-reduction alpha first, SRC alpha second — clarifies what each planner decision actually buys and makes the Inside-vs-Outside contrast immediate.
 
-2. **Conversion IRR attributable to drag avoidance.** The two alphas pin down which slice of the conversion IRR is delivered by drag avoidance rather than by rate arbitrage. Per-year definitions and the legitimacy argument are in Appendix C.
+2. **Correcting the implicit zero-growth taxable counterfactual.** The conventional Hidden Contribution figure equates the conv-tax dollar's value with its full sheltered-wrapper future value — implicitly assuming it would have done nothing absent conversion. The realistic counterfactual is taxable growth at $\tilde{r}$. The TDS framing extracts only the sheltered-vs-taxable differential as drag-avoidance value, leaving the would-have-grown-anyway portion correctly attributed to the conv-tax dollar regardless of conversion. (Appendix A.1 gives the decomposition.)
 
-3. **Correcting the implicit zero-growth taxable counterfactual.** The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes the conv-tax dollar would have done nothing absent conversion. The realistic counterfactual is taxable growth at $\tilde{r}$; the TDS framing extracts only the difference $K \cdot (S(T) - B(T))$ as drag-avoidance value, leaving the taxable-growth portion $K \cdot B(T)$ correctly attributed to the conv-tax dollar regardless of conversion.
+3. **Conversion IRR attributable to drag avoidance.** The two alphas pin down which slice of the conversion IRR is delivered by drag avoidance rather than by rate arbitrage. Per-year definitions and the legitimacy argument are in Appendix C.
 
 The contribution is isolation and quantification, not discovery of the underlying intuition.
 
 ---
 
-## 8. Conclusion
+## 7. Conclusion
 
 Three takeaways for conversion planning.
 
@@ -161,9 +162,14 @@ Three takeaways for conversion planning.
 
 3. **Separating the two clarifies the planner sequence.** The Convert decision is judged on RMD-reduction alpha; the Outside-settlement decision adds SRC alpha. Drag shelter materially contributes to conversion economics.
 
----
+**Sensitivity considerations.**
 
-## 9. Open Items
+| Parameter Change | Effect on SRC Alpha | Effect on RMD Alpha |
+|---|---|---|
+| Higher $\tau_C$ | ↑ | ↓ |
+| Higher $\rho$ | — | ↑ |
+| Higher drag $d$ | ↑ | ↑ |
+| Longer owner remaining life | ↑ | ↑ |
 
 RMD-reduction alpha scales linearly in $\rho$; realistic ranges run 0.50–1.00 for surplus-wealth retirees and $\rho \approx 0$ for retirees consuming the full RMD. The illustrative $d = 5\%$ is a middle-of-the-road estimate for a balanced taxable portfolio; Morningstar's Tax-Cost Ratio offers a per-fund empirical anchor.
 
@@ -185,7 +191,7 @@ $$
 
 ### A.1 SRC alpha within total SRC value
 
-The Synthetic Roth Contribution's total wealth value (Cheshire 2026) decomposes into two components:
+Let $S(T) = (1+r)^T$ and $B(T) = (1+\tilde{r})^T$ denote per-dollar future values at horizon $T$ in the sheltered and taxable wrappers respectively (no distributions). The Synthetic Roth Contribution's total wealth value (Cheshire 2026) decomposes into two components:
 
 - **Taxable-counterfactual growth**, $K \cdot B(T)$ — the future value the $K$ dollars would have earned at $\tilde{r}$ had they remained in the taxable wrapper. This value is properly attributed to the conv-tax dollar regardless of conversion choice.
 - **Drag-avoidance alpha**, $K \cdot (S(T) - B(T))$ — the excess generated by the $K$ dollars compounding at $r$ inside the Roth rather than at $\tilde{r}$ outside. This is the wrapper-migration benefit and is available only inside the Roth.
@@ -250,7 +256,7 @@ The output is **$\mu_{RMD}$**; multiply by $(1-\tau_C) \cdot C \cdot \rho$ to ob
 
 ## Appendix C. IRR Attribution: Per-Year Drag-Related Cash Flows
 
-§5 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
+§4.3 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
 
 **Per-year flows.** Let $\Delta_{SRC}(t)$ be the yearly sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.2), and $\Delta_{RMD}(t)$ the analogous Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.1). The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
 
