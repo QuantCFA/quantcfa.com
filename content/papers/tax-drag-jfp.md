@@ -1,9 +1,9 @@
 # Quantifying Tax-Drag Shelter Benefits in Roth Conversions
 
-**RMD Reduction and Hidden Contributions**
+**RMD Reductions and Hidden Roth Contributions**
 
 **Working paper**
-**Date:** 2026-05-29
+**Date:** 2026-05-31
 
 ---
 
@@ -13,7 +13,6 @@
 - A Roth conversion produces two distinct TDS alphas: **RMD-reduction alpha** (from the Convert decision) and **SRC alpha** (from the Outside-settlement choice).
 - Both alphas are special cases of a single valuation identity: the present value of the distribution gap between sheltered and taxable growth paths.
 - This paper provides PV identification for both alphas and attributes the corresponding share of the conversion IRR to drag avoidance.
-- **Scope.** Roth conversion only; other conversion-value channels (Medicare/IRMAA, Social Security tax-torpedo, estate-planning) are out of scope.
 
 ---
 
@@ -29,7 +28,7 @@ A Roth conversion can capture this benefit in two ways, each creating positive a
 
 2. **SRC alpha (secondary):**
 
-    Outside-funded conversions migrate $K$ ($\tau_C \cdot C$) after-tax dollars into the Roth wrapper, a **Synthetic Roth Contribution** (SRC; Cheshire 2026). **SRC alpha** is the PV gain of $K$ compounding tax-free as it distributes vs. in the taxable counterfactual. Identical alpha accrues to a same-sized statutory Roth contribution.
+    Outside-funded conversions migrate $K$ ($\tau_C \cdot C$) after-tax dollars into the Roth wrapper — **a hidden Roth contribution** in planner parlance, formally a **Synthetic Roth Contribution** (SRC; Cheshire 2026). **SRC alpha** is the PV gain of $K$ compounding tax-free as it distributes vs. in the taxable counterfactual. Identical alpha accrues to a same-sized statutory Roth contribution.
 
 ---
 
@@ -213,7 +212,7 @@ For each year $t = 1, \ldots, T + g$:
 1. If $t \leq g$: $B^{S} \leftarrow B^{S}(1+r)$, $B^{B} \leftarrow B^{B}(1+\tilde{r})$. Continue.
 2. Distributions under method $M$:
    - **RMD**: $D^{S}(t) = B^{S}/\varepsilon_t$; $D^{B}(t) = B^{B}/\varepsilon_t$.
-   - **FA**: $D^{S}(t) = \mathrm{af}(r, T{-}g)\cdot B^{S}(g{+}1)$, constant; $D^{B}(t) = \mathrm{af}(\tilde{r}, T{-}g)\cdot B^{B}(g{+}1)$, constant.
+   - **FA**: $D^{S}(t) = \mathrm{af}(r, T{-}g)\cdot B^{S}_{g+1}$, constant; $D^{B}(t) = \mathrm{af}(\tilde{r}, T{-}g)\cdot B^{B}_{g+1}$, constant.
 3. Update: $B^{S} \leftarrow B^{S}(1+r) - D^{S}(t)$; $B^{B} \leftarrow B^{B}(1+\tilde{r}) - D^{B}(t)$.
 4. $\Delta(t) = D^{S}(t) - D^{B}(t)$. $\mu_F \mathrel{+}= \Delta(t)$. $\mu_P \mathrel{+}= \Delta(t)/(1+r)^{t}$.
 
