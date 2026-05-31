@@ -63,6 +63,8 @@ Converting \$123,850 fills through the 22% bracket, with an effective tax rate o
 
 RMD-reduction alpha is inherent in all Roth conversions while SRC alpha is unique to Outside funding, where $K$ dollars migrate from taxable to tax-free wrapper. Outside's 11.56% IRR comprises a 7% base plus a 4.56% additional alpha from rate-arbitrage (\$13,280) + Medicare (\$1,028) + tax-drag shelter (\$3,543). Tax-drag shelter contributes 19.8% of that additional value.
 
+Appendix D gives the per-year RMD and SRC drag flows in nominal and PV terms.
+
 ---
 
 ## 3. The Drag-Shelter Valuation Identity
@@ -282,3 +284,51 @@ The first runs over the owner's remaining life and beneficiary period; the secon
 **Legitimacy.** Both flows exist because of the conversion decisions: $K\cdot\Delta_{SRC}(t)$ disappears under Inside payment by construction; $(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ exists only because the conversion reduced the Traditional balance generating RMDs. Discounting at $r$, $\sum_t \mathrm{CF}_{\mathrm{drag}}(t)/(1+r)^t = \alpha_{TDS}$.
 
 **Scope.** The conversion IRR is defined only under Outside payment (where $K$ is a real outlay). Under Inside payment the IRR is undefined and the RMD-reduction PV is the reportable figure.
+
+---
+
+## Appendix D. Per-Year Drag-Related Cash Flows (Worked Example)
+
+The table below realizes Appendix C's per-year flow $\mathrm{CF}_{\mathrm{drag}}(t) = K\cdot\Delta_{SRC}(t) + (1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ on the §2 inputs ($C$ = \$123,850, $K$ = \$17,966, $r$ = 7%, $\tilde{r}$ = 6.65%, conversion 2026, owner ages 69–92, beneficiary 2050–2059). PV discounted at $r$ = 7% to 2026.
+
+**Em-dash entries reflect accrual without distribution, not zero value.** Both alphas accumulate internally before realizing as cash flows: the SRC $K$ balance compounds at sheltered vs. taxable rates during gap years 2027–2029, and the avoided-RMD dollars compound in two parallel reinvestment balances throughout owner life (2027–2049). SRC realization begins in 2030 with owner-life RMDs and continues through the beneficiary 10-year annuity (2050–2059); RMD-reduction's full accumulated drag is realized only during the beneficiary period (2050–2059).
+
+| Year | RMD drag (nominal) | SRC drag (nominal) | RMD drag PV | SRC drag PV |
+|---|---:|---:|---:|---:|
+| 2026 | — | — | — | — |
+| 2027 | — | — | — | — |
+| 2028 | — | — | — | — |
+| 2029 | — | — | — | — |
+| 2030 | — | \$8 | — | \$6 |
+| 2031 | — | \$12 | — | \$8 |
+| 2032 | — | \$16 | — | \$10 |
+| 2033 | — | \$20 | — | \$13 |
+| 2034 | — | \$25 | — | \$15 |
+| 2035 | — | \$31 | — | \$17 |
+| 2036 | — | \$37 | — | \$19 |
+| 2037 | — | \$44 | — | \$21 |
+| 2038 | — | \$51 | — | \$23 |
+| 2039 | — | \$60 | — | \$25 |
+| 2040 | — | \$68 | — | \$27 |
+| 2041 | — | \$79 | — | \$29 |
+| 2042 | — | \$89 | — | \$30 |
+| 2043 | — | \$101 | — | \$32 |
+| 2044 | — | \$114 | — | \$34 |
+| 2045 | — | \$127 | — | \$35 |
+| 2046 | — | \$142 | — | \$37 |
+| 2047 | — | \$157 | — | \$38 |
+| 2048 | — | \$172 | — | \$39 |
+| 2049 | — | \$189 | — | \$40 |
+| 2050 | \$1,702 | \$355 | \$336 | \$70 |
+| 2051 | \$1,702 | \$355 | \$314 | \$65 |
+| 2052 | \$1,702 | \$355 | \$293 | \$61 |
+| 2053 | \$1,702 | \$355 | \$274 | \$57 |
+| 2054 | \$1,702 | \$355 | \$256 | \$53 |
+| 2055 | \$1,702 | \$355 | \$239 | \$50 |
+| 2056 | \$1,702 | \$355 | \$224 | \$47 |
+| 2057 | \$1,702 | \$355 | \$209 | \$44 |
+| 2058 | \$1,702 | \$355 | \$195 | \$41 |
+| 2059 | \$1,702 | \$355 | \$183 | \$38 |
+| **Total** | **\$17,019** | **\$5,092** | **\$2,522** | **\$1,021** |
+
+PV totals reconcile to the §2 figures. The SRC PV is concentrated in the beneficiary period despite SRC drag accruing throughout owner life because owner-life amounts are small and heavily discounted.
