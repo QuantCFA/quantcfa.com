@@ -146,7 +146,7 @@ This paper adds three things to the Roth-conversion literature.
 
 2. **Correcting the implicit zero-growth taxable counterfactual.** The conventional Hidden Contribution figure equates the conv-tax dollar's value with its full sheltered-wrapper future value — implicitly assuming it would have done nothing absent conversion. The realistic counterfactual is taxable growth at $\tilde{r}$. The TDS framing extracts only the sheltered-vs-taxable differential as drag-avoidance value, leaving the would-have-grown-anyway portion correctly attributed to the conv-tax dollar regardless of conversion. (Appendix A.1 gives the decomposition.)
 
-3. **Conversion IRR attributable to drag avoidance.** The two alphas pin down which slice of the conversion IRR is delivered by drag avoidance rather than by rate arbitrage. Per-year definitions and the legitimacy argument are in Appendix C.
+3. **Conversion IRR attributable to drag avoidance.** The two alphas pin down which slice of an Outside-funded conversion's IRR is delivered by drag avoidance rather than by rate arbitrage (Inside payment has no IRR). Per-year definitions and the legitimacy argument are in Appendix C.
 
 The contribution is isolation and quantification, not discovery of the underlying intuition.
 
