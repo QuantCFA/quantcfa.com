@@ -91,7 +91,7 @@ $$
 \alpha_{SRC} \;=\; K \cdot \mu_{SRC}.
 $$
 
-**Two-stage construction (RMD distribution).** Phase 1 (owner-life): per-dollar $K$ compounds in two parallel balances — sheltered at $r$, taxable at $\tilde{r}$ — and distributes each year via the RMD divisor. The yearly sheltered-vs-taxable distribution gap accrues as alpha. Phase 2 (beneficiary period): the residual distributes as a 10-year fixed annuity; the same gap mechanic continues. Appendix B.2 gives the per-dollar simulator. (Under FA distribution, Phase 1 is itself a fixed annuity across owner life — no separate Phase 2.)
+**Two-stage construction (RMD distribution).** Phase 1 (owner-life): $K$ compounds in two parallel balances — sheltered at $r$, taxable at $\tilde{r}$ — and distributes each year via the RMD divisor. The yearly sheltered-vs-taxable distribution gap accrues as alpha. Phase 2 (beneficiary period): the residual distributes as a 10-year fixed annuity; the same gap mechanic continues. Appendix B.1 gives the construction. (Under FA distribution, Phase 1 is itself a fixed annuity across owner life — no separate Phase 2.)
 
 **Inside payment.** No wrapper migration occurs, so $\alpha_{SRC} = 0$.
 
@@ -197,25 +197,25 @@ RMD-reduction alpha scales linearly in $\rho$; realistic ranges run 0.50–1.00 
 |---|---|
 | $S$ | Sheltered wrapper; compounds at $r$ |
 | $U$ | Unsheltered taxable wrapper; compounds at $\tilde{r} = r(1-d)$ |
-| $B^{S}_t, B^{U}_t$ | Balance - per dollar at time $t$ |
-| $A^{S}_t, A^{U}_t$ | Accumulation balance - per dollar (Appendix B.1) |
-| $D^{S}(t), D^{U}(t)$ | Distribution - per dollar in year $t$ |
-| $\Delta(t)$ | $D^{S}(t) - D^{U}(t)$, the yearly gap |
-| $S(T), U(T)$ | FV - per dollar at horizon $T$: $(1+r)^T$, $(1+\tilde{r})^T$ (no distributions) |
-| $\mu_P$ | $\sum_t \Delta(t)/(1+r)^t$, per-dollar PV multiplier |
-| $\mu_F$ | Per-dollar FV multiplier (undiscounted) |
-| $\mu_{SRC}$ | Multiplier on SRC schedule (Appendix B.2; $P = K$) |
-| $\mu_{RMD}$ | Multiplier on avoided-RMD schedule (Appendix B.1; $P = (1-\tau_C)\cdot C\cdot\rho$) |
+| $B^{S}_t, B^{U}_t$ | Balance at time $t$ in each wrapper |
+| $A^{S}_t, A^{U}_t$ | Accumulation balance for avoided RMDs (Appendix B.2) |
+| $D^{S}(t), D^{U}(t)$ | Distribution in year $t$ from each wrapper |
+| $\Delta(t)$ | $D^{S}(t) - D^{U}(t)$, the yearly distribution gap |
+| $S(T), U(T)$ | FV factor at horizon $T$: $(1+r)^T$, $(1+\tilde{r})^T$ (no distributions) |
+| $\mu_P$ | $\alpha / P$, per-dollar PV multiplier |
+| $\mu_{SRC}, \mu_{RMD}$ | Schedule-specific multipliers (App B); $\alpha_{SRC} = K \cdot \mu_{SRC}$, $\alpha_{RMD} = (1-\tau_C) C \rho \cdot \mu_{RMD}$ |
 
-**The identity.** Let a principal of $P$ dollars enter at time $0$ into either a sheltered wrapper (compounding at $r$) or a taxable wrapper (compounding at $\tilde{r}$), and be distributed thereafter on an identical schedule $\{D^{S}(t), D^{U}(t)\}$. The incremental present value of choosing the sheltered wrapper, discounted at $r$, is
+**The identity.** Place a principal of $P$ dollars at $t=0$ into either a sheltered wrapper (compounding at $r$) or an unsheltered taxable wrapper (compounding at $\tilde{r}$), and distribute each on a common schedule $\{D^{S}(t), D^{U}(t)\}$. The household receives the distribution stream; wrapper choice does not change time-zero outlay. Discounting at $r$, the incremental present value of the sheltered wrapper is
 
 $$
-\alpha \;=\; P \cdot \mu_{P} \;=\; P \cdot \sum_{t} \frac{D^{S}(t) - D^{U}(t)}{(1+r)^{t}}.
+\alpha \;=\; \sum_{t} \frac{D^{S}(t) - D^{U}(t)}{(1+r)^{t}} \;=\; P \cdot \mu_{P},
 $$
+
+where $\mu_P = \alpha/P$ is the per-dollar multiplier surfaced in §4.
 
 **Assumptions.** (i) Identical pre-tax return path inside and outside the wrapper. (ii) Identical distribution method and schedule. (iii) Principal enters at time 0; distributions follow per the schedule. (iv) No additional rate effects layered onto the same dollar (no contribution-year vs. distribution-year arbitrage). (v) End-of-period distributions: balances accrue a full year of return before the year's distribution is taken, matching the simulator step order in Appendix B.
 
-**Proof sketch.** Per-dollar, the sheltered balance evolves as $B^{S}_t = B^{S}_{t-1}(1+r) - D^{S}(t)$ and the taxable counterfactual as $B^{U}_t = B^{U}_{t-1}(1+\tilde{r}) - D^{U}(t)$, with $B^{S}_0 = B^{U}_0 = 1$. The household receives the distribution stream and discounts it at $r$; the wrapper choice does not change time-zero outlays. The incremental PV per dollar is therefore $\sum_t (D^{S}(t) - D^{U}(t)) / (1+r)^t = \mu_P$. Scaling linearly to $P$ dollars yields the stated identity. $\square$
+**Proof sketch.** The sheltered balance evolves as $B^{S}_t = B^{S}_{t-1}(1+r) - D^{S}(t)$ with $B^{S}_0 = P$, and the unsheltered counterfactual as $B^{U}_t = B^{U}_{t-1}(1+\tilde{r}) - D^{U}(t)$ with $B^{U}_0 = P$. The household receives the distribution stream and discounts it at $r$. The incremental PV is therefore $\sum_t (D^{S}(t) - D^{U}(t)) / (1+r)^t$. Linearity in $P$ gives the per-dollar form $\mu_P = \alpha/P$. $\square$
 
 **Comment.** The identity reduces the household-facing valuation question to two specializations: *what principal is being sheltered, and what distribution schedule drives $\mu_P$?* §4.1 sets $P = K$ on the post-conversion Roth schedule; §4.2 sets $P = (1-\tau_C)\cdot C\cdot \rho$ on the avoided-RMD schedule.
 
@@ -226,63 +226,45 @@ Let $S(T) = (1+r)^T$ and $U(T) = (1+\tilde{r})^T$ denote per-dollar future value
 - **Taxable-counterfactual growth**, $K \cdot U(T)$ — the future value the $K$ dollars would have earned at $\tilde{r}$ had they remained in the taxable wrapper. This value is properly attributed to the conv-tax dollar regardless of conversion choice.
 - **Drag-avoidance alpha**, $K \cdot (S(T) - U(T))$ — the excess generated by the $K$ dollars compounding at $r$ inside the Roth rather than at $\tilde{r}$ outside. This is the wrapper-migration benefit and is available only inside the Roth.
 
-SRC alpha in this paper is the **drag-avoidance component**: $\alpha_{SRC} = K \cdot \mu_{SRC}$ (Appendix B.2 defines $\mu_{SRC}$). The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes a zero-growth taxable counterfactual and conflates the two components; the TDS framing extracts only the differential as alpha.
+SRC alpha in this paper is the **drag-avoidance component**: $\alpha_{SRC} = K \cdot \mu_{SRC}$ (Appendix B.1 defines $\mu_{SRC}$). The conventional Hidden Contribution figure $K \cdot S(T)$ implicitly assumes a zero-growth taxable counterfactual and conflates the two components; the TDS framing extracts only the differential as alpha.
 
 ---
 
-## Appendix B. Per-Dollar Drag-Shelter Simulator
+## Appendix B. Drag-Shelter Simulator
 
-**Input.** Pre-tax return $r$; drag fraction $d$; distribution method $M \in \{\mathrm{RMD},\, \mathrm{FA}\}$; horizon $T$; gap years $g$; (for RMD) age-indexed life-expectancy divisors $\varepsilon_t$.
-
-**Output.** Per-dollar FV multiplier $\mu_F$, per-dollar PV multiplier $\mu_P$, per-year differential $\Delta(\cdot)$.
-
-Initialize $B^{S} = 1$, $B^{U} = 1$, $\mu_F = 0$, $\mu_P = 0$, $\tilde{r} = r\cdot(1-d)$.
+Both alphas run a sheltered balance at $r$ and an unsheltered counterfactual at $\tilde{r} = r(1-d)$ on a common distribution schedule, then sum the PV of the yearly gap $\Delta(t) = D^{S}(t) - D^{U}(t)$ discounted at $r$. End-of-period convention: a full year of return accrues before the year's distribution is taken (App A assumption (v)).
 
 **Annuity factor.** $\mathrm{af}(x, N) = x / (1 - (1+x)^{-N})$, the level annual payment per dollar of starting balance over $N$ years at rate $x$.
 
-For each year $t = 1, \ldots, T + g$:
+**Distribution methods.** RMD applies an age-indexed life-expectancy divisor $\varepsilon_t$ to the running balance: $D(t) = B / \varepsilon_t$. FA holds payments constant at $\mathrm{af}(x, N) \cdot B_0$ across $N$ years.
 
-1. If $t \leq g$: $B^{S} \leftarrow B^{S}(1+r)$, $B^{U} \leftarrow B^{U}(1+\tilde{r})$. Continue.
-2. Distributions under method $M$:
-   - **RMD**: $D^{S}(t) = B^{S}/\varepsilon_t$; $D^{U}(t) = B^{U}/\varepsilon_t$.
-   - **FA**: $D^{S}(t) = \mathrm{af}(r, T{-}g)\cdot B^{S}_{g+1}$, constant; $D^{U}(t) = \mathrm{af}(\tilde{r}, T{-}g)\cdot B^{U}_{g+1}$, constant.
-3. Update: $B^{S} \leftarrow B^{S}(1+r) - D^{S}(t)$; $B^{U} \leftarrow B^{U}(1+\tilde{r}) - D^{U}(t)$.
-4. $\Delta(t) = D^{S}(t) - D^{U}(t)$. $\mu_F \mathrel{+}= \Delta(t)$. $\mu_P \mathrel{+}= \Delta(t)/(1+r)^{t}$.
+### B.1 SRC alpha: distribution from K
 
-**Applying to each alpha.**
+Place $K$ dollars at $t=0$ in parallel sheltered and unsheltered balances $B^{S}, B^{U}$.
 
-- **SRC alpha.** Under RMD distribution, use the two-phase construction in B.2 below to compute $\mu_{SRC}$. Under FA distribution, run the simulator above directly with $M = \mathrm{FA}$, $g$ = gap years; the output is $\mu_{SRC}$. Multiply by $K$ for $\alpha_{SRC}$ (Outside payment only).
-- **RMD-reduction alpha.** Use the two-phase construction in B.1 below (accumulation during owner's life, then beneficiary fixed annuity) to compute $\mu_{RMD}$. Multiply by $(1-\tau_C)\cdot C\cdot \rho$ for $\alpha_{RMD}$.
-- **Combined.** Sum PV and FV components. Both per-year streams feed Appendix C.
+**Phase 1 — owner-life RMD distribution.** For each year $t = 1, \ldots, L$ of the owner's remaining life: distribute $D^{S}(t) = B^{S}/\varepsilon_t$ and $D^{U}(t) = B^{U}/\varepsilon_t$; update $B^{S} \leftarrow B^{S}(1+r) - D^{S}(t)$ and $B^{U} \leftarrow B^{U}(1+\tilde{r}) - D^{U}(t)$. The realized gap $\Delta(t)$ is the owner-life SRC flow.
 
-### B.2 SRC alpha: owner-life distribution before beneficiary annuity
+**Phase 2 — beneficiary 10-year fixed annuity.** Hold payments constant at $D^{S}(t) = \mathrm{af}(r, 10) \cdot B^{S}_L$ and $D^{U}(t) = \mathrm{af}(\tilde{r}, 10) \cdot B^{U}_L$; update balances each year.
 
-Under RMD distribution, the §4.1 mechanic has a two-phase structure analogous to B.1 but with non-zero Phase-1 distributions. Per-dollar of $K$:
+$$
+\alpha_{SRC} \;=\; \sum_{t} \frac{\Delta(t)}{(1+r)^t} \;=\; K \cdot \mu_{SRC}.
+$$
 
-**Phase 1 — owner-life RMD distribution.** Initialize $B^{S} = 1$, $B^{U} = 1$. For each year $t = 1, \ldots, L$ of the owner's remaining life:
+(Under FA distribution method, Phase 1 is itself a fixed annuity across owner life with no separate Phase 2.)
 
-1. Distributions: $D^{S}(t) = B^{S}/\varepsilon_t$, $D^{U}(t) = B^{U}/\varepsilon_t$.
-2. Update: $B^{S} \leftarrow B^{S}(1+r) - D^{S}(t)$, $B^{U} \leftarrow B^{U}(1+\tilde{r}) - D^{U}(t)$.
-3. Record $\Delta(t) = D^{S}(t) - D^{U}(t)$. Accumulate $\mu_F \mathrel{+}= \Delta(t)$, $\mu_P \mathrel{+}= \Delta(t)/(1+r)^t$.
+### B.2 RMD-reduction alpha: accumulation before distribution
 
-**Phase 2 — beneficiary 10-year fixed annuity.** Identical to B.1 Phase 2 with $N = 10$ and starting balances $B^{S}_L$, $B^{U}_L$: $D^{S}(t) = \mathrm{af}(r, N) \cdot B^{S}_L$, $D^{U}(t) = \mathrm{af}(\tilde{r}, N) \cdot B^{U}_L$, held constant; balances update each year; gap accumulates into $\mu_F$ and $\mu_P$.
+Let $a(t)$ be the avoided RMD dollars in year $t$ — the pre-conversion-minus-post-conversion RMD differential scaled by reinvestment share $\rho$. Reinvestment balances $A^{S}, A^{U}$ start at zero.
 
-The output is **$\mu_{SRC}$**; multiply by $K$ for $\alpha_{SRC}$.
+**Phase 1 — owner-life accumulation.** For each year $t = 1, \ldots, L$: compound prior balances at $r$ and $\tilde{r}$, then add $a(t)$ to each. No distributions, so $\Delta(t) = 0$ throughout owner life.
 
-### B.1 RMD-reduction: accumulation before distribution
+**Phase 2 — beneficiary 10-year fixed annuity.** Hold payments constant at $D^{S}(t) = \mathrm{af}(r, 10) \cdot A^{S}_L$ and $D^{U}(t) = \mathrm{af}(\tilde{r}, 10) \cdot A^{U}_L$; update balances each year.
 
-The §4.2 mechanic has a two-phase structure that the per-dollar simulator above does not make explicit: avoided RMD dollars *accumulate* across the owner's remaining life inside two parallel reinvestment balances, then *distribute* over the 10-year beneficiary period. Per-dollar:
+$$
+\alpha_{RMD} \;=\; \sum_{t} \frac{\Delta(t)}{(1+r)^t} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{RMD}.
+$$
 
-**Phase 1 — owner-life accumulation.** Initialize $A^{S} = 0$, $A^{U} = 0$. For each year $t = 1, \ldots, L$ of the owner's remaining life:
-
-1. Avoided per-dollar RMD this year: $a(t) = 1/\varepsilon_t$ applied to the pre-conversion-minus-post-conversion balance differential (per-dollar normalization).
-2. Compound prior accumulations: $A^{S} \leftarrow A^{S}(1+r)$, $A^{U} \leftarrow A^{U}(1+\tilde{r})$.
-3. Add the year's avoided amount: $A^{S} \mathrel{+}= a(t)$, $A^{U} \mathrel{+}= a(t)$.
-4. No distribution differential is realized in Phase 1; $\Delta(t) = 0$.
-
-**Phase 2 — beneficiary 10-year fixed annuity.** Let $N = 10$. Per-year annuity payments are $D^{S}(t) = \mathrm{af}(r, N) \cdot A^{S}_L$ and $D^{U}(t) = \mathrm{af}(\tilde{r}, N) \cdot A^{U}_L$, held constant over the period. Each year update the balances $A^{S} \leftarrow A^{S}(1+r) - D^{S}(t)$ and $A^{U} \leftarrow A^{U}(1+\tilde{r}) - D^{U}(t)$. Record $\Delta(t) = D^{S}(t) - D^{U}(t)$. Accumulate $\mu_F \mathrel{+}= \Delta(t)$ and $\mu_P \mathrel{+}= \Delta(t) / (1+r)^t$, where $t$ is the year-from-conversion.
-
-The output is **$\mu_{RMD}$**; multiply by $(1-\tau_C) \cdot C \cdot \rho$ to obtain RMD-reduction alpha; multiply $\mu_F$ by the same factor for the FV figure (alpha grown to horizon). The Phase-2 $\Delta(t)$, scaled by $(1-\tau_C)\cdot C\cdot\rho$, is the RMD-reduction per-year flow used in Appendix C; owner-life entries are zero, beneficiary-period entries carry the realized gap.
+The Phase-2 $\Delta(t)$ is the RMD-reduction per-year flow used in Appendix C; owner-life entries are zero.
 
 ---
 
@@ -290,7 +272,7 @@ The output is **$\mu_{RMD}$**; multiply by $(1-\tau_C) \cdot C \cdot \rho$ to ob
 
 §4.3 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
 
-**Per-year flows.** Let $\Delta_{SRC}(t)$ be the yearly sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.2), and $\Delta_{RMD}(t)$ the analogous Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.1). The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
+**Per-year flows.** Let $\Delta_{SRC}(t)$ be the yearly sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.1), and $\Delta_{RMD}(t)$ the analogous Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.2). The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
 
 $$\mathrm{CF}_{\mathrm{drag}}(t) \;=\; K\cdot\Delta_{SRC}(t)\;+\;(1-\tau_C)\cdot C\cdot\rho\cdot\Delta_{RMD}(t).$$
 
