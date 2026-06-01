@@ -155,13 +155,13 @@ The contribution is isolation and quantification, not discovery of the underlyin
 
 ## 7. Conclusion
 
-Three takeaways for conversion planning.
+Three implications for conversion planning.
 
-1. **RMD-reduction alpha is the dominant TDS contribution and applies to every conversion.** It depends on the converted principal $C$, not on how the conversion tax is settled. Both Inside and Outside payment unlock it.
+1. **Judge the Convert decision on RMD-reduction alpha alone.** It is the dominant TDS contribution, applies whether tax is paid Inside or Outside, and scales with the converted principal $C$. A planner deciding *whether* to convert can price drag shelter using $\alpha_{RMD}$ in isolation.
 
-2. **SRC alpha is secondary, available only under Outside settlement.** It is the wrapper-migration benefit on the conv-tax dollar $K$, identical to what a same-sized statutory Roth contribution earns.
+2. **Judge the Outside-settlement decision on SRC alpha.** It is the wrapper-migration premium on the conv-tax dollar $K$ — identical to what a same-sized statutory Roth contribution earns. If the planner has slack Roth contribution room already, the SRC alpha argument for Outside settlement weakens accordingly.
 
-3. **Separating the two clarifies the planner sequence.** The Convert decision is judged on RMD-reduction alpha; the Outside-settlement decision adds SRC alpha. Drag shelter materially contributes to conversion economics.
+3. **Attribute, don't aggregate.** Reporting a single conversion IRR conflates rate arbitrage, Medicare effects, and drag shelter. The two alphas let a planner show clients which slice of the IRR each decision actually buys, and which assumptions ($\tau_C$, $d$, $\rho$, owner life) drive which slice.
 
 **Sensitivity considerations.**
 
