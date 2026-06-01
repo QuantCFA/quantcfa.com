@@ -133,7 +133,9 @@ Published treatment of tax drag as a quantified, named PV line item in the Roth-
 
 **Reichenstein (2007), "Calculating After-Tax Asset Allocation Is Key…,"** *Journal of Financial Planning*. The conceptual ancestor; treats the IRA benefit as a single tax-exemption-on-inside-buildup term and does not decompose drag avoidance from rate arbitrage.
 
-**Vanguard BETR and Kitces.** Both acknowledge the Outside-payment benefit and account-level drag qualitatively; neither isolates the conv-tax dollar's $r(1-d)$ counterfactual as a PV or IRR line item.
+**Vanguard BETR (Passman, Wong & Dickson 2025).** Computes a break-even future tax rate $\tau_D$ assuming a Roth multiple $M$ and a taxable-side multiple $M'$. The recommendation is functionally driven by $M'$ — equivalently, by an embedded drag assumption $d = 1 - (M'/M)^{1/n}$ on the conversion-tax dollar (Cheshire 2026, §6); Vanguard's worked example implies $d \approx 37.5\%$. The TDS framework prices the same wedge directly via $\mu_{SRC}$ at a planner-chosen $d$, replacing a break-even-on-$\tau_D$ question with a break-even-on-$d$ question — the latter is the actionable one, since planners control $d$ through asset location while $\tau_D$ is exogenous.
+
+**Kitces.** Acknowledges the Outside-payment benefit and account-level drag qualitatively; does not isolate the conv-tax dollar's $r(1-d)$ counterfactual as a PV or IRR line item.
 
 Across these treatments, drag is discussed qualitatively but is not isolated as two separately priced PV alphas with explicit IRR attribution.
 
