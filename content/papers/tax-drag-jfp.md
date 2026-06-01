@@ -174,6 +174,17 @@ Three takeaways for conversion planning.
 | Higher drag $d$ | ↑ | ↑ |
 | Longer owner remaining life | ↑ | ↑ |
 
+**Magnitude examples (base + parameter variations).**
+
+| Scenario | RMD-reduction alpha | SRC alpha | TDS total |
+|---|---:|---:|---:|
+| Base ($L$=23, $d$=5%) | \$2,522 | \$1,021 | \$3,543 |
+| Longer life ($L$=28) | \$3,605 | \$1,055 | \$4,660 |
+| Higher drag ($d$=7%) | \$3,495 | \$1,410 | \$4,905 |
+| Both ($L$=28, $d$=7%) | \$4,985 | \$1,455 | \$6,440 |
+
+RMD-reduction alpha is highly time-sensitive: longer owner life extends Phase 1 accumulation, producing a larger Phase 2 starting balance. SRC alpha is partly self-limiting: extending Phase 1 distributes more of $K$, shrinking the Phase 2 residual — so Phase 1 gains and Phase 2 shrinkage roughly offset. The $L \times d$ interaction therefore concentrates in RMD-reduction (super-additive by ~\$407 on the combined-variation row); SRC alpha is approximately separable in $L$ and $d$.
+
 RMD-reduction alpha scales linearly in $\rho$; realistic ranges run 0.50–1.00 for surplus-wealth retirees and $\rho \approx 0$ for retirees consuming the full RMD. The illustrative $d = 5\%$ is a middle-of-the-road estimate for a balanced taxable portfolio; Morningstar's Tax-Cost Ratio offers a per-fund empirical anchor.
 
 ---
