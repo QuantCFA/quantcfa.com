@@ -3,7 +3,7 @@
 **RMD Reduction and the Hidden Roth Contribution**
 
 **Working paper**
-**Date:** 2026-05-31
+**Date:** 2026-06-01
 
 ---
 
@@ -69,9 +69,7 @@ Appendix D gives the per-year RMD and SRC drag flows in nominal and PV terms.
 
 ## 3. The Drag-Shelter Valuation Identity
 
-Both alphas in §4 come from the same calculation: run two parallel accounts on a common distribution schedule — one sheltered at $r$, one taxable at $\tilde{r}$. The present value of the yearly distribution gap is the alpha per dollar.
-
-For a given principal $P$ and distribution schedule, the **drag-shelter multiplier** $\mu_P$ is the per-dollar PV of the yearly sheltered-vs-taxable gap (derivation in Appendix A; simulator in Appendix B). The PV of sheltering $P$ dollars is
+Both alphas in §4 come from the same calculation: run two parallel accounts on a common distribution schedule — one sheltered at $r$, one taxable at $\tilde{r}$ — and sum the PV of the yearly distribution gap. For principal $P$, the **drag-shelter multiplier** $\mu_P$ is this per-dollar sum (derivation in Appendix A; simulator in Appendix B):
 
 $$
 \alpha \;=\; P \cdot \mu_{P}.
@@ -125,7 +123,7 @@ Both alphas also feed the conversion's IRR through yearly drag-related cash flow
 
 ## 5. Literature Review
 
-Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse. Four entries locate the gap.
+Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse. Five entries locate the gap.
 
 **McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning*. The closest academic engagement: Equation 4 and Tables 4–5 construct a single-counterfactual reinvestment of after-tax RMDs at $r(1-d)$ against a Roth compounding at $r$, and observe that *"tax drag compounds."* This is the same mechanism the present paper isolates as RMD-reduction alpha, but stated as a breakeven-age scalar rather than a separately priced PV with an attributable per-year cash-flow stream. Two further scope differences: M&D apply the mechanism to the full no-conversion RMD stream, where the present framework applies it to the pre-/post-conversion *differential*; and M&D's construction has no terminal distribution, so the drag advantage grows without bound, while the SECURE-Act 10-year beneficiary depletion bounds the present framework's PV and FV by construction.
 
