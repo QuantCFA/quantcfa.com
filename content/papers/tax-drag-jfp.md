@@ -333,17 +333,17 @@ PV totals reconcile to the §2 figures. The SRC PV is concentrated in the benefi
 
 ## References
 
-Cheshire, S. M. (2026). *Synthetic Roth Contribution: A Foundational Framework for Roth Conversion Valuation*. Working paper, SSRN.
+Cheshire, S. M. (2026). *The Synthetic Roth Contribution: Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions*. Working paper, SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772118
 
 Kitces, M. (n.d.). Various articles on asset-location yield-split, tax-diversification, and Roth-conversion mechanics. Available at kitces.com.
 
-McQuarrie, E. F., & DiLellio, J. A. (2023). The arithmetic of Roth conversions. *Journal of Financial Planning*.
+McQuarrie, E. F., & DiLellio, J. A. (2023). The arithmetic of Roth conversions. *Journal of Financial Planning*, 36(5), 72–89.
 
-Passman, A., Wong, J., & Dickson, J. (2025). *A BETR approach to Roth conversions*. Vanguard Research.
+Passman, A., Wong, J., & Dickson, J. (2025, July). *A BETR Approach to Roth Conversions*. Vanguard Research.
 
-Piper, M. (n.d.). The 4 effects of a Roth conversion. Oblivious Investor (and related Bogleheads video, *Prepay Taxes with Roth Conversions?*).
+Piper, M. (n.d.). The 4 effects of a Roth conversion. Oblivious Investor. https://obliviousinvestor.com/the-4-effects-of-a-roth-conversion/ (and related Bogleheads video, *Prepay Taxes with Roth Conversions?*).
 
-Reichenstein, W. (2007). Calculating after-tax asset allocation is key to determining risk, returns, and asset location. *Journal of Financial Planning*, July 2007.
+Reichenstein, W. (2007, July). Calculating after-tax asset allocation is key to determining risk, returns, and asset location. *Journal of Financial Planning*. https://www.financialplanningassociation.org/sites/default/files/2023-02/JUL07%20Reichenstein.pdf
 
 ---
 
