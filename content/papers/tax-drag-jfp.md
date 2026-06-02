@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-- **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper — universally acknowledged, rarely quantified as a named line item.
+- **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper — widely recognized as an effect, seldom priced as a distinct PV line item in Roth-conversion analysis.
 - A Roth conversion produces two distinct TDS alphas: **RMD-reduction alpha** (from the Convert decision) and **SRC alpha** (from the Outside-settlement choice).
 - Both alphas are special cases of a single valuation identity: the present value of the distribution gap between sheltered and taxable growth paths.
 - This paper provides PV identification for both alphas and attributes the corresponding share of the conversion IRR to drag avoidance.
@@ -97,7 +97,7 @@ SRC alpha is the drag-avoidance component of total SRC value; Appendix A.1 split
 
 ### 4.2 RMD-reduction alpha — all conversions
 
-The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$ — the lump-sum equivalent of the stream of avoided future RMDs accumulating year by year. Specializing §3 on the avoided-RMD schedule,
+The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$. Specializing §3 on the avoided-RMD schedule,
 
 $$
 \alpha_{RMD} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{RMD}.
@@ -135,7 +135,7 @@ Published treatment of tax drag as a quantified, named PV line item in the Roth-
 
 **Kitces.** Acknowledges the Outside-payment benefit and account-level drag qualitatively; does not isolate the conv-tax dollar's $r(1-d)$ counterfactual as a PV or IRR line item.
 
-Across these treatments, drag is discussed qualitatively but is not isolated as two separately priced PV alphas with explicit IRR attribution.
+Across these treatments, tax drag appears as an embedded assumption, breakeven condition, or qualitative benefit — rather than as two separately priced PV alphas tied to specific planner decisions and to attributable shares of conversion IRR.
 
 ---
 
