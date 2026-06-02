@@ -328,3 +328,25 @@ PV discounted at $r$ = 7% to 2026.
 **Em-dash entries reflect accrual without distribution, not zero value.** Both alphas accumulate internally before realizing as cash flows: the SRC $K$ balance compounds at sheltered vs. taxable rates during gap years 2027–2029, and the avoided-RMD dollars compound in two parallel reinvestment balances throughout owner life (2027–2049). SRC realization begins in 2030 with owner-life RMDs and continues through the beneficiary 10-year annuity (2050–2059); RMD-reduction's full accumulated drag is realized only during the beneficiary period (2050–2059).
 
 PV totals reconcile to the §2 figures. The SRC PV is concentrated in the beneficiary period despite SRC drag accruing throughout owner life because owner-life amounts are small and heavily discounted.
+
+---
+
+## References
+
+Cheshire, S. M. (2026). *Synthetic Roth Contribution: A Foundational Framework for Roth Conversion Valuation*. Working paper, SSRN.
+
+Kitces, M. (n.d.). Various articles on asset-location yield-split, tax-diversification, and Roth-conversion mechanics. Available at kitces.com.
+
+McQuarrie, E. F., & DiLellio, J. A. (2023). The arithmetic of Roth conversions. *Journal of Financial Planning*.
+
+Passman, A., Wong, J., & Dickson, J. (2025). *A BETR approach to Roth conversions*. Vanguard Research.
+
+Piper, M. (n.d.). The 4 effects of a Roth conversion. Oblivious Investor (and related Bogleheads video, *Prepay Taxes with Roth Conversions?*).
+
+Reichenstein, W. (2007). Calculating after-tax asset allocation is key to determining risk, returns, and asset location. *Journal of Financial Planning*, July 2007.
+
+---
+
+## Acknowledgments
+
+The author thanks Mike Piper, whose "The 4 Effects of a Roth Conversion" and Bogleheads video "Prepay Taxes with Roth Conversions?" prompted the drag-shelter formalization developed in this paper.
