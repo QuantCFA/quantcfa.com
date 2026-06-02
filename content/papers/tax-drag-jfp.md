@@ -165,25 +165,24 @@ Three implications for conversion planning.
 
 **Sensitivity considerations.**
 
-| Parameter Change | Effect on SRC Alpha | Effect on RMD Alpha |
+| Parameter Change | SRC Alpha | RMD Alpha |
 |---|---|---|
-| Higher $\tau_C$ | ↑ | ↓ |
-| Higher $\rho$ | — | ↑ |
+| Longer life | ↗ | ↑ |
 | Higher drag $d$ | ↑ | ↑ |
-| Longer owner remaining life | ↑ | ↑ |
+| Higher RMD reinvestment $\rho$ | — | ↑ |
 
 **Magnitude examples (base + parameter variations).**
 
-| Scenario | RMD-reduction alpha | SRC alpha | TDS total |
-|---|---:|---:|---:|
-| Base ($L$=23, $d$=5%) | \$2,522 | \$1,021 | \$3,543 |
-| Longer life ($L$=28) | \$3,605 | \$1,055 | \$4,660 |
-| Higher drag ($d$=7%) | \$3,495 | \$1,410 | \$4,905 |
-| Both ($L$=28, $d$=7%) | \$4,985 | \$1,455 | \$6,440 |
+| Scenario | RMD-reduction alpha | SRC alpha | RMD/SRC | TDS total |
+|---|---:|---:|---:|---:|
+| Base ($L$=23, $d$=5%) | \$2,522 | \$1,021 | 2.47× | \$3,543 |
+| Longer life ($L$=28) | \$3,605 | \$1,055 | 3.42× | \$4,660 |
+| Higher drag ($d$=7%) | \$3,495 | \$1,410 | 2.48× | \$4,905 |
+| Both ($L$=28, $d$=7%) | \$4,985 | \$1,455 | 3.43× | \$6,440 |
 
-RMD-reduction alpha is highly time-sensitive: longer owner life extends Phase 1 accumulation, producing a larger Phase 2 starting balance. SRC alpha is partly self-limiting: extending Phase 1 distributes more of $K$, shrinking the Phase 2 residual — so Phase 1 gains and Phase 2 shrinkage roughly offset. The $L \times d$ interaction therefore concentrates in RMD-reduction (super-additive by ~\$407 on the combined-variation row); SRC alpha is approximately separable in $L$ and $d$.
+RMD-reduction alpha is highly time-sensitive: longer life extends Phase 1 accumulation, producing a larger Phase 2 starting balance. SRC alpha is self-limiting: extending Phase 1 distributes more of $K$, shrinking the Phase 2 residual — Phase 1 gains roughly offset Phase 2 shrinkage. For RMD-reduction, $L$ and $d$ compound: changing both increases alpha by \$2,463 — ~\$407 more than their individual sum (\$1,083 + \$973 = \$2,056).
 
-RMD-reduction alpha scales linearly in $\rho$; realistic ranges run 0.50–1.00 for surplus-wealth retirees and $\rho \approx 0$ for retirees consuming the full RMD. The illustrative $d = 5\%$ is a middle-of-the-road estimate for a balanced taxable portfolio; Morningstar's Tax-Cost Ratio offers a per-fund empirical anchor.
+**Takeaway.** Tax-drag shelter is captured predominantly through the RMD-reduction channel — available to both Inside- and Outside-funded conversions — while the wrapper-migration benefit of Outside funding is the smaller, less time-leveraged piece.
 
 ---
 
@@ -213,7 +212,7 @@ where $\mu_P = \alpha/P$ is the per-dollar multiplier surfaced in §4.
 
 **Assumptions.** (i) Identical pre-tax return path inside and outside the wrapper. (ii) Identical distribution method and schedule. (iii) Principal enters at time 0; distributions follow per the schedule. (iv) No additional rate effects layered onto the same dollar (no contribution-year vs. distribution-year arbitrage). (v) End-of-period distributions: balances accrue a full year of return before the year's distribution is taken, matching the simulator step order in Appendix B.
 
-**Proof sketch.** The sheltered balance evolves as $B^{S}_t = B^{S}_{t-1}(1+r) - D^{S}(t)$ with $B^{S}_0 = P$, and the unsheltered counterfactual as $B^{U}_t = B^{U}_{t-1}(1+\tilde{r}) - D^{U}(t)$ with $B^{U}_0 = P$. The household receives the distribution stream and discounts it at $r$. The incremental PV is therefore $\sum_t (D^{S}(t) - D^{U}(t)) / (1+r)^t$. Linearity in $P$ gives the per-dollar form $\mu_P = \alpha/P$. $\square$
+**Proof sketch.** The sheltered balance evolves as $B^{S}_t = B^{S}_{t-1}(1+r) - D^{S}(t)$ with $B^{S}_0 = P$, and the unsheltered counterfactual as $B^{U}_t = B^{U}_{t-1}(1+\tilde{r}) - D^{U}(t)$ with $B^{U}_0 = P$. The household receives the distribution stream and discounts it at $r$. The incremental PV is therefore $\sum_t (D^{S}(t) - D^{U}(t)) / (1+r)^t$. Linearity in $P$ gives the per-dollar form $\mu_P = \alpha/P$.
 
 **Comment.** The identity reduces the household-facing valuation question to two specializations: *what principal is being sheltered, and what distribution schedule drives $\mu_P$?* §4.1 sets $P = K$ on the post-conversion Roth schedule; §4.2 sets $P = (1-\tau_C)\cdot C\cdot \rho$ on the avoided-RMD schedule.
 
