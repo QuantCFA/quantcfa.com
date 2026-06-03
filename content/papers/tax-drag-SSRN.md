@@ -16,17 +16,6 @@ Roth conversions generate alpha by sheltering assets from the tax drag inherent 
 
 ---
 
-## Executive Summary
-
-- **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper — widely recognized as an effect, seldom priced as a distinct PV line item in Roth-conversion analysis.
-- A Roth conversion produces two distinct TDS alphas: **RMD-reduction alpha** (from the Conversion decision) and **SRC alpha** (from the Outside-settlement choice).
-- Both alphas are special cases of a single valuation identity: the present value of the distribution gap between sheltered and taxable growth paths.
-- **SRC alpha is wrapper-migration differential, not full Roth growth of $K$.** A "Hidden Contribution" counts the full sheltered future value $K(1+r)^T$, implicitly assuming $K$ would have done nothing absent conversion. The counterfactual's taxable growth is $\tilde{r}$, so wrapper-migration alpha is $K[(1+r)^T - (1+\tilde{r})^T]$.
-- RMD-reduction alpha dominates SRC alpha because it scales with converted principal $C$ rather than with $\tau_C \cdot C$.
-- RMD-reduction alpha increases with life expectancy, while SRC alpha is relatively insensitive to it since Phase-1 distributions are self-limiting.
-
----
-
 ## 1. Tax-Drag Shelter
 
 **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper. Inside, investments grow unencumbered by taxes; outside, the same dollars pay annual tax on dividends, interest, realized capital gains, and turnover-driven distributions — a drag that compounds materially over time.
