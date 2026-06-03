@@ -59,7 +59,7 @@ Converting \$123,850 fills through the 22% bracket, with an effective tax rate o
 | **TDS total** | **\$3,543** | **\$2,522** |
 | Conversion IRR | 11.56% | undefined (no outlay) |
 
-**Interpretation.** Inside & Outside-funded conversions both yield \$2,522 RMD-reduction alpha. Outside funding adds \$1,021 SRC alpha, identical to a statutory Roth contribution of $K$. RMD-reduction is 2.47× larger since it scales with $C$ rather than with $K$ ($\tau_C \cdot C$).
+**Interpretation.** Inside- and Outside-funded conversions both yield \$2,522 RMD-reduction alpha. Outside funding adds \$1,021 SRC alpha, identical to a statutory Roth contribution of $K$. The RMD-reduction alpha is larger because it scales with an effective principal of $(1-\tau_C)\cdot C\cdot \rho = $ \$79,419, versus SRC principal $K = $ \$17,966 — 4.42×. The alpha ratio compresses to 2.47× because $K$ is sheltered at full value from year zero, while RMD-reduction principal accumulates through future avoided RMDs. SRC's smaller principal earns a higher per-dollar multiplier ($\mu_{SRC} \approx 0.057$ vs. $\mu_{RMD} \approx 0.032$); §7 develops this timing asymmetry.
 
 RMD-reduction alpha is inherent in all Roth conversions while SRC alpha is unique to Outside funding, where $K$ dollars migrate from taxable to tax-free wrapper. Outside's 11.56% IRR comprises a 7% base plus a 4.56% additional alpha from rate-arbitrage (\$13,280) + Medicare (\$1,028) + tax-drag shelter (\$3,543). Tax-drag shelter contributes 19.8% of that additional value.
 
@@ -159,9 +159,9 @@ The contribution is isolation and quantification, not discovery of the underlyin
 
 Three implications for conversion planning.
 
-1. **Judge the Conversion decision on RMD-reduction alpha alone.** It is the dominant TDS contribution, applies whether tax is paid Inside or Outside, and scales with the converted principal $C$. A planner deciding *whether* to convert can price drag shelter using $\alpha_{RMD}$ in isolation.
+1. **Judge the Conversion decision on RMD-reduction alpha alone.** It applies to both Inside- and Outside-funded conversions, scales with $C$ and is the dominant TDS alpha.
 
-2. **Judge the Outside-settlement decision (paying conversion tax with outside funds) on SRC alpha.** SRC alpha captures the value of moving those $K$ dollars into the Roth — identical to what a same-sized statutory Roth contribution earns.
+2. **Judge the Outside-settlement decision (paying conversion tax with outside funds) on SRC alpha.** It captures the value of moving $K$ dollars into the Roth — identical to what a same-sized statutory Roth contribution gains.
 
 3. **Attribute, don't aggregate.** Reporting a single conversion IRR conflates rate arbitrage, Medicare effects, and drag shelter. The two alphas let a planner show clients which slice of the IRR each decision actually buys, and which assumptions ($\tau_C$, $d$, $\rho$, owner life) drive which slice.
 
