@@ -346,9 +346,9 @@ Cheshire, S. M. (2026). *The Synthetic Roth Contribution: Empirical and Algebrai
 
 Kitces, M. (n.d.). Various articles on asset-location yield-split, tax-diversification, and Roth-conversion mechanics. Available at kitces.com.
 
-McQuarrie, E. F., & DiLellio, J. A. (2023). The arithmetic of Roth conversions. *Journal of Financial Planning*, 36(5), 72–89.
+McQuarrie, E. F., & DiLellio, J. A. (2023). The arithmetic of Roth conversions. *Journal of Financial Planning*, 36(5), 72–89. https://www.financialplanningassociation.org/learning/publications/journal/MAY23-arithmetic-roth-conversions-OPEN
 
-Passman, A., Wong, J., & Dickson, J. (2025, July). *A BETR Approach to Roth Conversions*. Vanguard Research.
+Passman, A., Wong, J., & Dickson, J. (2025, July). *A BETR Approach to Roth Conversions*. Vanguard Research. https://corporate.vanguard.com/content/dam/corp/research/pdf/a_betr_approach_to_roth_conversions_072025.pdf
 
 Piper, M. (n.d.). The 4 effects of a Roth conversion. Oblivious Investor. https://obliviousinvestor.com/the-4-effects-of-a-roth-conversion/ (and related Bogleheads video, *Prepay Taxes with Roth Conversions?*).
 
@@ -358,4 +358,4 @@ Reichenstein, W. (2007, July). Calculating after-tax asset allocation is key to 
 
 ## Acknowledgments
 
-The author thanks Mike Piper, whose "The 4 Effects of a Roth Conversion" and Bogleheads video "Prepay Taxes with Roth Conversions?" prompted the drag-shelter formalization developed in this paper.
+The author thanks Mike Piper, whose "The 4 Effects of a Roth Conversion" and Bogleheads video "Prepay Taxes with Roth Conversions?" inspired the drag-shelter formalization developed in this paper.
