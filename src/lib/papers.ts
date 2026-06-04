@@ -37,10 +37,14 @@ export const papers: Paper[] = [
     slug: "tax-drag-shelter",
     title: "Quantifying Tax-Drag Shelter Benefits in Roth Conversions",
     subtitle: "RMD Reduction and the Hidden Roth Contribution",
-    date: "May 2026",
+    date: "June 2026 · Posted on SSRN June 4, 2026",
     status: "Working paper",
     keyIdea:
       "Quantifies the two Tax-Drag Shelter alphas in a Roth conversion: RMD-reduction (from the Convert decision) and SRC (from the Outside-settlement decision).",
+    external: {
+      label: "Read on SSRN #6879378",
+      href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6879378",
+    },
     file: "tax-drag-jfp.md",
   },
   {
@@ -52,7 +56,7 @@ export const papers: Paper[] = [
     keyIdea:
       "The paper that introduced the Synthetic Roth Contribution concept and decomposed conversion-tax payback into its components. The framework has been substantially extended in the two working drafts above.",
     external: {
-      label: "Read on SSRN",
+      label: "Read on SSRN #5205840",
       href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5205840",
     },
   },
