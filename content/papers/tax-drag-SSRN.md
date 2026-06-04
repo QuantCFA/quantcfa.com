@@ -3,10 +3,7 @@
 **RMD Reduction and the Hidden Roth Contribution**
 
 Steven Cheshire, CFA  
-Independent Researcher  
-cheshiresteven@gmail.com
-
-**Date Written:** June 1, 2026
+cheshiresteven@gmail.com | Draft: June 4, 2026
 
 ---
 
@@ -127,17 +124,19 @@ Both alphas also feed the conversion's IRR through yearly drag-related cash flow
 
 Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse. Five entries illustrate this gap.
 
-**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning*. Equation 4 and Tables 4–5 reinvest after-tax counterfactual RMDs at $r(1-d)$ while the Roth compounds at $r$, establishing that drag compounds rather than accruing linearly. The present paper expands this framework by embedding the full SECURE 2.0 distribution schedule — owner-life RMDs followed by 10-year beneficiary depletion — into the same arithmetic. That bounded schedule is the load-bearing addition: with no terminal distribution, M&D's construction is open-ended, the after-tax wedge grows without bound, and a breakeven age is the most one can extract. Closing the schedule at the legally mandated terminus turns the same wedge into a finite cash-flow stream that admits a closed-form PV and an IRR, which is what lets us price RMD-reduction alpha as a separate per-decision line item rather than report it as a breakeven scalar.
+**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning*. Equation 4 and Tables 4–5 reinvest after-tax counterfactual RMDs at $r(1-d)$ while the Roth compounds at $r$, establishing that drag compounds rather than accruing linearly. The present paper expands this framework by embedding the full SECURE 2.0 distribution schedule — owner-life RMDs followed by 10-year beneficiary depletion — into the same arithmetic. That bounded schedule is the load-bearing addition: absent a terminal distribution schedule, the after-tax wedge remains open-ended and a breakeven age is the natural output. Closing the schedule at the legally mandated terminus turns the same wedge into a finite cash-flow stream that admits a closed-form PV and an IRR, which is what lets us price RMD-reduction alpha as a separate per-decision line item rather than report it as a breakeven scalar.
 
-**Reichenstein & Meyer (2017), "Valuing Roth Conversion and Recharacterization Options,"** *Journal of Financial Planning* 30(11): 48–56. Their Strategy 3 (outside-funded conversion) vs Strategy 2 (inside-funded) comparison computes $tV(1+r)^n - tV(1+R)^n$, the drag wedge on the conversion-tax dollars — algebraically what the present paper isolates as SRC alpha. R&M do not extend this to the RMD-reduction channel: the avoided-RMD stream sheltered from drag (the dominant alpha in most conversions) is not separately priced, and the unified $\alpha = P \cdot \mu$ identity that links both alphas to one drag mechanic is absent. Results are reported as FV ratios at the withdrawal year rather than PV at the conversion year.
+**Reichenstein & Meyer (2017), "Valuing Roth Conversion and Recharacterization Options,"** *Journal of Financial Planning* 30(11): 48–56. Their Strategy 3 (outside-funded conversion) vs Strategy 2 (inside-funded) comparison computes $tV(1+r)^n - tV(1+R)^n$, the drag wedge on the conversion-tax dollars — algebraically what the present paper isolates as SRC alpha. R&M do not extend this to the RMD-reduction channel: the avoided-RMD stream sheltered from drag (the dominant alpha in most conversions) is not separately priced, and the common drag structure linking the two channels is not separately identified. Results are reported as FV ratios at the withdrawal year rather than PV at the conversion year.
 
-**Vanguard BETR (Passman, Wong & Dickson 2025).** Computes a break-even future tax rate $\tau_D$ from a Roth multiple $M$ and a taxable-side multiple $M'$. The recommendation is functionally driven by $M'$ — equivalently, by an embedded drag assumption $d = 1 - \tilde{r}/r$ where $r = M^{1/n}-1$ and $\tilde{r} = M'^{1/n}-1$ (Cheshire 2026, §6); Vanguard's Jill case ($M=3$, $M'=2$, $n=20$) implies $d \approx 37.5\%$. The framework is hybrid: the K-leg ($K=\tau_C C$ compounding taxably vs. sheltered) is algebraically SRC alpha; the C-leg is rate-arbitrage on conversion-year vs. distribution-year tax rates. RMD-reduction alpha is absent — Vanguard assumes uninterrupted compounding with a terminal tax, no distribution stream. TDS prices the K-leg directly via $\mu_{SRC}$ at a planner-chosen $d$, replacing break-even-on-$\tau_D$ (exogenous) with break-even-on-$d$ (asset-location-controlled).
+**Vanguard BETR (Passman, Wong & Dickson 2025).** Computes Jill's break-even future tax rate from Roth multiple $M = 3$, taxable multiple $M' = 2$, and $n = 20$; $\tau_D = 23.3\%$ — our equivalent embedded drag $d = 1 - \dfrac{M'^{1/n} - 1}{M^{1/n} - 1} \approx 37.5\%$ (Cheshire 2026, §6). The framings are algebraically identical, yet 23.3% vs. Jill's expected 24% reads as plausible; the equivalent tax-drag rates of 37.5% and 34.95% (from $M' = M(\tau_D/\tau_C) = 2.057$) may appear less so. Viewed through the present framework, BETR can be re-expressed as an implied tax-drag assumption: the break-even on $\tau_D$ is algebraically a break-even on $d$, with $d \approx 37.5\%$ as the implied figure in Jill's case. The reframing substitutes a future statutory rate for an embedded portfolio-level drag the planner can estimate and influence.
 
 **Mike Piper, "The 4 Effects of a Roth Conversion."** Names the Outside-payment benefit and the RMD-reduction benefit qualitatively but does not quantify either or produce PV/IRR figures.
 
 **Kitces.** Acknowledges the Outside-payment benefit and account-level drag qualitatively; does not isolate the conv-tax dollar's $r(1-d)$ counterfactual as a PV or IRR line item.
 
-Across these treatments, tax drag appears as an embedded assumption, breakeven condition, or qualitative benefit — rather than as two separately priced PV alphas tied to specific planner decisions and to attributable shares of conversion IRR.
+Across these treatments, tax drag appears as an embedded assumption, breakeven condition, or qualitative benefit — rather than as two separately priced PV alphas corresponding to the planner's two distinct decisions: whether to convert, and conditional on converting, whether to fund the tax from inside or outside assets.
+
+To our knowledge, no prior Roth-conversion study reports the drag avoided on the counterfactual reinvestment of eliminated RMDs as a separately priced present-value component of conversion value.
 
 ---
 
