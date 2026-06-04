@@ -27,7 +27,7 @@ export const papers: Paper[] = [
     keyIdea:
       "When you pay Roth conversion tax from outside the retirement account, you've quietly made a Roth contribution equal to the tax — bypassing the IRS contribution limit. This paper proves it four ways.",
     external: {
-      label: "SSRN #6772118",
+      label: "Read on SSRN #6772118",
       href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772118",
     },
     submittedTo: "Journal of Financial Planning",

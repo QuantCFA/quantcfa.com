@@ -57,9 +57,6 @@ export default function Home() {
                 key={p.slug}
                 className="bg-paper border border-rule rounded-md p-6 flex flex-col"
               >
-                <div className="text-xs uppercase tracking-wider text-ink-muted font-sans font-semibold mb-2">
-                  {p.status} · {p.date}
-                </div>
                 <h3 className="font-serif text-[1.2rem] leading-snug text-navy-deep mb-3">
                   {p.title}
                 </h3>
@@ -94,6 +91,9 @@ export default function Home() {
                       Submitted to {p.submittedTo}
                     </div>
                   )}
+                </div>
+                <div className="mt-4 pt-3 border-t border-rule text-xs text-ink-muted font-sans">
+                  {p.status} · {p.date}
                 </div>
               </article>
             ))}
