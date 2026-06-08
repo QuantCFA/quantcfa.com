@@ -22,6 +22,15 @@ export function Markdown({ source }: { source: string }) {
             },
           ],
         ]}
+        components={{
+          img: ({ src, alt, ...rest }) => {
+            const resolvedSrc =
+              typeof src === "string" && !/^(https?:|\/)/.test(src)
+                ? `/papers/${src}`
+                : src;
+            return <img src={resolvedSrc} alt={alt} {...rest} />;
+          },
+        }}
       >
         {source}
       </ReactMarkdown>
