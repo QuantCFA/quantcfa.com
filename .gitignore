@@ -45,3 +45,8 @@ next-env.d.ts
 
 # Office lock files
 ~$*
+
+# Office / PDF source & export artifacts — never commit
+*.docx
+*.pdf
+*.tmp
