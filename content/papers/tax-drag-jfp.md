@@ -3,28 +3,42 @@
 **RMD Reduction and the Hidden Roth Contribution**
 
 Steven Cheshire, CFA  
-cheshiresteven@gmail.com | Draft: June 4, 2026
-
----
-
-## Abstract
-
-Roth conversions generate alpha by sheltering assets from the tax drag inherent in taxable accounts — tax-drag shelter (TDS). Yet TDS is rarely priced in conversion analysis. This paper isolates two alpha sources, each tied to a specific planner decision: RMD-reduction alpha, created when all conversions reduce future RMDs; and Synthetic Roth Contribution (SRC) alpha, created when an Outside-funded conversion migrates conversion-tax dollars into the Roth — the wrapper-migration premium over taxable counterfactual growth. Both follow the valuation identity, $\alpha = P \cdot \mu$, where $P$ is sheltered principal and $\mu$ is the per-dollar present value of the yearly distribution gap between parallel sheltered and taxable growth paths. These yearly gaps also feed an Outside-funded conversion's IRR as drag-related cash flows. RMD-reduction alpha dominates SRC alpha because it scales with converted principal $C$ rather than with $\tau_C \cdot C$. Additionally, RMD-reduction alpha increases with life expectancy, while SRC alpha is relatively insensitive to it since Phase-1 distributions are self-limiting.
+cheshiresteven@gmail.com | Draft: June 9, 2026
 
 ---
 
 ## Executive Summary
 
-- **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper — widely recognized as an effect, seldom priced as a distinct PV line item in Roth-conversion analysis.
-- A Roth conversion produces two distinct TDS alphas: **RMD-reduction alpha** (from the Conversion decision) and **SRC alpha** (from the Outside-settlement choice).
-- Both alphas are special cases of a single valuation identity: the present value of the distribution gap between sheltered and taxable growth paths.
-- **SRC alpha is wrapper-migration differential, not full Roth growth of $K$.** A "Hidden Contribution" counts the full sheltered future value $K(1+r)^T$, implicitly assuming $K$ would have done nothing absent conversion. The counterfactual's taxable growth is $\tilde{r}$, so wrapper-migration alpha is $K[(1+r)^T - (1+\tilde{r})^T]$.
-- RMD-reduction alpha dominates SRC alpha because it scales with converted principal $C$ rather than with $\tau_C \cdot C$.
-- RMD-reduction alpha increases with life expectancy, while SRC alpha is relatively insensitive to it since Phase-1 distributions are self-limiting.
+- A Roth conversion involves two distinct planning decisions: whether to convert, and conditional on converting, whether conversion tax should be paid from Inside or Outside assets. These decisions generate two distinct tax-drag shelter (TDS) alphas: **RMD-reduction alpha** and **Synthetic Roth Contribution (SRC) alpha**. *(§2)*
+- **RMD-reduction alpha** arises because conversion reduces future Traditional-account balances and therefore future Required Minimum Distributions (RMDs). Reinvested avoided-RMD dollars remain sheltered rather than compounding in taxable accounts. This benefit exists under both Inside- and Outside-funded conversions. *(§5.2)*
+- **SRC alpha** arises only under Outside-funded conversions. Paying conversion tax from taxable assets effectively migrates after-tax dollars into the Roth wrapper, creating a Synthetic Roth Contribution. The benefit is the wrapper-migration differential between Roth and taxable growth, not the full future value of the conversion-tax dollars. *(§5.1, App A.1)*
+- Both alphas reduce to the valuation identity $\alpha = P \cdot \mu$, where $P$ is sheltered principal and $\mu$ is the per-dollar PV of the yearly sheltered-vs-taxable distribution gap. Embedding SECURE 2.0's bounded owner-life and beneficiary distribution structure is the critical addition that closes the stream and admits closed-form present-value measurement of both alphas. *(§3, App A)*
+- In the worked example, RMD-reduction alpha (\$2,522) exceeds SRC alpha (\$1,021) because the principal sheltered through reduced future RMDs substantially exceeds the conversion-tax principal generating SRC alpha. *(§6)*
+- Tax-drag shelter contributes ~20% of the additional value beyond the base return in the worked example, and can be separately attributed within conversion IRR — letting planners distinguish drag-avoidance benefits from rate-arbitrage and Medicare effects. *(§5.3, §4)*
 
 ---
 
-## 1. Tax-Drag Shelter
+## 1. Literature Review
+
+Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse. Five entries illustrate this gap.
+
+**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning*. Equation 4 and Tables 4–5 reinvest after-tax counterfactual RMDs at $r(1-d)$ while the Roth compounds at $r$, establishing that drag compounds rather than accruing linearly. The present paper expands this framework by embedding the full SECURE 2.0 distribution schedule — owner-life RMDs followed by 10-year beneficiary depletion — into the same arithmetic. That bounded schedule is the load-bearing addition: absent a terminal distribution schedule, the after-tax wedge remains open-ended and a breakeven age is the natural output. Closing the schedule at the legally mandated terminus turns the same wedge into a finite cash-flow stream that admits a closed-form PV and an IRR, which is what lets us price RMD-reduction alpha as a separate per-decision line item rather than report it as a breakeven scalar.
+
+**Reichenstein & Meyer (2017), "Valuing Roth Conversion and Recharacterization Options,"** *Journal of Financial Planning* 30(11): 48–56. Their Strategy 3 (outside-funded conversion) vs Strategy 2 (inside-funded) comparison computes $tV(1+r)^n - tV(1+R)^n$, the drag wedge on the conversion-tax dollars — algebraically what the present paper isolates as SRC alpha. R&M do not extend this to the RMD-reduction channel: the avoided-RMD stream sheltered from drag (the dominant alpha in most conversions) is not separately priced, and the common drag structure linking the two channels is not separately identified. Results are reported as FV ratios at the withdrawal year rather than PV at the conversion year.
+
+**Vanguard BETR (Passman, Wong & Dickson 2025).** Computes Jill's break-even future tax rate from Roth multiple $M = 3$, taxable multiple $M' = 2$, and $n = 20$; $\tau_D = 23.3\%$ — our equivalent embedded drag $d = 1 - \dfrac{M'^{1/n} - 1}{M^{1/n} - 1} \approx 37.5\%$ (Cheshire 2026, §6). The framings are algebraically identical, yet 23.3% vs. Jill's expected 24% reads as plausible; the equivalent tax-drag rates of 37.5% and 34.95% (from $M' = M(\tau_D/\tau_C) = 2.057$) may appear less so. Viewed through the present framework, BETR can be re-expressed as an implied tax-drag assumption: the break-even on $\tau_D$ is algebraically a break-even on $d$, with $d \approx 37.5\%$ as the implied figure in Jill's case. The reframing substitutes a future statutory rate for an embedded portfolio-level drag the planner can estimate and influence.
+
+**Mike Piper, "The 4 Effects of a Roth Conversion."** Names the Outside-payment benefit and the RMD-reduction benefit qualitatively but does not quantify either or produce PV/IRR figures.
+
+**Kitces.** Acknowledges the Outside-payment benefit and account-level drag qualitatively; does not isolate the conv-tax dollar's $r(1-d)$ counterfactual as a PV or IRR line item.
+
+Across these treatments, tax drag appears as an embedded assumption, breakeven condition, or qualitative benefit — rather than as two separately priced PV alphas corresponding to the planner's two distinct decisions: whether to convert, and conditional on converting, whether to fund the tax from inside or outside assets.
+
+To our knowledge, prior Roth-conversion studies have not reported the drag avoided on the counterfactual reinvestment of eliminated RMDs as a separately priced present-value component of conversion value. The contribution is isolation, quantification, and decision-attribution—not discovery of the underlying drag-compounding mechanism.
+
+---
+
+## 2. Tax-Drag Shelter
 
 **Tax-Drag Shelter (TDS)** is the present-value gap between holding investments inside vs. outside a tax-advantaged wrapper. Inside, investments grow unencumbered by taxes; outside, the same dollars pay annual tax on dividends, interest, realized capital gains, and turnover-driven distributions — a drag that compounds materially over time.
 
@@ -40,7 +54,91 @@ A Roth conversion can capture this benefit in two ways, each creating positive a
 
 ---
 
-## 2. Worked Example
+## 3. The Drag-Shelter Valuation Identity
+
+A common process creates both TDS alphas: run two parallel accounts on a shared distribution schedule — one sheltered at $r$, one taxable at $\tilde{r} = r(1-d)$ — and sum the PV of the yearly distribution gap. For principal $P$, the **drag-shelter multiplier** $\mu_P$ is this per-dollar sum (derivation in Appendix A; simulator in Appendix B):
+
+$$
+\alpha \;=\; P \cdot \mu_{P}.
+$$
+
+§5 specializes the calculation twice. SRC alpha applies it to principal $K$, distributed on the planner's chosen schedule across owner life and the 10-year beneficiary annuity. RMD-reduction alpha applies it to avoided-RMD dollars that accumulate during owner life, then distribute over the 10-year beneficiary annuity only.
+
+---
+
+## 4. Advisor Decision Hierarchy
+
+A Roth conversion involves **two sequential decisions**:
+
+1. Whether to convert.
+2. Conditional on converting, whether to pay the tax from Inside or Outside assets.
+
+These decisions create **distinct tax-drag shelter alphas**:
+
+1. Conversion decision → RMD-reduction alpha.
+2. Outside-settlement decision → SRC alpha.
+
+Because RMD-reduction alpha and SRC alpha can materially affect conversion value, planners who evaluate conversions only through tax-rate arbitrage and Medicare effects may misclassify economically beneficial conversions as unattractive.
+
+---
+
+## 5. The Two TDS Alphas
+
+### 5.1 SRC alpha — Outside-funded conversions only
+
+Specializing §3 with $P = K$,
+
+$$
+\alpha_{SRC} \;=\; K \cdot \mu_{SRC}.
+$$
+
+**Two-stage construction (RMD distribution).** Phase 1 (owner-life): $K$ compounds in two parallel balances — sheltered at $r$, taxable at $\tilde{r}$ — and distributes each year via the RMD divisor. The yearly sheltered-vs-taxable distribution gap accrues as alpha. Phase 2 (beneficiary period): the residual distributes as a 10-year fixed annuity (FA); the same gap mechanic continues. Appendix B.1 gives the construction. (Under FA distribution, Phase 1 is itself a fixed annuity across owner life — no separate Phase 2.)
+
+The conventional Hidden Contribution figure equates the conv-tax dollar's value with its full sheltered-wrapper future value — implicitly assuming it would have done nothing absent conversion. The counterfactual is taxable growth at $\tilde{r}$. The TDS framing extracts only the sheltered-vs-taxable differential as drag-avoidance value, leaving the would-have-grown-anyway portion correctly attributed to the conv-tax dollar regardless of conversion. (Appendix A.1 gives the decomposition.)
+
+**Inside payment.** No wrapper migration occurs, so $\alpha_{SRC} = 0$.
+
+SRC alpha is the drag-avoidance component of total SRC value; Appendix A.1 splits it from the taxable-side growth term.
+
+![](figures/src-alpha-chart.png)
+
+**Figure 1.** SRC alpha. $K$ = \$17,966 conversion-tax dollars compound in a sheltered Roth vs. a taxable counterfactual (drag $d$ = 5%), distributing under RMD, then FA for beneficiary; the per-year gap accrues PV = \$1,021.
+
+### 5.2 RMD-reduction alpha — Inside- and Outside-funded conversions
+
+The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$. Specializing §3 on the avoided-RMD schedule,
+
+$$
+\alpha_{RMD} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{RMD}.
+$$
+
+Because RMD divisors $\varepsilon_t$ depend on age, not balance, the avoided-RMD stream scales linearly in $C$, justifying the use of the scaling principal $(1-\tau_C) \cdot C \cdot \rho$ in the identity above. The multiplier $\mu_{RMD}$ (Appendix B.2) prices the drag-shelter value per dollar of that scaling principal.
+
+**Two-stage construction.** Phase 1 (owner-life): each year's avoided RMD enters two parallel balances — sheltered at $r$, taxable at $\tilde{r}$. Nothing distributes; the owner-life drag accumulates in the balance gap. Phase 2 (beneficiary period): under the SECURE-Act 10-year mandate, both balances distribute as a 10-year fixed annuity, and the yearly sheltered-vs-taxable gap delivers the alpha. Phase 2 is identical in structure to SRC alpha's Phase 2.
+
+$\rho$ is the surplus-wealth reinvestment share; consumed RMDs cancel across conversion and counterfactual paths and are out of scope.
+
+![](figures/rmd-alpha-chart.png)
+
+**Figure 2.** RMD-reduction alpha. Avoided RMDs reinvest in parallel sheltered and taxable balances during Phase 1 (owner life); both distribute as a 10-year fixed annuity in Phase 2 (beneficiary period). Cumulative drag-avoidance benefit reaches PV = \$2,522.
+
+Both figures show balances depleting to zero — owner-life RMDs plus SECURE-mandated 10-year beneficiary distribution form a bounded schedule that admits closed-form PV (and IRR for SRC alpha).
+
+### 5.3 Total TDS alpha
+
+Under Outside payment,
+
+$$
+\alpha_{TDS} \;=\; \alpha_{SRC} \;+\; \alpha_{RMD}.
+$$
+
+Under Inside payment, $\alpha_{TDS} = \alpha_{RMD}$ since no wrapper migration occurs and $\alpha_{SRC} = 0$.
+
+Both alphas also feed the conversion's IRR through yearly drag-related cash flows — the SRC flow over owner-life and beneficiary distributions, the RMD-reduction flow over the beneficiary period — so a planner can attribute a quantified share of the deployed IRR to drag avoidance. Appendix C gives the per-year definitions. Under Inside payment (no user outlay) the conversion IRR is undefined and the RMD-reduction PV stands alone.
+
+---
+
+## 6. Worked Example
 
 Converting \$123,850 fills through the 22% bracket, with an effective tax rate of 14.5%.
 
@@ -75,111 +173,11 @@ Appendix D gives the per-year RMD and SRC drag flows in nominal and PV terms; §
 
 ---
 
-## 3. The Drag-Shelter Valuation Identity
-
-A common process creates both TDS alphas: run two parallel accounts on a shared distribution schedule — one sheltered at $r$, one taxable at $\tilde{r}$ — and sum the PV of the yearly distribution gap. For principal $P$, the **drag-shelter multiplier** $\mu_P$ is this per-dollar sum (derivation in Appendix A; simulator in Appendix B):
-
-$$
-\alpha \;=\; P \cdot \mu_{P}.
-$$
-
-§4 specializes the calculation twice. SRC alpha applies it to principal $K$, distributed on the planner's chosen schedule across owner life and the 10-year beneficiary annuity. RMD-reduction alpha applies it to avoided-RMD dollars that accumulate during owner life, then distribute over the 10-year beneficiary annuity only.
-
----
-
-## 4. The Two TDS Alphas
-
-### 4.1 SRC alpha — Outside-funded conversions only
-
-Specializing §3 with $P = K$,
-
-$$
-\alpha_{SRC} \;=\; K \cdot \mu_{SRC}.
-$$
-
-**Two-stage construction (RMD distribution).** Phase 1 (owner-life): $K$ compounds in two parallel balances — sheltered at $r$, taxable at $\tilde{r}$ — and distributes each year via the RMD divisor. The yearly sheltered-vs-taxable distribution gap accrues as alpha. Phase 2 (beneficiary period): the residual distributes as a 10-year fixed annuity (FA); the same gap mechanic continues. Appendix B.1 gives the construction. (Under FA distribution, Phase 1 is itself a fixed annuity across owner life — no separate Phase 2.)
-
-**Inside payment.** No wrapper migration occurs, so $\alpha_{SRC} = 0$.
-
-SRC alpha is the drag-avoidance component of total SRC value; Appendix A.1 splits it from the taxable-side growth term.
-
-![](figures/src-alpha-chart.png)
-
-**Figure 1.** SRC alpha. $K$ = \$17,966 conversion-tax dollars compound in a sheltered Roth vs. a taxable counterfactual (drag $d$ = 5%), distributing under RMD, then FA for beneficiary; the per-year gap accrues PV = \$1,021.
-
-### 4.2 RMD-reduction alpha — Inside- and Outside-funded conversions
-
-The principal being sheltered is the after-tax converted balance scaled by the reinvestment share, $P = (1-\tau_C) \cdot C \cdot \rho$. Specializing §3 on the avoided-RMD schedule,
-
-$$
-\alpha_{RMD} \;=\; (1-\tau_C) \cdot C \cdot \rho \cdot \mu_{RMD}.
-$$
-
-Because RMD divisors $\varepsilon_t$ depend on age, not balance, the avoided-RMD stream scales linearly in $C$, justifying the use of the scaling principal $(1-\tau_C) \cdot C \cdot \rho$ in the identity above. The multiplier $\mu_{RMD}$ (Appendix B.2) prices the drag-shelter value per dollar of that scaling principal.
-
-**Two-stage construction.** Phase 1 (owner-life): each year's avoided RMD enters two parallel balances — sheltered at $r$, taxable at $\tilde{r}$. Nothing distributes; the owner-life drag accumulates in the balance gap. Phase 2 (beneficiary period): under the SECURE-Act 10-year mandate, both balances distribute as a 10-year fixed annuity, and the yearly sheltered-vs-taxable gap delivers the alpha. Phase 2 is identical in structure to SRC alpha's Phase 2.
-
-$\rho$ is the surplus-wealth reinvestment share; consumed RMDs cancel across conversion and counterfactual paths and are out of scope.
-
-![](figures/rmd-alpha-chart.png)
-
-**Figure 2.** RMD-reduction alpha. Avoided RMDs reinvest in parallel sheltered and taxable balances during Phase 1 (owner life); both distribute as a 10-year fixed annuity in Phase 2 (beneficiary period). Cumulative drag-avoidance benefit reaches PV = \$2,522.
-
-Both figures show balances depleting to zero — owner-life RMDs plus SECURE-mandated 10-year beneficiary distribution form a bounded schedule that admits closed-form PV (and IRR for SRC alpha).
-
-### 4.3 Total TDS alpha
-
-Under Outside payment,
-
-$$
-\alpha_{TDS} \;=\; \alpha_{SRC} \;+\; \alpha_{RMD}.
-$$
-
-Under Inside payment, $\alpha_{TDS} = \alpha_{RMD}$ since no wrapper migration occurs and $\alpha_{SRC} = 0$.
-
-Both alphas also feed the conversion's IRR through yearly drag-related cash flows — the SRC flow over owner-life and beneficiary distributions, the RMD-reduction flow over the beneficiary period — so a planner can attribute a quantified share of the deployed IRR to drag avoidance. Appendix C gives the per-year definitions. Under Inside payment (no user outlay) the conversion IRR is undefined and the RMD-reduction PV stands alone.
-
----
-
-## 5. Literature Review
-
-Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse. Five entries illustrate this gap.
-
-**McQuarrie & DiLellio (2023), "The Arithmetic of Roth Conversions,"** *Journal of Financial Planning*. Equation 4 and Tables 4–5 reinvest after-tax counterfactual RMDs at $r(1-d)$ while the Roth compounds at $r$, establishing that drag compounds rather than accruing linearly. The present paper expands this framework by embedding the full SECURE 2.0 distribution schedule — owner-life RMDs followed by 10-year beneficiary depletion — into the same arithmetic. That bounded schedule is the load-bearing addition: absent a terminal distribution schedule, the after-tax wedge remains open-ended and a breakeven age is the natural output. Closing the schedule at the legally mandated terminus turns the same wedge into a finite cash-flow stream that admits a closed-form PV and an IRR, which is what lets us price RMD-reduction alpha as a separate per-decision line item rather than report it as a breakeven scalar.
-
-**Reichenstein & Meyer (2017), "Valuing Roth Conversion and Recharacterization Options,"** *Journal of Financial Planning* 30(11): 48–56. Their Strategy 3 (outside-funded conversion) vs Strategy 2 (inside-funded) comparison computes $tV(1+r)^n - tV(1+R)^n$, the drag wedge on the conversion-tax dollars — algebraically what the present paper isolates as SRC alpha. R&M do not extend this to the RMD-reduction channel: the avoided-RMD stream sheltered from drag (the dominant alpha in most conversions) is not separately priced, and the common drag structure linking the two channels is not separately identified. Results are reported as FV ratios at the withdrawal year rather than PV at the conversion year.
-
-**Vanguard BETR (Passman, Wong & Dickson 2025).** Computes Jill's break-even future tax rate from Roth multiple $M = 3$, taxable multiple $M' = 2$, and $n = 20$; $\tau_D = 23.3\%$ — our equivalent embedded drag $d = 1 - \dfrac{M'^{1/n} - 1}{M^{1/n} - 1} \approx 37.5\%$ (Cheshire 2026, §6). The framings are algebraically identical, yet 23.3% vs. Jill's expected 24% reads as plausible; the equivalent tax-drag rates of 37.5% and 34.95% (from $M' = M(\tau_D/\tau_C) = 2.057$) may appear less so. Viewed through the present framework, BETR can be re-expressed as an implied tax-drag assumption: the break-even on $\tau_D$ is algebraically a break-even on $d$, with $d \approx 37.5\%$ as the implied figure in Jill's case. The reframing substitutes a future statutory rate for an embedded portfolio-level drag the planner can estimate and influence.
-
-**Mike Piper, "The 4 Effects of a Roth Conversion."** Names the Outside-payment benefit and the RMD-reduction benefit qualitatively but does not quantify either or produce PV/IRR figures.
-
-**Kitces.** Acknowledges the Outside-payment benefit and account-level drag qualitatively; does not isolate the conv-tax dollar's $r(1-d)$ counterfactual as a PV or IRR line item.
-
-Across these treatments, tax drag appears as an embedded assumption, breakeven condition, or qualitative benefit — rather than as two separately priced PV alphas corresponding to the planner's two distinct decisions: whether to convert, and conditional on converting, whether to fund the tax from inside or outside assets.
-
-To our knowledge, no prior Roth-conversion study reports the drag avoided on the counterfactual reinvestment of eliminated RMDs as a separately priced present-value component of conversion value.
-
----
-
-## 6. Contribution
-
-This paper adds three things to the Roth-conversion literature.
-
-1. **PV identification of two distinct alphas, organized as a decision hierarchy.** RMD-reduction alpha (created by the Conversion decision) and SRC alpha (created by the Outside-settlement decision) are each expressed as $P \cdot \mu_P$ for the relevant principal. The decision-hierarchy framing — RMD-reduction alpha first, SRC alpha second — clarifies what each planner decision actually buys and makes the Inside-vs-Outside contrast immediate.
-
-2. **Correcting the implicit zero-growth taxable counterfactual.** The conventional Hidden Contribution figure equates the conv-tax dollar's value with its full sheltered-wrapper future value — implicitly assuming it would have done nothing absent conversion. The counterfactual is taxable growth at $\tilde{r}$. The TDS framing extracts only the sheltered-vs-taxable differential as drag-avoidance value, leaving the would-have-grown-anyway portion correctly attributed to the conv-tax dollar regardless of conversion. (Appendix A.1 gives the decomposition.)
-
-3. **Conversion IRR attributable to drag avoidance.** The two alphas pin down which slice of an Outside-funded conversion's IRR is delivered by drag avoidance rather than by rate arbitrage (Inside payment has no IRR). Per-year definitions and the legitimacy argument are in Appendix C.
-
-The contribution is isolation and quantification, not discovery of the underlying intuition.
-
----
-
 ## 7. Conclusion
 
 Three implications for conversion planning.
 
-1. **Judge the Conversion decision on RMD-reduction alpha alone.** It applies to both Inside- and Outside-funded conversions, scales with $C$ and is the dominant TDS alpha.
+1. **Judge the Conversion decision on RMD-reduction alpha alone.** It applies to both Inside- and Outside-funded conversions, scales with $(1-\tau_C)\cdot C \cdot \rho$ and is the dominant TDS alpha.
 
 2. **Judge the Outside-settlement decision (paying conversion tax with outside funds) on SRC alpha.** It captures the value of moving $K$ dollars into the Roth — identical to what a same-sized statutory Roth contribution gains.
 
@@ -230,13 +228,13 @@ $$
 \alpha \;=\; \sum_{t} \frac{D^{S}(t) - D^{U}(t)}{(1+r)^{t}} \;=\; P \cdot \mu_{P},
 $$
 
-where $\mu_P = \alpha/P$ is the per-dollar multiplier surfaced in §4.
+where $\mu_P = \alpha/P$ is the per-dollar multiplier surfaced in §5.
 
 **Assumptions.** (i) Identical pre-tax return path inside and outside the wrapper. (ii) Identical distribution method and schedule. (iii) Principal enters at time 0; distributions follow per the schedule. (iv) No additional rate effects layered onto the same dollar (no contribution-year vs. distribution-year arbitrage). (v) End-of-period distributions: balances accrue a full year of return before the year's distribution is taken, matching the simulator step order in Appendix B.
 
 **Proof sketch.** The sheltered balance evolves as $B^{S}_t = B^{S}_{t-1}(1+r) - D^{S}(t)$ with $B^{S}_0 = P$, and the unsheltered counterfactual as $B^{U}_t = B^{U}_{t-1}(1+\tilde{r}) - D^{U}(t)$ with $B^{U}_0 = P$. The household receives the distribution stream and discounts it at $r$. The incremental PV is therefore $\sum_t (D^{S}(t) - D^{U}(t)) / (1+r)^t$. Linearity in $P$ gives the per-dollar form $\mu_P = \alpha/P$.
 
-**Comment.** The identity reduces to two questions: *what principal is being sheltered, and what distribution schedule drives $\mu_P$?* §4.1 sets $P = K$ on the post-conversion Roth schedule; §4.2 sets $P = (1-\tau_C)\cdot C\cdot \rho$ on the avoided-RMD schedule.
+**Comment.** The identity reduces to two questions: *what principal is being sheltered, and what distribution schedule drives $\mu_P$?* §5.1 sets $P = K$ on the post-conversion Roth schedule; §5.2 sets $P = (1-\tau_C)\cdot C\cdot \rho$ on the avoided-RMD schedule.
 
 ### A.1 SRC alpha within total SRC value
 
@@ -289,7 +287,7 @@ The Phase-2 $\Delta(t)$ is the RMD-reduction per-year flow used in Appendix C; o
 
 ## Appendix C. IRR Attribution: Per-Year Drag-Related Cash Flows
 
-§4.3 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
+§5.3 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
 
 **Per-year flows.** Let $\Delta_{SRC}(t)$ be the yearly sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.1), and $\Delta_{RMD}(t)$ the analogous Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.2). The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
 
@@ -347,7 +345,7 @@ PV discounted at $r$ = 7% to 2026.
 
 **Em-dash entries reflect accrual without distribution, not zero value.** Both alphas accumulate internally before realizing as cash flows: the SRC $K$ balance compounds at sheltered vs. taxable rates during gap years 2027–2029, and the avoided-RMD dollars compound in two parallel reinvestment balances throughout owner life (2027–2049). SRC realization begins in 2030 with owner-life RMDs and continues through the beneficiary 10-year annuity (2050–2059); RMD-reduction's full accumulated drag is realized only during the beneficiary period (2050–2059).
 
-PV totals reconcile to the §2 figures. The SRC PV is concentrated in the beneficiary period despite SRC drag accruing throughout owner life because owner-life amounts are small and heavily discounted.
+PV totals reconcile to the §6 figures. The SRC PV is concentrated in the beneficiary period despite SRC drag accruing throughout owner life because owner-life amounts are small and heavily discounted.
 
 ---
 
