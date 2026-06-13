@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
 
+/* Keep Tailwind's source scan out of content/ — markdown there is rendered via
+   react-markdown + .prose-paper, not utility classes, and Office temp files
+   (~$*.docx, *.tmp) in content/papers/ otherwise crash the Turbopack build. */
+@source not "../../content";
+
 @theme {
   --color-cream: #faf6ef;
   --color-cream-deep: #f3ede0;
