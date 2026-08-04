@@ -363,7 +363,7 @@ Two alpha tables: the per-year cash-flow gap (PV discounted at $r$ = 7%) plus th
 
 *2030 — age 73.* Avoided RMD: \$133,259 / 26.5 = \$5,028. Principal: \$133,259 × 1.07 − \$5,028 = \$137,559. Reinvested: \$5,028 × $\rho$ = \$3,771 into each leg — equal in the arrival year, since prior balances compound at 1.07 ($r$) and 1.0665 ($\tilde r$) *before* the new deposit is added. (2031: 3,771 × 1.07 + 4,046 = \$8,081 vs. 3,771 × 1.0665 + 4,046 = \$8,068.)
 
-*2050 — first beneficiary year.* $D^{S}$ = \$262,347 × af(7%, 10) = \$262,347 × 0.142376 = \$37,340; $D^{U}$ = \$254,163 × af(6.65%, 10) = \$254,163 × 0.140086 = \$35,595; gap = \$1,748, constant across 2050–2059.
+*2050 — first beneficiary year.* $D^{S}$ = \$262,347 × af(7%, 10) = \$262,347 × 0.142378 = \$37,352; $D^{U}$ = \$254,163 × af(6.65%, 10) = \$254,163 × 0.140083 = \$35,604; gap = \$1,748, constant across 2050–2059.
 
 D.2's Phase-1 distributions apply the same $\varepsilon_t$ to each parallel balance.
 
