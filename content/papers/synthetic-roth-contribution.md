@@ -1,7 +1,7 @@
 # The Synthetic Roth Contribution: Isolating and Valuing the Wrapper-Migration Component of Outside-Funded Roth Conversions
 
 **Steven Cheshire, CFA**
-Draft: 2026-05-20
+Draft: 2026-08-09
 
 ---
 
