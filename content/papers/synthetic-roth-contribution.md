@@ -1,4 +1,4 @@
-# The Synthetic Roth Contribution: Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions
+# The Synthetic Roth Contribution: Isolating and Valuing the Wrapper-Migration Component of Outside-Funded Roth Conversions
 
 **Steven Cheshire, CFA**
 Draft: 2026-05-20
@@ -9,7 +9,7 @@ Draft: 2026-05-20
 
 Traditional accounting of Roth conversion value focuses on the arbitrage between the conversion-year tax rate $t_C$ and the time-weighted distribution tax rate $t_D$. This framing is incomplete. When the conversion tax is paid from outside the retirement account, after-tax dollars equal to the conversion tax migrate from a taxable wrapper into a tax-free wrapper, where they grow tax-free for the life of the account, including any beneficiary period. We name this effect the **Synthetic Roth Contribution** (SRC). Cheshire (2025, SSRN 5205840) introduced the concept, decomposing conversion-tax payback into SRC plus tax-rate-arbitrage components. Additional SRC alpha lies in tax-drag avoidance. We now formalize the SRC as a separable component with its own PV / FV / IRR identity, distinct from the rate-arbitrage Core.
 
-We prove the SRC's existence four independent ways: (1) algebraically, via the annuity-payment / present-value identity, showing $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$; (2) empirically under Fixed Annuity distributions, where the Outside − Inside per-year ATCF increment is \$1,695.86 in all 20 distribution years, matching the prediction to the cent; (3) empirically under RMD distributions, where varying per-year PV increments sum to within 4 cents of the SRC amount over the 30-year horizon; and (4) by decomposition, showing that the realized Outside/Inside FV difference equals the SRC value.
+We establish the SRC algebraically and illustrate it empirically: (1) algebraically, showing $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$ for any distribution schedule; (2) empirically under Fixed Annuity distributions, where the Outside − Inside per-year ATCF increment is \$1,695.86 in all 20 distribution years, matching the prediction to the cent; (3) empirically under RMD distributions, where varying per-year PV increments sum to within 4 cents of the SRC amount over the 30-year horizon; and (4) by decomposition, showing that the realized Outside/Inside FV difference equals the SRC value.
 
 Prior treatments — Reichenstein & Meyer (2017), McQuarrie & DiLellio (2023), Vanguard's 2025 BETR, Nalebuff/Haghani/White (2025) — recognize the wrapper migration but treat the migrated tax as a forgone cost. We formalize it as a separable asset with its own per-year cash flow and closed-form PV identity, and reconcile McQuarrie (2024)'s "live past 97 to break even" conclusion by incorporating the SRC into the NPV accounting.
 
@@ -21,15 +21,15 @@ When a Roth conversion's tax bill is paid from outside the retirement account, a
 
 The Roth-conversion literature frames value almost exclusively through the spread arbitrage between the conversion-year rate $t_C$ and the time-weighted distribution rate $t_D$. Funding source is sometimes acknowledged as "helpful" when paid from outside, but has not been formalized as a separable economic component with its own per-year cash flow, PV, FV, and IRR identity — distinct from, and additive to, the rate-arbitrage Core. That is the gap this paper closes.
 
-Cheshire (2025, SSRN 5205840) introduced the SRC framework; §1B summarizes. This paper extends with formal algebraic and empirical proofs, generalizes to RMD-method distributions, and engages directly with the closest related literature.
+Cheshire (2025, SSRN 5205840) introduced the SRC framework; §1B summarizes. This paper extends with a schedule-independent algebraic result and empirical illustrations, generalizes to RMD-method distributions, and engages directly with the closest related literature.
 
 **Contributions of this paper.**
 
 1. **Formal definition and separable decomposition.** The SRC is defined as the conversion-tax amount $K$ migrating from the bank account into the Roth wrapper under Outside funding, with its own PV / FV / IRR identity distinct from the rate-arbitrage Core, the Medicare-surcharge-reduction alpha, and the RMD tax-drag alpha. To our knowledge, this separable decomposition has not been published outside this framework.
 
-2. **Algebraic proof of the matched-rate PV identity.** When the discount rate equals the portfolio rate, $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$, via the annuity-payment / present-value identity (§4).
+2. **Algebraic proof of the matched-rate PV identity, for any distribution schedule.** When the discount rate equals the portfolio rate, $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$; the level-payment case follows in closed form from the annuity-payment / present-value identity (§4).
 
-3. **Empirical validation under both Fixed Annuity and RMD distributions.** Paired Inside/Outside scenarios confirm the algebraic identity — the constant \$1,695.86/year increment under FA (§5) and a per-year-varying but PV-canceling increment under RMD (§5B), closing the year-0 outflow to within 4 cents over a 30-year horizon.
+3. **Empirical illustration under both Fixed Annuity and RMD distributions.** Paired Inside/Outside scenarios confirm the algebraic identity — the constant \$1,695.86/year increment under FA (§5) and a per-year-varying but PV-canceling increment under RMD (§5B), closing the year-0 outflow to within 4 cents over a 30-year horizon.
 
 4. **Wrapper Migration Neutrality as a generalizing principle.** Pure wrapper migrations at constant household wealth impose no PV cost at the portfolio rate. The SRC is one instance of this principle (§3.5).
 
@@ -68,9 +68,9 @@ McQuarrie's framework offsets the tax payment against future RMD tax savings, di
 
 Two considerations arise.
 
-*First*, the loan analogy is backwards. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Under Inside funding, the IRS gets the same \$22K back with no out-of-pocket cash, confirming there was never a taxpayer loan. Settling a \$25K liability today repays the IRS loan while booking a \$3K profit — helpful and prudent.
+*First*, the loan framing runs in the opposite direction. The IRS effectively lends the deferred tax to the investor — interest-free, for potentially decades. Under Inside funding, the IRS gets the same \$22K back with no out-of-pocket cash, confirming there was never a taxpayer loan. Settling a \$25K liability today repays the IRS loan while booking a \$3K profit — helpful and prudent.
 
-*Second*, McQuarrie's framework misses the wrapper composition. The RMD-savings stream is identical under Inside funding — his framework does not distinguish the two funding paths. The *"\$22,000 paid out of pocket up front"* he calls a loan actually sits in the Roth. The NPV = 0 result obscures this wrapper migration.
+*Second*, McQuarrie's framework does not separately identify wrapper composition. The RMD-savings stream is identical under Inside funding — his framework does not distinguish the two funding paths. The *"\$22,000 paid out of pocket up front"* he calls a loan leaves an additional \$22,000 inside the Roth wrapper relative to Inside funding — an economic description of the difference between the two paths, not a claim about where the tax payment itself goes. The NPV = 0 result nets the migration against the payment rather than reporting it separately.
 
 | | Trad (pre-tax) | Roth (tax-free) | Bank (after-tax) | Total after-tax |
 |---|---|---|---|---|
@@ -84,7 +84,7 @@ Further considerations.
 
 *First*, conversion NPV is a positive or negative number, locked in at year 0. McQuarrie's Col 9, labeled "NPV-to-This-Point," runs from −\$22K at year 0 to +\$3K at distribution end — as if NPV accrues over time. But NPV is a year-0 scalar by definition; the decision was settled at conversion. Time only unfolds the consequences.
 
-*Second*, the "not all that helpful" conclusion is antithetical to the widely accepted desirability of moving dollars into a tax-free wrapper. The benefit holds even absent any rate-spread profit — applying equally to statutory Roth contributions and the Synthetic Roth Contribution.
+*Second*, the "not all that helpful" conclusion sits awkwardly with the widely accepted desirability of moving dollars into a tax-free wrapper. The benefit holds even absent any rate-spread profit — applying equally to statutory Roth contributions and the Synthetic Roth Contribution.
 
 **Other practitioner literature** — Kitces, Slott, Pfau, the Bogleheads NPV threads, and major brokerage research — advises paying conversion tax from outside funds when feasible but never separates the value as a standalone PV / FV / IRR bucket or states the PV identity. Stowe, Fodor, and Stowe (2013) — *Financial Analysts Journal* — note in their now-defunct recharacterization-option analysis that outside-funded tax raises terminal value by ~3 percentage points, but treat it as a parameter sensitivity. The formal decomposition is absent from this body of work.
 
@@ -204,7 +204,15 @@ The SRC is not the rate-arbitrage, $(t_D - t_C) \cdot C$, captured at conversion
 
 ## 4. Algebraic Proof: PV Equivalence at the Portfolio Rate
 
-At the portfolio discount rate, the SRC adds a cash-flow stream with zero NPV — nominal-cash-flow-positive over the distribution period.
+At the portfolio discount rate, the SRC adds a cash-flow stream with zero NPV — nominal-cash-flow-positive over the distribution period. The closed form below is the standard annuity relation $\mathrm{AF}(r,N) \cdot \mathrm{PVA}(r,N) = 1$ applied to level payments; the contribution is the decomposition the result supports, not the algebra itself.
+
+**Generality.** The result does not depend on the distribution schedule. Outside funding pays $K$ at year 0 and receives, in every subsequent year, the distributions that $K$ generates inside the Roth. Whatever schedule governs those distributions, the balance compounds at $r$ and is fully paid out over the horizon, so discounting the stream at $r$ returns exactly $K$. Hence
+
+$$
+\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = -K + K = 0
+$$
+
+for any distribution schedule. The fixed-annuity development below evaluates this for level payments, where $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ gives the same result in closed form; §5B confirms it under RMD, where payments vary year to year.
 
 Outside funding adds yearly Roth distributions of $K \cdot \mathrm{AF}(r, N)$ (fixed-annuity payment formula) with year-0 outflow of $-K$. The Outside-vs-Inside ATCF difference is exactly $K \cdot \mathrm{AF}(r, N)$ in each of the $N$ distribution years.
 
@@ -226,9 +234,11 @@ The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity 
 
 **Scope of the PV identity:** It is a property of the same matched-rate framework employed by McQuarrie (2024), Vanguard / Passman (2025) BETR, and Reichenstein & Meyer (2017) — not an artifact of discount choice. If a retiree's discount rate $\rho$ differs from $r$, the identity breaks ($\rho > r$ → negative SRC PV; $\rho < r$ → positive), but most risk-averse retirees have $\rho \le r$, keeping the SRC neutral-to-favorable.
 
+**Zero present value and the meaning of "asset."** The distinction is between present value and *net* present value. The SRC's distribution stream has a present value of exactly $K$: under FA, \$1,695.86 × $\mathrm{PVA}(7\%, 20)$ = \$17,965.96; under RMD, the varying increments discount to the same \$17,965.96 (§5B.3). That stream is the asset. Its *net* present value is zero because the household paid $K$ to acquire it — equivalently, its internal rate of return is exactly $r$. Zero NPV therefore records that the SRC was acquired at fair value, not that nothing was acquired: the conversion-tax outlay is a purchase, not a cost. Two consequences follow. Value above par arises only from the wrapper differential (§6), which is why $d$ carries the entire economic benefit and why the alpha vanishes at $d = 0$. And because the outlay is a purchase rather than an expense, there is no sum to recoup — the break-even-age framing that follows from treating $K$ as a cost does not apply.
+
 ---
 
-## 5. Empirical Proof: Paired Inside / Outside Scenarios (Fixed Annuity)
+## 5. Empirical Illustration: Paired Inside / Outside Scenarios (Fixed Annuity)
 
 We compare Inside vs Outside simulation runs using identical inputs.
 
@@ -246,6 +256,10 @@ We compare Inside vs Outside simulation runs using identical inputs.
 - No other taxable income in conversion or distribution years
 
 **Conversion (both scenarios):** $C$ = \$123,850.00, fills through 22% cumulative bracket. $K$ = \$17,966.00 ($t_C = 14.51\%$). Time-weighted $t_D = 22.39\%$. Annuity-factor multiple = 1.88786.
+
+**Scope of what is verifiable here.** $K$ is taken as an input to the SRC analysis. Every SRC-specific result below — the constant per-year increment, the present-value identity, the payout multiple, and the drag-avoidance alpha — follows from $K$, $r$, $N$ and $d$ alone, and is reproducible by hand from those four values, together with the IRS Uniform Lifetime divisors in the RMD case. The surrounding ATCF figures, and the derivation of $K$ from $C$ at $t_C$, are output of a full tax model computing bracket fill, Social Security taxation and Medicare surcharges; that model is not the subject of this paper, and its parameterization is not required to verify any claim made here.
+
+**Rounding.** Dollar figures are reported to the cent where they participate in a displayed reconciliation (§5.3, §5B.3, §6) and to the nearest dollar elsewhere.
 
 
 ### 5.1 Year-by-Year ATCF Deltas — Inside vs Outside
@@ -285,7 +299,7 @@ where $\mathrm{AF}(7\%, 20) = 0.07\,/\,(1 - 1.07^{-20}) = 0.094393$.
 
 ### 5.3 The PV Identity
 
-The Outside − Inside (PV @ 7%) column sums to approximately zero across all 21 rows — empirical evidence of the algebraic identity proved in Section 4. The −\$17,966 year-0 outflow is offset by the 20-year constant \$1,696 distribution stream PV:
+The Outside − Inside (PV @ 7%) column sums to approximately zero across all 21 rows — empirical confirmation of the algebraic identity proved in Section 4. The −\$17,966 year-0 outflow is offset by the 20-year constant \$1,696 distribution stream PV:
 
 $$
 \begin{aligned}
@@ -363,7 +377,7 @@ $$
 -\$17{,}966.00 \;+\; \$17{,}965.96 \;=\; -\$0.04
 $$
 
-A four-cent rounding residual. **The SRC's algebraic identity is empirically confirmed under RMD distributions**, despite varying per-year differentials from \$831 to \$2,596 for the owner plus a flat \$3,901 for the beneficiary.
+A four-cent rounding residual. **The general result of §4 is confirmed empirically under RMD distributions**, despite varying per-year differentials from \$831 to \$2,596 for the owner plus a flat \$3,901 for the beneficiary.
 
 Unlike FA's flat \$1,695.86 per-year differential (§5.3), RMD's varies as the divisor changes annually. Across both methods, the SRC's PV at the portfolio rate equals exactly zero.
 
@@ -391,10 +405,25 @@ This alpha accrues only under Outside funding.
 **Mapping to Vanguard's BETR.** Passman, Wong & Dickson (2025) parameterize our same wrapper-drag wedge via a 20-year cumulative outside-account multiple $M'$ relative to the Roth multiple $M$. The relationship to the SRC drag fraction is direct:
 
 $$
-d = 1 - \frac{(M')^{1/n}}{M^{1/n}}
+d = 1 - \frac{(M')^{1/n} - 1}{M^{1/n} - 1}
 $$
 
-For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially higher tax-inefficiency than this paper's $d = 5\%$ baseline (corresponding to $M' \approx 2.74$).
+For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially higher tax-inefficiency than this paper's $d = 5\%$ baseline (corresponding to $M' \approx 2.84$).
+
+**Sensitivity to $d$.** The Fixed Annuity case admits a closed form: the annual Outside − Inside gap is $K \cdot [\mathrm{AF}(r, N) - \mathrm{AF}(\tilde{r}, N)]$, and its present value is that gap times $\mathrm{PVA}(r, N)$. With $K = \$17{,}966$, $r = 7\%$, $N = 20$:
+
+| $d$ | $\tilde{r}$ | Annual gap | $\alpha_{SRC}$ (PV) | Nominal, 20 yr |
+|---:|---:|---:|---:|---:|
+| 0% | 7.00% | \$0.00 | \$0 | \$0 |
+| 2.5% | 6.83% | \$23.00 | \$244 | \$460 |
+| 5% *(baseline)* | 6.65% | \$45.85 | \$486 | \$917 |
+| 10% | 6.30% | \$91.14 | \$966 | \$1,823 |
+| 15% | 5.95% | \$135.86 | \$1,439 | \$2,717 |
+| 37.5% | 4.38% | \$329.63 | \$3,492 | \$6,593 |
+
+The alpha is very nearly proportional to $d$, so a planner substituting a household-specific drag rate can rescale rather than re-simulate. At $d = 0$ it is exactly zero: with no drag, the funding choice is a matter of indifference on wrapper grounds, and the decomposition reports that rather than concealing it.
+
+**Step-up in basis.** Two features of the taxable counterfactual are not modeled above. Funding the conversion from outside assets may require selling appreciated holdings, realizing gains in the conversion year — a year-0 cost $d$ does not capture. And dollars left in taxable and held until death receive a basis step-up under §1014, so their appreciation escapes income tax entirely, a benefit forgone when those dollars go to the IRS instead. The $d$ used here measures recurring tax on dividends, interest and turnover distributions, which a step-up does not erase; but for a bequest-motivated household holding low-yield, low-turnover assets in taxable, that recurring drag is small and the forgone step-up can outweigh the SRC alpha. Outside funding is not automatically preferred for such households.
 
 ---
 
@@ -414,13 +443,13 @@ Once the conversion decision is made, Outside funding is simply an added capital
 
 ## 8. Conclusion
 
-The Synthetic Roth Contribution is the economic equivalent of a Roth contribution that occurs when conversion tax is paid from outside the retirement account. Cheshire (2025, SSRN 5205840) introduced the concept; this paper proves it four independent ways:
+The Synthetic Roth Contribution is the economic equivalent of a Roth contribution that occurs when conversion tax is paid from outside the retirement account. Cheshire (2025, SSRN 5205840) introduced the concept; this paper establishes it algebraically and illustrates it under two distribution schedules:
 
 1. **Algebraic.** The annuity-payment / present-value identity proves that when the discount rate equals the portfolio rate, the Outside vs Inside PV difference is exactly zero — yet Outside funding creates a constant $K \cdot \mathrm{AF}(r, N)$ of additional cash flow in every distribution year.
 
-2. **Empirical (FA case).** Paired Inside FA and Outside FA scenarios confirm a constant **\$1,695.86/year** increment matching the algebraic prediction to the cent, with identical **\$9,766 PV totals**. SRC (FV) = \$33,917.27 = $K \times$ annuity-factor multiple (§5).
+2. **Illustration (FA case).** Paired Inside FA and Outside FA scenarios confirm a constant **\$1,695.86/year** increment matching the algebraic prediction to the cent, with identical **\$9,766 PV totals**. SRC (FV) = \$33,917.27 = $K \times$ annuity-factor multiple (§5).
 
-3. **Empirical (RMD case — generalization).** Under RMD, the per-year (Outside − Inside) increment varies but its PV sums to **+\$17,965.96**, within 4 cents of $K$. SRC (FV) = \$71,229.59 matches the 30-year nominal sum to \$0.13 (§5B).
+3. **Illustration (RMD case — generalization).** Under RMD, the per-year (Outside − Inside) increment varies but its PV sums to **+\$17,965.96**, within 4 cents of $K$. SRC (FV) = \$71,229.59 matches the 30-year nominal sum to \$0.13 (§5B).
 
 4. **Decompositional.** The realized FV difference between Outside and Inside paths cannot be reconciled without including the SRC term as a separable component alongside spread arbitrage, Medicare-surcharge savings, and reduced-RMD tax-drag.
 
@@ -514,7 +543,3 @@ Stowe, D. L., Fodor, A., & Stowe, J. D. (2013). *The Value and Use of the IRA Re
 - **Conversion alpha components — identical for Inside and Outside** — confirm funding-source independence under each distribution method. Alphas: Tax-Rate Spread, Medicare-Surcharge Savings, and RMD Tax-Drag.
 - **Total ATCF (FV) differs between scenarios by the SRC's lifetime payout.** Under FA: Outside \$65,854 = Inside \$31,937 + SRC \$33,917.
 - **Cash-Flow IRR** for Outside (15.0% FA, 11.5% RMD) exceeds the 7% portfolio rate because the lifetime distributions include the conversion's alpha — rate-arbitrage spread, Medicare savings, RMD tax-drag savings, and SRC tax-drag avoidance. Inside has no out-of-pocket cash; IRR is undefined.
-
----
-
-*Draft prepared 2026-05-20. Empirical results produced by the RothGPT calculation engine.*

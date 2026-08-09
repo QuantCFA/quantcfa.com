@@ -21,11 +21,11 @@ export const papers: Paper[] = [
     title:
       "The Synthetic Roth Contribution",
     subtitle:
-      "Empirical and Algebraic Proofs of a Hidden Component in Outside-Funded Roth Conversions",
+      "Isolating and Valuing the Wrapper-Migration Component of Outside-Funded Roth Conversions",
     date: "May 2026 · Posted on SSRN May 20, 2026",
     status: "Working paper",
     keyIdea:
-      "When you pay Roth conversion tax from outside the retirement account, you've quietly made a Roth contribution equal to the tax — bypassing the IRS contribution limit. This paper proves it four ways.",
+      "When you pay Roth conversion tax from outside the retirement account, you've quietly made a Roth contribution equal to the tax — bypassing the IRS contribution limit. This paper isolates that component and values it.",
     external: {
       label: "Read on SSRN #6772118",
       href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772118",
