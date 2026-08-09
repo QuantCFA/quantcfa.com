@@ -30,7 +30,6 @@ export const papers: Paper[] = [
       label: "Read on SSRN #6772118",
       href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772118",
     },
-    submittedTo: "Journal of Financial Planning",
     file: "synthetic-roth-contribution.md",
   },
   {
