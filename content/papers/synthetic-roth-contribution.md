@@ -56,7 +56,7 @@ Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss 
 
 Does Jill understand that her advisor's assumed taxable multiple of 2 (vs Roth's 3) implies a 37.5% annual tax rate on investment returns (§6) — implausibly high for most investors?
 
-Vanguard frames the tax payment as a cost rather than a migrated asset.
+Vanguard frames the tax payment as a cost rather than wrapper migration.
 
 **Nalebuff, Haghani, & White (2025)** — *Size Matters in the Roth IRA Conversion Decision*, Elm Wealth (June 18, 2025) — is a practitioner article on wrapper migration. Their "Reason 1" frames outside-payment as "effectively making the IRA more than 50% bigger" and states (without derivation) a closed-form $\tau_1 \cdot \tau_2 \cdot \mathrm{Size} \cdot \mathrm{growth}$ heuristic. The framing substantively aligns with the SRC concept, but the formula collapses ordinary-income and capital-gains rates into one term and gives a single FV result rather than a year-by-year cash-flow stream with its own IRR and PV identity. The article cites no prior work on the topic. Post-dates Cheshire (2025); cited as parallel evidence the concept is being independently surfaced.
 
@@ -109,7 +109,7 @@ Further considerations.
 **Two scenarios:**
 
 - **Inside funding:** Tax $K$ is settled from inside the Traditional account (a separate pre-tax distribution in the conversion year). The Roth receives $C - K$. No taxable-account dollars are spent.
-- **Outside funding:** Tax $K$ is settled from a taxable account in the conversion year. The Roth receives the $C - K$ converted amount plus the $K$ tax payment.
+- **Outside funding:** Tax $K$ is settled from a taxable account in the conversion year. The Roth receives the $C - K$ converted amount plus the $K$ tax payment amount.
 
 In both scenarios the Traditional balance is reduced by $C$. The two paths differ only in the source of the $K$ tax payment: a separate inside-the-Traditional pre-tax distribution (Inside funding) or a Bank account distribution (Outside funding).
 
@@ -151,7 +151,7 @@ The \$22,000 settlement can be sourced two ways:
 
 **Option A — Inside funding.** The settlement is paid from inside the Traditional account. The Traditional gross is reduced by $C$ = \$100,000: \$78,000 of converted principal moves to Roth (the Traditional conversion amount net of the distributed conversion tax amount), and the \$22,000 distribution is paid to the IRS. The \$22,000 bank account asset is untouched.
 
-**Option B — Outside funding.** The settlement is paid from the bank account. The Traditional gross is reduced by $C$ = \$100,000: the \$78,000 converted principal and the \$22,000 paid to the IRS from the bank account together leave \$100,000 in the Roth and \$0 in the bank account.
+**Option B — Outside funding.** The settlement is paid from the bank account. The Traditional gross is reduced by $C$ = \$100,000: the \$78,000 converted principal and the \$22,000 amount paid to the IRS from the bank account together leave \$100,000 in the Roth and \$0 in the bank account.
 
 Both options settle the same deferred-tax liability and capture the same \$3,000 rate-arbitrage gain, leaving the same \$100,000 total household wealth:
 
