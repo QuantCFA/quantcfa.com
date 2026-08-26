@@ -22,7 +22,7 @@ export const papers: Paper[] = [
       "The Synthetic Roth Contribution",
     subtitle:
       "Isolating and Valuing the Wrapper-Migration Component of Outside-Funded Roth Conversions",
-    date: "Revised August 9, 2026 · Posted on SSRN May 20, 2026",
+    date: "Revised August 26, 2026 · Posted on SSRN May 20, 2026",
     status: "Working paper",
     keyIdea:
       "When you pay Roth conversion tax from outside the retirement account, you've quietly made a Roth contribution equal to the tax — bypassing the IRS contribution limit. This paper isolates that component and values it.",

@@ -1,7 +1,7 @@
 # The Synthetic Roth Contribution: Isolating and Valuing the Wrapper-Migration Component of Outside-Funded Roth Conversions
 
 **Steven Cheshire, CFA**
-Draft: 2026-08-09
+Draft: 2026-08-26
 
 ---
 
@@ -11,7 +11,7 @@ Traditional accounting of Roth conversion value focuses on the arbitrage between
 
 We establish the SRC algebraically and illustrate it empirically: (1) algebraically, showing $\mathrm{PV}_r(\mathrm{Outside} - \mathrm{Inside}) = 0$ for any distribution schedule; (2) empirically under Fixed Annuity distributions, where the Outside − Inside per-year ATCF increment is \$1,695.86 in all 20 distribution years, matching the prediction to the cent; (3) empirically under RMD distributions, where varying per-year PV increments sum to within 4 cents of the SRC amount over the 30-year horizon; and (4) by decomposition, showing that the realized Outside/Inside FV difference equals the SRC value.
 
-Prior treatments — Reichenstein & Meyer (2017), McQuarrie & DiLellio (2023), Vanguard's 2025 BETR, Nalebuff/Haghani/White (2025) — recognize the wrapper migration but treat the migrated tax as a forgone cost. We formalize it as a separable economic component with its own per-year cash flow and closed-form PV identity, and show how separately accounting for the SRC changes the interpretation of McQuarrie (2024)'s "live past 97 to break even" conclusion by incorporating the SRC into the NPV accounting.
+Prior treatments — McQuarrie & DiLellio (2023), Vanguard's 2025 BETR, Nalebuff/Haghani/White (2025) — recognize the wrapper migration but treat the migrated tax as a forgone cost. Reichenstein & Meyer (2017) come closest, pricing the wrapper effect as a drag differential without isolating it. We formalize it as a separable economic component with its own per-year cash flow and closed-form PV identity, and show how separately accounting for the SRC changes the interpretation of McQuarrie (2024)'s "live past 97 to break even" conclusion by incorporating the SRC into the NPV accounting.
 
 ---
 
@@ -19,7 +19,7 @@ Prior treatments — Reichenstein & Meyer (2017), McQuarrie & DiLellio (2023), V
 
 When a Roth conversion's tax bill is paid from outside the retirement account, after-tax dollars equal to that tax migrate from a taxable wrapper into a tax-free one, where they compound untaxed for the life of the account and any beneficiary period. We call this transfer the **Synthetic Roth Contribution** (SRC). Pay the same tax from inside the account and no such migration occurs — the Roth holds only the converted balance net of tax. The two funding paths produce materially different end-of-life wealth, and the gap is not the spread arbitrage. It is the SRC.
 
-The Roth-conversion literature frames value almost exclusively through the spread arbitrage between the conversion-year rate $t_C$ and the time-weighted distribution rate $t_D$. Funding source is sometimes acknowledged as "helpful" when paid from outside, but has not been formalized as a separable economic component with its own per-year cash flow, PV, FV, and IRR identity — distinct from, and additive to, the rate-arbitrage Core. That is the gap this paper closes.
+The Roth-conversion literature frames value almost exclusively through the spread arbitrage between the conversion-year rate $t_C$ and the time-weighted distribution rate $t_D$. Funding source is treated variously as "helpful," as a forgone cost, or — in the closest prior work — as a drag differential between wrappers, but has not been formalized as a separable economic component with its own per-year cash flow, PV, FV, and IRR identity, distinct from and additive to the rate-arbitrage Core. That is the gap this paper closes.
 
 Cheshire (2025, SSRN 5205840) introduced the SRC framework; §1B summarizes. This paper extends with a schedule-independent algebraic result and empirical illustrations, generalizes to RMD-method distributions, and engages directly with the closest related literature.
 
@@ -37,11 +37,11 @@ Cheshire (2025, SSRN 5205840) introduced the SRC framework; §1B summarizes. Thi
 
 ## 1B. Prior Literature
 
-**Reichenstein & Meyer (2017)** — *Valuing Roth Conversion and Recharacterization Options*, Journal of Financial Planning 30(11): 48–56 — express the value of paying conversion tax from outside funds as $tV(1+r)^n - tV(1+R)^n$, where $tV$ = conversion tax ($K$), $r$ = tax-free Roth return, $R$ = after-tax bank return, $n$ = horizon. They observe: *"Strategy 3 has tV more dollars growing at the pre-tax return of r in the Roth IRA."*
+**Reichenstein & Meyer (2017)** — *Valuing Roth Conversion and Recharacterization Options*, Journal of Financial Planning 30(11): 48–56 — compare three strategies: (1) retaining funds in the TDA, (2) converting and paying the tax from the Roth, and (3) converting and paying the tax from a taxable account. Each is valued as a single lump sum withdrawn in Year $n+2$, with $n$ arbitrary.
 
-That observation *is* the SRC mechanism. The term $tV(1+r)^n$ is the migrated tax dollars compounding tax-free in the Roth — the future value of the SRC position, PV = $K$ at the portfolio rate (§4). But the framework immediately nets it against the bank's forgone growth $tV(1+R)^n$, leaving only the much smaller tax-drag residual; at $R = r$ the expression collapses to zero with no Outside benefit. Reichenstein & Meyer report the residual — the tax-drag alpha — without recognizing the wrapper migration as a separable Roth-equivalent contribution.
+They state the mechanism explicitly: *"At the end of Year 1, Strategy 3 has tV more dollars growing at the pre-tax return of r in the Roth IRA and tV less dollars growing at the after-tax return of R in the taxable account compared to Strategy 2."* Writing $tV$ for the conversion tax ($K$ here), $r$ for the pre-tax return and $R$ for the after-tax return on taxable assets, the gap between Strategies 2 and 3 is $tV(1+r)^n - tV(1+R)^n$ — the future value of the drag-avoidance alpha priced in §6. They go further: treating a TDA as a partnership in which the investor owns $(1-t_n)V$ and the government the remainder, they observe that outside funding leaves the full $V$ growing tax-exempt, and conclude that it *"can be preferable to Strategy 1 even if the conversion year tax rate exceeds the withdrawal year tax rate."*
 
-Their drag-differential expression is real and prior — not a decomposition of outside-funded conversion value, but a tax-drag alpha calculation that assumes $r > R$. The SRC framework treats it as a special case of the §6 tax-drag-avoidance alpha.
+This is the closest prior account of the SRC's economics, and their models already contain the separation this paper formalizes: rate arbitrage on the converted principal, and a wrapper effect on the tax dollars, summing to the total advantage. What R&M do not do is price the second term as a component in its own right — no present value, no rate of return, no name. A terminal lump sum leaves nothing to price: the term surfaces only as a difference between two ending balances, netted inside an expression that vanishes at $R = r$. This paper takes it as the subject — valuing the migration at $K$ at the portfolio rate under any distribution schedule (§4), pricing the drag differential separately (§6), and separating the funding decision from the conversion decision (§7).
 
 **McQuarrie & DiLellio (2023)** — *The Arithmetic of Roth Conversions*, Journal of Financial Planning, May 2023 — explicitly recognize the migrated tax dollars as *"the invisible, but very real, future value of the [tax] sent to the IRS,"* then subtract that grown value from the Outside Roth as a forgone cost. Year 3: \$100K × 1.10³ − \$25K × 1.085³ = \$133,100 − \$31,932 = \$101,168 vs Inside's \$99,825 → \$1,343 wedge (extends to \$40,386 at year 20). The wedge is the tax-drag alpha. Economically, the tax payment sits in the Roth growing tax-free; M&D's math shows it only as a subtracted cost.
 
@@ -53,8 +53,6 @@ SRC (alternative):      $300K = $300K × (1 − BETR) + $70K → 23.3%
 ```
 
 Conversion is recommended since 24% > 23.3%, despite an immediate \$11,000 loss of wealth (= \$100K × (24% - 35%)).
-
-Does Jill understand that her advisor's assumed taxable multiple of 2 (vs Roth's 3) implies a 37.5% annual tax rate on investment returns (§6) — implausibly high for most investors?
 
 Vanguard frames the tax payment as a cost rather than wrapper migration.
 
@@ -230,7 +228,7 @@ $$
 
 The cancellation $\mathrm{AF}(r, N) \cdot \mathrm{PVA}(r, N) = 1$ is an annuity identity. When discount and portfolio rates are equal, the **Outside-funded SRC produces zero net present value.** However, the SRC's K dollars generate $K \cdot \mathrm{AF}(r, N) \cdot N = 1.888K$ in nominal lifetime payouts (at $r = 7\%$, $N = 20$) — K plus its time-value return.
 
-**The SRC's lasting value:** $K$ compounds tax-free at $r$ instead of suffering drag at $r_d$, generating $K \cdot (r - r_d)$ in annual tax-drag-avoidance alpha (Property 2; §6).
+**The SRC's lasting value:** $K$ compounds tax-free at $r$ instead of suffering drag at $r_d$. The resulting tax-drag-avoidance alpha is the present value of the distribution gap that differential opens over the schedule (Property 2; §6).
 
 **Scope of the PV identity:** It is a property of the same matched-rate framework employed by McQuarrie (2024), Vanguard / Passman (2025) BETR, and Reichenstein & Meyer (2017) — not an artifact of discount choice. If a retiree's discount rate $\rho$ differs from $r$, the identity breaks ($\rho > r$ → negative SRC NPV; $\rho < r$ → positive).
 
@@ -402,26 +400,7 @@ Under Outside funding, $K$ compounds at the Roth's $r$ instead of the taxable ac
 
 This alpha accrues only under Outside funding.
 
-**Mapping to Vanguard's BETR.** Passman, Wong & Dickson (2025) parameterize our same wrapper-drag wedge via a 20-year cumulative outside-account multiple $M'$ relative to the Roth multiple $M$. The relationship to the SRC drag fraction is direct:
-
-$$
-d = 1 - \frac{(M')^{1/n} - 1}{M^{1/n} - 1}
-$$
-
-For Vanguard's $M = 3$, $M' = 2$, $n = 20$: $d = 37.5\%$ — implicitly assuming a substantially higher tax-inefficiency than this paper's $d = 5\%$ baseline (corresponding to $M' \approx 2.84$).
-
-**Sensitivity to $d$.** The Fixed Annuity case admits a closed form: the annual Outside − Inside gap is $K \cdot [\mathrm{AF}(r, N) - \mathrm{AF}(\tilde{r}, N)]$, and its present value is that gap times $\mathrm{PVA}(r, N)$. With $K = \$17{,}966$, $r = 7\%$, $N = 20$:
-
-| $d$ | $\tilde{r}$ | Annual gap | $\alpha_{SRC}$ (PV) | Nominal, 20 yr |
-|---:|---:|---:|---:|---:|
-| 0% | 7.00% | \$0.00 | \$0 | \$0 |
-| 2.5% | 6.83% | \$23.00 | \$244 | \$460 |
-| 5% *(baseline)* | 6.65% | \$45.85 | \$486 | \$917 |
-| 10% | 6.30% | \$91.14 | \$966 | \$1,823 |
-| 15% | 5.95% | \$135.86 | \$1,439 | \$2,717 |
-| 37.5% | 4.38% | \$329.63 | \$3,492 | \$6,593 |
-
-The alpha is very nearly proportional to $d$, so a planner substituting a household-specific drag rate can rescale rather than re-simulate. At $d = 0$ it is exactly zero: with no drag, the funding choice is a matter of indifference on wrapper grounds, and the decomposition reports that rather than concealing it.
+**Sensitivity to $d$.** The Fixed Annuity case admits a closed form: the annual Outside − Inside gap is $K \cdot [\mathrm{AF}(r, N) - \mathrm{AF}(\tilde{r}, N)]$, and its present value is that gap times $\mathrm{PVA}(r, N)$. Alpha scales close to linearly in $d$, so a different drag assumption can be applied by proportion. At $d = 0$ it is exactly zero: with no drag, the funding choice is a matter of indifference on wrapper grounds, and the separable decomposition reports that rather than concealing it.
 
 **Step-up in basis.** Two features of the taxable counterfactual are not modeled above. Funding the conversion from outside assets may require selling appreciated holdings, realizing gains in the conversion year — a year-0 cost $d$ does not capture. And dollars left in taxable and held until death receive a basis step-up under §1014, so their appreciation escapes income tax entirely, a benefit forgone when those dollars go to the IRS instead. The $d$ used here measures recurring tax on dividends, interest and turnover distributions, which a step-up does not erase; but for a bequest-motivated household holding low-yield, low-turnover assets in taxable, that recurring drag is small and the forgone step-up can outweigh the SRC alpha. Outside funding is not automatically preferred for such households.
 
@@ -433,7 +412,7 @@ The alpha is very nearly proportional to $d$, so a planner substituting a househ
 
 *At age 59½+:* both funding paths are available, and the household's decision separates into two:
 
-- **Conversion (yes/no, how much):** driven by the sum of PV alpha components that don't depend on funding source — the rate-arbitrage Core (spread on converted principal), the Medicare-surcharge-reduction alpha (not decomposed here), and the RMD tax-drag alpha (drag avoided on reinvested RMDs the conversion eliminates). Each follows from the conversion event itself, not from how the tax is paid. Convert if the sum is PV-positive.
+- **Conversion (yes/no, how much):** driven by the sum of PV alpha components that don't depend on funding source — the rate-arbitrage Core (spread on converted principal), the Medicare-surcharge-reduction alpha (not decomposed here), and the RMD tax-drag alpha — drag avoided on reinvested RMDs the conversion eliminates (Cheshire, Tax-Drag 2026). Each follows from the conversion event itself, not from how the tax is paid. Convert if the sum is PV-positive.
 
 - **Funding (Inside vs Outside), conditional on conversion:** Outside relocates $K$ from a taxable wrapper compounding at $r_d$ to a tax-free wrapper compounding at $r$ — the IRS allows this conversion-tax investment (SRC) that others miscast as a cost. The payoff is the tax-drag-avoidance alpha of §6 (\$1,021 PV in the Outside RMD scenario), added to the conversion alpha sum to give total Outside-conversion alpha.
 
@@ -469,13 +448,15 @@ The SRC's lasting value emerges not from PV at the portfolio rate (which is zero
 
 Cheshire, S. (2025). *Roth Conversion Valuation & Mechanics*. SSRN Working Paper 5205840 (April 4, 2025). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5205840
 
+Cheshire, S. (2026). *Quantifying Tax-Drag Shelter Benefits in Roth Conversions*. SSRN Working Paper 6879378. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6879378
+
 Nalebuff, B., Haghani, V., & White, J. (2025). *Size Matters in the Roth IRA Conversion Decision*. Elm Wealth Research Note (June 18, 2025). Republished by Advisor Perspectives, July 14, 2025. https://elmwealth.com/roth-conversion/
 
 McQuarrie, E. F. (2024). *Net Present Value Analysis of Roth Conversions*. Journal of Financial Planning 37(7/9): 76–90.
 
 McQuarrie, E. F., & DiLellio, J. (2023). *The Arithmetic of Roth Conversions*. Journal of Financial Planning, May 2023.
 
-Passman, A. (2025). *A "BETR" Approach to Roth Conversions*. Vanguard Research (July 2025). https://corporate.vanguard.com/content/dam/corp/research/pdf/a_betr_approach_to_roth_conversions_072025.pdf
+Passman, J. M., Wong, B. C., & Dickson, J. M. (2025). *A "BETR" Approach to Roth Conversions*. Vanguard Research (July 2025). https://corporate.vanguard.com/content/dam/corp/research/pdf/a_betr_approach_to_roth_conversions_072025.pdf
 
 Reichenstein, W., & Meyer, W. (2017). *Valuing Roth Conversion and Recharacterization Options*. Journal of Financial Planning 30(11): 48–56.
 
