@@ -36,7 +36,7 @@ export const papers: Paper[] = [
     slug: "tax-drag-shelter",
     title: "Quantifying Tax-Drag Shelter Benefits in Roth Conversions",
     subtitle: "RMD Reduction and the Hidden Roth Contribution",
-    date: "Revised August 3, 2026 · Posted on SSRN June 4, 2026",
+    date: "Revised August 31, 2026 · Posted on SSRN June 4, 2026",
     status: "Working paper",
     keyIdea:
       "Quantifies the two Tax-Drag Shelter alphas in a Roth conversion: RMD-reduction (from the Convert decision) and SRC (from the Outside-settlement decision).",
