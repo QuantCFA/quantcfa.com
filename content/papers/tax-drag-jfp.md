@@ -97,7 +97,7 @@ Applying one $t_D$ to the stream is an approximation because each avoided distri
 
 ![](figures/rmd-alpha-chart.png)
 
-**Figure 2.** RMD-reduction alpha. Avoided RMDs reinvest in parallel sheltered and taxable balances during Phase 1; both distribute as a 10-year fixed annuity in Phase 2. The after-tax principal $P = C(1-t_D)$ = \$96,359 on a \$121,800 conversion is applied to the divisor-based deposit schedule; Appendix B.3 measures the approximation. Cumulative drag-avoidance benefit reaches $\alpha_{RMD}^{t_D}$ = \$2,439.
+**Figure 2.** RMD-reduction alpha. Avoided RMDs reinvest in parallel sheltered and taxable balances during Phase 1; both distribute as a 10-year fixed annuity in Phase 2. The after-tax principal $P = C(1-t_D)$ = \$96,359 — the \$121,800 conversion net of $t_D$ = 20.89% — is applied to the divisor-based deposit schedule; Appendix B.3 measures the approximation. Cumulative drag-avoidance benefit reaches $\alpha_{RMD}^{t_D}$ = \$2,439.
 
 Both figures show balances depleting to zero — the SECURE-mandated 10-year beneficiary depletion closes the schedule, making both alphas present values rather than breakevens (with an IRR for SRC alpha). SRC alpha requires no $t_D$ approximation; RMD alpha uses the one assessed in Appendix B.3.
 
@@ -336,8 +336,7 @@ $$P^{*}_{RMD} \;=\; \sum_{t} \frac{\Delta D_t - \Delta\mathrm{Tax}_t}{(1+r)^{t}}
 
 When deposits span the full displaced-distribution schedule, $P^{*}_{RMD} = C(1-t_D)$: the PV of displaced distributions equals $C$, and $t_D$ is their PV-weighted effective tax rate.
 
-Equal principal does not imply equal alpha: earlier deposits receive longer shelter, so the stream's yearly shape determines its multiplier. 
-The exact and scalar constructions can therefore have the same time-zero principal but different RMD-reduction alphas. The approximation substitutes the pre-tax distribution shape for the after-tax shape. The scalar and exact alphas coincide if yearly displaced tax rates are constant; when rates vary, their different yearly deposit patterns produce different alphas.
+Equal principal does not imply equal alpha: earlier deposits receive longer shelter, so the stream's yearly shape determines its multiplier. The approximation substitutes the pre-tax distribution shape for the after-tax shape, and the two coincide only if yearly displaced tax rates are constant.
 
 **Table B1. Measured error.** Reports $\alpha_{RMD}^{t_D}$ against $\alpha_{RMD}^{\text{exact}}$ for the cumulative and incremental conversions in Tables 1 and 2 (§5). At the optimal 22% fill, the scalar estimate is \$2,439 against \$2,502 exact cumulatively and \$1,115 against \$1,149 incrementally:
 
