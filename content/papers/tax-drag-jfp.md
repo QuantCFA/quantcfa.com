@@ -3,7 +3,7 @@
 **RMD Reduction and the Hidden Roth Contribution**
 
 Steven Cheshire, CFA  
-cheshiresteven@gmail.com | Draft: September 18, 2026
+cheshiresteven@gmail.com | Draft: September 22, 2026
 
 ---
 
@@ -14,20 +14,18 @@ cheshiresteven@gmail.com | Draft: September 18, 2026
 - **SRC alpha** arises only under Outside-funded conversions. Paying conversion tax from taxable assets migrates after-tax dollars into the Roth wrapper, creating a Synthetic Roth Contribution. The benefit is the wrapper-migration differential between Roth and taxable growth, not the full future value of the conversion-tax dollars. *(§4.1, App A.1)*
 - Both alphas use $\alpha = P\mu$, where $P$ is sheltered principal and $\mu$ the per-dollar PV of the sheltered-vs-taxable gap. For SRC alpha, $P = K$. For RMD alpha, $P = C(1-t_D)$, a scalar approximating the yearly shape of after-tax avoided RMDs. The SECURE Act's mandated beneficiary terminus closes the cash-flow stream and permits finite PV measurement. *(§3, App A, B.3)*
 - In the worked example, RMD-reduction alpha (\$2,439) exceeds SRC alpha (\$1,480) at the 22% fill, because its sheltered principal exceeds the conversion-tax principal. The margin narrows as the conversion deepens: on the 22% bracket increment, the two are near parity. *(§5)*
-- Tax-drag shelter can be attributed separately within the conversion IRR, letting planners distinguish drag avoidance from rate arbitrage. *(§4.3, App C)*
+- Tax-drag shelter contributes to the Outside-funded conversion IRR through RMD-reduction alpha's yearly counterfactual gaps and through the shelter benefit embedded in the SRC's sheltered return. *(§4.3, App C)*
 - TDS alphas are positive whenever tax drag is positive, so a conversion can create value when rate arbitrage is negative. **Planners weighing only rate arbitrage may reject beneficial conversions:** in the worked example the 22% bracket increment has −\$918 of rate arbitrage but is worth +\$1,199 once Outside-funded drag is priced, moving the optimal bracket fill from \$66,500 to \$121,800. *(§5, §6)*
 
 ---
 
 ## 1. Literature Review
 
-Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse.
-
-The mechanism itself is established. McQuarrie and DiLellio (2023), in *The Arithmetic of Roth Conversions*, reinvest after-tax counterfactual RMDs at $r(1-d)$ while the Roth compounds at $r$ (Equation 4, Tables 4–5), showing that drag compounds rather than accruing linearly. What their framework leaves open is the terminus. Absent one, the after-tax wedge runs indefinitely and naturally produces a breakeven age; bounding it at the SECURE Act's mandated 10-year beneficiary depletion creates a finite cash-flow stream with an exact PV and IRR. This lets RMD-reduction alpha be priced as a decision-specific line item rather than a breakeven scalar. McQuarrie (2024) discounts the year-by-year tax savings from conversion-reduced RMDs and argues that uncertainty in the rates applied to those distributions is central. In this paper's terms that NPV is rate arbitrage—the conversion tax paid today against taxes subsequently avoided. Because his counterfactual reinvests neither the avoided distributions nor the tax dollars otherwise available to fund the conversion, both wrapper effects priced here are absent by construction.
+Published treatment of tax drag as a quantified, named PV line item in the Roth-conversion setting is sparse, but the mechanism itself is established. McQuarrie and DiLellio (2023), in *The Arithmetic of Roth Conversions*, reinvest after-tax counterfactual RMDs at $r(1-d)$ while the Roth compounds at $r$ (Equation 4, Tables 4–5), showing that drag compounds rather than accruing linearly. What their framework leaves open is the terminus. Absent one, the after-tax wedge runs indefinitely and naturally produces a breakeven age; bounding it at the SECURE Act's mandated 10-year beneficiary depletion creates a finite cash-flow stream with an exact PV and IRR. This lets RMD-reduction alpha be priced as a decision-specific line item rather than a breakeven scalar. McQuarrie (2024) discounts year-by-year tax savings from avoided RMDs (this paper's rate-arbitrage NPV), netting today's conversion tax against future taxes avoided, and argues that rate uncertainty is central. Because his counterfactual neither reinvests the avoided RMDs nor carries the Outside-funded conversion-tax dollars as an asset, both wrapper effects priced here are absent by construction.
 
 Others price the wrapper effect without isolating it. Reichenstein and Meyer (2017) compare an outside-funded conversion with an inside-funded one and compute $tV(1+r)^n - tV(1+R)^n$ — algebraically what this paper isolates as SRC alpha — but report a FV rather than a PV, do not extend it to avoided-RMDs, and do not identify the two channels’ common valuation structure. Kitces (2021) and Van Deusen and Kitces (2022) analyze tax diversification, Roth optimization and account-level tax alpha, showing that paying conversion tax from non-IRA cash preserves the full converted balance for market upside; neither isolates the conversion-tax dollar's $r(1-d)$ counterfactual as a separately priced component. Piper names both the outside-payment and RMD-reduction benefits qualitatively, without PV or IRR figures. Murray (2022) supplies the yield-split asset-location framework underlying this paper's drag-rate assumptions, but does not address conversion payment-source mechanics.
 
-Drag can also appear as an assumption rather than a result. Passman, Wong and Dickson (2025) compute Jill's break-even tax rate (BETR) from a Roth multiple $M = 3$, taxable multiple $M' = 2$ and $n = 20$, obtaining $t_D = 23.3\%$. That parameterization embeds a drag of approximately 37.5\%, $d = 1 - (M'^{1/n} - 1)/(M^{1/n} - 1)$, yet the model's 23.3\% tax rate appears plausible while a 37.5\% portfolio drag may not. Thus, a break-even on $t_D$ is also a break-even on $d$: their framing substitutes a future statutory rate for a portfolio-level drag the planner can estimate and influence.
+Drag can also appear as an assumption rather than a result. Passman, Wong and Dickson (2025) compute Jill's break-even tax rate (BETR) from a Roth multiple $M = 3$, taxable multiple $M' = 2$ and $n = 20$, obtaining $t_D = 23.3\%$. That parameterization embeds a drag of approximately 37.5\%, $d = 1 - (M'^{1/n} - 1)/(M^{1/n} - 1)$, yet the model's 23.3\% tax rate appears plausible while a drag above the 37\% top statutory rate may not. Thus, a break-even on $t_D$ is also a break-even on $d$: their framing substitutes a future statutory rate for a portfolio-level drag the planner can estimate and influence.
 
 Across these treatments tax drag appears as an embedded assumption, a breakeven condition, or a qualitative benefit, but not as two separately priced PV alphas mapped to the planner's two decisions. To our knowledge no prior Roth-conversion study reports the drag avoided on the counterfactual reinvestment of eliminated RMDs as a separately priced present-value component. The contribution is isolation, quantification and decision attribution rather than discovery of the underlying mechanism, plus unification: both alphas share the same valuation identity, differing only in sheltered principal and schedule.
 
@@ -45,7 +43,7 @@ A Roth conversion involves two sequential decisions — whether to convert, and 
 
 2. **SRC alpha (secondary):**
 
-    Outside-funded conversions migrate $K$ ($t_C \cdot C$) after-tax dollars into the Roth wrapper — **a hidden Roth contribution**, formally a **Synthetic Roth Contribution** (SRC; Cheshire 2025, 2026). **SRC alpha** is the PV gain of $K$ compounding tax-free as it distributes vs. in the taxable counterfactual. Identical alpha accrues to a same-sized statutory Roth contribution.
+    Outside-funded conversions migrate $K$ ($t_C \cdot C$) after-tax dollars into the Roth wrapper — **a hidden Roth contribution**, formally a **Synthetic Roth Contribution** (SRC; Cheshire 2025, 2026). **SRC alpha** is the PV gain of $K$ compounding tax-free as it distributes vs. in the taxable counterfactual. Identical alpha accrues to a same-sized statutory Roth contribution; Table D3 shows that the underlying principal transfer itself has zero PV.
 
 ---
 
@@ -101,7 +99,7 @@ Applying one $t_D$ to the stream is an approximation because each avoided distri
 
 **Figure 2.** RMD-reduction alpha. Avoided RMDs reinvest in parallel sheltered and taxable balances during Phase 1; both distribute as a 10-year fixed annuity in Phase 2. The after-tax principal $P = C(1-t_D)$ = \$96,359 — the \$121,800 conversion net of $t_D$ = 20.89% — is applied to the divisor-based deposit schedule; Appendix B.3 measures the approximation. Cumulative drag-avoidance benefit reaches $\alpha_{RMD}^{t_D}$ = \$2,439.
 
-Both figures show balances depleting to zero — the SECURE-mandated 10-year beneficiary depletion closes the schedule, making both alphas present values rather than breakevens (with an IRR for SRC alpha). SRC alpha requires no $t_D$ approximation; RMD alpha uses the one assessed in Appendix B.3.
+Both figures show balances depleting to zero — the SECURE-mandated 10-year beneficiary depletion closes the schedule, making both alphas present values rather than breakevens. SRC alpha requires no $t_D$ approximation; RMD alpha uses the one assessed in Appendix B.3.
 
 ### 4.3 Total TDS alpha
 
@@ -113,7 +111,7 @@ $$
 
 Under Inside payment, $\alpha_{TDS} = \alpha_{RMD}$ because $\alpha_{SRC} = 0$.
 
-Both alphas feed the conversion's IRR through yearly drag-related cash flows — the SRC flow over owner-life and beneficiary distributions, the RMD-reduction flow over the beneficiary period — letting planners quantify drag avoidance within the IRR. Appendix C gives the per-year definitions. Under Inside payment (no user outlay) the conversion IRR is undefined and the RMD-reduction PV stands alone.
+RMD-reduction alpha feeds the conversion's IRR stream through beneficiary-period counterfactual gaps. The IRR already embeds the SRC shelter benefit because conversion-tax dollars return the sheltered rate, not the taxable one (Table D3). Therefore planners may also view drag avoidance through the IRR lens. Appendix C gives the per-year definitions. Under Inside payment (no user outlay), the conversion IRR is undefined and the RMD-reduction PV stands alone.
 
 ---
 
@@ -122,7 +120,7 @@ Both alphas feed the conversion's IRR through yearly drag-related cash flows —
 Converting \$121,800 fills through the 22% bracket, at an effective conversion rate of 14.75%.
 
 | Inputs | Symbol | Value |
-|---|---|---|
+|---|:---|---|
 | Filer | | Single, age 62 |
 | Traditional balance | | \$700,000 |
 | Social Security | | \$25,000/yr at 65 |
@@ -155,7 +153,7 @@ $t_C$ is incremental conversion-year tax divided by $C$. $t_D$ is the effective 
 
 Figures are Outside-funded; under Inside funding $\alpha_{SRC} = 0$, so TDS is $\alpha_{RMD}$ alone and conversion IRR is undefined because there is no outlay. At the 22% fill, both funding sources yield \$2,439 RMD-reduction alpha; Outside adds \$1,480 SRC alpha, for \$3,919 of tax-drag shelter. RMD alpha is 65% larger despite SRC's higher per-dollar multiplier.
 
-At the 22% fill, Outside's 8.92% IRR reflects the 7% base return, \$7,475 of rate arbitrage and \$3,919 TDS alpha; Appendix D3 gives the cash-flow stream it solves. Rate arbitrage alone is maximised at the 12% fill; pricing drag moves the optimal bracket fill to the 22%, a \$121,800 conversion rather than \$66,500. Conversions are evaluated at bracket fills throughout, so a reported optimum is the largest fill whose final bracket increment carries positive net PV, not a dollar-level maximum.
+At the 22% fill, Outside's 8.71% IRR reflects the 7% base return, \$7,475 of rate arbitrage and \$2,439 of RMD-reduction alpha, with the SRC shelter benefit embedded in the sheltered rate those dollars return (Table D3). Rate arbitrage alone is maximised at the 12% fill; pricing drag moves the optimal bracket fill to the 22%, a \$121,800 conversion rather than \$66,500. Conversions are evaluated at bracket fills throughout, so a reported optimum is the largest fill whose final bracket increment carries positive net PV, not a dollar-level maximum.
 
 **Table 2. Incremental conversion results - Marginal brackets**
 
@@ -175,7 +173,7 @@ On RMD-reduction alpha alone the 22% increment nets \$197 — near indifference 
 
 $d$ is the fraction of pre-tax return lost annually to tax in the taxable counterfactual. Murray's yield-split analysis implies $d$ of 9.9%, 6.7% and 3.5% under no, conventional and yield-split asset location, respectively, when applied to the 7% assumed here.
 
-The 5% baseline is an illustrative round value between Murray's yield-split and conventional-location cases; households mirroring allocations across accounts should use a higher $d$. Sialm and Zhang (2020) estimate investment taxes averaging 1.08% annually for US equity mutual fund shareholders in the highest tax bracket — $d$ = 15% at $r$ = 7% — roughly tripling the alphas above. The baseline is deliberately conservative: the drag implicitly embedded in Vanguard's BETR example is roughly 37.5% (§1).
+The 5% baseline is an illustrative round value between Murray's yield-split and conventional-location cases; households mirroring allocations across accounts should use a higher $d$. Sialm and Zhang (2020) estimate investment taxes averaging 1.08% annually for US equity mutual fund shareholders in the highest tax bracket — $d$ = 15% at $r$ = 7% — roughly tripling the alphas above. The 5% drag assumption is deliberately conservative: the drag implicitly embedded in Vanguard's BETR example is roughly 37.5% (§1).
 
 These parameters are observable to the planner: asset mix and asset location are advisor decisions, so $d$ is better estimated by the advisor than by a model default.
 
@@ -208,11 +206,11 @@ RMD-reduction alpha is time-sensitive: five further years of life raise it 43%, 
 
 | Increment | $t_C$ | $t_D$ | Breakeven $t_D$ |
 |------------|--------:|--------:|--------:|
-| 12% | 12.00% | 21.12% | 8.64% |
-| 22% | 22.00% | 20.34% | 18.05% |
-| 24% | 24.00% | 18.82% | 19.92% |
+| 12% | 12.00% | 21.12% | 8.70% |
+| 22% | 22.00% | 20.34% | 18.12% |
+| 24% | 24.00% | 18.82% | 20.00% |
 
-The 22% increment tolerates a displaced rate 2.3 points below the one assumed; the 24% fails by 1.1. Pricing tax-drag shelter lowers the displaced rate that the 22% increment requires from 22.00% to 18.05% — 3.95 points of tolerance rate arbitrage alone does not provide. This is a partial sensitivity holding $d$, $\rho$, $\mu_{RMD}$, $\alpha_{SRC}$ and $t_C$ fixed; it measures sensitivity to the displaced-rate estimate rather than simulating a change in the statutory schedule.
+The 22% increment tolerates a displaced rate 2.2 points below the one assumed; the 24% fails by 1.2. Pricing tax-drag shelter lowers the displaced rate that the 22% increment requires from 22.00% to 18.12% — 3.88 points of tolerance rate arbitrage alone does not provide. This partial sensitivity holds $d$, $\rho$, $\mu_{RMD}$, $\alpha_{SRC}$ and $t_C$ fixed; it measures sensitivity to the displaced-rate estimate rather than changes in the statutory schedule.
 
 ### 5.3 Limitations: taxable counterfactual and beneficiary schedule
 
@@ -234,7 +232,7 @@ Implications for conversion planning.
 
 2. **Price SRC alpha in the Outside-settlement decision.** It captures the value of moving $K$ dollars into the Roth — identical to what a same-sized statutory Roth contribution gains. Because that funding benefit is separately positive, it can make an otherwise marginal conversion worth executing as part of the combined Outside-funded transaction, subject to liquidity and Roth wrapper preference.
 
-3. **Attribute, don't aggregate.** A single conversion IRR conflates rate arbitrage, Medicare effects, and drag shelter. The two alphas show which slice of IRR each decision buys and what ($t_C$, $t_D$, $d$, $\rho$, owner life) drives it.
+3. **Attribute, don't aggregate.** A single conversion IRR conflates rate arbitrage, Medicare effects, and drag shelter. The two alphas isolate which source of value each decision creates and what ($t_C$, $t_D$, $d$, $\rho$, owner life) drives it.
 
 4. **Approximate when necessary.** $t_D$ is a conversion-specific output of a year-by-year tax calculation, but most planners will estimate and use it in the scalar RMD-alpha calculation. Even this exact $t_D$ does not price the conversion's RMD-reduction alpha exactly because each year's avoided RMD is reinvested after tax at that year's rate, rather than the conversion's scalar $t_D$. And exact $t_D$ is not itself a shortcut: the year-by-year tax calculation it might appear to avoid is required to produce it. Appendix B.3 shows that the scalar approximation is within a few percent; only the yearly stream gives it exactly. Accordingly, a bottom-up tax engine is needed to measure rate arbitrage reliably and RMD-reduction alpha exactly; without one, the scalar approximation still lets planners price value that would otherwise be omitted.
 
@@ -247,7 +245,7 @@ Implications for conversion planning.
 **Notation.** The following symbols are used throughout Appendices A–C.
 
 | Symbol | Meaning |
-|---------------|--------------------------------------------------------------------|
+|:--------------|--------------------------------------------------------------------|
 | $S$ | Sheltered wrapper; compounds at $r$ |
 | $U$ | Taxable wrapper; compounds at $\tilde{r} = r(1-d)$ |
 | $B^{S}_t, B^{U}_t$ | Balance at time $t$ in each wrapper |
@@ -273,7 +271,7 @@ where $\mu$ is that sum evaluated at $P = 1$, the per-dollar multiplier surfaced
 
 1. Identical pre-tax return and asset allocation inside and outside the wrapper. The construction isolates the wrapper effect; asset-location optimization, which would change both $r$ and $d$ by wrapper, is excluded.
 
-2. Identical distribution schedule in both wrappers. A Roth IRA has no owner-life RMD, and a taxable account has no SECURE ten-year mandate. Appendix B uses RMD divisors as a proportional drawdown rule and the ten-year annuity as a common measurement window. The inherited Roth's mandated depletion sets the terminus; thereafter both paths are taxable and no further alpha accrues. Alpha depends on the schedule because the taxable leg compounds at $\tilde{r}$ but is discounted at $r$.
+2. Identical distribution schedule in both wrappers. A Roth IRA has no owner-life RMD, and a taxable account has no SECURE ten-year mandate. Appendix B applies RMD divisors and the ten-year annuity as common measurement schedules, not statutory requirements. Matching isolates the wrapper differential; divergence would price the schedule instead.
 
 3. End-of-period distributions. Balances accrue a full year of return before each distribution, matching the Appendix B simulator.
 
@@ -376,15 +374,15 @@ $\alpha_{SRC}$ is unaffected throughout. It scales on $K$, a known conversion-ye
 
 ---
 
-## Appendix C. IRR Attribution: Per-Year Drag-Related Cash Flows
+## Appendix C. Per-Year Drag Flows and the IRR Stream
 
-§4.3 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year cash flows behind that claim.
+§4.3 reports that the conversion IRR carries a drag-avoidance share. This appendix gives the per-year gaps behind both alphas and how each enters the IRR stream.
 
-**Per-year flows.** Let $\Delta_{SRC}(t)$ be the per-dollar sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.1), and $\Delta_{RMD}(t)$ the corresponding per-dollar Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.2), evaluated at full reinvestment. The conversion's incremental cash flow in year $t$ picks up two drag-related terms:
+**Per-year flows.** Let $\Delta_{SRC}(t)$ be the per-dollar sheltered-vs-taxable gap on SRC alpha's two-phase schedule (Appendix B.1), and $\Delta_{RMD}(t)$ the corresponding per-dollar Phase-2 gap on RMD-reduction alpha's beneficiary 10-year annuity (Appendix B.2), evaluated at full reinvestment. Total tax-drag shelter decomposes into two per-year flows:
 
 $$\mathrm{CF}_{\mathrm{drag}}^{t_D}(t) \;=\; K\cdot\Delta_{SRC}(t)\;+\;(1-t_D)\cdot C\cdot\rho\cdot\Delta_{RMD}(t).$$
 
-The first runs over the owner's remaining life and beneficiary period; the second is non-zero only in the beneficiary period. Exact attribution replaces the scalar RMD flow with the flow generated by B.3's yearly after-tax deposits.
+The first runs over the owner's remaining life and beneficiary period; the second is non-zero only in the beneficiary period. Only the second is added to the IRR stream: the conversion-tax dollars already return the sheltered rate through the $\Delta$ATCF flows, so adding $K\cdot\Delta_{SRC}(t)$ would count that shelter twice (Table D3). Exact attribution replaces the scalar RMD flow with the flow generated by B.3's yearly after-tax deposits.
 
 **Legitimacy.** Both flows arise from the conversion decisions: $K\cdot\Delta_{SRC}(t)$ disappears under Inside payment by construction; $(1-t_D)\cdot C\cdot\rho\cdot\Delta_{RMD}(t)$ arises from the reduction in the Traditional balance generating RMDs. Discounting at $r$,
 
@@ -396,7 +394,7 @@ $\sum_t \mathrm{CF}_{\mathrm{drag}}^{t_D}(t)/(1+r)^t = \alpha_{SRC} + \alpha_{RM
 
 ## Appendix D. Worked Example: Per-Year TDS Cash Flows and Balances
 
-Two tables report each alpha's per-year cash-flow gap (PV discounted at $r$ = 7%) and the balances driving it: depleting converted principal and parallel reinvestment balances for RMD-reduction alpha; parallel sheltered and taxable balances for SRC alpha.
+D1 and D2 report each alpha's per-year gap (PV discounted at $r$ = 7%) and the balances driving it: depleting converted principal and parallel reinvestment balances for RMD-reduction alpha; parallel sheltered and taxable balances for SRC alpha. D3 combines both with the conversion's cash flows.
 
 **Table D1. RMD-reduction alpha: Per-Year Cash Flows and Balances.** After-Tax Principal is §4.2's scalar $P = (1-t_D)C$, which depletes via owner-life RMDs then the beneficiary 10-year annuity; $\rho = 75\%$ of each RMD enters the reinvestment balances and the remainder is consumed. **RMD Reinvest — Roth/Tax-Drag** are the parallel avoided-RMD reinvestment balances (Appendix B.2's $A^S_t, A^U_t$): zero until age 75 (2039), accumulating through owner life, then distributing over the beneficiary decade (2059–2068). The 2027–2038 gap years are compressed to one row because the principal simply compounds at $r$ with no distributions. The table reports $\alpha_{RMD}^{t_D} = \$2,439$: the exact B.3 construction gives \$2,502, a 2.5% difference.
 
@@ -450,81 +448,81 @@ Table D2 applies the same $\varepsilon_t$ to each parallel balance during Phase 
 |-------|------:|----------------:|------------------:|---------------:|-----------:|
 | 2026 | — | \$17,966 | \$17,966 | — | — |
 | 2027–2038 | — | \$19,224 → \$40,463 | \$19,161 → \$38,903 | — | — |
-| 2039 | 24.6 | \$41,650 | \$39,908 | \$63 | \$26 |
-| 2040 | 23.7 | \$42,809 | \$40,879 | \$74 | \$29 |
-| 2041 | 22.9 | \$43,936 | \$41,812 | \$84 | \$31 |
-| 2042 | 22.0 | \$45,014 | \$42,692 | \$97 | \$33 |
-| 2043 | 21.1 | \$46,032 | \$43,507 | \$110 | \$35 |
-| 2044 | 20.2 | \$46,975 | \$44,247 | \$125 | \$37 |
-| 2045 | 19.4 | \$47,842 | \$44,909 | \$141 | \$39 |
-| 2046 | 18.5 | \$48,605 | \$45,467 | \$159 | \$41 |
-| 2047 | 17.7 | \$49,261 | \$45,922 | \$177 | \$43 |
-| 2048 | 16.8 | \$49,777 | \$46,243 | \$199 | \$45 |
-| 2049 | 16.0 | \$50,151 | \$46,428 | \$221 | \$47 |
-| 2050 | 15.2 | \$50,362 | \$46,461 | \$245 | \$48 |
-| 2051 | 14.4 | \$50,390 | \$46,324 | \$271 | \$50 |
-| 2052 | 13.7 | \$50,239 | \$46,023 | \$297 | \$51 |
-| 2053 | 12.9 | \$49,861 | \$45,516 | \$327 | \$53 |
-| 2054 | 12.2 | \$49,265 | \$44,812 | \$356 | \$54 |
-| 2055 | 11.5 | \$48,429 | \$43,895 | \$387 | \$54 |
-| 2056 | 10.8 | \$47,335 | \$42,750 | \$420 | \$55 |
-| 2057 | 10.1 | \$45,962 | \$41,360 | \$454 | \$56 |
-| 2058 | 9.5 | \$44,341 | \$39,757 | \$484 | \$56 |
-| 2059 | — | \$41,132 | \$36,831 | \$744 | \$80 |
-| 2060 | — | \$37,698 | \$33,711 | \$744 | \$75 |
-| 2061 | — | \$34,024 | \$30,384 | \$744 | \$70 |
-| 2062 | — | \$30,092 | \$26,835 | \$744 | \$65 |
-| 2063 | — | \$25,885 | \$23,051 | \$744 | \$61 |
-| 2064 | — | \$21,384 | \$19,014 | \$744 | \$57 |
-| 2065 | — | \$16,568 | \$14,709 | \$744 | \$53 |
-| 2066 | — | \$11,414 | \$10,118 | \$744 | \$50 |
-| 2067 | — | \$5,900 | \$5,222 | \$744 | \$46 |
-| 2068 | — | \$0 | \$0 | \$744 | \$43 |
+| 2039 | 24.6 | \$41,650 | \$39,908 | \$63.41 | \$26.31 |
+| 2040 | 23.7 | \$42,809 | \$40,879 | \$73.50 | \$28.50 |
+| 2041 | 22.9 | \$43,936 | \$41,812 | \$84.28 | \$30.55 |
+| 2042 | 22.0 | \$45,014 | \$42,692 | \$96.54 | \$32.70 |
+| 2043 | 21.1 | \$46,032 | \$43,507 | \$110.07 | \$34.84 |
+| 2044 | 20.2 | \$46,975 | \$44,247 | \$124.97 | \$36.97 |
+| 2045 | 19.4 | \$47,842 | \$44,909 | \$140.64 | \$38.89 |
+| 2046 | 18.5 | \$48,605 | \$45,467 | \$158.57 | \$40.98 |
+| 2047 | 17.7 | \$49,261 | \$45,922 | \$177.26 | \$42.81 |
+| 2048 | 16.8 | \$49,777 | \$46,243 | \$198.75 | \$44.86 |
+| 2049 | 16.0 | \$50,151 | \$46,428 | \$220.92 | \$46.60 |
+| 2050 | 15.2 | \$50,362 | \$46,461 | \$244.94 | \$48.29 |
+| 2051 | 14.4 | \$50,390 | \$46,324 | \$270.92 | \$49.92 |
+| 2052 | 13.7 | \$50,239 | \$46,023 | \$296.79 | \$51.11 |
+| 2053 | 12.9 | \$49,861 | \$45,516 | \$326.82 | \$52.60 |
+| 2054 | 12.2 | \$49,265 | \$44,812 | \$356.18 | \$53.57 |
+| 2055 | 11.5 | \$48,429 | \$43,895 | \$387.19 | \$54.42 |
+| 2056 | 10.8 | \$47,335 | \$42,750 | \$419.82 | \$55.15 |
+| 2057 | 10.1 | \$45,962 | \$41,360 | \$453.98 | \$55.74 |
+| 2058 | 9.5 | \$44,341 | \$39,757 | \$484.41 | \$55.58 |
+| 2059 | — | \$41,132 | \$36,831 | \$743.94 | \$79.78 |
+| 2060 | — | \$37,698 | \$33,711 | \$743.94 | \$74.56 |
+| 2061 | — | \$34,024 | \$30,384 | \$743.94 | \$69.68 |
+| 2062 | — | \$30,092 | \$26,835 | \$743.94 | \$65.12 |
+| 2063 | — | \$25,885 | \$23,051 | \$743.94 | \$60.86 |
+| 2064 | — | \$21,384 | \$19,014 | \$743.94 | \$56.88 |
+| 2065 | — | \$16,568 | \$14,709 | \$743.94 | \$53.16 |
+| 2066 | — | \$11,414 | \$10,118 | \$743.94 | \$49.68 |
+| 2067 | — | \$5,900 | \$5,222 | \$743.94 | \$46.43 |
+| 2068 | — | \$0 | \$0 | \$743.94 | \$43.39 |
 | **Total** | | | | **\$12,129** | **\$1,480** |
 
-Both alphas accumulate before realizing as cash flows. SRC realization begins with owner-life drawdown in 2039 and continues through the beneficiary decade; RMD-reduction alpha is realized only during the beneficiary period. PV totals reconcile to the §5 figures.
+Both alphas accumulate before the gap opens. SRC's begins with owner-life drawdown in 2039 and continues through the beneficiary decade; RMD-reduction alpha's opens only during the beneficiary period. PV totals reconcile to the §5 figures.
 
-**Table D3. Rate-arbitrage alpha and the IRR cash-flow stream.** $\Delta$ATCF is the conversion's incremental after-tax cash flow. Because conversion moves money between wrappers without changing total distributions, it equals the federal tax saved each year. 2026 carries the conversion tax paid from Outside assets; 2027–2038 are empty in all three legs. The drag columns are D1's and D2's per-year gaps. Each PV column is a component of Table 1's 22% row, and the Total column is the stream whose root is the conversion IRR.
+**Table D3. Component cash flows and the IRR stream.** After-tax cash flows for Table 1's 22% fill, split by decision. **Core** is the conversion funded from inside, carrying no outlay. **SRC** is the additional effect of settling the tax from Outside assets: the \$17,966 payment in 2026, and the larger distributions that follow because those dollars remain in the retirement account rather than being taken from the converted balance. The drag columns are D1's and D2's per-year gaps. 2027–2038 are empty throughout. **IRR Stream** excludes SRC drag because the SRC cash-flow column already earns the sheltered portfolio return; SRC drag measures the value of that shelter against the taxable counterfactual, so it belongs in **NPV Total** but not again in the IRR.
 
-| Year | $\Delta$ATCF | RMD drag | SRC drag | Total |
-|:---------|------------:|----------:|---------:|-----------:|
-| 2026 | −\$17,966 | — | — | −\$17,966 |
-| 2027–2038 | — | — | — | — |
-| 2039 | \$1,338 | \$0 | \$63 | \$1,401 |
-| 2040 | \$1,430 | \$0 | \$74 | \$1,504 |
-| 2041 | \$1,734 | \$0 | \$84 | \$1,818 |
-| 2042 | \$2,159 | \$0 | \$97 | \$2,256 |
-| 2043 | \$2,620 | \$0 | \$110 | \$2,730 |
-| 2044 | \$3,119 | \$0 | \$125 | \$3,244 |
-| 2045 | \$3,600 | \$0 | \$141 | \$3,741 |
-| 2046 | \$3,857 | \$0 | \$159 | \$4,016 |
-| 2047 | \$4,096 | \$0 | \$177 | \$4,273 |
-| 2048 | \$4,373 | \$0 | \$199 | \$4,572 |
-| 2049 | \$4,640 | \$0 | \$221 | \$4,861 |
-| 2050 | \$4,921 | \$0 | \$245 | \$5,166 |
-| 2051 | \$5,216 | \$0 | \$271 | \$5,487 |
-| 2052 | \$5,486 | \$0 | \$297 | \$5,783 |
-| 2053 | \$5,809 | \$0 | \$327 | \$6,136 |
-| 2054 | \$6,096 | \$0 | \$356 | \$6,452 |
-| 2055 | \$6,389 | \$0 | \$387 | \$6,776 |
-| 2056 | \$6,688 | \$0 | \$420 | \$7,108 |
-| 2057 | \$6,990 | \$0 | \$454 | \$7,444 |
-| 2058 | \$7,216 | \$0 | \$484 | \$7,700 |
-| 2059 | \$10,272 | \$3,026 | \$744 | \$14,042 |
-| 2060 | \$10,272 | \$3,026 | \$744 | \$14,042 |
-| 2061 | \$10,272 | \$3,026 | \$744 | \$14,042 |
-| 2062 | \$10,272 | \$3,026 | \$744 | \$14,042 |
-| 2063 | \$10,160 | \$3,026 | \$744 | \$13,930 |
-| 2064 | \$10,005 | \$3,026 | \$744 | \$13,775 |
-| 2065 | \$9,847 | \$3,026 | \$744 | \$13,617 |
-| 2066 | \$9,685 | \$3,026 | \$744 | \$13,455 |
-| 2067 | \$9,518 | \$3,026 | \$744 | \$13,288 |
-| 2068 | \$9,416 | \$3,026 | \$744 | \$13,186 |
-| **PV at $r$** | **\$7,475** | **\$2,439** | **\$1,480** | **\$11,394** |
+| Year | Core $\Delta$ATCF | SRC $\Delta$ATCF | RMD drag | IRR Stream | SRC drag | NPV Total |
+|:------|--------:|---------:|--------:|---------:|-------:|---------:|
+| 2026 | — | −\$17,966 | — | −\$17,966 | — | −\$17,966 |
+| 2027–2038 | — | — | — | — | — | — |
+| 2039 | −\$307 | \$1,645 | \$0 | \$1,338 | \$63 | \$1,401 |
+| 2040 | −\$328 | \$1,757 | \$0 | \$1,429 | \$74 | \$1,503 |
+| 2041 | −\$135 | \$1,869 | \$0 | \$1,734 | \$84 | \$1,818 |
+| 2042 | \$162 | \$1,997 | \$0 | \$2,159 | \$97 | \$2,256 |
+| 2043 | \$486 | \$2,133 | \$0 | \$2,619 | \$110 | \$2,729 |
+| 2044 | \$840 | \$2,279 | \$0 | \$3,119 | \$125 | \$3,244 |
+| 2045 | \$1,179 | \$2,421 | \$0 | \$3,600 | \$141 | \$3,741 |
+| 2046 | \$1,271 | \$2,586 | \$0 | \$3,857 | \$159 | \$4,016 |
+| 2047 | \$1,350 | \$2,746 | \$0 | \$4,096 | \$177 | \$4,273 |
+| 2048 | \$1,441 | \$2,932 | \$0 | \$4,373 | \$199 | \$4,572 |
+| 2049 | \$1,529 | \$3,111 | \$0 | \$4,640 | \$221 | \$4,861 |
+| 2050 | \$1,622 | \$3,299 | \$0 | \$4,921 | \$245 | \$5,166 |
+| 2051 | \$1,719 | \$3,497 | \$0 | \$5,216 | \$271 | \$5,487 |
+| 2052 | \$1,808 | \$3,678 | \$0 | \$5,486 | \$297 | \$5,783 |
+| 2053 | \$1,914 | \$3,895 | \$0 | \$5,809 | \$327 | \$6,136 |
+| 2054 | \$2,009 | \$4,087 | \$0 | \$6,096 | \$356 | \$6,452 |
+| 2055 | \$2,105 | \$4,284 | \$0 | \$6,389 | \$387 | \$6,776 |
+| 2056 | \$2,204 | \$4,484 | \$0 | \$6,688 | \$420 | \$7,108 |
+| 2057 | \$2,303 | \$4,687 | \$0 | \$6,990 | \$454 | \$7,444 |
+| 2058 | \$2,378 | \$4,838 | \$0 | \$7,216 | \$484 | \$7,700 |
+| 2059 | \$3,959 | \$6,313 | \$3,026 | \$13,298 | \$744 | \$14,042 |
+| 2060 | \$3,959 | \$6,313 | \$3,026 | \$13,298 | \$744 | \$14,042 |
+| 2061 | \$3,959 | \$6,313 | \$3,026 | \$13,298 | \$744 | \$14,042 |
+| 2062 | \$3,959 | \$6,313 | \$3,026 | \$13,298 | \$744 | \$14,042 |
+| 2063 | \$3,846 | \$6,313 | \$3,026 | \$13,185 | \$744 | \$13,929 |
+| 2064 | \$3,692 | \$6,313 | \$3,026 | \$13,031 | \$744 | \$13,775 |
+| 2065 | \$3,534 | \$6,313 | \$3,026 | \$12,873 | \$744 | \$13,617 |
+| 2066 | \$3,371 | \$6,313 | \$3,026 | \$12,710 | \$744 | \$13,454 |
+| 2067 | \$3,205 | \$6,313 | \$3,026 | \$12,544 | \$744 | \$13,288 |
+| 2068 | \$3,103 | \$6,313 | \$3,026 | \$12,442 | \$744 | \$13,186 |
+| **PV at $r$** | **\$7,475** | **\$0** | **\$2,439** | **\$9,914** | **\$1,480** | **\$11,394** |
 
-Rows are rounded for display and each foots across; the PV row is computed from unrounded values.
+**The Outside payment is a transfer, not a cost.** The SRC's distributions discount to \$17,966.00 against the \$17,966.00 outlay (PV = 0). The outlay is also $K$, SRC alpha's principal. Outside funding therefore adds value only through SRC alpha's wrapper differential. Frameworks that treat conversion tax as a cost with no corresponding counterfactual understate Outside funding by construction. The Core produces \$7,475 of net PV tax savings with zero outlay.
 
-Each leg comes from its own cash flows — $\Delta$ATCF from the conversion-versus-no-conversion distribution streams, the drag legs from the sheltered-versus-taxable gaps of D1 and D2 — so \$7,475 + \$2,439 + \$1,480 = \$11,394 combines three separately generated streams rather than restating one. No fourth valuation is available without redefining the economic counterfactual, because these three streams *are* the decomposition. What the table does establish is that they do not overlap: $\Delta$ATCF captures the conversion-versus-no-conversion tax cash-flow consequence in full, and both drag legs price wrapper counterfactuals that appear nowhere in it. The Total column discounts to \$11,394 and has an internal rate of return of 8.92%.
+Core's underlying tax calculation is what yields $t_D$, and B.3's exact deposits use the same after-tax displaced distributions; SRC carries untaxed Roth distributions and affects neither $t_D$ nor those deposits. The SRC column charges the outlay at face and returns the sheltered stream those dollars buy; because that stream discounts to exactly the outlay, the column nets to zero and SRC drag is all the funding decision creates. The RMD drag leg prices a counterfactual reinvestment appearing in no cash flow at all. Thus \$7,475 + \$0 + \$2,439 + \$1,480 = \$11,394, and IRR Stream solves to 8.71%. Any separate valuation would have to hold the same counterfactuals that define these components, and no channel lies outside them, so this sum *is* the total.
 
 ---
 
