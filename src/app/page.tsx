@@ -31,9 +31,7 @@ export default function Home() {
           </div>
           <p className="font-serif text-[1.05rem] text-ink-soft leading-relaxed">
             New to this? The <Link href="/practitioner-guide" className="text-navy underline underline-offset-2">Practitioner Guide</Link> walks through the conversion decision from
-            first principles, in plain prose. For the math, see the{" "}
-            <Link href="/research/synthetic-roth-contribution" className="text-navy underline underline-offset-2">Synthetic Roth Contribution</Link>{" "}
-            paper.
+            first principles, in plain prose.
           </p>
         </div>
       </section>
