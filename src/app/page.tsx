@@ -11,8 +11,7 @@ export default function Home() {
             Quantitative Research
           </div>
           <h1 className="font-serif text-[2.5rem] md:text-[3rem] leading-[1.1] tracking-tight text-navy-deep">
-            The mathematics of <span className="italic">Roth Conversions</span>,
-            in full.
+            The mathematics of <span className="italic">Roth Conversion Components</span>.
           </h1>
           <p className="mt-3 text-lg md:text-xl text-ink-soft font-serif leading-relaxed">
             Most Roth-conversion advice collapses to one comparison: <em>your tax
