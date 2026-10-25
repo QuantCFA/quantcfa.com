@@ -17,6 +17,20 @@ export type Paper = {
 
 export const papers: Paper[] = [
   {
+    slug: "tax-drag-shelter",
+    title: "Quantifying Tax-Drag Shelter Benefits in Roth Conversions",
+    subtitle: "RMD Reduction and the Hidden Roth Contribution",
+    date: "Forthcoming, Journal of Financial Planning (expected June 2027) · Posted on SSRN September 22, 2026",
+    status: "Working paper",
+    keyIdea:
+      "Quantifies the two Tax-Drag Shelter alphas in a Roth conversion: RMD-reduction (from the Convert decision) and SRC (from the Outside-settlement decision).",
+    external: {
+      label: "Read on SSRN #6879378",
+      href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6879378",
+    },
+    file: "tax-drag-jfp.md",
+  },
+  {
     slug: "synthetic-roth-contribution",
     title:
       "The Synthetic Roth Contribution",
@@ -31,20 +45,6 @@ export const papers: Paper[] = [
       href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772118",
     },
     file: "synthetic-roth-contribution.md",
-  },
-  {
-    slug: "tax-drag-shelter",
-    title: "Quantifying Tax-Drag Shelter Benefits in Roth Conversions",
-    subtitle: "RMD Reduction and the Hidden Roth Contribution",
-    date: "Forthcoming, Journal of Financial Planning (expected June 2027) · Posted on SSRN September 22, 2026",
-    status: "Working paper",
-    keyIdea:
-      "Quantifies the two Tax-Drag Shelter alphas in a Roth conversion: RMD-reduction (from the Convert decision) and SRC (from the Outside-settlement decision).",
-    external: {
-      label: "Read on SSRN #6879378",
-      href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6879378",
-    },
-    file: "tax-drag-jfp.md",
   },
   {
     slug: "roth-conversion-valuation-mechanics",
