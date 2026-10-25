@@ -105,7 +105,18 @@ export default function Home() {
           <div className="text-xs uppercase tracking-[0.18em] text-cream/60 font-sans font-semibold mb-3">
             Research applied at
           </div>
-          <h2 className="font-serif text-3xl mb-4">RothGPT</h2>
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <h2 className="font-serif text-3xl">RothGPT</h2>
+            <a
+              href="https://www.rothgpt.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-cream text-navy-deep px-5 py-2.5 text-sm font-medium hover:bg-cream-deep transition-colors"
+            >
+              Visit RothGPT.com
+              <span aria-hidden>↗</span>
+            </a>
+          </div>
           <p className="font-serif text-[1.05rem] leading-relaxed text-cream/85">
             These and other frameworks are available at{" "}
             <strong>RothGPT.com</strong>. Enter your own numbers and see
@@ -117,17 +128,6 @@ export default function Home() {
             The model is also available inside Claude.ai as a certified
             connector, so Claude can explain the model&rsquo;s output in depth.
           </p>
-          <div className="mt-6">
-            <a
-              href="https://www.rothgpt.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-cream text-navy-deep px-5 py-2.5 text-sm font-medium hover:bg-cream-deep transition-colors"
-            >
-              Visit RothGPT.com
-              <span aria-hidden>↗</span>
-            </a>
-          </div>
         </div>
       </section>
     </div>
