@@ -105,15 +105,19 @@ export default function Home() {
       <section className="border-t border-rule bg-navy-deep text-cream">
         <div className="mx-auto max-w-3xl px-6 pt-8 pb-8">
           <div className="text-xs uppercase tracking-[0.18em] text-cream/60 font-sans font-semibold mb-3">
-            See the research applied
+            Research applied at
           </div>
           <h2 className="font-serif text-3xl mb-4">RothGPT</h2>
           <p className="font-serif text-[1.05rem] leading-relaxed text-cream/85">
-            The frameworks developed here are implemented in a working
-            calculator: <strong>RothGPT.com</strong>. Enter your own numbers and
-            see the Synthetic Roth Contribution, Tax-Drag Shelter alpha,
-            time-weighted distribution rate, and break-even tax rate computed for
-            your actual situation.
+            These and other frameworks are available at{" "}
+            <strong>RothGPT.com</strong>. Enter your own numbers and see
+            Rate-Arbitrage alpha, Tax-Drag Shelter alpha, and Medicare IRMAA
+            alpha combine into a recommended bracket-filling conversion that
+            maximizes your post-conversion wealth.
+          </p>
+          <p className="mt-4 font-serif text-[1.05rem] leading-relaxed text-cream/85">
+            The model is also available inside Claude.ai as a certified
+            connector, so Claude can explain the model&rsquo;s output in depth.
           </p>
           <div className="mt-6">
             <a

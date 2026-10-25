@@ -39,7 +39,7 @@ export function SiteFooter() {
 
         <div>
           <div className="text-xs uppercase tracking-wider text-ink-muted font-sans font-semibold mb-3">
-            See the research applied
+            Research applied at
           </div>
           <a
             href="https://www.rothgpt.com"
