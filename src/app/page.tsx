@@ -14,10 +14,11 @@ export default function Home() {
             The mathematics of <span className="italic">Roth Conversion Components</span>.
           </h1>
           <p className="mt-3 text-lg md:text-xl text-ink-soft font-serif leading-relaxed">
-            Most Roth-conversion advice collapses to one comparison: <em>your tax
-            rate today versus your tax rate later</em>. That comparison hides the
-            components that actually drive the answer. The papers here isolate
-            each one, derive it formally, and explain it in plain English.
+            Roth conversion advice usually turns on a guess about future tax rates,
+            but conversion value has multiple components, each requiring a robust
+            multi-year tax model whose outputs cannot simply be assumed. Our
+            research goal is to improve the decision process and show whether each
+            conversion is profitable in understandable present-value terms.
           </p>
         </div>
       </section>
