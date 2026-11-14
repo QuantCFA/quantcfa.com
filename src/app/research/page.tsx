@@ -4,7 +4,7 @@ import { papers } from "@/lib/papers";
 
 export const metadata: Metadata = {
   title: "Research",
-  description: "Working papers and published research on the mathematics of Roth Conversions.",
+  description: "Research papers on the mathematics of Roth conversions.",
 };
 
 export default function ResearchIndex() {
@@ -14,7 +14,7 @@ export default function ResearchIndex() {
         Research
       </div>
       <h1 className="font-serif text-4xl text-navy-deep mb-6 leading-tight">
-        Working papers
+        Papers
       </h1>
       <p className="font-serif text-lg text-ink-soft leading-relaxed mb-12">
         Each paper isolates one component of Roth-conversion value, derives it
@@ -34,22 +34,22 @@ export default function ResearchIndex() {
               <span className="text-xs text-ink-muted font-sans">{p.date}</span>
             </div>
             <h2 className="font-serif text-2xl text-navy-deep mb-1 leading-snug">
-              {p.external ? (
-                <a
-                  href={p.external.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-navy"
-                >
-                  {p.title}
-                </a>
-              ) : (
+              {p.file ? (
                 <Link
                   href={`/research/${p.slug}`}
                   className="hover:text-navy"
                 >
                   {p.title}
                 </Link>
+              ) : (
+                <a
+                  href={p.external?.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-navy"
+                >
+                  {p.title}
+                </a>
               )}
             </h2>
             {p.subtitle && (
