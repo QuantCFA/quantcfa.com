@@ -6,7 +6,7 @@ export type Paper = {
   title: string;
   subtitle?: string;
   date: string; // ISO-ish display string
-  status: "Working paper" | "Published" | "Foundational paper";
+  status: "Working paper" | "Forthcoming" | "Published" | "Foundational paper";
   keyIdea: string; // one-line plain-English hook
   authorsNote?: string;
   external?: { label: string; href: string };
@@ -20,8 +20,8 @@ export const papers: Paper[] = [
     slug: "tax-drag-shelter",
     title: "Quantifying Tax-Drag Shelter Benefits in Roth Conversions",
     subtitle: "RMD Reduction and the Hidden Roth Contribution",
-    date: "Forthcoming, Journal of Financial Planning (expected June 2027) · Posted on SSRN September 22, 2026",
-    status: "Working paper",
+    date: "Journal of Financial Planning (expected June 2027) · Posted on SSRN September 22, 2026",
+    status: "Forthcoming",
     keyIdea:
       "Quantifies the two Tax-Drag Shelter alphas in a Roth conversion: RMD-reduction (from the Convert decision) and SRC (from the Outside-settlement decision).",
     external: {
@@ -53,7 +53,7 @@ export const papers: Paper[] = [
     date: "April 2025 · Published on SSRN June 2025",
     status: "Foundational paper",
     keyIdea:
-      "The paper that introduced the Synthetic Roth Contribution concept and decomposed conversion-tax payback into its components. The framework has been substantially extended in the two working drafts above.",
+      "An early, informal paper, not written to publication standard, but with some interesting foundational ideas not found in the two papers above.",
     external: {
       label: "Read on SSRN #5205840",
       href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5205840",

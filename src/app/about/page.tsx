@@ -68,56 +68,20 @@ export default function AboutPage() {
             most notably that <em>how</em> you pay the conversion tax (from
             inside the Traditional account vs. from outside funds) produces a
             separable economic effect that the literature had either folded
-            into a black-box term or missed. The papers on this site are the
-            attempt to write down those findings rigorously.
+            into a black-box term or missed. The{" "}
+            <a
+              href="/research"
+              className="text-navy hover:text-navy-deep underline underline-offset-2"
+            >
+              papers on this site
+            </a>{" "}
+            are the attempt to write down those findings rigorously.
           </p>
           <p>
             I encourage readers to try and disprove anything I present. My goal
             is for the truth to prevail and for Roth-conversion knowledge to
             improve, disseminate, and be widely understood.
           </p>
-        </div>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="font-serif text-xl text-navy-deep mb-3 border-b border-rule pb-2">
-          Published work
-        </h2>
-        <div className="bg-paper border border-rule rounded-md p-5">
-          <div className="text-xs uppercase tracking-wider text-ink-muted font-sans font-semibold mb-1">
-            Foundational paper · April 2025 · Published on SSRN June 2025
-          </div>
-          <h3 className="font-serif text-lg text-navy-deep mb-2">
-            Roth Conversion Valuation &amp; Mechanics
-          </h3>
-          <p className="font-serif text-ink-soft text-[0.95rem] leading-relaxed mb-3">
-            Introduces the Synthetic Roth Contribution concept and the
-            conversion-tax-payback decomposition. The framework has been
-            substantially extended in subsequent working drafts — see the
-            current{" "}
-            <a
-              href="/research/synthetic-roth-contribution"
-              className="text-navy hover:text-navy-deep underline underline-offset-2"
-            >
-              Synthetic Roth Contribution
-            </a>{" "}
-            and{" "}
-            <a
-              href="/research/tax-drag-shelter"
-              className="text-navy hover:text-navy-deep underline underline-offset-2"
-            >
-              Tax-Drag Shelter
-            </a>{" "}
-            papers for the formal treatment as it stands today.
-          </p>
-          <a
-            href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5205840"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm text-navy hover:text-navy-deep underline underline-offset-2"
-          >
-            Read on SSRN ↗
-          </a>
         </div>
       </section>
 
@@ -136,7 +100,7 @@ export default function AboutPage() {
           >
             RothGPT.com
           </a>
-          . Enter your own numbers and see the components in your case.
+          , and in Claude through the RothGPT connector. Enter your own numbers and see the components in your case.
         </p>
       </section>
     </div>
